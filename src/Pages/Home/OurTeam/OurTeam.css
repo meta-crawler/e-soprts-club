@@ -1,0 +1,53 @@
+.OurTeam{
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+
+.team-heading{
+    font-weight: 700;
+    font-size: 36px;
+    color: rgb(251, 251, 251);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.card-style{
+    background-color: rgb(56, 65, 78);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.player-number{
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 80px;
+    background: #ffb400;
+    position: relative;
+    top: 0;
+    left: 50%;
+    font-size: 30px;
+    line-height: 25px;
+    padding-top: 13px;
+    padding-bottom: 7px;
+    transition: 0.3s;
+    font-weight: 700;
+    text-align: center;
+}
+.player-number::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -14px;
+    width: 100%;
+    height: 15px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: #ffb400;
+    transition: 0.3s;
+}
+.player-name{
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 700;
+}
+.player-title{
+    font-size: 14px;
+}

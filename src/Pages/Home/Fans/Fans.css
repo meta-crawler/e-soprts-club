@@ -1,0 +1,44 @@
+.Fans{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+.Fans h1{
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+}
+
+
+.FansFull{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.clint {
+    background: #1a1d22;
+    padding: 20px;
+    width: 570px;
+    padding-left: 90px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.clint h3{
+    color: rgb(186 194 208);
+    padding: 5px;
+}
+
+
+.clint img {
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    width: 110px;
+    height: 110px;
+}

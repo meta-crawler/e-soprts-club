@@ -1,10 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
+import './Sponsored.css';
 
 const Sponsored = () => {
   return (
-    <Container>
+    <Container className="Sponsored">
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
