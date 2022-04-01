@@ -1,5 +1,6 @@
 import React from 'react';
 import Nextmatch from '../Nextmatch/Nextmatch';
+import Video from '../Video/Video';
 import Banner from './Banner/Banner';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Nextmatch></Nextmatch>
+            <Video></Video>
         </div>
     );
 };
