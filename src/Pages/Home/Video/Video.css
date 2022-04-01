@@ -1,0 +1,45 @@
+.main-video{
+    margin-top: 50px;
+    padding: 100px 0px;
+}
+
+.video-title{
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: bold;
+}
+.video-describtion{
+    color: whitesmoke;
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.video-button{
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    margin-bottom: 25px;
+    background-color: #ffb400;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #111;
+    padding: 17px 30px 18px;
+    margin-top: 10px;
+}
+.video{
+    
+
+}
+.video-team{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.team-des{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 400;
+}
+.team-date{
+    color: #6f757a;
+}
