@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
-import img1 from '../../Images/next match/team-4-92x98.png'
-import img2 from '../../Images/next match/team-6-79x98.png'
-import blueimg from '../../Images/buleimg.jpg'
-import twitter from '../../Images/twitter.jpg'
+import img1 from '../../../Images/next match/team-4-92x98.png'
+import img2 from '../../../Images/next match/team-6-79x98.png'
+import blueimg from '../../../Images/buleimg.jpg'
+import twitter from '../../../Images/twitter.jpg'
 import './Nextmatch.css'
 
 const Nextmatch = () => {

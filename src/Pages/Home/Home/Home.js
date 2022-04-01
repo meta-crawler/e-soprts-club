@@ -1,7 +1,9 @@
 import React from 'react';
+import Banner from '../Banner/Banner';
 import Nextmatch from '../Nextmatch/Nextmatch';
 import Video from '../Video/Video';
-import Banner from './Banner/Banner';
+
+
 
 const Home = () => {
     return (
@@ -9,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <Nextmatch></Nextmatch>
             <Video></Video>
+            
         </div>
     );
 };

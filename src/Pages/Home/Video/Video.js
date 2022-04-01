@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import img1 from '../../Images/sport team img/image-4-110x70.jpg'
-import img2 from '../../Images/sport team img/image-5-110x70.jpg'
-import img3 from '../../Images/sport team img/image-7-110x70.jpg'
+import img1 from '../../../Images/sport team img/image-4-110x70.jpg'
+import img2 from '../../../Images/sport team img/image-5-110x70.jpg'
+import img3 from '../../../Images/sport team img/image-7-110x70.jpg'
 import './Video.css'
 
 
