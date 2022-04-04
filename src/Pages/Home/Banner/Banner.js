@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Row, Table } from "react-bootstrap";
 // import required modules
-import { EffectFade, FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -26,7 +26,7 @@ const Banner = () => {
             spaceBetween={10}
             navigation={false}
             thumbs={{ swiper: thumbsSwiper }}
-            modules={[EffectFade, FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper2"
             allowTouchMove={false}
           >
@@ -56,19 +56,19 @@ const Banner = () => {
               className="carousel-banner"
               style={{
                 background:
-                  'url("https://p0.pikrepo.com/preview/322/682/person-sitting-in-front-of-computer-monitors.jpg")',
+                  'url("https://i.guim.co.uk/img/media/dfed9d8ba139a772e0fca3ee16c1bcd1df7e450e/0_221_5472_3283/master/5472.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=6c737665c6bbbe1c18218fb36baf2c37")',
                 backgroundSize: "cover",
               }}
             >
               <div>
                 <h1 className="fw-bold">
-                  2016 OFFSEASON <br />
-                  PREVIEW STORYBOARD
+                  THREE QUESTION MAJOR <br />
+                  FINALS PREVIEW
                 </h1>
                 <p>
-                  Last year, with James attempting to beat the Warriors by
-                  himself and the Heat preparing for offseason, Riley took a
-                  nice shot at James.
+                  Becoming a three-time ESL champion. Winning a title for the
+                  city of Cleveland. Cementing his legacy as one of the greatest
+                  cs:go players ever.
                 </p>
                 <Button variant="warning">Read more</Button>
               </div>
@@ -78,19 +78,20 @@ const Banner = () => {
               className="carousel-banner"
               style={{
                 background:
-                  'url("https://p0.pikrepo.com/preview/322/682/person-sitting-in-front-of-computer-monitors.jpg")',
+                  'url("https://admin.dailycricket.com.bd/storage/posts/3476/Bangladesh-Cricket-Team.jpg")',
                 backgroundSize: "cover",
               }}
             >
               <div>
                 <h1 className="fw-bold">
-                  2016 OFFSEASON <br />
-                  PREVIEW STORYBOARD
+                  CELTICS AGGRESSIVELY <br />
+                  SHOPPING 3RD OVERALL <br />
+                  PICK
                 </h1>
                 <p>
-                  Last year, with James attempting to beat the Warriors by
-                  himself and the Heat preparing for offseason, Riley took a
-                  nice shot at James.
+                  When I decided to leave Miami — I`m not going to name any
+                  names, I can`t do that — but there were some people that I
+                  trusted.
                 </p>
                 <Button variant="warning">Read more</Button>
               </div>
