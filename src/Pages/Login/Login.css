@@ -7,8 +7,8 @@
     background-color: #0c0116 ;
 }
 .form-start{
-    position: relative;
-    padding: 60px 15px;
+    /* position: relative; */
+    padding: 275px 277px !important ;
     width: 270px;
     height: 350px;
     box-shadow: 0px 0px 10px 0px rgb(116, 119, 114);
@@ -16,12 +16,22 @@
     overflow: hidden;
 
 }
+@media only screen and (max-width:688px) {
+   .form-start{
+       padding: 60px 20px !important;
+       width: 244px;
+       height: 396px;
+   }
+     
+   }
+
+   
 .login-inner{
-    position: absolute;
+    /* position: absolute; */
     height: 98%;
     width: 98%;
-    top: 50%;
-    left: 50%;
+    /* top: 50%; */
+    /* left: 50%; */
     background: #0c0116 ;
     transform: translate(-50%, -50%);
 }
@@ -39,14 +49,19 @@
 .login-inner .user-text{
     display: block;
     padding: 12px 15px;
-    width: 100%;
-    left: 50%;
+    width: 400px !important;
+    /* left: 50%; */
     border-radius: 10px;
     margin-top: 20px;
     border: 1.5px solid rgb(109, 87 , 121);
     outline: none;
     background: #19052c;
     color: white;
+    transition: 0.25s;
+
+}
+.login-inner .user-text:focus{
+    width: 500px !important;
 }
 .submit-btn{
     cursor: pointer;
