@@ -37,6 +37,7 @@ const Navigation = () => {
             <Nav.Link className="link-style" as={Link} to="/booking">
               <h5 className="text-style">BOOKING</h5>
             </Nav.Link>
+
             {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SHOP</h5></Nav.Link> */}
             {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>DONATIONS</h5></Nav.Link> */}
             <Nav.Link className="link-style" as={Link} to="/">
