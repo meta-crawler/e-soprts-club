@@ -1,0 +1,36 @@
+
+.PlayersLeg {
+    display: flex;
+    margin-top: 50px;
+    border-bottom: 3px solid #5b5b5b;
+    padding-bottom: 20px;
+    width: 420px;
+    margin-left: 50px;
+}
+
+
+
+.PlayersLeg .images img {
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+
+
+
+.PlayersLeg h2 {
+    margin-top: 0px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+.ImageBanner img{
+    width: 100%;
+    margin-top: 150px;
+
+}

@@ -8,13 +8,18 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
-// import Nextmatch from './Pages/Nextmatch/Nextmatch';
+
+
+import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
+
+
 function App() {
   return (
     <div>
       <Router>
         <Navigation />
         <Routes>
+          <Route path="/footballHome" element={<FootBallHome />} />
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
