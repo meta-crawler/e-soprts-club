@@ -1,0 +1,49 @@
+.MainPlayer {
+    width: 400px;
+    background: #FFFFFF;
+    color: black;
+    cursor: pointer;
+}
+
+.MainPlayer img{
+    width: 400px;
+}
+
+
+
+
+
+
+.MainPlayer .Head{
+    display: flex;
+}
+
+
+
+.MainPlayer .Number h1 {
+    width: 100px;
+    padding: 20px;
+    margin-left: 20px;
+    font-weight: 900;
+    font-family: jost;
+    color: rgb(148, 148, 148);
+}
+
+
+
+
+.Head .Text h3 {
+    font-weight: 900;
+    font-family: jost;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.Head .Text h5 {
+    font-weight: 900;
+    font-family: jost;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
