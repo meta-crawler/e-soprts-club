@@ -1,4 +1,5 @@
 import React from "react";
+import ControledSlider from "../../ControledSlider/ControledSlider";
 import Banner from "../Banner/Banner";
 import Counter from "../Counter/Counter";
 import Fans from "../Fans/Fans";
@@ -15,6 +16,7 @@ const Home = () => {
       <Banner />
       <Sponsored />
       <Statistics />
+      <ControledSlider />
       <Nextmatch />
       <OurTeam />
       <Video />
