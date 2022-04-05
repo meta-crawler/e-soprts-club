@@ -1,12 +1,12 @@
-import React from 'react';
-import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import logo from '../../../Images/Untitled-1.png agin.png'
-import cartlogo from '../../../Images/download.png'
-import './Navigation.css'
-
+import React from "react";
+import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import cartlogo from "../../../Images/download.png";
+import logo from "../../../Images/Untitled-1.png agin.png";
+import "./Navigation.css";
 
 const Navigation = () => {
+
     return (
         <div>
    <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
@@ -28,12 +28,18 @@ const Navigation = () => {
           
         
 
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            <Nav.Link className="link-style" as={Link} to="/booking">
+              <h5 className="text-style">BOOKING</h5>
+            </Nav.Link>
 
-      </div>
-    );
+         
+           
+           
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  );
 };
 
 export default Navigation;
