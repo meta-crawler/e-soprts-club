@@ -34,7 +34,7 @@ const Banner = () => {
               className="carousel-banner"
               style={{
                 background:
-                  'url("https://p0.pikrepo.com/preview/322/682/person-sitting-in-front-of-computer-monitors.jpg")',
+                  'url("")',
                 backgroundSize: "cover",
               }}
             >
@@ -50,13 +50,13 @@ const Banner = () => {
                 </p>
                 <Button variant="warning">Read more</Button>
               </div>
-              {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> */}
+             
             </SwiperSlide>
             <SwiperSlide
               className="carousel-banner"
               style={{
                 background:
-                  'url("https://p0.pikrepo.com/preview/322/682/person-sitting-in-front-of-computer-monitors.jpg")',
+                  'url("")',
                 backgroundSize: "cover",
               }}
             >
@@ -72,7 +72,7 @@ const Banner = () => {
                 </p>
                 <Button variant="warning">Read more</Button>
               </div>
-              {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> */}
+              
             </SwiperSlide>
             <SwiperSlide
               className="carousel-banner"

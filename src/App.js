@@ -7,6 +7,7 @@ import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
 import './App.css';
+import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
+          <Route path="/footballHome" element={<FootBallHome />} />
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

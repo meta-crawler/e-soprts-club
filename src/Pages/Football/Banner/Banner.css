@@ -1,0 +1,52 @@
+.Banner{
+    padding: 0px 0px 100px;
+    position: relative;
+
+}
+
+.Banner img{
+    width: 100%;
+    padding: 0px 0px 50px;
+}
+
+
+.Banner .Shap {
+    width: 500px;
+    height: 500px;
+    background-color: inherit;
+    border: 20px solid salmon;
+    border-radius: 5px;
+    position: absolute;
+    top: 170px;
+    left: 160px;
+}
+
+
+.Banner .Text {
+    position: absolute;
+    top: 245px;
+    left: 350px;
+    background: #000000;
+    padding: 50px;
+}
+
+
+
+.Banner .Text h1{
+    width: 700px;
+}
+
+
+
+
+.Banner .Text p{
+    width: 500px;
+}
+
+
+
+
+
+.Banner .Text button{
+    margin-left: 20px;
+}
