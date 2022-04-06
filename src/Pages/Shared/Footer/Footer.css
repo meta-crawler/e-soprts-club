@@ -1,4 +1,53 @@
-.text-white{
-    margin: 0px;
-   
+.main-footer{
+    background-color: #111111;
+    margin-top: 30px;
+}
+.footer-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-left: 30px; */
+    margin-right: 60px;
+}
+.footer-title{
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.footer-li{
+    margin: 10px
+}
+.footer-li:hover{
+    color: gold;
+}
+.footer-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.news-des{
+    font-weight: 600;
+}
+.news-des:hover{
+    color: gold;
+    cursor: pointer;
+}
+.news-date{
+    font-size: 15px;
+    margin-top: -10px;
+}
+.footer-appmain{
+    border: 2px solid white;
+}
+.footer-appmain:hover{
+    background-color: gold;
+}
+.app-buy{
+    font-weight: 300;
+}
+.footer-app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
