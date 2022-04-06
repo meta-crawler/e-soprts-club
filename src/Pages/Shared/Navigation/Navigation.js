@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import logo from '../../../Images/Untitled-1.png agin.png'
 import cartlogo from '../../../Images/download.png'
 import './Navigation.css'
+import useAuth from '../../../Hook/UseAuth';
 
 
 const Navigation = () => {
+  const {user,logOut} = useAuth()
     return (
         <div>
    <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
@@ -23,7 +25,11 @@ const Navigation = () => {
           {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SHOP</h5></Nav.Link> */}
           {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>DONATIONS</h5></Nav.Link> */}
           <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>CONTACTS</h5></Nav.Link>
-          <Nav.Link className='link-style' as={Link} to="/login"><h5 className='text-style'>Login</h5></Nav.Link>
+       { user?.email ? 
+      <h5 onClick={logOut} className='text-style'>Logout</h5>
+       : 
+        <Nav.Link className='link-style' as={Link} to="/login"><h5 className='text-style'>Login</h5></Nav.Link>}
+         
           <Nav.Link className='link-style cart-button' as={Link} to="/cart"><img src={cartlogo} width="50px" alt="" /> </Nav.Link>
           
         

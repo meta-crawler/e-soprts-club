@@ -1,13 +1,24 @@
+.main-login{
+    background-image: url(../../Images/ce72f6\ \(1\).jpg) ;
+    background-repeat: no-repeat;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */ 
+    
+
+}
 .main-from{
     font-family: sans-serif;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
+    width: 100%!important;
     min-height: 100vh;
-    background-color: #0c0116 ;
+    /* background-image: url(../../Images/ce72f6\ \(1\).jpg);
+    background-repeat: no-repeat; */
 }
 .form-start{
-    /* position: relative; */
+    position: relative;
     padding: 275px 277px !important ;
     width: 270px;
     height: 350px;
@@ -27,11 +38,11 @@
 
    
 .login-inner{
-    /* position: absolute; */
+    position: absolute;
     height: 98%;
     width: 98%;
-    /* top: 50%; */
-    /* left: 50%; */
+    top: 50%;
+    left: 50%;
     background: #0c0116 ;
     transform: translate(-50%, -50%);
 }
