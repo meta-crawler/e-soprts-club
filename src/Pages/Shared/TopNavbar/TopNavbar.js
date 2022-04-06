@@ -10,7 +10,7 @@ const TopNavbar = () => {
       <Container>
         <Row className="top-navbar">
           <div className="col-md-6">
-            <span className="me-2">Phone: +8801648306424</span>
+            <span className="me-2">Phone: +8801648308424</span>
             <span>Email: dev.abdurrahman01@gmail.com</span>
           </div>
           <div className="col-md-6 text-end">
