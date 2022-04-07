@@ -1,13 +1,27 @@
 import React from 'react';
 import './Player.css';
+import { useNavigate } from 'react-router-dom';
 
 const Player = (props) => {
 
     console.log(props.player);
 
     const {name, img, Position, id} = props.player;
+
+
+
+    const navigate = useNavigate();
+  
+    function detailsPlayer() {
+      navigate(`/playerDetails/${id}`);
+    }
+  
+
     return (
-        <div className='MainPlayer'>
+        <div className='MainPlayer' onClick={
+            () => {
+                detailsPlayer(id);
+            }}>
             <img src={img} alt="" />
 
 
