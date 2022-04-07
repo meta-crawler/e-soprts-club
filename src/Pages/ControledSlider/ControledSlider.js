@@ -2,8 +2,25 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import Slider from "react-slick/lib/slider";
+import Player from "../Player/Player";
+import './ControledSlider.css';
+
 
 export default class ControledSlider extends Component {
+
+
+  state = {
+    players: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:7000/players')
+      .then((response) => response.json())
+      .then(playersList => {
+        this.setState({ players: playersList });
+      });
+  }
+
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
@@ -27,21 +44,37 @@ export default class ControledSlider extends Component {
       slidesToScroll: 1,
     };
 
+
+    console.log(this.state.players);
+
+
+
+
+
+
+
     return (
-      <div className="container">
+      <div className="container AllPlayer">
         <div className="my-5">
           <FontAwesomeIcon
             className="me-2"
             onClick={this.previous}
             icon={faArrowLeft}
           />
-          <FontAwesomeIcon onClick={this.next} icon={faArrowRight} />
+          <FontAwesomeIcon
+          className="me-2"
+          onClick={this.next} icon={faArrowRight} />
         </div>
 
         <Slider ref={(c) => (this.slider = c)} {...settings}>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((a, i) => (
-            <div>Player -{i + 1}</div>
-          ))}
+          
+          {this.state.players.map(players => <Player
+
+            key={players._id}
+            player={players}
+
+          />)
+          }
         </Slider>
       </div>
     );
