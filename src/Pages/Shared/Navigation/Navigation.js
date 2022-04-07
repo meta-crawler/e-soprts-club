@@ -20,11 +20,11 @@ const Navigation = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className='justify-content-end'>
 
-          <Nav.Link className='link-style ms-auto' as={Link} to="/home"><h5 className='text-style' >Home</h5></Nav.Link>
+          <Nav.Link className='link-style ms-auto' as={Link} to="/home"><h5 className='text-style' >HOME</h5></Nav.Link>
           
           
 
-          <NavDropdown title="PAGES" id="basic-nav-dropdown">
+          <NavDropdown style={{fontSize: "22px", marginBottom: "7px", fontWeight: "600"}} title="PAGES" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to="/footballHome">Football</NavDropdown.Item>
           
           
