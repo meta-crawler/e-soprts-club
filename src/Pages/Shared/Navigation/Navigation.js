@@ -38,15 +38,10 @@ const Navigation = () => {
          
           <Nav.Link className='link-style cart-button' as={Link} to="/cart"><img src={cartlogo} width="50px" alt="" /> </Nav.Link>
           
-        
 
             <Nav.Link className="link-style" as={Link} to="/booking">
               <h5 className="text-style">BOOKING</h5>
             </Nav.Link>
-
-         
-           
-           
           </Navbar.Collapse>
         </Container>
       </Navbar>

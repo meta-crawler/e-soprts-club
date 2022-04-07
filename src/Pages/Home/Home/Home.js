@@ -1,5 +1,6 @@
 import React from "react";
 import ControledSlider from "../../ControledSlider/ControledSlider";
+import NextMathTimer from "../../NextMathTimer/NextMathTimer";
 import Banner from "../Banner/Banner";
 import Counter from "../Counter/Counter";
 import Fans from "../Fans/Fans";
@@ -15,7 +16,10 @@ const Home = () => {
     <div>
       <Banner />
       <Sponsored />
+      <NextMathTimer></NextMathTimer>
+
       <Statistics />
+      
       <ControledSlider />
       <Nextmatch />
       <OurTeam />
