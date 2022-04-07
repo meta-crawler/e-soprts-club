@@ -7,7 +7,7 @@
     background-color: #0c0116 ;
 }
 .form-start{
-    position: relative;
+    /* position: relative; */
     padding: 60px 15px;
     width: 270px;
     height: 350px;
@@ -17,11 +17,11 @@
 
 }
 .login-inner{
-    position: absolute;
+    /* position: absolute; */
     height: 98%;
     width: 98%;
-    top: 50%;
-    left: 50%;
+    /* top: 50%; */
+    /* left: 50%; */
     background: #0c0116 ;
     transform: translate(-50%, -50%);
 }

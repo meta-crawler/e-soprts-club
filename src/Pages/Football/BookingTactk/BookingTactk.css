@@ -1,0 +1,17 @@
+.BookingPart{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
+    margin: 100px 0px;
+    box-shadow: 0px 1px 10px 3px #000000;
+}
+
+
+.Text{
+    font-size: 20px;
+}
+
+
+.Text h1{
+    width: 610px;
+}

@@ -16,10 +16,16 @@ import Navigation from "./Pages/Shared/Navigation/Navigation";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import ContactUs from "./Pages/Home/ContactUs/ContactUs";
 
+import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
+import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
+// import Nextmatch from './Pages/Nextmatch/Nextmatch';
+
+
 
 function App() {
   return (
     <div>
+      <AuthProvider>
       <Router>
         
         <Navigation />
@@ -34,10 +40,11 @@ function App() {
           <Route path="/event-register" element={<EventRegister />} />
 
           <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
-
+          <Route path="/singleProduct/:id" element={<SingleProduct/>} />
         </Routes>
         <Footer />
       </Router>
+      </AuthProvider>
     </div>
   );
 }
