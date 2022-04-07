@@ -20,7 +20,7 @@
     transform: translate(-50%, -50%);
     margin: 0;
     width: 80px;
-    background: #ffb400;
+    background: #E40046;
     position: relative;
     top: 0;
     left: 50%;
@@ -40,7 +40,7 @@
     width: 100%;
     height: 15px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
-    background: #ffb400;
+    background: #E40046;
     transition: 0.3s;
 }
 .player-name{

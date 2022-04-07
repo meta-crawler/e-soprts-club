@@ -10,8 +10,15 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
+
+
+
+import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
+import ContactUs from "./Pages/Home/ContactUs/ContactUs";
+
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
+
 
 
 function App() {
@@ -26,8 +33,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/booking" element={<Booking />} />
+
+
+          <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
+
+
           <Route path="/event-register" element={<EventRegister />} />
+
         </Routes>
         <Footer />
       </Router>
