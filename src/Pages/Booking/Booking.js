@@ -32,7 +32,7 @@ const Booking = () => {
     <div>
       <div className="follow-us container">
         <div className="follow-us-box">
-          <span className="me-2">FOLLOW US:</span>
+          
           <FontAwesomeIcon className="facebook-icon me-1" icon={faFacebookF} />
           <FontAwesomeIcon className="twitter-icon me-1" icon={faTwitter} />
           <FontAwesomeIcon
@@ -119,7 +119,7 @@ const Booking = () => {
             </Form.Group>
             <Form.Group className="mb-3 input-box">
               <Form.Label className="mb-0"></Form.Label>
-              <Button className="fw-bold w-100" variant="warning" type="submit">
+              <Button style={{ background: "#e40046" }} className="fw-bold w-100"  type="submit">
                 SUBMIT
               </Button>
             </Form.Group>
@@ -132,12 +132,12 @@ const Booking = () => {
             <div className="col-md-2 text-center">
               <p>Next Match</p>
               <h1
-                style={{ fontSize: "5rem" }}
-                className="text-warning fw-bold my-0"
+                style={{ fontSize: "5rem",  }}
+                className="fw-bold my-0 text-warning" 
               >
-                26
+                25
               </h1>
-              <p>December 2022 </p>
+              <p>May 2022 </p>
             </div>
             <div className="col-md-8 next-match-info-sec">
               <h4 className="text-uppercase">

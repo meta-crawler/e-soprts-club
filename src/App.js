@@ -17,6 +17,7 @@ import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import ContactUs from "./Pages/Home/ContactUs/ContactUs";
 
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
+import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
 
@@ -26,6 +27,7 @@ function App() {
     <div>
       <AuthProvider>
       <Router>
+        
         <Navigation />
         <Routes>
           <Route path="/footballHome" element={<FootBallHome />} />
@@ -35,13 +37,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/booking" element={<Booking />} />
-
-
-          <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
-
-
           <Route path="/event-register" element={<EventRegister />} />
 
+          <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
+          <Route path="/singleProduct/:id" element={<SingleProduct/>} />
         </Routes>
         <Footer />
       </Router>

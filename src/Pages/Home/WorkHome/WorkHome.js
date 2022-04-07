@@ -9,12 +9,14 @@ import {
     faBasketball,
     faVolleyballBall
   } from "@fortawesome/free-solid-svg-icons";
+import { Container } from 'react-bootstrap';
 
 
 
 
 const WorkHome = () => {
     return (
+        <Container>
         <div className='WorkHome'>
            
             <h1>New Responsive  Gaming Category Development for Desktop &amp; Mobile Devices</h1>
@@ -81,6 +83,7 @@ const WorkHome = () => {
         </div>
 
         </div>
+        </Container>
     );
 };
 

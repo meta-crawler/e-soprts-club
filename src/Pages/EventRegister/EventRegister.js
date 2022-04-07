@@ -31,7 +31,7 @@ const EventRegister = () => {
     <div>
       <div className="follow-us container">
         <div className="follow-us-box">
-          <span className="me-2">FOLLOW US:</span>
+          <span >FOLLOW US:</span>
           <FontAwesomeIcon className="facebook-icon me-1" icon={faFacebookF} />
           <FontAwesomeIcon className="twitter-icon me-1" icon={faTwitter} />
           <FontAwesomeIcon
@@ -166,7 +166,7 @@ const EventRegister = () => {
 
             <Form.Group className="mb-3 input-box">
               <Form.Label className="mb-0"></Form.Label>
-              <Button className="fw-bold w-100" variant="warning" type="submit">
+              <Button className="fw-bold w-100" style={{ background: "#e40046" }} type="submit">
                 SUBMIT
               </Button>
             </Form.Group>
@@ -182,9 +182,9 @@ const EventRegister = () => {
                 style={{ fontSize: "5rem" }}
                 className="text-warning fw-bold my-0"
               >
-                26
+                25
               </h1>
-              <p>December 2022 </p>
+              <p>May 2022 </p>
             </div>
             <div className="col-md-8 next-match-info-sec">
               <h4 className="text-uppercase">

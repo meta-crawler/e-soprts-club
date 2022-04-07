@@ -1,4 +1,4 @@
-import { faRegistered, faTicket } from "@fortawesome/free-solid-svg-icons";
+import { faRegistered, faTicket, faPhone, faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Container, Row } from "react-bootstrap";
@@ -10,8 +10,11 @@ const TopNavbar = () => {
       <Container>
         <Row className="top-navbar">
           <div className="col-md-6">
-            <span className="me-2">Phone: +8801648308424</span>
-            <span>Email: dev.abdurrahman01@gmail.com</span>
+            <div className="div">
+            <FontAwesomeIcon  style={{ color: "#e40046", fontSize: "20px", marginRight: "10px", marginTop: "10px" }} icon={faPhone} />+8801648308424
+            <FontAwesomeIcon style={{ color: "#e40046", fontSize: "20px",  marginLeft: "20px", marginRight: "10px", marginTop: "10px" }} icon={faMailBulk} /> dev.abdurrahman01@gmail.com
+
+            </div>
           </div>
           <div className="col-md-6 text-end">
             <Link to="/booking">

@@ -15,10 +15,11 @@
     margin-bottom: 30px;
 }
 .footer-li{
-    margin: 10px
+    margin: 10px;
+    transition: linear .3s;
 }
 .footer-li:hover{
-    color: gold;
+    color: #e40046;
 }
 .footer-cart{
     display: flex;
@@ -28,9 +29,10 @@
 }
 .news-des{
     font-weight: 600;
+    transition: linear .3s;
 }
 .news-des:hover{
-    color: gold;
+    color: #e40046;
     cursor: pointer;
 }
 .news-date{
@@ -44,9 +46,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    transition: linear .3s;
 }
 .footer-appmain:hover{
-    background-color: gold;
+    background-color: #e40046;
 }
 .app-buy{
     font-weight: 300;

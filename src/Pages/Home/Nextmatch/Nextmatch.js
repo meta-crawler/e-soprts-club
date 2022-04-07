@@ -1,10 +1,11 @@
 import React from 'react';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Button, Carousel, Col, Container, Row } from 'react-bootstrap';
 import img1 from '../../../Images/next match/team-4-92x98.png'
 import img2 from '../../../Images/next match/team-6-79x98.png'
 import blueimg from '../../../Images/buleimg.jpg'
 import twitter from '../../../Images/twitter.jpg'
 import './Nextmatch.css'
+import { Link } from 'react-router-dom';
 
 const Nextmatch = () => {
     return (
@@ -28,12 +29,15 @@ const Nextmatch = () => {
                 <div>
                     <h5 className='team-name'>BLUEBIRDS</h5>
                     <img src={img2} alt="" />
+                    
 
                 </div>
+                
             </div>
        </div>
-            <h4 className='date-style'>25 Sep, 2021</h4>
-            <h6 className='text-style'>Kensingtion</h6>
+            <h4 className='date-style'>25 May, 2022</h4>
+            <Link to="/booking">
+            <Button style={{background: "#E40046", padding: "10px", marginLeft: "265px", marginTop: "20px", border: '0px'}}>Booking</Button></Link>
         </div>
     </Col>
     <Col>
