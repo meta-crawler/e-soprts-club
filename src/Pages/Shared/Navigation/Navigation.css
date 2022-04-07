@@ -4,11 +4,14 @@
 }
 .link-style:hover{
     color: white;
-    background-color: #00a8ff;  
+    /* background-color: #00a8ff;   */
     
 }
 .text-style{
     color: whitesmoke;
+}
+.text-style:hover{
+    color: #0d6efd;
 }
 
 .info-bar{

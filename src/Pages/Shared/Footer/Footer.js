@@ -1,175 +1,186 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import './Footer.css';
+import { Col, Container, Row } from 'react-bootstrap';
+import footerimg1 from '../../../Images/footer img/gallery-3-90x65.jpg';
+import footerimg2 from '../../../Images/footer img/post-1-90x65.jpg';
+import footerimg3 from '../../../Images/footer img/video-post-90x65.jpg';
+
+  import {
+    faAppStore,
+    faApple,
+    faAmazon,
+    faPaypal,
+    faWindows,
+    faSteam,
+    faGooglePlay,
+  } from "@fortawesome/free-brands-svg-icons";
+  import {
+    faFacebookF,
+    faGooglePlusG,
+    faTwitter,
+    faWhatsapp,
+  } from "@fortawesome/free-brands-svg-icons";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import  './Footer.css';
+import Footericon from './Footericon/Footericon';
 
 const Footer = () => {
     return (
-        <div className="text-white" style={{ backgroundColor: '#242F3D', marginTop: "100px" }}>
-            <div class="text-white">
-
-                <Container
-                    class="text-center text-lg-start text-white text-decoration-none text-start"
-
-                 
-
-                >
-
-                    <section
-                        class="d-flex justify-content-between p-4 text-white"
-                       
-
-
-                    >
-
-                        <div class="me-5">
-                            <span>Get connected with us on social networks:</span>
-                        </div>
-
-                        <div>
-                            <a href="" class="text-white me-4">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="" class="text-white me-4">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="text-white me-4">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="text-white me-4">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="" class="text-white me-4">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="text-white me-4">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-
-                    </section>
-                    <section class="">
-                        <div class="mx-3 text-center text-md-start mt-5">
-
-                            <div class="row mt-3 text-white">
-
-                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                                    <h6 class="text-uppercase fw-bold">   ABOUT
-                                    </h6>
-                                    <hr
-                                        class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }}
-
-                                    />
-                                    <p>
-                                        Bicycle rights heirloom poutine twee distillery kale chips. Thundercats pok pok seitan waistcoat whatever yr. Squid cornhole iPhone umami thundercats, shabby chic pinterest crucifix kogi irony. Chambray lyft flannel pok pok.
-                                    </p>
-                                </div>
-
-                                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 text-white">
-
-                                    <h6 class="text-uppercase fw-bold">                                CONTACT INFO
-                                    </h6>
-
-
-                                    <hr
-                                        class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }}
-
-                                    />
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start">Call-center: 1 (323) 938-5798
-                                        </li>
-                                    </p>
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start">Sales: 1 (888) 637-7262
-                                        </li>
-                                    </p>
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start">Email: info@styleixthemes.com
-                                        </li>
-                                    </p>
-
-                                </div>
-                                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-
-                                    <h6 class="text-uppercase fw-bold">
-                                        QUICK LINKS
-
-                                    </h6>
-                                    <hr
-                                        class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style={{ width: '60px',  height: '2px' }}
-
-                                    />
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start">
-                                            About Club
-
-                                        </li>
-                                    </p>
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start"> Arena
-                                        </li>
-                                    </p>
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start">
-                                            Our history
-
-                                        </li>
-                                    </p>
-                                    <p>
-                                        <li style={{ fontSize: "16px" }} class="text-white text-decoration-none text-start">
-                                            Shortcodes
-
-                                        </li>
-                                    </p>
-                                </div>
+        <div >
+            <Footericon></Footericon>
+        
 
 
 
-                                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-white">
-
-                                    <h6 class="text-uppercase fw-bold">Information</h6>
-                                    <hr
-                                        class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style={{ width: '60px',  height: '2px' }}
-
-                                    />
-                                    <p>  FAQ
-                                    </p>
-                                    <p>  News
-                                    </p>
-                                    <p> Price table
-                                    </p>
-                                    <p> Shop
-                                    </p>
-                                    <p>  Trophy room
-
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </section>
-
-                    <div
-                        class="text-center p-3"
-                        style={{ backgroundColor: (0, 0, 0, 0.2) }}
-
-                    >
-                       Copyright (c) 2020 Splash.
+            <div className='main-footer'>
+            <Container >
+  
+  <Row >
+    <Col style={{marginTop:'30px'}}>
+    <h1 className='footer-title'>ABOUT <span style={{color:'gold'}} >US</span></h1>
+    <p style={{marginBottom:'20px'}}>Amet nisl purus in mollis nunc sed id. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Volutpat a tincidunt vitae semper pellentesque diam volutpat.</p>
+    <div className='footer-nav'>
+        <div >
+            <li className='footer-li'>Home</li>
+            <li className='footer-li'>blog</li>
+            <li className='footer-li'>team</li>
+            <li className='footer-li'>eSports</li>
+        </div>
+        <div>
+            <li className='footer-li' >Game</li>
+            <li className='footer-li'>About</li>
+            <li className='footer-li'>coumunity</li>
+            <li className='footer-li'>Contact</li>
+        </div>
+    </div>
+    </Col>
 
 
+    <Col style={{marginTop:'30px'}}><h1 className='footer-title'>LATEST <span style={{color:'gold'}} >NEWS</span></h1>
+        <div>
+            <div className='footer-cart'>
+                <div>
+                    <img src={footerimg1} alt="" />
+                </div>
+                <div style={{marginRight:'140px', paddingTop:'10px'}}>
+                    <p className='news-des'>About Space and World</p>
+                    <small className='news-date'>January 2, 2018</small>
+                </div>
+            </div>
+       
+      
+            <div className='footer-cart'>
+                <div>
+                    <img src={footerimg2} alt="" />
+                </div>
+                <div style={{marginRight:'140px', paddingTop:'10px'}}>
+                    <p className='news-des'>New Trailer is Released!</p>
+                    <small className='news-date'>January 2, 2018</small>
+                </div>
+            </div>
+        
+            <div className='footer-cart'>
+                <div>
+                    <img src={footerimg3} alt="" />
+                </div>
+                <div style={{marginRight:'140px', paddingTop:'10px'}}>
+                    <p className='news-des'>Price List of the Games</p>
+                    <small className='news-date'>January 2, 2018</small>
+                </div>
+            </div>
+        </div>
+    </Col>
+    
 
+    <Col style={{marginTop:'30px'}}>
+    <h1 className='footer-title'> APPS <span style={{color:'gold'}} >& PLATFORMS
+    </span></h1>
+
+        <div className='footer-news-main'>
+          <div>
+            <div className='footer-appmain'>
+                <div className='footer-app'>
+                    <div> <FontAwesomeIcon className="footer-icon" icon={faApple} />
                     </div>
+                    <div> 
+                        <small className='app-buy'>Buy now vai</small> <br />
+                        <strong>Apple Store</strong>
+                    </div>
+                </div>
+               
+            </div>
+            <div className='footer-appmain'>
+                <div className='footer-app'>
+                    <div> <FontAwesomeIcon className="footer-icon" icon={faSteam} />
+                    </div>
+                    <div> 
+                        <small className='app-buy'>Buy now vai</small> <br />
+                        <strong>Steam</strong>
+                    </div>
+                </div>
+               
+            </div>
+            <div className='footer-appmain'>
+                <div className='footer-app'>
+                    <div> <FontAwesomeIcon className="footer-icon" icon={faAmazon} />
+                    </div>
+                    <div> 
+                        <small className='app-buy'>Buy now vai</small> <br />
+                        <strong>Amazon</strong>
+                    </div>
+                </div>
+               
+            </div>
+          </div>
 
-                </Container>
 
+
+
+
+            <div>
+            <div className='footer-appmain'>
+                <div className='footer-app'>
+                    <div> <FontAwesomeIcon className="footer-icon" icon={faGooglePlay} />
+                    </div>
+                    <div> 
+                        <small className='app-buy'>Buy now vai</small> <br />
+                        <strong>Google Play </strong>
+                    </div>
+                </div>
+               
+            </div>
+            <div className='footer-appmain'>
+                <div className='footer-app'>
+                    <div> <FontAwesomeIcon className="footer-icon" icon={faWindows} />
+                    </div>
+                    <div> 
+                        <small className='app-buy'>Download vai</small> <br />
+                        <strong>WinStore</strong>
+                    </div>
+                </div>
+               
+            </div>
+            <div className='footer-appmain'>
+                <div className='footer-app'>
+                    <div> <FontAwesomeIcon className="footer-icon" icon={faPaypal} />
+                    </div>
+                    <div> 
+                        <small className='app-buy'>Download vai</small> <br />
+                        <strong>PayPal</strong>
+                    </div>
+                </div>
+               
+            </div>
             </div>
         </div>
 
+
+
+    </Col>
+  </Row>
+</Container>
+        </div>
+        </div>
     );
 };
 
