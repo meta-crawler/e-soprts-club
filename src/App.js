@@ -10,10 +10,14 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
+import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
+// import Nextmatch from './Pages/Nextmatch/Nextmatch';
+
 
 function App() {
   return (
     <div>
+      <AuthProvider>
       <Router>
         <Navigation />
         <Routes>
@@ -27,6 +31,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+      </AuthProvider>
     </div>
   );
 }

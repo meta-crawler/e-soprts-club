@@ -1,52 +1,43 @@
-import React from "react";
-import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import cartlogo from "../../../Images/download.png";
-import logo from "../../../Images/Untitled-1.png agin.png";
-import TopNavbar from "../TopNavbar/TopNavbar";
-import "./Navigation.css";
+import React from 'react';
+import { Container, Nav, Navbar, NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import logo from '../../../Images/Untitled-1.png agin.png'
+import cartlogo from '../../../Images/download.png'
+import './Navigation.css'
+import useAuth from '../../../Hook/UseAuth';
+// import cartlogo from "../../../Images/download.png";
+// import logo from "../../../Images/Untitled-1.png agin.png";
+
 
 const Navigation = () => {
-  return (
-    <div>
-      <TopNavbar />
-      <Navbar
-        bg="dark"
-        variant="dark"
-        sticky="top"
-        collapseOnSelect
-        expand="lg"
-      >
-        <Container>
-          <NavLink to="/home">
-            <img width="75px" src={logo} alt="" />{" "}
-          </NavLink>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Nav.Link className="link-style ms-auto" as={Link} to="/home">
-              <h5 className="text-style">ABOUT</h5>
-            </Nav.Link>
+  const {user,logOut} = useAuth()
 
-            <Nav.Link className="link-style" as={Link} to="/">
-              <h5 className="text-style">PAGES</h5>
-            </Nav.Link>
-            <Nav.Link className="link-style" as={Link} to="/">
-              <h5 className="text-style">SPORTSPRESS</h5>
-            </Nav.Link>
-            <Nav.Link className="link-style" as={Link} to="/">
-              <h5 className="text-style">NEWS</h5>
-            </Nav.Link>
-            {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SHOP</h5></Nav.Link> */}
-            {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>DONATIONS</h5></Nav.Link> */}
-            <Nav.Link className="link-style" as={Link} to="/footballHome">
-              <h5 className="text-style">Football</h5>
-            </Nav.Link>
-            <Nav.Link className="link-style" as={Link} to="/login">
-              <h5 className="text-style">Login</h5>
-            </Nav.Link>
-            <Nav.Link className="link-style cart-button" as={Link} to="/cart">
-              <img src={cartlogo} width="50px" alt="" />{" "}
-            </Nav.Link>
+
+    return (
+        <div>
+   <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
+      <Container>
+        <NavLink to="/home"><img width="75px" src={logo} alt="" />  </NavLink>
+        <Navbar.Toggle />
+        <Navbar.Collapse className='justify-content-end'>
+
+          <Nav.Link className='link-style ms-auto' as={Link} to="/home"><h5 className='text-style' >ABOUT</h5></Nav.Link>
+          
+          <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>PAGES</h5></Nav.Link>
+          <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SPORTSPRESS</h5></Nav.Link>
+          <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>NEWS</h5></Nav.Link>
+          {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SHOP</h5></Nav.Link> */}
+          {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>DONATIONS</h5></Nav.Link> */}
+          <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>CONTACTS</h5></Nav.Link>
+       { user?.email ? 
+      <h5 onClick={logOut} style={{cursor:'pointer'}} className='text-style'>Logout</h5>
+       : 
+        <Nav.Link className='link-style' as={Link} to="/login"><h5 className='text-style'>Login</h5></Nav.Link>}
+         
+          <Nav.Link className='link-style' as={Link} to="/footballHome"><h5 className='text-style'>Football</h5></Nav.Link>
+         
+          <Nav.Link className='link-style cart-button' as={Link} to="/cart"><img src={cartlogo} width="50px" alt="" /> </Nav.Link>
+          
 
             <Nav.Link className="link-style" as={Link} to="/booking">
               <h5 className="text-style">BOOKING</h5>
