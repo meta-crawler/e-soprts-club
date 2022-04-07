@@ -5,12 +5,21 @@ import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import useAuth from '../../Hook/UseAuth';
 import img from '../../Images/ce72f6 (1).jpg'
+import {
+    faFacebookF,
+    faGooglePlusG,
+    faTwitter,
+    faWhatsapp,
+    faGoogle
+  } from "@fortawesome/free-brands-svg-icons";
+  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 import './Login.css'
 const Login = () => {
 
     const [loginFromData , setLoginFromData] = useState()
-    const { user,loginUser,authError ,isLoading} = useAuth()
+    const { user,loginUser,authError,googleSignIn ,isLoading} = useAuth()
 
     const handleOnBlur = e => {
         const field = e.target.name
@@ -27,7 +36,9 @@ const Login = () => {
         loginUser(loginFromData.email, loginFromData.password)
         e.preventDefault()
     }
-
+    const handleGoogleSingin= () => {
+        googleSignIn()
+    }
 
 
     return (
@@ -78,12 +89,18 @@ const Login = () => {
                         <Link as={Link} to='/register' style={{
                             textDecration:'none',color:'#d7a3d7', marginTop:'20px'
                         }} >Please Register</Link>
+                        
                         <button className='submit-btn'>Submit</button>
+                        <p className='or-style' >-------------or------------</p>
+                        <h2 onClick={handleGoogleSingin}><FontAwesomeIcon className="login-google" icon={faGoogle} /></h2>
+
+
                     </div>
 
 
                 </div>
             </form>
+
             {isLoading &&   <Spinner  animation="border" variant="primary" />}
             {/* {user?.email && <Alert>create user successfully </Alert> } */}
             {authError && <Alert>{authError}</Alert> }

@@ -58,7 +58,7 @@
     padding: 25px;
 }
 .login-inner .user-text{
-    display: block;
+    /* display: block; */
     padding: 12px 15px;
     width: 400px !important;
     /* left: 50%; */
@@ -155,4 +155,21 @@
         bottom: -48%;
         right: -48%;
     }
+}
+.or-style{
+    font-size: 20px;
+    text-align: center;
+    color:aqua ;
+}
+.login-google{
+    font-size: 50px;
+    text-align: center;
+    background-color: #c907c9;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
 }

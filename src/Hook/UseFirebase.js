@@ -5,7 +5,7 @@ import initializeFirebase from "../Pages/Login/Firebase/firebase.init";
 initializeFirebase()
 const useFirebase = () => {
     const auth = getAuth()
-    const provider = new GoogleAuthProvider()
+    const googleProvider = new GoogleAuthProvider()
 
     const [ user, setUser ] = useState({})
     const [ modal, setModal ] = useState(false)
@@ -27,16 +27,17 @@ const useFirebase = () => {
         return () => unsubscribe;
     },[])
 
-
+// google function 
     const googleSignIn = () =>{
-        signInWithPopup(auth,provider)
+        setIsLoading(true)
+        signInWithPopup(auth,googleProvider)
         .then( result =>{
             setUser(result.user)
             // userDatabase(result.user.email, result.user.displayName, 'PUT')           
         })
         .catch( error =>{
             setAuthError(error.message)
-        })
+        }).finally(() => setIsLoading(false));
     }
 
     // register function

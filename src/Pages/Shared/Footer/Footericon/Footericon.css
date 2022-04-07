@@ -1,0 +1,30 @@
+.fonticon-style{
+    font-size: 50px;
+    color: gold;
+    
+    
+}
+.fonticon-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: whitesmoke;
+    margin-top: 50px;
+    
+}
+.fonticon-info{
+    align-items: center;
+    justify-content: center;
+
+}
+.footericon-title{
+    color: black;
+    font-size: 20px;
+}
+.footericon-title:hover{
+    color: gold;
+}

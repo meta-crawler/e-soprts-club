@@ -101,19 +101,21 @@ const Register = () => {
                          label='password'
                          onBlur={handleOnBlur}
                          required/>
+                          <Link as={Link} to='/login' style={{
+                            textDecration:'none',color:'#d7a3d7', marginTop:'20px'
+                        }} >All ready Register!</Link>
                         <button className='submit-btn'>Submit</button>
                     </div>
-                    <Link as={Link} to='/login' style={{
-                            textDecration:'none',color:'#d7a3d7', marginTop:'20px'
-                        }} >Please Register</Link>
+
                                    
 
                 </div>
+                <NavLink as={Link} to='/login'  >Already Registered ?</NavLink>
             </form>}
             {isLoading &&   <Spinner  animation="border" variant="primary" />}
             {/* {user?.email && <Alert>create user successfully </Alert> } */}
             {authError && <Alert>{authError}</Alert> }
-            <NavLink as={Link} to='/login'  >Already Registered ?</NavLink>
+            
             </div>
         </div>
     );
