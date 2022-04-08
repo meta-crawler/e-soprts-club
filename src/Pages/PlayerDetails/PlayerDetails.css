@@ -1,0 +1,45 @@
+.biography{
+    background-color: white;
+    color: black;
+    
+}
+.style-playerDetails{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.playerHeading{
+    font-size: 22px;
+    font-weight: 600;
+    color: #18181f;
+}
+.style-playerDetails p{
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: #18181f;
+}
+/* table CSS  styly */
+.style-playerDetails table {
+    width: 100%;
+    border-spacing: 2px;
+    border-collapse: separate;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.style-playerDetails table tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+.style-playerDetails table tr:nth-child(even) {
+    color: #949494;
+}
+.style-playerDetails table tr:nth-child(odd) {
+    color: #949494;
+}
+.style-playerDetails table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.style-playerDetails table tr td {
+    padding: 15px 12px;
+}
