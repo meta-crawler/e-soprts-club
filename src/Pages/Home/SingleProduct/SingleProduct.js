@@ -60,7 +60,29 @@ const SingleProduct = () => {
                   <form>
                   <div className="d-flex">
                     <input className="cart-style" size="1" min="1" value="1"/>
-                    <button className="cart-btn">Cart</button>
+                    <button type="button" class="cart-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Cart
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content modal-style">
+                        <div class="modal-header-style">
+                          <h5 class="modal-titel1 mb-3">Buy This Product</h5>
+                        </div>
+                        <div class="modal-body">
+                          <div className="text-center text-white">
+                            <img className="w-25 rounded-circle" src={singleProducts?.img} alt="" />
+                            <h3 className="modal-pd-name m">{singleProducts?.name}</h3>
+                            <h5 className="modal-pd-name">{singleProducts?.price}</h5>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="modal-btn">Buy Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   </div>
                   </form>
                 </div>

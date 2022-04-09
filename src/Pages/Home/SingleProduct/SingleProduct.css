@@ -55,6 +55,16 @@
    font-size: 18px;
    font-weight: 600;
 }
+.modal-btn{
+   padding: 8px 26px;
+   background: #e40046;
+   border:none;
+   color: #fff;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 600;
+   border-radius: 25px;
+}
 .des-btn{
    background: #e40046;
    padding: 15px 20px;
@@ -86,4 +96,20 @@
 .product-dis2{
    margin-left: 3%;
    font-family: 'Open Sans', sans-serif;
+}
+.modal-titel1{
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+}
+.modal-style{
+   background-color: rgb(56, 65, 78);
+}
+.modal-pd-name{
+   font-family: 'Montserrat', sans-serif;
+}
+.modal-header-style{
+   text-align: center;
+   margin-top: 20px;
+   margin-bottom: 5px;
+   border-bottom: 1px solid #fff;
 }
