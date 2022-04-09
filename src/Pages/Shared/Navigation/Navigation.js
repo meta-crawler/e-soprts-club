@@ -25,7 +25,13 @@ const Navigation = () => {
           
 
           <NavDropdown style={{fontSize: "22px", marginBottom: "7px", fontWeight: "600"}} title="PAGES" id="basic-nav-dropdown">
-          <NavDropdown.Item as={Link} to="/footballHome">Football</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/football">Football</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/cricket">Cricket</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/hockeyPuck">Hockey Puck</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/tableTennis">Table Tennis</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/baseBall">Base Ball</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/basketBall">Basket Ball</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/volleyBall">Volley Ball</NavDropdown.Item>
           
           
         </NavDropdown>

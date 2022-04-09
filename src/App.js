@@ -18,6 +18,12 @@ import ContactUs from "./Pages/Home/ContactUs/ContactUs";
 
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
 import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
+import CricketHome from "./Pages/Cricket/CricketHome/CricketHome";
+import HockeyPuckHome from "./Pages/HockeyPuck/HockeyPuckHome/HockeyPuckHome";
+import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome";
+import BaseBallHome from "./Pages/BaseBall/BaseBallHome/BaseBallHome";
+import BasketBallHome from "./Pages/BasketBall/BasketBallHome/BasketBallHome";
+import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
 
@@ -30,7 +36,16 @@ function App() {
         
         <Navigation />
         <Routes>
-          <Route path="/footballHome" element={<FootBallHome />} />
+          <Route path="/football" element={<FootBallHome />} />
+          <Route path="/cricket" element={<CricketHome />} />
+          <Route path="/hockeyPuck" element={<HockeyPuckHome />} />
+          <Route path="/tableTennis" element={<TableTennisHome />} />
+          <Route path="/baseBall" element={<BaseBallHome />} />
+          <Route path="/basketBall" element={<BasketBallHome />} />
+          <Route path="/volleyBall" element={<VolleyBallHome />} />
+
+
+
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
