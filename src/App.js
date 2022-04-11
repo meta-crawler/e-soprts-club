@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import BaseBallHome from "./Pages/BaseBall/BaseBallHome/BaseBallHome";
@@ -20,7 +21,6 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
 import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
-
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
 // test
@@ -51,6 +51,10 @@ function App() {
             <Route path="/playerDetails/:id" element={<PlayerDetails />} />
             <Route path="/singleProduct/:id" element={<SingleProduct />} />
           </Routes>
+          <MessengerCustomerChat
+            pageId="104705585550276"
+            appId="2184967135000690"
+          />
           <Footer />
         </Router>
       </AuthProvider>
