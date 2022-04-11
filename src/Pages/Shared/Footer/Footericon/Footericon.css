@@ -16,6 +16,15 @@
     margin-top: 50px;
     
 }
+@media only screen and (max-width:688px) {
+  .footericon-title{
+      display: none;
+  }
+  .fonticon-style{
+      font-size: 20px;
+  }
+     
+   }
 .fonticon-info{
     align-items: center;
     justify-content: center;

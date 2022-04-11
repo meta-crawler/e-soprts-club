@@ -29,8 +29,13 @@ const Navigation = () => {
           {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SHOP</h5></Nav.Link> */}
           {/* <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>DONATIONS</h5></Nav.Link> */}
           <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>CONTACTS</h5></Nav.Link>
+
+
+
        { user?.email ? 
-      <h5 onClick={logOut} style={{cursor:'pointer'}} className='text-style'>Logout</h5>
+      <>
+               {user.displayName}  <h5 onClick={ logOut }>Logout</h5>
+                </>
        : 
         <Nav.Link className='link-style' as={Link} to="/login"><h5 className='text-style'>Login</h5></Nav.Link>}
          

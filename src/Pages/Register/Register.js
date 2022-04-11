@@ -4,11 +4,18 @@ import Typewriter from 'typewriter-effect';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
 import { Alert, Button, Modal, Spinner } from 'react-bootstrap';
+import {
+    
+    faGoogle,
+    faFacebook,
+    faGithub
+  } from "@fortawesome/free-brands-svg-icons";
+  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const Register = () => {
     const [loginFromData , setLoginFromData] = useState()
-    const { user,registerUser,authError ,modal,isLoading, setModal} = useAuth()
+    const { user,registerUser,authError ,modal,isLoading, googleSignIn ,handleFacebookSingIn, githubsignIn ,setModal} = useAuth()
 
     const handleOnBlur = e => {
         const field = e.target.name
@@ -21,104 +28,109 @@ const Register = () => {
 
     }
 
-    const handleRegisterSubmie = e => {
+    const handleRegisterSubmit = e => {
+        console.log('test');
         if(loginFromData.password !== loginFromData.password2){
             alert('your password did not match')
         }
-        registerUser(loginFromData.email, loginFromData.password)
+        registerUser(loginFromData.email, loginFromData.password, loginFromData.name)
         e.preventDefault()
+    } 
+    const handleGoogleSingin= () => {
+        googleSignIn()
+    }
+    const facebookLogin = () => {
+        handleFacebookSingIn()
+    }
+    const handleGithub = () => {
+        githubsignIn()
+
     }
     return (
-        <div>
-               <div className='main-from'>
-               <Modal show={modal}>
-        <Modal.Header>
-          <Modal.Title style={{color:'black'}}>Registration Successful !</Modal.Title>
-        </Modal.Header>
-        <Modal.Body style={{color:'black'}}>Hello Mr./Ms. {user?.displayName} You have successfully registered !</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={ ()=>setModal(false)}>
-            <Link style={{color:'white',textDecoration:'none'}} to="/">Go To Home</Link>
-          </Button>
-        </Modal.Footer>
-      </Modal>
-            { !isLoading && <form onSubmit={handleRegisterSubmie} action="" className='form-start'>
-                <span className='from-span'></span>
-                <span className='from-span'></span>
-                <span className='from-span'></span>
-                <span className='from-span'></span>
+        <div className='main-section'>
+         <div className='bg-img'></div>
+        <div className='login-main'>
+           {!isLoading && <form onSubmit={handleRegisterSubmit} action="" className='login'>
+            <Typewriter
 
-                <div className='login-inner'>
-                    <h2 className='login-text'><div className='about'>
-                                <div className='autoType'>
-                                    <Typewriter
+                    options={{
+                    strings: [
+                        "Ready to Register",
+                        
+                    ],
 
-                                        options={{
-                                            strings: [
-                                                "Please Register",
-                                               
-                                            ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 20,
+                    }}
+                    />
+           
+               <input 
+               type="text"
+                name="name"
+                 id="name"
+                  placeholder='User name'
+                   className='user-text' 
+                   onBlur={handleOnBlur}
+                   required
+                   
+                   />
+                 <input 
+                     type="email"
+                      name="email" 
+                      id="email" 
+                      label="email"
+                       placeholder='User email' 
+                       className='user-text'
+                       onBlur={handleOnBlur}
+                       required />
 
-                                            autoStart: true,
-                                            loop: true,
-                                            delay: 100,
-                                        }}
-                                    />
-                                </div>
-                               
-                            </div></h2>
-                    <div className='content-style'>
-                        <input 
-                         type="text"
-                          name="name"
-                           id="name"
-                            placeholder='User name'
-                             className='user-text' 
-                             onBlur={handleOnBlur}
-                             required
-                             
-                             />
-                           <input 
-                        type="email"
-                         name="email" 
-                         id="email" 
-                         label="email"
-                          placeholder='User email' 
-                          className='user-text'
-                          onBlur={handleOnBlur}
-                          required />
-                       <input 
-                        type="password" 
-                        name="password"
-                         id=""  placeholder='password' className='user-text' 
-                         label='password'
-                         onBlur={handleOnBlur}
-                         required/>
-                         <input 
-                        type="password" 
-                        name="password2"
-                         id=""  placeholder='password' className='user-text' 
-                         label='password'
-                         onBlur={handleOnBlur}
-                         required/>
-                          <Link as={Link} to='/login' style={{
-                            textDecration:'none',color:'#d7a3d7', marginTop:'20px'
-                        }} >All ready Register!</Link>
-                        <button className='submit-btn'>Submit</button>
-                    </div>
+                 <input 
+                     type="password" 
+                     name="password"
+                      id=""  placeholder='password' className='user-text' 
+                      label='password'
+                      onBlur={handleOnBlur}
+                      required/>
+                 <input 
+                     type="password" 
+                     name="password2"
+                      id=""  placeholder='ReType Your Password' 
+                      className='user-text' 
+                      label='password'
+                      onBlur={handleOnBlur}
+                      required/>
+                      
 
-                                   
-
-                </div>
-                <NavLink as={Link} to='/login'  >Already Registered ?</NavLink>
+                 <input type="submit" className='login-button' value="Register" />
+                 <p>All Ready have a account? </p> 
+                 <NavLink style={{color:'saddlebrown', textDecoration:'none'}} as={Link} to='/login'>please login !</NavLink> <br />
+                <button className='login-icon' onClick={handleGoogleSingin}><FontAwesomeIcon  icon={faGoogle} /> </button>
+                <button className='login-icon' onClick={facebookLogin}><FontAwesomeIcon  icon={faFacebook} /></button>
+                <button className='login-icon' onClick={handleGithub} ><FontAwesomeIcon  icon={faGithub} /></button>
+                
+                
             </form>}
-            {isLoading &&   <Spinner  animation="border" variant="primary" />}
-            {/* {user?.email && <Alert>create user successfully </Alert> } */}
-            {authError && <Alert>{authError}</Alert> }
-            
-            </div>
+            {isLoading &&   <Spinner animation="border" variant="secondary" />}
+            {user?.email && <div class="alert alert-success" role="alert">
+  user create successfully!
+</div>}
+                {authError && [
+  
+  'danger',
+  
+].map((variant, idx) => (
+  <Alert key={idx} variant={variant}>
+    This is a {variant} alert with{' '}
+    {authError}
+  </Alert>
+))}
         </div>
+        
+     </div>
     );
 };
 
 export default Register;
+
+// /*
