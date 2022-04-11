@@ -20,7 +20,7 @@ const Login = () => {
     const [loginFromData , setLoginFromData] = useState()
     const { user,loginUser,authError,googleSignIn ,isLoading,handleFacebookSingIn, githubsignIn} = useAuth()
     const location = useLocation();
-    const navigator = useNavigate();
+    const navigate = useNavigate();
 
     const handleOnBlur = e => {
         const field = e.target.name
@@ -34,11 +34,11 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e => {
-        loginUser(loginFromData.email, loginFromData.password)
+        loginUser(loginFromData.email, loginFromData.password,location,navigate)
         e.preventDefault()
     }
     const handleGoogleSingin= () => {
-        googleSignIn()
+        googleSignIn(location,navigate)
     }
     const facebookLogin = () => {
         handleFacebookSingIn()

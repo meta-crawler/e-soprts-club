@@ -1,14 +1,22 @@
 import React from 'react';
+import ControledSlider from '../../ControledSlider/ControledSlider';
+import CountSlider from '../../CountSlider/CountSlider';
+import NextMathTimer from '../../NextMathTimer/NextMathTimer';
 import Banner from '../Banner/Banner';
+import BookingTactk from '../BookingTactk/BookingTactk';
 import FootBallLeague from '../FootBallLeague/FootBallLeague';
-import FootBallMatch from '../FootBallMatch/FootBallMatch';
+
 
 const FootBallHome = () => {
     return (
         <div>
             <Banner />
-            <FootBallMatch />
+            <NextMathTimer />
+            <BookingTactk />
+            <ControledSlider />
             <FootBallLeague />
+            <CountSlider />
+
             
         </div>
     );

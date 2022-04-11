@@ -17,6 +17,7 @@ const Footericon = () => {
     return (
 
         <div className='fonticon-main' >
+            
             <div className='fonticon-info' >
                 <FontAwesomeIcon className='fonticon-style'  icon={faFacebookF} />
             <h3 className='footericon-title'>FACEBOOK</h3>

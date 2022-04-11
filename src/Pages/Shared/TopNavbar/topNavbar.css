@@ -1,0 +1,22 @@
+.top-navbar span{
+    display: inline-block;
+    font-size: 14px;
+}
+
+
+
+
+
+.top-right-part{
+    color: white;
+    padding: 3px 10px;
+    clip-path: polygon(5% 0, 100% 0%, 95% 99%, 0% 100%);
+}
+.top-right-part:hover{
+    text-decoration: underline;
+}
+@media only screen and (max-width: 992px) {
+    .top-navbar{
+        display: none;
+    }
+}

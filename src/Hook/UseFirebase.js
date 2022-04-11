@@ -71,8 +71,8 @@ const githubsignIn = () => {
             saveUser(user.email, user.displayName, 'PUT');
             setAuthError('');
             // setModal(true)
-            // const destination = location?.state?.from || '/';
-            // navigate(destination);
+            const destination = location?.state?.from || '/';
+            navigate(destination);
 
                       
         })
@@ -82,7 +82,7 @@ const githubsignIn = () => {
     }
 
     // register function
-    const registerUser = ( email,password, name ) =>{
+    const registerUser = ( email,password, name , navigate ) =>{
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password )
         .then((userCredential) => {
@@ -101,6 +101,7 @@ const githubsignIn = () => {
                   setAuthError(error.massage)
                
               });
+              navigate('/');
            
           })
           .catch((error) => {

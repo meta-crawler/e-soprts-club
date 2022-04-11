@@ -1,0 +1,53 @@
+.TableTennisBanner{
+    background: url(../../../Images/TableTennis/215-2150890_table-tennis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    width: 100%;
+}
+
+
+
+
+
+.TableTennisBanner .Shap {
+    width: 500px;
+    height: 550px;
+    background-color: inherit;
+    border: 20px solid #e40046;
+    border-radius: 5px;
+    position: absolute;
+    top: 245px;
+    left: 160px;
+}
+
+
+
+.TableTennisBanner .Text {
+    position: absolute;
+    top: 350px;
+    left: 350px;
+    background: #000000;
+    padding: 50px;
+}
+
+
+.TableTennisBanner .Text h1{
+    width: 700px;
+}
+
+
+
+
+.TableTennisBanner .Text p{
+    width: 500px;
+}
+
+
+
+
+
+.TableTennisBanner .Text button{
+    margin-left: 20px;
+}

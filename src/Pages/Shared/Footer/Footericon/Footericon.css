@@ -1,6 +1,7 @@
 .fonticon-style{
     font-size: 50px;
-    color: gold;
+    color: #e40046;
+    cursor: pointer;
     
     
 }
@@ -14,6 +15,7 @@
     padding-right: 50px;
     background-color: whitesmoke;
     margin-top: 50px;
+   
     
 }
 @media only screen and (max-width:688px) {
@@ -33,7 +35,9 @@
 .footericon-title{
     color: black;
     font-size: 20px;
+    transition: linear .3s;
+    cursor: pointer;
 }
 .footericon-title:hover{
-    color: gold;
+    color: #e40046;
 }

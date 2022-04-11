@@ -36,7 +36,7 @@
 
 
 .Travel .button {
-    background-color: #122c83;
+    background-color: #e40046;
     margin: 50px;
     color: #FFFFFF;
     padding: 15px 40px;
@@ -45,9 +45,9 @@
 }
 
 .Travel .button:hover {
-    color: #ffffff;
+    color: #e40046;
     font-size: 20px;
     font-weight: 700;
     background: none;
-    border: #122c83;
+    border: #e40046;
 }

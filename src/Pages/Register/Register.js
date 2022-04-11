@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Register.css'
 import Typewriter from 'typewriter-effect';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink ,useNavigate } from 'react-router-dom';
 import useAuth from '../../Hook/UseAuth';
 import { Alert, Button, Modal, Spinner } from 'react-bootstrap';
 import {
@@ -15,6 +15,7 @@ import {
 
 const Register = () => {
     const [loginFromData , setLoginFromData] = useState()
+    const navigate = useNavigate()
     const { user,registerUser,authError ,modal,isLoading, googleSignIn ,handleFacebookSingIn, githubsignIn ,setModal} = useAuth()
 
     const handleOnBlur = e => {
@@ -33,7 +34,7 @@ const Register = () => {
         if(loginFromData.password !== loginFromData.password2){
             alert('your password did not match')
         }
-        registerUser(loginFromData.email, loginFromData.password, loginFromData.name)
+        registerUser(loginFromData.email, loginFromData.password, loginFromData.name ,navigate)
         e.preventDefault()
     } 
     const handleGoogleSingin= () => {
