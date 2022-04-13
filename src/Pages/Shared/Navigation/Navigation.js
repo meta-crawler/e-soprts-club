@@ -52,7 +52,7 @@ const Navigation = () => {
          
          
 
-          <Nav.Link className='link-style cart-button' as={Link} to="/cart"><img src={cartlogo} width="50px" alt="" /> </Nav.Link>
+          <Nav.Link className='link-style cart-button' as={Link} to="/dashbord/home"><img src={cartlogo} width="50px" alt="" /> </Nav.Link>
           
 
 

@@ -74,6 +74,8 @@ const SingleProduct = () => {
                             <img className="w-25 rounded-circle" src={singleProducts?.img} alt="" />
                             <h3 className="modal-pd-name m">{singleProducts?.name}</h3>
                             <h5 className="modal-pd-name">{singleProducts?.price}</h5>
+                            <h6 className="modal-pd-name">Category: {singleProducts?.category}</h6>
+                            <h6 className="modal-pd-name">Tags: {singleProducts?.tags}</h6>
                           </div>
                         </div>
                         <div class="modal-footer">

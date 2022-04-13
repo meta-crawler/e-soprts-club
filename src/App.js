@@ -8,14 +8,8 @@ import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
-import Footer from "./Pages/Shared/Footer/Footer";
-import Navigation from "./Pages/Shared/Navigation/Navigation";
-
-
-
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import ContactUs from "./Pages/Home/ContactUs/ContactUs";
-
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
 import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import CricketHome from "./Pages/Cricket/CricketHome/CricketHome";
@@ -24,6 +18,11 @@ import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome
 import BaseBallHome from "./Pages/BaseBall/BaseBallHome/BaseBallHome";
 import BasketBallHome from "./Pages/BasketBall/BasketBallHome/BasketBallHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
+import DashBord from "./Pages/DashBord/DashBord/DashBord";
+import Payment from "./Pages/DashBord/Pay/Payment";
+import Review from "./Pages/DashBord/Review/Review";
+import MyOrders from "./Pages/DashBord/MyOrders/MyOrders";
+import DashBordHome from "./Pages/DashBord/Home/DashBordHome";
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
 
@@ -34,7 +33,7 @@ function App() {
       <AuthProvider>
       <Router>
         
-        <Navigation />
+        
         <Routes>
           <Route path="/football" element={<FootBallHome />} />
           <Route path="/cricket" element={<CricketHome />} />
@@ -53,11 +52,17 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/event-register" element={<EventRegister />} />
-
           <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
           <Route path="/singleProduct/:id" element={<SingleProduct/>} />
+      
+          <Route path="/dashbord" element={<DashBord/>}> 
+          <Route exact path={'/dashbord/myOrder'} element={<MyOrders />} /> 
+          <Route exact path={'/dashbord/home'} element={<DashBordHome />} /> 
+                <Route path={`/dashbord/review`} element={ <Review /> } />
+            <Route path={`/dashbord/pay`} element={<Payment />} />
+          </Route>
+
         </Routes>
-        <Footer />
       </Router>
       </AuthProvider>
     </div>
