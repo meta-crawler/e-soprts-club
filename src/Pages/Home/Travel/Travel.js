@@ -6,7 +6,7 @@ import { Button, Container } from 'react-bootstrap';
 
 const Travel = () => {
     return (
-        <div className='Travel'>
+        <div className='Travel img-fluid'>
             <Container>
                 <h1>TRAVEL WITH THE TEAM
                     TO AN AWAY GAME</h1>

@@ -19,8 +19,8 @@ const WorkHome = () => {
         <Container>
         <div className='WorkHome'>
            
-            <h1>New Responsive  Gaming Category Development for Desktop &amp; Mobile Devices</h1>
-       
+            <h1 className='work-home-title'>New Responsive  Gaming Category Development for Desktop &amp; Mobile Devices</h1>
+
 
             <div className='WorkHomeMain'>
         <div>
