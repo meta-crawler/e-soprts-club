@@ -1,0 +1,22 @@
+.add-form{
+         margin: 40px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         background-color: rgb(56, 65, 78);
+         border-radius: 5px;
+         padding: 10px 20px;
+}
+
+.add-form input{
+         display: block;
+         margin-top: 30px;
+         padding: 15px;
+         border: none;
+         border-radius: 5px;
+         width: 80%;
+         box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+         margin-bottom: 10px;
+         font-family: "Quicksand",sans-serif;
+}
