@@ -1,5 +1,4 @@
 .ContactUs{
-    padding: 100px 0px;
     position: relative;
 }
 
@@ -34,6 +33,7 @@
     color: #ffffff;
     width: 230px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 

@@ -7,9 +7,11 @@ import {
     faTableTennis,
     faBaseball,
     faBasketball,
-    faVolleyballBall
+    faVolleyballBall, 
+    
   } from "@fortawesome/free-solid-svg-icons";
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,25 +25,34 @@ const WorkHome = () => {
 
 
             <div className='WorkHomeMain'>
+
         <div>
+            <Link style={{textDecoration: "none", color: "#000"}} to='/football'>
         <div className="WorkText">
         <div className="WorkShap"></div>
         <FontAwesomeIcon className='icon' icon={faFootball} />
          <h2>Football</h2>
          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
          </div>
+         </Link>
         </div>
+
+
         <div >
+        <Link style={{textDecoration: "none", color: "#000"}} to='/cricket'>
         <div className="WorkText">
         <div className="WorkShap"></div>
         <FontAwesomeIcon className='icon' icon={faHockeyPuck} />
-        <h2>Hockey Puck</h2>
+        <h2>Cricket</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
         </div>
+        </Link>
         </div>
+
 
         
         <div>
+        <Link style={{textDecoration: "none", color: "#000"}} to='/tableTennis'>
         <div className="WorkText">
         <div className="WorkShap"></div>  
        
@@ -49,9 +60,12 @@ const WorkHome = () => {
         <h2>Table Tennis</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
         </div>
+        </Link>
          </div>
 
          <div >
+
+         <Link style={{textDecoration: "none", color: "#000"}} to='/baseBall'>
         <div className="WorkText">
         <div className="WorkShap"></div>  
        
@@ -59,10 +73,12 @@ const WorkHome = () => {
         <h2>Base Ball</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
         </div>
+        </Link>
          </div>
 
 
          <div>
+         <Link style={{textDecoration: "none", color: "#000"}} to='/basketBall'>
         <div className="WorkText"> 
         <div className="WorkShap"></div>
        
@@ -70,16 +86,20 @@ const WorkHome = () => {
         <h2>Basket Ball</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
         </div>
+        </Link>
          </div>
 
          <div>
+         <Link style={{textDecoration: "none", color: "#000"}} to='/volleyBall'>
         <div className="WorkText">  
         <div className="WorkShap"></div>
         <FontAwesomeIcon className='icon' icon={faVolleyballBall} />
         <h2>Volley Ball</h2>
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
         </div>
+         </Link>
          </div>
+         
         </div>
 
         </div>

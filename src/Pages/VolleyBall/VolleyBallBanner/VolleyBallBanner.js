@@ -10,6 +10,11 @@ const VolleyBallBanner = () => {
 
             </div>
             
+            
+<div className="banner">
+    
+</div>
+
             <div className="Text">
             <div className="HoverShap"></div>
                 <h1>Find and Download Free Graphic Resources for Football Banner</h1>

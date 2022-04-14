@@ -6,8 +6,8 @@ const Player = (props) => {
 
     console.log(props.player);
 
-    const {name, img, Position, id} = props.player;
-
+    const {name, img, Position, Nationality, id} = props.player;
+console.log( props.player);
 
 
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Player = (props) => {
             () => {
                 detailsPlayer(id);
             }}>
-            <img src={img} alt="" />
+            <img style={{height: "400px"}} src={img} alt="" />
 
 
             <div className="Head">
@@ -32,7 +32,7 @@ const Player = (props) => {
             </div>
             <div className="Text">
             <h3>{name}</h3>
-            <h5>{Position}</h5>
+            <h5>{Position||Nationality}</h5>
             
             </div>
 

@@ -18,7 +18,7 @@ const BookingTactk = () => {
                             <Link to="/booking" > <Button style={{background: "#E71E68", color: "#FFF", padding: "10px", border: "0px", marginTop: "20px"}}>TICKET BOOKING</Button></Link>
                         </div>
                         <div className="Number">
-                            <h2><span style={{color: "#E71E68", marginTop: "0px", display: "block"}} >25 </span> May 2022</h2>
+                            <h2><span style={{color: "#E71E68", marginTop: "0px", display: "block"}} >25 </span> March 2022</h2>
                         </div>
                 </div>
 

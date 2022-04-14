@@ -13,6 +13,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const EventRegister = () => {
   const [formData, setFormData] = useState({});
@@ -29,6 +30,7 @@ const EventRegister = () => {
   };
   return (
     <div>
+      <Navigation />
       <div className="follow-us container">
         <div className="follow-us-box">
           <span >FOLLOW US:</span>

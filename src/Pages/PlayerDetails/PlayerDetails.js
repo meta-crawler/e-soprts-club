@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import biograpy from "../../Images/player-about3-img.jpg";
+
+import Navigation from '../Shared/Navigation/Navigation';
+=======
 import PlayerDetailsBanner from '../PlayerDetailsBanner/PlayerDetailsBanner';
+
 import './PlayerDetails.css';
 
 const PlayerDetails = () => {
@@ -40,13 +44,22 @@ const PlayerDetails = () => {
   console.log(detailsItam);
 
     return (
+
+      <>
+        <Navigation />
+      <div className='biography container'>
       <div className='biography'>
            <PlayerDetailsBanner></PlayerDetailsBanner>
+
       <div className='row'>
           <div className='col-md-6'>
           <div className='style-playerDetails'>
           <h1 className='playerHeading'>Biography</h1>
-          <p>Thomas Smith is an Argentine professional footballer who plays as a forward and captains both Barcelona and the Argentina national team. Often considered the best player in the world and widely regarded as one of the greatest players of all time, Messi has a record-tying five Ballond Or awards, four of which he won consecutively, and a record six European Golden Shoes.</p>
+          <h2>
+            {detailsItam?.name}
+          </h2>
+
+          <p>{detailsItam?.describe}</p>
           <p>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
           <p>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
           <div>
@@ -54,19 +67,19 @@ const PlayerDetails = () => {
                   <tbody>
                       <tr>
                           <td><strong>Height</strong></td>
-                          <td>6.5'</td>
+                          <td>{detailsItam?.Height}</td>
                       </tr>
                       <tr>
                           <td><strong>Weight</strong></td>
-                          <td>195 LBS</td>
+                          <td>{detailsItam?.Weight}</td>
                       </tr>
                       <tr>
                           <td><strong>Position</strong></td>
-                          <td>Goalkeeper</td>
+                          <td>{detailsItam?.Position}</td>
                       </tr>
                       <tr>
                           <td><strong>Nationality</strong></td>
-                          <td>Bangladesh</td>
+                          <td>{detailsItam?.Nationality}</td>
                       </tr>
                   </tbody>
               </table>
@@ -79,6 +92,7 @@ const PlayerDetails = () => {
           </div>
       </div>
   </div>
+  </>
     );
 };
 
