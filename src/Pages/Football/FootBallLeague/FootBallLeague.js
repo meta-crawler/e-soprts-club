@@ -18,7 +18,7 @@ const FootBallLeague = () => {
             <Row style={{padding: "100px 0px 100px"}}>
     <Col xs={6}>
 
-            <Row>
+          
 
         <div>
             <h1 style={{marginBottom: "100px"}}><span className='color'>FIFA </span>Top  Players <span className='color'>Rankings</span> </h1>
@@ -101,7 +101,7 @@ const FootBallLeague = () => {
 
     <Col  xs={6}>
 
-    <Col  >
+  
 
         <div className='ImageBanner'>
             <img style={{marginTop: '170px', marginBottom: "50px"}} src={banner1} alt="" />
