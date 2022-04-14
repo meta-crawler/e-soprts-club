@@ -19,6 +19,18 @@
     width: 900px;
     margin: 0 auto;
 }
+@media only screen and (max-width:688px) {
+  .WorkHomeMain{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .WorkHome > h1 {
+    color: #ffffff;
+    width: 450px;
+    margin: 0 auto;
+}
+     
+}
 
 
 
@@ -38,6 +50,10 @@
     position: relative;
     background: #FFF;
 }
+
+
+
+
 
 
 .WorkText img {

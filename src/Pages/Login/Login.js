@@ -1,16 +1,15 @@
 import { Alert } from 'bootstrap';
 import React, { useState } from 'react';
 import { Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import useAuth from '../../Hook/UseAuth';
-import img from '../../Images/ce72f6 (1).jpg'
+import img from '../../Images/google.png'
 import {
-    faFacebookF,
-    faGooglePlusG,
-    faTwitter,
-    faWhatsapp,
-    faGoogle
+    
+    faGoogle,
+    faFacebook,
+    faGithub
   } from "@fortawesome/free-brands-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,7 +18,9 @@ import './Login.css'
 const Login = () => {
 
     const [loginFromData , setLoginFromData] = useState()
-    const { user,loginUser,authError,googleSignIn ,isLoading} = useAuth()
+    const { user,loginUser,authError,googleSignIn ,isLoading,handleFacebookSingIn, githubsignIn} = useAuth()
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleOnBlur = e => {
         const field = e.target.name
@@ -32,81 +33,84 @@ const Login = () => {
 
     }
 
-    const handleLoginSubmie = e => {
-        loginUser(loginFromData.email, loginFromData.password)
+    const handleLoginSubmit = e => {
+        loginUser(loginFromData.email, loginFromData.password,location,navigate)
         e.preventDefault()
     }
     const handleGoogleSingin= () => {
-        googleSignIn()
+        googleSignIn(location,navigate)
+    }
+    const facebookLogin = () => {
+        handleFacebookSingIn()
+    }
+    const handleGithub = () => {
+        githubsignIn()
+
     }
 
 
     return (
-        <div className='main-login'>
-            <div className='main-from'>
-            <form action="" onSubmit={handleLoginSubmie}  className='form-start'>
-                <span className='from-span'></span>
-                <span className='from-span'></span>
-                <span className='from-span'></span>
-                <span className='from-span'></span>
+       <div className='main-section'>
+           <div className='bg-img'></div>
+           <div className='login-main'>
+               <form onSubmit={handleLoginSubmit} action="" className='login'>
+               <Typewriter
 
-                <div className='login-inner'>
-                    <h2 className='login-text'> <div className='about'>
-                                <div className='autoType'>
-                                    <Typewriter
+options={{
+    strings: [
+        "Ready to sign in",
+       
+    ],
 
-                                        options={{
-                                            strings: [
-                                                "Please Login",
-                                               
-                                            ],
-
-                                            autoStart: true,
-                                            loop: true,
-                                            delay: 100,
-                                        }}
-                                    />
-                                </div>
-                               
-                            </div></h2>
-                    <div className='content-style'>
-                        <input 
+    autoStart: true,
+    loop: true,
+    delay: 20,
+}}
+/>
+              
+                  {/* <input 
+                  type="text"
+                   name="name"
+                    id="name"
+                     placeholder='User name'
+                      className='user-text' 
+                      onBlur={handleOnBlur}
+                      required
+                      
+                      /> */}
+                      <label   htmlFor="">
+                          
+                    <input 
                         type="email"
                          name="email" 
-                         id="" 
+                         id="email" 
                          label="email"
                           placeholder='User email' 
                           className='user-text'
                           onBlur={handleOnBlur}
+                    
                           required />
-                        <input 
+                          </label>
+
+                    <input 
                         type="password" 
                         name="password"
                          id=""  placeholder='password' className='user-text' 
                          label='password'
                          onBlur={handleOnBlur}
                          required/>
-                        <Link as={Link} to='/register' style={{
-                            textDecration:'none',color:'#d7a3d7', marginTop:'20px'
-                        }} >Please Register</Link>
-                        
-                        <button className='submit-btn'>Submit</button>
-                        <p className='or-style' >-------------or------------</p>
-                        <h2 onClick={handleGoogleSingin}><FontAwesomeIcon className="login-google" icon={faGoogle} /></h2>
+                         
 
-
-                    </div>
-
-
-                </div>
-            </form>
-
-            {isLoading &&   <Spinner  animation="border" variant="primary" />}
-            {/* {user?.email && <Alert>create user successfully </Alert> } */}
-            {authError && <Alert>{authError}</Alert> }
-            </div>
-            {/* <img src={img} width='100%' alt="" /> */}
-
+                    <input type="submit" className='login-button' value="login" />
+                    <p>Don't have a account? </p> 
+                    <NavLink style={{color:'saddlebrown', textDecoration:'none'}} as={Link} to='/register'   >please Registered !</NavLink> <br />
+                   <button className='login-icon' onClick={handleGoogleSingin}><FontAwesomeIcon  icon={faGoogle} /> </button>
+                   <button className='login-icon' onClick={facebookLogin}><FontAwesomeIcon  icon={faFacebook} /></button>
+                   <button className='login-icon' onClick={handleGithub} ><FontAwesomeIcon  icon={faGithub} /></button>
+                   
+                   
+               </form>
+           </div>
            
         </div>
     );

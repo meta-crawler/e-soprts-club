@@ -13,7 +13,7 @@ const FootBallLeague = () => {
     return (
         <Container>
             <Row>
-    <Col xs={5}>
+    <Col >
         <div>
             <h1>League Table</h1>
             <div className="PlayersLeg">
@@ -74,7 +74,7 @@ const FootBallLeague = () => {
         </div>
     </Col>
 
-    <Col  xs={7}>
+    <Col  >
         <div className='ImageBanner'>
             <img src={banner} alt="" />
         </div>

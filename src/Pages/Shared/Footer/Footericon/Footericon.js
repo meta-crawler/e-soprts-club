@@ -10,10 +10,12 @@ import {
   } from "@fortawesome/free-brands-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
   import  './Footericon.css'
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 const Footericon = () => {
     return (
+
         <div className='fonticon-main' >
             
             <div className='fonticon-info' >
