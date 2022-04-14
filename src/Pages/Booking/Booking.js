@@ -13,6 +13,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
+import Navigation from "../Shared/Navigation/Navigation";
 import "./booking.css";
 
 const Booking = () => {
@@ -30,6 +31,7 @@ const Booking = () => {
   };
   return (
     <div>
+      <Navigation />
       <div className="follow-us container">
         <div className="follow-us-box">
           

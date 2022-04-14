@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Container, Row, Table } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import './FootBallMatch.css';
 
 
@@ -55,7 +56,7 @@ const FootBallMatch = () => {
 
               
             </div>
-            <Button> Booking </Button>
+            <Link to="/booking" > <Button style={{background: "#E71E68", color: "#FFF", padding: "10px", border: "0px", marginTop: "20px"}}>TICKET BOOKING</Button></Link>
 
 
         </Container>

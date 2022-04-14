@@ -8,7 +8,7 @@ const NextMathTimer = () => {
     const date = new Date().toLocaleDateString();
     const time = new Date().toLocaleTimeString();
     return (
-        <div style={{ height: '350px' }} className="container timerheight">
+        <div style={{ height: '350px' }} className="container ">
             <div className="row text-dark">
                 <div className="col-md-6  d-flex justify-content-center align-items-center">
                     <Card className=' my-5' style={{ width: '100%' }}>

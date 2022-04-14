@@ -7,6 +7,7 @@ import {
     faPhone
   } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Navigation from '../../Shared/Navigation/Navigation';
 
 const ContactUs = () => {
 
@@ -25,7 +26,7 @@ const ContactUs = () => {
   };
     return (
         <div className='ContactUs'>
-        
+        <Navigation />
         <h1>Contact Us</h1>
         
         <p>We'd love to get to know you and learn how we can help, so please get in touch, or request a call back.</p>
