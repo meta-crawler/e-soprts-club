@@ -4,7 +4,8 @@ import { Button,  Form } from "react-bootstrap";
 import {
     faMailBulk,
     faLocation,
-    faPhone
+    faPhone,
+    
   } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navigation from '../../Shared/Navigation/Navigation';
@@ -51,7 +52,7 @@ const ContactUs = () => {
     <div className='ContactImage'>
     <div className="ticket-booking-container">
       
-      <form className="mt-4" onSubmit={onSubmitHandler}>
+      <form className="mt-4 contact-from" onSubmit={onSubmitHandler}>
         <Form.Group className="mb-3 input-box">
           <Form.Label className="mb-0">Full name</Form.Label>
           <Form.Control

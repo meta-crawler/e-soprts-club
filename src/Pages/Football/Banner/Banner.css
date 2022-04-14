@@ -20,6 +20,37 @@
     top: 170px;
     left: 160px;
 }
+@media only screen and  (max-width:688px){
+    .Banner .Shap {
+        width: 130px;
+        height: 130px;
+        border: 5px solid #e40046;
+        border-radius: 5px;
+        top: 40px;
+        left: 18px;
+    }
+    .Banner .Text {
+        top: 54px !important;
+        left: 35px !important;
+        padding: 8px !important;
+        width: 278px;
+    }
+    .football-banner-text{
+        font-size: 15px;
+        width: 288px !important ;
+        
+
+    }
+    .Banner .Text p{
+        font-size: 8px;
+        width: 290px !important;
+    }
+    .Banner .Text button{
+        margin-left: 2px;
+        padding: 2px;
+        font-size: 8px !important;
+    }
+}
 
 
 .Banner .Text {

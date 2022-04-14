@@ -1,13 +1,14 @@
 import React from 'react';
 import './Statistics.css';
 import images from '../../../Images/05.jpg';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 
 
 const Statistics = () => {
   return (
     <Container className='Statistics'>
+
 
       <div className="text">
         <h1>PLAYERS STATISTICS</h1>
@@ -56,9 +57,6 @@ const Statistics = () => {
         </div>
         <img src={images} alt="" />
       </div>
-
-
-
 
     </Container>
 

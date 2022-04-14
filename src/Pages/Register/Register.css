@@ -1,132 +1,87 @@
-.main-from{
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #0c0116 ;
+.main-section{
+    position: relative;
 }
-.form-start{
-    /* position: relative; */
-    padding: 60px 15px;
-    width: 270px;
-    height: 350px;
-    box-shadow: 0px 0px 10px 0px rgb(116, 119, 114);
-    border-radius: 5px;
-    overflow: hidden;
+.login-main{
+    color: whitesmoke;
+    font-family: 'Roboto black';
 
 }
-.login-inner{
-    /* position: absolute; */
-    height: 98%;
-    width: 98%;
-    /* top: 50%; */
-    /* left: 50%; */
-    background: #0c0116 ;
-    transform: translate(-50%, -50%);
-}
-.login-text{
-    font-size: 25px;
-    color: #d7a3d7;
-    text-align: center;
-    padding-top: 35px;
-}
-.content-style{
+
+.bg-img{
+    /* background: url(https://img.freepik.com/free-photo/lights-night-stadium-mixed-media_34982-68.jpg?w=1380); */
+    background-size: cover;
     height: 100%;
     width: 100%;
-    padding: 25px;
+    opacity: 0.8;
 }
-.login-inner .user-text{
-    display: block;
-    padding: 12px 15px;
-    width: 100%;
-    left: 50%;
-    border-radius: 10px;
-    margin-top: 20px;
-    border: 1.5px solid rgb(109, 87 , 121);
-    outline: none;
-    background: #19052c;
-    color: white;
+.login{
+    background-color: rgba(255, 165, 0 , 8);
+    width: 600px;
+    height: 582px;
+    /* position: absolute; */
+    padding: 40px;
+    /* top: 50%;
+    left: 50%; */
+    margin-left: 971px;
+    margin-top: 323px;
+    margin-bottom: -150px;
+   
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
 }
-.submit-btn{
-    cursor: pointer;
-    color: white;
-    margin-top: 40px;
-    width: 100%;
-    padding: 12px;
-    outline: none;
-    background: #800080;
-    border: none;
-    font-size: 18px;
-    border-radius: 10px;
-    transition: 0.4s;
+@media only screen and (max-width:688px) {
+    .login{
+        width: 309px;
+        height: 483px;
+        margin-left: 190px;
+
+        
+    }
+    .user-text{
+        width: 250px !important;
+    }
+     
+   }
+   @media only screen and (min-width:689px) and (max-width: 991px){
+    .login{
+        margin-left: 470px;
+    }
+    
 }
-.submit-btn{
-    background: #c907c9;
+.user-text{
+display: block;
+margin: 20px auto;
+padding: 10px 10px;
+width: 350px;
+background: none;
+border: 2px solid black;
+border-radius: 15px;
+transition: 0.8s;
+
 }
-/* animation */
-.form-start .from-span{
-    position: absolute;
-    height: 50%;
-    width: 50%;
+.user-text:focus{
+    border-left: 40px solid black;
 }
-/* for 1st line */
-.form-start .from-span:nth-child(1){
-    background: #ffda05;
-    top: 0;
-    left: -48%;
-    animation: 5s span1 infinite linear;
-    animation-delay: 1s;
+.login-button{
+    background: none;
+    border: 2px solid black;
+    padding: 10px 10px;
+    width: 100px;
+    margin: 10px 10px;
+    border-radius: 15px;
+    transition: 0.6s;
 }
-@keyframes span1 {
-    0%{
-        top: -48%;
-        left: -48%;
-    }
-    25%{
-        top: -48%;
-        left: 98%;
-    }
-    50%{
-        top: 98%;
-        left: 98%;
-    }
-    75%{
-        top: 98%;
-        left: -48%;
-    }
-    100%{
-        top: -48%;
-        left: -48%;
-    }
+.login-button:hover{
+    background-color: black;
+    color: whitesmoke;
 }
-/* for 2 line */
-.form-start .from-span:nth-child(2){
-    background: #00a800;
-    bottom: 0;
-    right: -48%;
-    animation: 5s span2 infinite linear;
-    /* animation-delay: 1s; */
-}
-@keyframes span2 {
-    0%{
-        bottom: -48%;
-        right: -48%;
-    }
-    25%{
-        bottom: -48%;
-        right: 98%;
-    }
-    50%{
-        bottom: 98%;
-        right: 98%;
-    }
-    75%{
-        bottom: 98%;
-        right: -48%;
-    }
-    100%{
-        bottom: -48%;
-        right: -48%;
-    }
+.login-icon{
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    background-color: gold;
 }

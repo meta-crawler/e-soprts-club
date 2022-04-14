@@ -18,6 +18,19 @@
     grid-template-columns: repeat(2, 1fr);
 
 }
+@media only screen and (max-width:688px) {
+    .FansFull{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    
+    }
+    .clint{
+        margin-top: 62px;
+        width: 453px !important;
+
+    }
+    
+  }
 
 .clint {
     background: #1a1d22;
