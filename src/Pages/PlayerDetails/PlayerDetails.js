@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import biograpy from "../../Images/player-about3-img.jpg";
+import PlayerDetailsBanner from '../PlayerDetailsBanner/PlayerDetailsBanner';
 import './PlayerDetails.css';
 
 const PlayerDetails = () => {
@@ -26,9 +27,6 @@ const PlayerDetails = () => {
 
 
 
-
-
-
   useEffect(() => {
     if (playerDetails?.length > 0) {
       const matchItam = playerDetails.find(playerDetails => playerDetails.id == id)
@@ -43,6 +41,7 @@ const PlayerDetails = () => {
 
     return (
       <div className='biography'>
+           <PlayerDetailsBanner></PlayerDetailsBanner>
       <div className='row'>
           <div className='col-md-6'>
           <div className='style-playerDetails'>
@@ -76,7 +75,7 @@ const PlayerDetails = () => {
           </div>
           </div>
           <div className='col-md-6'>
-              <img src={biograpy} alt="" />
+              <img src={playerDetails?.img} alt="" />
           </div>
       </div>
   </div>

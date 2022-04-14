@@ -4,7 +4,8 @@ import { Button,  Form } from "react-bootstrap";
 import {
     faMailBulk,
     faLocation,
-    faPhone
+    faPhone,
+    
   } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
