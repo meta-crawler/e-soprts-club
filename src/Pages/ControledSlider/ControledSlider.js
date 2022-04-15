@@ -32,6 +32,7 @@ export default class ControledSlider extends Component {
 
   render() {
     const settings = {
+      arrows: false,
       autoplay: true,
       dots: false,
       infinite: true,
