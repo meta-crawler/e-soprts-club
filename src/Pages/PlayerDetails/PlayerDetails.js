@@ -3,6 +3,15 @@ import {  useParams } from 'react-router-dom';
 import biograpy from "../../Images/player-about3-img.jpg";
 import Navigation from '../Shared/Navigation/Navigation';
 import './PlayerDetails.css';
+import {
+  faMailBulk,
+  faLocation,
+  faPhone,
+  faVideo
+  
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Container } from 'react-bootstrap';
 
 const PlayerDetails = () => {
 
@@ -43,8 +52,28 @@ const PlayerDetails = () => {
   console.log(detailsItam);
 
     return (
-      <>
+      <Container>
         <Navigation />
+        <>
+        <div className='details-player-main' >
+            <div className='details-player-bgimg'></div>
+            <div className='details-player-info'>
+                <div>
+                    <h1 className='details-player-title'>{detailsItam?.name }  </h1>
+
+                    <p className='details-player-des'>{detailsItam?.describe }</p>
+                    <button className='details-connecting'>conecting</button>
+                    <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
+                </div>
+                <div>
+                    {/* <div className='details-single-img'></div> */}
+                    <img className='details-player-img' src={detailsItam?.img } alt="" />
+                </div>
+            </div>
+        </div>
+        </>
+        
+       
       <div className='biography container'>
       <div className='row'>
           <div className='col-md-6'>
@@ -87,7 +116,8 @@ const PlayerDetails = () => {
           </div>
       </div>
   </div>
-  </>
+  </Container>
+ 
     );
 };
 

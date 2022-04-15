@@ -11,6 +11,7 @@ import {
     faGithub
   } from "@fortawesome/free-brands-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Footer from '../Shared/Footer/Footer';
 
 
 const Register = () => {
@@ -127,7 +128,7 @@ const Register = () => {
   </Alert>
 ))}
         </div>
-        
+        <Footer></Footer>
      </div>
     );
 };

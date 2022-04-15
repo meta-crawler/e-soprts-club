@@ -15,6 +15,7 @@ import {
 
 
 import './Login.css'
+import Footer from '../Shared/Footer/Footer';
 const Login = () => {
 
     const [loginFromData , setLoginFromData] = useState()
@@ -111,7 +112,7 @@ options={{
                    
                </form>
            </div>
-           
+           <Footer></Footer>
         </div>
     );
 };

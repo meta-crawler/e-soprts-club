@@ -11,7 +11,7 @@ const BookingTactk = () => {
                 <div className="BookingPart">
                         <div className="Text">
                         <h1>Why are you still waiting?</h1>
-        <p>Our <span style={{color: "#E71E68"}} >TICKET BOOKING OPENS NOW </span></p>
+                    <p>Our <span style={{color: "#E71E68"}} >TICKET BOOKING OPENS NOW </span></p>
                         </div>
                         
                         <div className="Bottun">

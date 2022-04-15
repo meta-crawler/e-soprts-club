@@ -7,6 +7,46 @@
     width: 100%;
 }
 
+@media only screen and (max-width:688px) {
+    .HockeyPuckBanner{
+        height: 275px;
+    }
+    .HockeyPuckBanner .Shap{
+        width: 130px !important;
+        height: 130px !important;
+        border: 5px solid #e40046 !important;
+        border-radius: 5px !important;
+        top: 199px !important;
+        left: 18px !important;
+    }
+
+
+
+    .HockeyPuckBanner .Text {
+        top: 219px !important;
+        left: 35px !important;
+        padding: 8px !important;
+        width: 278px;
+    }
+    .cricket-banner-text{
+        font-size: 15px;
+        width: 288px !important ;
+        
+
+    }
+    .HockeyPuckBanner .Text p{
+        font-size: 8px;
+        width: 290px !important;
+    }
+    .HockeyPuckBanner .Text button{
+        margin-left: 2px;
+        padding: 2px;
+        font-size: 8px !important;
+    }
+    
+
+
+}
 
 
 

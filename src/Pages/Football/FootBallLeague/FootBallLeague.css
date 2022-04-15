@@ -12,6 +12,22 @@
     display: flex;
     
 }
+.Football-league-main{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+@media only screen and (max-width:688px) {
+    .Football-league-main{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+    .football-reague-details{
+        width: 520px !important;
+    }
+    .PlayersLeg{
+        width: 300px;
+    }
+}
 
 .images h1 {
     

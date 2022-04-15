@@ -15,12 +15,13 @@ const FootBallLeague = () => {
     return (
         <Container>
 
-            <Row style={{padding: "100px 0px 100px"}}>
-    <Col xs={6}>
+            {/* <Row style={{padding: "100px 0px 100px"}}> */}
+            <div className='Football-league-main' style={{padding: "100px 0px 100px"}}>
+    {/* <Col xs={6}> */}
 
           
 
-        <div>
+        <div className='football-reague-details'>
             <h1 style={{marginBottom: "100px"}}><span className='color'>FIFA </span>Top  Players <span className='color'>Rankings</span> </h1>
             <div className="PlayersLeg">
 
@@ -96,10 +97,10 @@ const FootBallLeague = () => {
             
             
         </div>
-    </Col>
+    {/* </Col> */}
 
 
-    <Col  xs={6}>
+    {/* <Col  xs={6}> */}
 
   
 
@@ -107,8 +108,9 @@ const FootBallLeague = () => {
             <img style={{marginTop: '170px', marginBottom: "50px"}} src={banner1} alt="" />
             <img style={{margin: '0px'}} src={banner2} alt="" />
         </div>
-    </Col>
-    </Row>
+    {/* </Col> */}
+    </div> 
+    {/* </Row> */} 
         </Container>
     );
 };
