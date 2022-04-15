@@ -18,10 +18,6 @@ import Login from "./Pages/Login/Login";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import Register from "./Pages/Register/Register";
 
-
-
-
-
 import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
 import DashBord from "./Pages/DashBord/DashBord/DashBord";
