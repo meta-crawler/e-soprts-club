@@ -1,14 +1,28 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
-import './Sponsored.css';
+import "./Sponsored.css";
 
 const Sponsored = () => {
   return (
     <Container className="Sponsored">
       <Swiper
-        slidesPerView={5}
+        slidesPerView={2}
         spaceBetween={30}
+        breakpoints={{
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
         pagination={{
           clickable: true,
         }}

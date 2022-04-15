@@ -3,20 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import Slider from "react-slick/lib/slider";
 import Player from "../Player/Player";
-import './ControledSlider.css';
-
+import "./ControledSlider.css";
 
 export default class ControledSlider extends Component {
-
-
   state = {
-    players: []
-  }
+    players: [],
+  };
 
   componentDidMount() {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/players')
+    fetch("https://enigmatic-garden-34025.herokuapp.com/players")
       .then((response) => response.json())
-      .then(playersList => {
+      .then((playersList) => {
         this.setState({ players: playersList });
       });
   }
@@ -35,23 +32,34 @@ export default class ControledSlider extends Component {
 
   render() {
     const settings = {
+      arrows: false,
       autoplay: true,
       dots: false,
       infinite: true,
-      speed: 800,
+      speed: 1000,
       slidesToShow: 3,
       pauseOnHover: false,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1,
+          },
+        },
+      ],
     };
-
-
-    console.log(this.state.players);
-
-
-
-
-
-
 
     return (
       <div className="container AllPlayer">
@@ -62,19 +70,16 @@ export default class ControledSlider extends Component {
             icon={faArrowLeft}
           />
           <FontAwesomeIcon
-          className="me-2"
-          onClick={this.next} icon={faArrowRight} />
+            className="me-2"
+            onClick={this.next}
+            icon={faArrowRight}
+          />
         </div>
 
         <Slider ref={(c) => (this.slider = c)} {...settings}>
-          
-          {this.state.players.map(players => <Player
-
-            key={players._id}
-            player={players}
-
-          />)
-          }
+          {this.state.players.map((players) => (
+            <Player key={players._id} player={players} />
+          ))}
         </Slider>
       </div>
     );
