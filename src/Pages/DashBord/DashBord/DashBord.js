@@ -13,6 +13,8 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAuth from "../../../Hook/UseAuth";
 import "./DashBord.css";
 
+// test comment
+
 const drawerWidth = 240;
 
 function DashBord(props) {
@@ -36,14 +38,14 @@ function DashBord(props) {
       {user && (
         <Box>
           <NavLink
-            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex justify-content-center align-items-center mt-5"
+            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex align-items-center mt-5"
             to="/"
           >
             {" "}
             <i className="fas fa-home me-2"></i> Home
           </NavLink>
           <NavLink
-            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex justify-content-center align-items-center mt-3"
+            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex  align-items-center mt-3"
             to={`/dashbord/myOrder`}
             onClick={() => setCurrentPage("My Orders")}
           >
@@ -51,14 +53,14 @@ function DashBord(props) {
             <i className="fas fa-clipboard-list me-2"></i>My Orders
           </NavLink>
           <NavLink
-            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex justify-content-center align-items-center mt-3"
+            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex align-items-center mt-3"
             to={`/dashbord/review`}
           >
             {" "}
             <i className="far fa-star-half me-2"></i>Review
           </NavLink>
           <NavLink
-            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex justify-content-center align-items-center mt-3"
+            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex  align-items-center mt-3"
             to={`/dashbord/pay`}
           >
             {" "}
@@ -67,7 +69,7 @@ function DashBord(props) {
           <NavLink
             onClick={logOut}
             to={`/dashbord`}
-            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex justify-content-center align-items-center mt-3"
+            className="text-decoration-none header-text fs-5 ms-3 fw-bold d-flex  align-items-center mt-3"
           >
             {" "}
             <i className="fas fa-sign-in-alt me-2"></i>LogOut
