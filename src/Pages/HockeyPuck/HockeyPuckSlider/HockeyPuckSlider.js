@@ -5,7 +5,7 @@ import image2 from "../../../Images/HockeyLeague/cut (2).jpg";
 import image3 from "../../../Images/HockeyLeague/cut (3).jpg";
 import image4 from "../../../Images/HockeyLeague/cut.jpg";
 import image5 from "../../../Images/HockeyLeague/download.jpg";
-import image6 from "../../../Images/HockeyLeague/GS_Wild-Scoreboard.jpg.crdownload";
+import image6 from "../../../Images/HockeyLeague/cut (2).jpg";
 import image8 from "../../../Images/HockeyLeague/images.jpg";
 import image7 from "../../../Images/HockeyLeague/Single-Videoboard-slight-angle063014.jpg";
 

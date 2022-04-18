@@ -31,7 +31,7 @@ const labels = {
 
 
 
-const PlayerDetails = () => {
+const CricketPlayerInfo = () => {
 
 
   const { id } = useParams();
@@ -42,7 +42,7 @@ const PlayerDetails = () => {
 
   useEffect(() => {
 
-    fetch('https://enigmatic-garden-34025.herokuapp.com/players')
+    fetch('https://enigmatic-garden-34025.herokuapp.com/cricketplayers')
       .then(res => res.json())
       .then(data => {
         setPlayerDetails(data);
@@ -266,4 +266,4 @@ style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <I
     );
 };
 
-export default PlayerDetails;
+export default CricketPlayerInfo;
