@@ -1,0 +1,83 @@
+[
+
+         {
+         "id": "1",
+         "name": "Robbie Ray",
+         "height": "5″7",
+         "nationality": "North Korea",
+         "club": "Blue Jays",
+         "weight": "177 LBS",
+         "describe": "Ray won the American League Cy Young Award after the finest campaign of his career. The southpaw led the majors in strikeouts and topped the AL in ERA, innings, opponents' batting average, and WHIP. He also posted the lowest walks-per-nine rate of his career and stranded runners at an MLB-best 90.1% clip.",
+         "img": "https://i.ibb.co/r277NfX/baseball-player-1.jpg"
+     },    
+     {
+         "id": "2",
+         "name": "Fernando Tatis Jr.",
+         "height": "5″9",
+         "nationality": "Germany",
+         "club": "Padres",
+         "weight": "178 LBS",
+         "describe": "El Nino is one of the game's most electric performers and his abilities were on full display once again in 2021. The San Diego Padres shortstop finished third in NL MVP voting after crushing a league-leading 42 homers alongside 31 doubles, 97 RBIs, and 25 steals. ",
+         "img": "https://i.ibb.co/88q2nkn/baseball-player-2.jpg"
+     },    
+     {
+         "id": "3",
+         "name": "Marcus Semien",
+         "height": "6″1",
+         "nationality": "Brazil",
+         "club": "Blue Jays",
+         "weight": "180 LBS",
+         "describe": "Semien finished third in AL MVP voting for the second time in three years after an excellent campaign for the Toronto Blue Jays, setting career highs in homers (45), RBIs (102), steals (15), and slugging percentage (.538). The 31-year-old also finished first in UZR and second in defensive runs saved among qualified second basemen during his first full campaign at the position.",
+         "img": "https://i.ibb.co/LdQY3fM/baseball-player-3.jpg"
+     },   
+     {
+         "id": "4",
+         "name": "Juan Soto",
+         "height": "5″10",
+         "nationality": "Yuanshan",
+         "club": "Nationals",
+         "weight": "179 LBS",
+         "describe": "Arguably baseball's best hitter, Soto did things this past season that no one his age has ever done before. The 23-year-old finished second in NL MVP voting, won a Silver Slugger, and led the majors in walks (145) and on-base percentage (.465). He joined Ted Williams as the only players.",
+         "img": "https://i.ibb.co/616QYLS/baseball-player-4.jpg"
+     },    
+     {
+         "id": "5",
+         "name": "Bryce Harper",
+         "height": "5″11",
+         "nationality": "China",
+         "club": "Phillies",
+         "weight": "178 LBS",
+         "describe": "Harper captured his second MVP award after an unbelievable 2021 campaign that included an MLB-best 42 doubles, a .615 slugging percentage, and a 1.044 OPS. The 29-year-old also finished first in the majors in wRC+ and xwOBA and third in fWAR, isolated power, and walk percentage.",
+         "img": "https://i.ibb.co/fphxd9d/baseball-player-5.jpg"
+     },    
+     {
+         "id": "6",
+         "name": "Vladimir Guerrero Jr.",
+         "height": "5″9",
+         "nationality": "Japan",
+         "club": "Blue Jays base",
+         "weight": "155 LBS",
+         "describe": "Tomokazu is a popular Japanese table tennis player in the team who has been the winner of the 2018 World Junior Singles and ITTF 2018 World Junior Championship. He is a right-handed, shake-hand grip player. He has the equipment as Butterfly Tomokazi Harimoto ALC, Butterfly Dignics 05 (Forehand), Dignics 05 (Backhand).",
+         "img": "https://i.ibb.co/5jTGj6k/baseball-player-6.jpg"
+     },    
+     {
+         "id": "7",
+         "name": "Corbin Burnes",
+         "height": "5″6",
+         "nationality": "Yuanshan",
+         "club": "Brewers",
+         "weight": "177 LBS",
+         "describe": "Burnes became the first Milwaukee Brewers pitcher to win a Cy Young Award since Pete Vuckovich in 1982 after an unreal season that included a 2.43 ERA, 1.63 FIP, and 12.6 K/9. The 27-year-old's new reliance on a filthy cutter, which he threw more than 52% of the time, resulted in 117 punchouts and led to improved curveball performance - opposing hitters batted.",
+         "img": "https://i.ibb.co/h8QRrLn/baseball-player-7.jpg"
+     },    
+     {
+         "id": "8",
+         "name": "Shohei Ohtani",
+         "height": "5″7",
+         "nationality": "China",
+         "club": "Angels",
+         "weight": "182 LBS",
+         "describe": "What Ohtani did in 2021 was something that baseball fans might never see again. The two-way sensation took home unanimous AL MVP honors after recording 46 homers, 100 RBIs, eight triples, 26 steals, and a .965 OPS as a hitter. His results as a pitcher were impressive too: In 130 1/3 innings, he posted a 9-2 record with a 3.18 ERA, 1.09 WHIP, and 156 strikeouts. Ohtani's combined fWAR as a hitter and pitcher was a ridiculous 8.1.",
+         "img": "https://i.ibb.co/rF9vQh7/baseball-player-8.jpg"
+     }    
+]

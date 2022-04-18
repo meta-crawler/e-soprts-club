@@ -1,0 +1,82 @@
+[
+         {
+                  "id": "1",
+                  "name": "Sebastian Aho",
+                  "Height": "6″2",
+                  "Nationality": "South africa",
+                  "Goals": "38 goals",
+                  "Weight": "155 LBS",
+                  "describe": "One of the league's most consistently versatile players, Barkov has collected the Lady Byng and Selke Trophies in an eight-year career. He's scored 20 or more goals in six straight seasons and is in the league's top 20 in total points",
+                  "img": "https://i.ibb.co/yfLBsp1/hocky-player-5.jpg"
+         },
+         {
+                  "id": "2",
+                  "name": "Ottawa Senators",
+                  "Height": "5″8",
+                  "Nationality": "China",
+                  "Goals": "35 goals",
+                  "Weight": "160 LBS",
+                  "describe": "Like Barkov, Huberdeau has been rock-solid in helping the Panthers climb back to elite status in the NHL. Florida made him the third pick in the 2011 draft, and he's been a regular since 2012-13.",
+                  "img": "https://i.ibb.co/74gJF8H/hocky-player-6.jpg"
+         },
+         {
+                  "id": "3",
+                  "name": "Minnesota Wild",
+                  "Height": "5″9",
+                  "Nationality": "United States",
+                  "Goals": "33 goals",
+                  "Weight": "188 LBS",
+                  "describe": "A skilled wing with speed, creativity and some edge, Marner is one of the impressive core players for a Maple Leafs team that has huge expectations in the coming years. He was in the league's top five in both assists and points in 2020-21.",
+                  "img": "https://i.ibb.co/kQv4Yfm/hocky-player-7.jpg"
+         },
+         {
+                  "id": "4",
+                  "name": "Kirill Kaprizov",
+                  "Height": "5″7",
+                  "Nationality": "Indonesia",
+                  "Goals": "29 goals",
+                  "Weight": "166 LBS",
+                  "describe": "Point was a third-round pick in 2014 and is second in goals and points for the star-studded Lightning since debuting in 2016-17. He led the league in playoff goals (14) in 2019-20 and scored the Stanley Cup-winning goal against Dallas in a decisive Game 6 that year.",
+                  "img": "https://i.ibb.co/QNSyqSq/hocky-player-8.jpg"
+         },
+         {
+                  "id": "5",
+                  "name": "Abus Salam",
+                  "Height": "5″11",
+                  "Nationality": "Bangladesh",
+                  "Goals": "28 goals",
+                  "Weight": "180 LBS",
+                  "describe": "He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.",
+                  "img": "https://i.ibb.co/vYrzrpF/hocky-player-1.jpg"
+         },
+         {
+                  "id": "6",
+                  "name": "Boston Bruins",
+                  "Height": "5″10",
+                  "Nationality": "Mexico",
+                  "Goals": "23 goals",
+                  "Weight": "170 LBS",
+                  "describe": "Rantanen is a big, skilled winger who's been a point-per-game player in three of the past four seasons, a stretch that coincides with the Avalanche's rise from last place in 2016-17 to a Presidents.",
+                  "img": "https://i.ibb.co/TYFM56L/hocky-player-2.jpg"
+         },
+         {
+                  "id": "7",
+                  "name": "Florida Panthers",
+                  "Height": "6″2",
+                  "Nationality": "Turkey",
+                  "Goals": "25 goals",
+                  "Weight": "169 LBS",
+                  "describe": "The fourth pick in the 2017 draft has wasted no time showing he belongs. Makar debuted with the Avalanche in the 2018-19 playoffs, scored a goal in his first game and returned to win the Calder Trophy in 2019-20. ",
+                  "img": "https://i.ibb.co/pwm8Zs4/hocky-player-3.jpg"
+         },
+         {
+                  "id": "8",
+                  "name": "Aleksander Barkov",
+                  "Height": "6″1",
+                  "Nationality": "France",
+                  "Goals": "20 goals",
+                  "Weight": "190 LBS",
+                  "describe": "The most clutch of this generation's money goalies, all the 26-year-old Russian has done to follow a 2018-19 Vezina Trophy is backstop a pair of Stanley Cup runs and capture a Conn Smythe Trophy following the 2020-21 win.",
+                  "img": "https://i.ibb.co/b6dZNhY/hocky-player-4.jpg"
+         }
+]

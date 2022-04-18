@@ -1,0 +1,83 @@
+[
+         
+         {
+                  "id": "1",
+                  "name": "Anthony Edwards",
+                  "height": "5″7",
+                  "nationality": "Ecuador",
+                  "club": "Minnesota Timberwolves",
+                  "weight": "177 LBS",
+                  "describe": "The other half of the vaunted “Splash Bros.,” Thompson just returned to action after a two-year hiatus. While he been limited in minutes as the Warriors look to get him up to speed, we have not seen too much of a drop-off in production. The three-time champion is averaging 19.3 points, 3.9 rebounds and 2.7 assists.",
+                  "img": "https://i.ibb.co/VHM52xj/basket-Ball6.jpg"
+         },    
+         {
+                  "id": "2",
+                  "name": "Tyrese Haliburton",
+                  "height": "5″9",
+                  "nationality": "Guatemala",
+                  "club": "Indiana Pacers",
+                  "weight": "185 LBS",
+                  "describe": "Acquired from Sacramento during February’s NBA trade deadline, Haliburton is among the best young point guards in the NBA. In limited action with the Pacers, he’s averaging 17.3 points to go with 9.8 assists while shooting 40.9% from three-point range.",
+                  "img": "https://i.ibb.co/t30RLPY/basket-Ball5.jpg"
+         },    
+         {
+                  "id": "3",
+                  "name": "Jarrett Allen",
+                  "height": "5″6",
+                  "nationality": "North Korea",
+                  "club": "Cleveland Cavaliers",
+                  "weight": "190 LBS",
+                  "describe": "A first-round pick of the Nets back in 2017, Allen displayed flashes of brilliance in Brooklyn before heading to Cleveland in the James Harden trade to open the 2020-21 season. Since joining the Cavaliers, he’s been an elite force for this up-and-coming squad.",
+                  "img": "https://i.ibb.co/G0KhN8x/basket-Ball4.webp"
+         },    
+         {
+                  "id": "4",
+                  "name": "Darius Garland",
+                  "height": "5″10",
+                  "nationality": "North Korea",
+                  "club": "Cleveland Cavaliers",
+                  "weight": "174 LBS",
+                  "describe": "One of the more surprising success stories from last season was Jerami Grant having a fantastic performance for the rebuilding Detroit Pistons. He very nearly nabbed the Most Improved Player award last season averaging career-highs in points, assists.",
+                  "img": "https://i.ibb.co/cCXy456/basket-Ball3.webp"
+         },    
+         {
+                  "id": "5",
+                  "name": "Miles Bridges",
+                  "height": "5″9",
+                  "nationality": "North Korea",
+                  "club": "Charlotte Hornets",
+                  "weight": "169 LBS",
+                  "describe": "One of the most-underrated acquisitions during the 2020 offseason, Christian Wood proved to be a godsend for a Rockets team that will have to continue finding an identity moving forward. Wood had a tremendous breakout season last year and has since carried over that success into this season.",
+                  "img": "https://i.ibb.co/NpkZzc0/basket-Ball1.webp"
+         },    
+         {
+                  "id": "6",
+                  "name": "Ben Simmons",
+                  "height": "6″1",
+                  "nationality": "North Korea",
+                  "club": "Brooklyn Nets",
+                  "weight": "180 LBS",
+                  "describe": "In the latter half of last season, Miles Bridges began to show signs that he was ready to have a breakout year coming into this season. In his last 19 games of the year, he averaged 20.3 points shooting 52% from the field and 6.8 rebounds.",
+                  "img": "https://i.ibb.co/Fzms1Mm/basket-Ball7.webp"
+         },    
+         {
+                  "id": "7",
+                  "name": "De Aaron Fox",
+                  "height": "6″2",
+                  "nationality": "North Korea",
+                  "club": "Sacramento Kings",
+                  "weight": "189 LBS",
+                  "describe": "Pretty much the centerpiece in the trade that sent Paul George to the Los Angeles Clippers ahead of the 2019-20 season, Shai Gilgeous-Alexander has morphed into a star and leader for the rebuilding Thunder. It pretty darn shocking what.",
+                  "img": "https://i.ibb.co/VNh13Dg/basket-Ball9.webp"
+         },    
+         {
+                  "id": "8",
+                  "name": "Julius Randle",
+                  "height": "6″0",
+                  "nationality": "North Korea",
+                  "club": "New York Knicks",
+                  "weight": "178 LBS",
+                  "describe": "De Aaron Fox has proven himself to be among the best NBA players at the point guard position. That magnified by the fact Fox has improved in each of his four seasons. Unfortunately, the Sacramento Kings have not been in the postseason since 2006. ",
+                  "img": "https://i.ibb.co/Rvt7dbr/basket-Ball8.webp"
+         }    
+]
