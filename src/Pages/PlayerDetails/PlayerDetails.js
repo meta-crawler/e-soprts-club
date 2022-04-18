@@ -102,7 +102,7 @@ const PlayerDetails = () => {
         ...orderinfo
       }
   
-      fetch('http://localhost:7000/review', {
+      fetch('https://enigmatic-garden-34025.herokuapp.com/review', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

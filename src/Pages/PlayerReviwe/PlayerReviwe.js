@@ -8,7 +8,7 @@ const PlayerReviwe = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:7000/review')
+        fetch('https://enigmatic-garden-34025.herokuapp.com/review')
           .then(res => res.json())
           .then(data => {
             setSinglePlayer(data);
