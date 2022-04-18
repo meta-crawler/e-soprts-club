@@ -18,13 +18,6 @@ import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome
 import BaseBallHome from "./Pages/BaseBall/BaseBallHome/BaseBallHome";
 import BasketBallHome from "./Pages/BasketBall/BasketBallHome/BasketBallHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
-import Dashbord from "./Pages/Dashbord/Dashbord";
-/* import DashBord from "./Pages/DashBord/DashBord/DashBord";
-import Payment from "./Pages/DashBord/Pay/Payment";
-import Review from "./Pages/DashBord/Review/Review";
-import MyOrders from "./Pages/DashBord/MyOrders/MyOrders";
-import DashBordHome from "./Pages/DashBord/Home/DashBordHome"; */
-// import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
 
 
@@ -55,13 +48,6 @@ function App() {
           <Route path="/event-register" element={<EventRegister />} />
           <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
           <Route path="/singleProduct/:id" element={<SingleProduct/>} />
-      
-          <Route path="/dashbord" element={<Dashbord/>}> 
-          {/* <Route exact path={'/dashbord/myOrder'} element={<MyOrders />} /> 
-          <Route exact path={'/dashbord/home'} element={<DashBordHome />} /> 
-                <Route path={`/dashbord/review`} element={ <Review /> } />
-            <Route path={`/dashbord/pay`} element={<Payment />} /> */}
-          </Route>
 
         </Routes>
       </Router>
