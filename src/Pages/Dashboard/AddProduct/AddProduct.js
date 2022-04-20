@@ -1,82 +1,181 @@
-import axios from 'axios';
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useState } from 'react';
+import { Box, Button, Rating, Typography } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
+import IosShareIcon from '@mui/icons-material/IosShare';
 import './AddProduct.css'
 
+
+
+
+const labels = {
+  0.5: 'Useless',
+  1: 'Useless+',
+  1.5: 'Poor',
+  2: 'Poor+',
+  2.5: 'Ok',
+  3: 'Ok+',
+  3.5: 'Good',
+  4: 'Good+',
+  4.5: 'Excellent',
+  5: 'Excellent+',
+};
+
+
+
+
+
 const AddProduct = () => {
-    // const { user } = useAuth();
-  const {
-    register,
-    handleSubmit,
-    reset,
-    watch,
-    formState: { errors },
-  } = useForm();
+  // const { user } = useAuth();
+
+
+  const [value, setValue] = React.useState(2);
+  const [hover, setHover] = React.useState(-1);
+
+
+  const productInfo = { name: '', number: '', tags: '', category: '', feedback: "", url: "", textarea: ""};
+
+  const [productData, setOrderinfo] = useState(productInfo);
+
+  const hendalOnBlure = data => {
+
+    const filed = data.target.name;
+    const value = data.target.value;
+    const newValue = { ...productData };
+    newValue[filed] = value;
+    setOrderinfo(newValue);
+    console.log(newValue);
+
+  }
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("https://enigmatic-garden-34025.herokuapp.com/addproduct",data)
-    .then(res => {
-      if (res.data.insertedId) {
-          alert('added successfully');
-          reset();
-      }
+
+    const newDispalyReviwe = {
+      ...productData
+    }
+
+
+    fetch('http://localhost:7000/other', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newDispalyReviwe)
     })
+      .then(res => res.json())
+      .then(data => console.log(data));
+
   }
-    return (
-        <div>
-        <div>
-          <h1 className="mt-5 text-center text-danger">Please Add Product</h1>
-          <div className=" w-25 m-auto mt-5">
-            <div className=" ">
-              <div className="">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <input
-                    {...register("name")}
-                    placeholder="Name"
-                    className="p-2 m-2 w-100 input-field"
-                  />
-  
-                  <input
-                    {...register("description")}
-                    placeholder="Description"
-                    className="p-2 m-2 w-100 input-field"
-                  />
-  
-                  <input
-                    {...register("image", { required: true })}
-                    placeholder="Image Link"
-                    className="p-2 m-2 w-100 input-field"
-                  />
-  
-                  <input
-                    {...register("price", { required: true })}
-                    placeholder="Price"
-                    type="number"
-                    className="p-2 m-2 w-100 input-field"
-                  />
-  
-                  <select {...register("model")} className="p-2 m-2 w-100">
-                    <option value="premium">premium</option>
-                    <option value="classic">classic</option>
-                    <option value="business">business</option>
-                  </select>
-                  <br />
-  
-                  {errors.exampleRequired && <span>This field is required</span>}
-  
-                  <input
-                    type="submit"
-                    value="Add"
-                    className="button button-contactForm boxed-btn w-50"
-                  />
-                </form>
-              </div>
+
+
+  return (
+    <div>
+      <div>
+        <h1 className="mt-5 text-center text-danger">Please Add Product</h1>
+        <div className=" w-25 m-auto mt-5">
+          <div className=" ">
+            <div className="">
+              <form className='ProductFrom' >
+
+
+                
+
+                
+               
+                <input
+                  type="text"
+                  name='name'
+                  onBlur={hendalOnBlure}
+                  id=""
+                  placeholder='Product Name'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "300px"}}
+                />
+
+<input
+                  name='number'
+                  onBlur={hendalOnBlure}
+                  type="Number"
+                  id=""
+                  placeholder='Price'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "100px"}}
+                />
+
+                <input
+                  type="text"
+                  name='tags'
+                  onBlur={hendalOnBlure}
+                  id=""
+                  placeholder='Product tags'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px"}}
+                />
+
+                <input
+                  type="text"
+                  name='category'
+                  onBlur={hendalOnBlure}
+                  id=""
+                  placeholder='Product Category'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px"}}
+                />
+
+
+
+                
+
+                <input
+                  type="url"
+                  name="url"
+                  onBlur={hendalOnBlure}
+                  id=""
+                  placeholder='Type a img url'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "400px"}}
+                />
+
+<textarea
+                  className='textarea'
+                  onBlur={hendalOnBlure}
+                  type="text"
+                  name='description1'
+                  placeholder='Type Your Description'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "425px"}}
+                />
+
+<div className="ProductRating">
+                  <Typography sx={{ fontWeight: '700' }} >Your Rating</Typography>
+
+                  {value !== null && (
+                    <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+                  )}
+
+                </div>
+                <Rating
+                  name="feedback"
+                  onBlur={hendalOnBlure}
+                  value={value}
+                  precision={0.5}
+
+                  onChange={(event, newValue) => {
+                    setValue(newValue);
+                  }}
+                  onChangeActive={(event, newHover) => {
+                    setHover(newHover);
+                  }}
+                  emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                />
+
+                <br /><br />
+                <Button onClick={onSubmit}
+
+                  style={{ background: "#dc3545", border: "none", padding: "10px 10px" }} >Submit <IosShareIcon /></Button>
+
+
+              </form>
             </div>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default AddProduct;
