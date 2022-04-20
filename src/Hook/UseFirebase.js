@@ -13,6 +13,7 @@ const useFirebase = () => {
     const [ modal, setModal ] = useState(false)
     const [ authError, setAuthError ] = useState('');
     const [ isLoading, setIsLoading ] = useState(true)
+    const [admin , setAdmin ] = useState(false)
 
     // observer user state
     useEffect( ()=>{
@@ -127,6 +128,15 @@ const githubsignIn = () => {
             })
             .finally(() => setIsLoading(false));
     }  
+    // admin
+    useEffect( () => {
+        fetch(`https://enigmatic-garden-34025.herokuapp.com/users/${user.email} `)
+        .then(res => res.json())
+        .then(data => setAdmin(data.admin))
+    }, [])
+
+
+
     // logOut function
     const logOut = () =>{
         setIsLoading(true)
@@ -155,6 +165,7 @@ const githubsignIn = () => {
 
     return{
         user,
+        admin,
         isLoading,
         authError,
         modal,

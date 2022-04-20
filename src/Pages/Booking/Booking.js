@@ -11,8 +11,10 @@ import {
   faTag,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import React, { useState } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./booking.css";
 
@@ -26,7 +28,12 @@ const Booking = () => {
 
 
 
-  const onBlurHandler = (e) => {
+
+  const [formData, setFormData] = useState({});
+  const [success, setSuccess] = useState(false);
+
+  const {reset} = useForm()
+ const onBlurHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     const newFormData = { ...formData };
@@ -57,6 +64,7 @@ const Booking = () => {
         .then(data => console.log(data));
   
     }
+
 
 
 
@@ -160,6 +168,7 @@ const Booking = () => {
               </Button>
             </Form.Group>
           </form>
+          {success && <p style={{ color: 'green' }}>{success}</p>}
         </div>
       </div>
       <div className="next-match-container">
