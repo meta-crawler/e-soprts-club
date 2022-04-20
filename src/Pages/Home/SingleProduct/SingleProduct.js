@@ -18,7 +18,7 @@ const SingleProduct = () => {
   useEffect(() => {
     fetch('https://enigmatic-garden-34025.herokuapp.com/other',)
       .then(res => res.json())
-      .then(data => setProducts(data))
+      .then(data => setProducts(data.products))
   }, [])
   useEffect(() => {
     const foundProducts = products.find(product => (product.id == id))

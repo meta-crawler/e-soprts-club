@@ -32,7 +32,7 @@ const AddProduct = () => {
   const [hover, setHover] = React.useState(-1);
 
 
-  const productInfo = { name: '', number: '', tags: '', category: '', feedback: "", url: "", textarea: ""};
+  const productInfo = { name: '', price: '', tags: '', category: '', feedback: "", img: "", description1: "", id: ""};
 
   const [productData, setOrderinfo] = useState(productInfo);
 
@@ -55,7 +55,7 @@ const AddProduct = () => {
     }
 
 
-    fetch('http://localhost:7000/other', {
+    fetch('https://enigmatic-garden-34025.herokuapp.com/other', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -92,9 +92,9 @@ const AddProduct = () => {
                 />
 
 <input
-                  name='number'
+                  name='price'
                   onBlur={hendalOnBlure}
-                  type="Number"
+                  type="text"
                   id=""
                   placeholder='Price'
                   style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "100px"}}
@@ -124,11 +124,20 @@ const AddProduct = () => {
 
                 <input
                   type="url"
-                  name="url"
+                  name="img"
                   onBlur={hendalOnBlure}
                   id=""
                   placeholder='Type a img url'
-                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "400px"}}
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "300px"}}
+                />
+
+<input
+                  name='id'
+                  onBlur={hendalOnBlure}
+                  type="Number"
+                  id=""
+                  placeholder='ID'
+                  style={{padding: "10px", margin: "10px", borderRadius: "05px", width: "100px"}}
                 />
 
 <textarea
