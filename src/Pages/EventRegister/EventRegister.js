@@ -12,14 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Button, Container, Form, Row } from "react-bootstrap";
+import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
+import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
 
 const EventRegister = () => {
 
 
 
-
+  const { isLoading} = useAuth()
   
   const formDataAll = { eventName: '', StartDate: '', sex: '', age: '',city: "", address: "", eventDes: "", ClubName: "", email: "", number: ""};
 
@@ -58,6 +59,13 @@ const EventRegister = () => {
       })
         .then(res => res.json())
         .then(data => console.log(data));
+
+
+
+
+        if(newDispalyReviwe){
+          alert("Thank You, Your Register was Completed")
+        }
   
     }
 
@@ -95,6 +103,8 @@ const EventRegister = () => {
               Dubai World Cup.
             </p>
           </div>
+
+          {!isLoading && 
           <form className="mt-4" onSubmit={onSubmitHandler}>
             <Form.Group className="mb-3 input-box">
               <Form.Label className="mb-0">Event Name</Form.Label>
@@ -211,7 +221,10 @@ const EventRegister = () => {
                 SUBMIT
               </Button>
             </Form.Group>
-          </form>
+          </form>} 
+
+
+          {isLoading &&   <Spinner animation="border" variant="secondary" />}
         </div>
       </div>
       <div className="next-match-container">
