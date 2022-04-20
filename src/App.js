@@ -7,11 +7,11 @@ import BasketBallHome from "./Pages/BasketBall/BasketBallHome/BasketBallHome";
 import Booking from "./Pages/Booking/Booking";
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
 import CricketHome from "./Pages/Cricket/CricketHome/CricketHome";
-import DashBord from "./Pages/DashBord/DashBord/DashBord";
-import DashBordHome from "./Pages/DashBord/Home/DashBordHome";
-import MyOrders from "./Pages/DashBord/MyOrders/MyOrders";
-import Payment from "./Pages/DashBord/Pay/Payment";
-import Review from "./Pages/DashBord/Review/Review";
+import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
+
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+
+
 import EventRegister from "./Pages/EventRegister/EventRegister";
 import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
 import HockeyPuckHome from "./Pages/HockeyPuck/HockeyPuckHome/HockeyPuckHome";
@@ -24,6 +24,9 @@ import Register from "./Pages/Register/Register";
 
 import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
+import AddAdmin from "./Pages/Dashboard/AddAdmin/AddAdmin";
+import AddReview from "./Pages/Dashboard/AddReview/AddReview";
+import AddTicketBooking from "./Pages/Dashboard/AddTicketBooking/AddTicketBooking";
 
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
@@ -53,12 +56,22 @@ function App() {
             <Route path="/playerDetails/:id" element={<PlayerDetails />} />
             <Route path="/singleProduct/:id" element={<SingleProduct />} />
 
-            <Route path="/dashbord" element={<DashBord />}>
-              <Route exact path={"/dashbord/myOrder"} element={<MyOrders />} />
-              <Route exact path={"/dashbord/home"} element={<DashBordHome />} />
-              <Route path={`/dashbord/review`} element={<Review />} />
-              <Route path={`/dashbord/pay`} element={<Payment />} />
+
+
+            <Route path="/dashboard" element={<Dashboard />}>
+            <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
+            <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
+            <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
+            <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
+
             </Route>
+            
+            
+            
+
+
+            
+          
           </Routes>
         </Router>
       </AuthProvider>
