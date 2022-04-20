@@ -63,7 +63,7 @@ const SingleProduct = () => {
                   <div className="d-flex">
                     <input className="cart-style" size="1" min="1" value="1"/>
                     <button type="button" class="cart-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Cart
+                    Shop 
                   </button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">

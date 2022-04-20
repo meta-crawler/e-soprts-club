@@ -11,13 +11,18 @@ import {
   faTag,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 import React, { useState } from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
+import { useForm } from "react-hook-form";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./booking.css";
 
 const Booking = () => {
   const [formData, setFormData] = useState({});
+  const [success, setSuccess] = useState(false);
+
+  const {reset} = useForm()
   const onBlurHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -26,9 +31,35 @@ const Booking = () => {
     setFormData(newFormData);
   };
   const onSubmitHandler = (e) => {
+  
     e.preventDefault();
     console.log(formData);
+    fetch('https://enigmatic-garden-34025.herokuapp.com/doctors', {
+      method: 'POST',
+      body: formData
+  })
+      .then(res => res.json())
+      .then(data => {
+          if (data.insertedId) {
+              setSuccess('Doctor added successfully')
+              console.log('doctor added successfully')
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
   };
+
+  // const onSubmit = (data) => {
+  //   console.log(data);
+  //   axios.post("https://enigmatic-garden-34025.herokuapp.com/addticket",data)
+  //   .then(res => {
+  //     if (res.data.insertedId) {
+  //         alert('added successfully');
+  //         reset();
+  //     }
+  //   })
+  // }
   return (
     <div>
       <Navigation />
@@ -126,6 +157,7 @@ const Booking = () => {
               </Button>
             </Form.Group>
           </form>
+          {success && <p style={{ color: 'green' }}>{success}</p>}
         </div>
       </div>
       <div className="next-match-container">

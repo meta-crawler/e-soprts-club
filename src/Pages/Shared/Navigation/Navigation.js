@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import useAuth from "../../../Hook/UseAuth";
 import cartlogo from "../../../Images/download.png";
 import logo from "../../../Images/logo.png";
@@ -24,7 +25,7 @@ const Navigation = () => {
           
           
 
-          <NavDropdown style={{fontSize: "22px", marginBottom: "7px", fontWeight: "600"}} title="PAGES" id="basic-nav-dropdown">
+          <NavDropdown style={{fontSize: "22px", marginBottom: "7px", fontWeight: "600", color: "#dc3545 !important "}} title="PAGES" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to="/football">Football</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/cricket">Cricket</NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/hockeyPuck">Hockey Puck</NavDropdown.Item>
@@ -35,10 +36,16 @@ const Navigation = () => {
           
           
         </NavDropdown>
+        <HashLink className='link-style' to='#shop'>
+          <h5 className='text-style'>SHOP</h5>
+          </HashLink>
           
-          <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>NEWS</h5></Nav.Link>
-
-          <Nav.Link className='link-style' as={Link} to="/"><h5 className='text-style'>SHOP</h5></Nav.Link>
+          <HashLink className='link-style' to='#news'>
+          <h5 className='text-style'>NEWS</h5>
+          </HashLink>
+          
+         
+         
 
           <Nav.Link className='link-style' as={Link} to="/contact"><h5 className='text-style'>CONTACT</h5></Nav.Link>
           <Nav.Link className='link-style' as={Link} to="/dashboard"><h5 className='text-style'>DASHBOARD</h5></Nav.Link>

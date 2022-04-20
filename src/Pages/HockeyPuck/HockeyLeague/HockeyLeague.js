@@ -7,7 +7,7 @@ import player3 from '../../../Images/HockeyLeague/i.png';
 import player4 from '../../../Images/HockeyLeague/i (1).png';
 import player5 from '../../../Images/HockeyLeague/Victor-Hedman-PNG-HD-Quality.png';
 import banner1 from '../../../Images/HockeyLeague/download.jpg';
-import banner2 from '../../../Images/HockeyLeague/GS_Wild-Scoreboard.jpg.crdownload';
+import banner2 from '../../../Images/HockeyLeague/images.jpg';
 
 const HockeyLeague = () => {
     return (

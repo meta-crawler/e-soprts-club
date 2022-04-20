@@ -8,10 +8,7 @@ import Booking from "./Pages/Booking/Booking";
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
 import CricketHome from "./Pages/Cricket/CricketHome/CricketHome";
 import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
-
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
-
-
 import EventRegister from "./Pages/EventRegister/EventRegister";
 import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
 import HockeyPuckHome from "./Pages/HockeyPuck/HockeyPuckHome/HockeyPuckHome";
@@ -69,8 +66,8 @@ function App() {
             
             
 
-
             
+          
           
           </Routes>
         </Router>

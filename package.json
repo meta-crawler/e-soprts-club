@@ -27,6 +27,7 @@
     "react-messenger-customer-chat": "^0.8.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.0",
     "react-slick": "^0.28.1",
     "sass": "^1.50.0",
