@@ -1,11 +1,11 @@
 import React from 'react';
 import './TableTennisLeague.css';
 import {  Container, Row, Col } from "react-bootstrap";
-import player1 from '../../../Images/cricketLeague/shakib-al-hasan-792.png';
-import player2 from '../../../Images/cricketLeague/mohammad-nabi-1313.png';
-import player3 from '../../../Images/cricketLeague/chris-woakes-1056.png';
-import player4 from '../../../Images/cricketLeague/rashid-khan-arman_636964742186305003.png';
-import player5 from '../../../Images/cricketLeague/benjamin-andrew-stokes_636526681993441973.png';
+import player1 from '../../../Images/TableTennisLeague/player1.webp';
+import player2 from '../../../Images/TableTennisLeague/player2.webp';
+import player3 from '../../../Images/TableTennisLeague/player3.webp';
+import player4 from '../../../Images/TableTennisLeague/player4.webp';
+import player5 from '../../../Images/TableTennisLeague/player5.webp';
 import banner1 from '../../../Images/TableTennisLeague/TableTennisBanner1.jpg';
 import banner2 from '../../../Images/TableTennisLeague/TableTennisBanner2.jpg';
 
@@ -23,8 +23,8 @@ const TableTennisLeague = () => {
                     <img src={player1} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Shakib Al Hasan </h2>
-                    <h4>Bangladesh</h4>
+                    <h2>MA Long</h2>
+                    <h4>China</h4>
                     
                      </div>
 
@@ -38,8 +38,8 @@ const TableTennisLeague = () => {
                     <img src={player2} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Mohammad Nabi</h2>
-                    <h4>Afghanistan</h4>
+                    <h2>Hugo CALDERANO</h2>
+                    <h4>Brazil</h4>
                     
                      </div>
 
@@ -52,8 +52,8 @@ const TableTennisLeague = () => {
                     <img src={player3} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Chris Woakes</h2>
-                    <h4>England</h4>
+                    <h2>LIN Yun-Ju </h2>
+                    <h4>Chinese Taipei</h4>
                     
                      </div>
 
@@ -66,8 +66,8 @@ const TableTennisLeague = () => {
                     <img src={player4} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>DRashid Khan</h2>
-                    <h4>Afghanistan</h4>
+                    <h2>Dimitrij OVTCHAROV</h2>
+                    <h4>Germany</h4>
                     
                      </div>
 
@@ -79,8 +79,8 @@ const TableTennisLeague = () => {
                     <img src={player5} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Ben Stokes</h2>
-                    <h4>England</h4>
+                    <h2>Darko JORGIC</h2>
+                    <h4>Slovenia</h4>
                     
                      </div>
 
