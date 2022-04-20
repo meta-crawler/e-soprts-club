@@ -48,6 +48,7 @@ const Navigation = () => {
          
 
           <Nav.Link className='link-style' as={Link} to="/contact"><h5 className='text-style'>CONTACT</h5></Nav.Link>
+          <Nav.Link className='link-style' as={Link} to="/dashboard"><h5 className='text-style'>DASHBOARD</h5></Nav.Link>
           
           
   
@@ -59,7 +60,8 @@ const Navigation = () => {
          
          
 
-          <Nav.Link className='link-style cart-button' as={Link} to="/dashbord/home"><img src={cartlogo} width="50px" alt="" /> </Nav.Link>
+          {/* <Nav.Link className='link-style cart-button' as={Link} to="/dashbord/home"><img src={cartlogo} width="50px" alt="" /> </Nav.Link> */}
+         
           
 
 

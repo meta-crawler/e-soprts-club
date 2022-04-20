@@ -7,6 +7,8 @@ import BasketBallHome from "./Pages/BasketBall/BasketBallHome/BasketBallHome";
 import Booking from "./Pages/Booking/Booking";
 import AuthProvider from "./Pages/context/AuthProvider/AuthProvider";
 import CricketHome from "./Pages/Cricket/CricketHome/CricketHome";
+import AddProduct from "./Pages/Dashboard/AddProduct/AddProduct";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import EventRegister from "./Pages/EventRegister/EventRegister";
 import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
 import HockeyPuckHome from "./Pages/HockeyPuck/HockeyPuckHome/HockeyPuckHome";
@@ -19,6 +21,9 @@ import Register from "./Pages/Register/Register";
 
 import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
+import AddAdmin from "./Pages/Dashboard/AddAdmin/AddAdmin";
+import AddReview from "./Pages/Dashboard/AddReview/AddReview";
+import AddTicketBooking from "./Pages/Dashboard/AddTicketBooking/AddTicketBooking";
 
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
@@ -38,15 +43,32 @@ function App() {
             <Route path="/basketBall" element={<BasketBallHome />} />
             <Route path="/volleyBall" element={<VolleyBallHome />} />
 
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/event-register" element={<EventRegister />} />
-          <Route path="/playerDetails/:id" element= {<PlayerDetails /> } />
-          <Route path="/singleProduct/:id" element={<SingleProduct/>} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/event-register" element={<EventRegister />} />
+            <Route path="/playerDetails/:id" element={<PlayerDetails />} />
+            <Route path="/singleProduct/:id" element={<SingleProduct />} />
+
+
+
+            <Route path="/dashboard" element={<Dashboard />}>
+            <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
+            <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
+            <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
+            <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
+
+            </Route>
+            
+            
+            
+
+            
+          
+          
           </Routes>
         </Router>
       </AuthProvider>
