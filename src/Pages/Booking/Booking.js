@@ -19,47 +19,58 @@ import Navigation from "../Shared/Navigation/Navigation";
 import "./booking.css";
 
 const Booking = () => {
+
+
+
+  const formDataAll = { name: '', email: '', number: '', date: '',city: "", address: "" };
+
+  const [formData, setFormData] = useState(formDataAll);
+
+
+
+
   const [formData, setFormData] = useState({});
   const [success, setSuccess] = useState(false);
 
   const {reset} = useForm()
-  const onBlurHandler = (e) => {
+ const onBlurHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     const newFormData = { ...formData };
     newFormData[name] = value;
     setFormData(newFormData);
   };
-  const onSubmitHandler = (e) => {
-  
-    e.preventDefault();
-    console.log(formData);
-    fetch('https://enigmatic-garden-34025.herokuapp.com/doctors', {
-      method: 'POST',
-      body: formData
-  })
-      .then(res => res.json())
-      .then(data => {
-          if (data.insertedId) {
-              setSuccess('Doctor added successfully')
-              console.log('doctor added successfully')
-          }
-      })
-      .catch(error => {
-          console.error('Error:', error);
-      });
-  };
 
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   axios.post("https://enigmatic-garden-34025.herokuapp.com/addticket",data)
-  //   .then(res => {
-  //     if (res.data.insertedId) {
-  //         alert('added successfully');
-  //         reset();
-  //     }
-  //   })
-  // }
+
+
+
+  const onSubmitHandler = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...formData
+      }
+  
+      fetch('https://enigmatic-garden-34025.herokuapp.com/booking', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+  
+    }
+
+
+
+
+
+
+
   return (
     <div>
       <Navigation />

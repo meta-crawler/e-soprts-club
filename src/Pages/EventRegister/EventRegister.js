@@ -16,7 +16,18 @@ import { Button, Container, Form, Row } from "react-bootstrap";
 import Navigation from "../Shared/Navigation/Navigation";
 
 const EventRegister = () => {
-  const [formData, setFormData] = useState({});
+
+
+
+
+  
+  const formDataAll = { eventName: '', StartDate: '', sex: '', age: '',city: "", address: "", eventDes: "", ClubName: "", email: "", number: ""};
+
+
+
+  const [formData, setFormData] = useState(formDataAll);
+
+
   const onBlurHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -24,10 +35,38 @@ const EventRegister = () => {
     newFormData[name] = value;
     setFormData(newFormData);
   };
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+
+
+
+
+
+  const onSubmitHandler = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...formData
+      }
+  
+      fetch('https://enigmatic-garden-34025.herokuapp.com/eventRegister', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+  
+    }
+
+
+
+
+
+
+
   return (
     <div>
       <Navigation />
