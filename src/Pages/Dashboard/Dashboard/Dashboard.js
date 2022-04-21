@@ -25,6 +25,7 @@ const Dashboard = () => {
             
             <div className="top">
                 <span className="logo">Sports Club</span>
+                
             </div>
             <hr />
             <div className="center">

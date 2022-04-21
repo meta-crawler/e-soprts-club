@@ -15,7 +15,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("https://enigmatic-garden-34025.herokuapp.com/addproduct",data)
+    axios.post("https://enigmatic-garden-34025.herokuapp.com/other",data)
     .then(res => {
       if (res.data.insertedId) {
           alert('added successfully');
@@ -56,11 +56,19 @@ const AddProduct = () => {
                     className="p-2 m-2 w-100 input-field"
                   />
   
-                  <select {...register("model")} className="p-2 m-2 w-100">
-                    <option value="premium">premium</option>
-                    <option value="classic">classic</option>
-                    <option value="business">business</option>
-                  </select>
+                  <input
+                    {...register("category", { required: true })}
+                    placeholder="category"
+                    className="p-2 m-2 w-100 input-field"
+                  />
+                  <input
+                    {...register("tags", { required: true })}
+                    placeholder="tags"
+                    className="p-2 m-2 w-100 input-field"
+                  />
+                  
+  
+                 
                   <br />
   
                   {errors.exampleRequired && <span>This field is required</span>}

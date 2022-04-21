@@ -34,15 +34,15 @@ const Booking = () => {
   
     e.preventDefault();
     console.log(formData);
-    fetch('https://enigmatic-garden-34025.herokuapp.com/doctors', {
+    fetch('https://enigmatic-garden-34025.herokuapp.com/addticket', {
       method: 'POST',
       body: formData
   })
       .then(res => res.json())
       .then(data => {
           if (data.insertedId) {
-              setSuccess('Doctor added successfully')
-              console.log('doctor added successfully')
+              setSuccess('ticket added successfully')
+              console.log('ticket added successfully')
           }
       })
       .catch(error => {
@@ -50,16 +50,16 @@ const Booking = () => {
       });
   };
 
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   axios.post("https://enigmatic-garden-34025.herokuapp.com/addticket",data)
-  //   .then(res => {
-  //     if (res.data.insertedId) {
-  //         alert('added successfully');
-  //         reset();
-  //     }
-  //   })
-  // }
+  const onSubmit = (data) => {
+    console.log(data);
+    axios.post("https://enigmatic-garden-34025.herokuapp.com/addticket",data)
+    .then(res => {
+      if (res.data.insertedId) {
+          alert('added successfully');
+          reset();
+      }
+    })
+  }
   return (
     <div>
       <Navigation />
