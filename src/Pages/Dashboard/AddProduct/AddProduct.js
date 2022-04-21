@@ -71,7 +71,7 @@ const AddProduct = () => {
   return (
     <div>
       <div>
-        <h1 className="mt-5 text-center text-danger">Please Add Product</h1>
+        <h1 className="mt-5 text-center add-product "><i><b>Please Add Product</b></i></h1>
         <div className=" w-25 m-auto mt-5">
           <div className=" ">
             <div className="">
@@ -175,7 +175,7 @@ const AddProduct = () => {
                 <br /><br />
                 <Button onClick={onSubmit}
 
-                  style={{ background: "#dc3545", border: "none", padding: "10px 10px" }} >Submit <IosShareIcon /></Button>
+                  style={{ background: "black", border: "none", padding: "10px 10px", color:'gold' }} >Submit <IosShareIcon /></Button>
 
 
               </form>
