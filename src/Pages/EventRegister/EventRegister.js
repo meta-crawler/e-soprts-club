@@ -22,7 +22,7 @@ const EventRegister = () => {
 
   const { isLoading} = useAuth()
   
-  const formDataAll = { eventName: '', StartDate: '', sex: '', age: '',city: "", address: "", eventDes: "", ClubName: "", email: "", number: ""};
+  const formDataAll = { eventName: '', StartDate: '', sex: '', age: '',city: "", address: "", eventDes: "", ClubName: "", email: "", number: "", status: "pending"};
 
 
 
