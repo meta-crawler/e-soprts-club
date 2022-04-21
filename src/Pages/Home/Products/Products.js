@@ -14,7 +14,7 @@ const Products = () => {
     const size = 5;
 
     useEffect(() => {
-        fetch(`http://localhost:7000/other?page=${page}&&size=${size}`)
+        fetch(`https://enigmatic-garden-34025.herokuapp.com/other?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setProducts(data.products);
