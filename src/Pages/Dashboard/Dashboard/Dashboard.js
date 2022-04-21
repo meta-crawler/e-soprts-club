@@ -59,7 +59,7 @@ const Dashboard = () => {
                    <Link to={`/dashboard/addadmin`}>
                    <li className='dashboard-li'>
                         <AssessmentIcon className='icon'/>
-                        <span>Add-Admin</span>
+                        <span> Make An Admin</span>
                         </li></Link>
                     <li className='dashboard-li'>
                         <NotificationsNoneIcon className='icon'/>
@@ -72,14 +72,20 @@ const Dashboard = () => {
                         <span>Ticket-Booking</span>
                     </li>
                     </Link>
+                    <Link to={`/dashboard/addEventRegister`}>
                     <li className='dashboard-li'>
-                        <PsychologyIcon className='icon'/>
-                        <span>Logs</span>
-                        </li>
-                    <li className='dashboard-li'>
-                        <SettingsIcon className='icon' />
-                        <span>Settings</span>
+                        <SettingsSystemDaydreamIcon className='icon'/>
+                        <span>Event-Register</span>
                     </li>
+                    </Link>
+
+
+                    <Link to={`/dashboard/loadProdect`}>
+                    <li className='dashboard-li'>
+                        <SettingsSystemDaydreamIcon className='icon'/>
+                        <span>Your Shop</span>
+                    </li>
+                    </Link>
                     <p className="title">User</p>
                     <li className='dashboard-li'>
                         <AssignmentIndIcon className='icon' />

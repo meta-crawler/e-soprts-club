@@ -35,7 +35,28 @@ const PlayerDetailsBanner = () => {
                     <h1 className='details-player-title'>{product?.name}</h1>
 
                     <p className='details-player-des'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p>
-                    <button className='details-connecting'>conecting</button>
+                    <button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    
+                    >Conecting</button>
+
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
                 </div>
                 <div>

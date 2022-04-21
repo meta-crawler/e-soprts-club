@@ -24,7 +24,8 @@ const Booking = () => {
 
   const { isLoading} = useAuth()
 
-  const formDataAll = { name: '', email: '', number: '', date: '', city: "", address: "" };
+  const formDataAll = { name: '', email: '', number: '', date: '', city: "", address: "", status: "pending" };
+
   const [formData, setFormData] = useState(formDataAll);
 
 
@@ -35,6 +36,7 @@ const Booking = () => {
     const newFormData = { ...formData };
     newFormData[name] = value;
     setFormData(newFormData);
+    console.log(formDataAll);
   };
 
 
@@ -48,7 +50,7 @@ const Booking = () => {
     const newDispalyReviwe = {
       ...formData
     }
-
+console.log(newDispalyReviwe);
     fetch('https://enigmatic-garden-34025.herokuapp.com/booking', {
       method: 'POST',
       headers: {

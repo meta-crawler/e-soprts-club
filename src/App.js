@@ -24,6 +24,7 @@ import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
 import AddAdmin from "./Pages/Dashboard/AddAdmin/AddAdmin";
 import AddReview from "./Pages/Dashboard/AddReview/AddReview";
 import AddTicketBooking from "./Pages/Dashboard/AddTicketBooking/AddTicketBooking";
+import AddEventRegister from "./Pages/Dashboard/AddEventRegister/AddEventRegister";
 
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
 
@@ -60,6 +61,8 @@ function App() {
             <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
             <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
             <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
+            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
 
             </Route>
             
