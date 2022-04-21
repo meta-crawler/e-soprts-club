@@ -11,18 +11,24 @@ import {
   faTag,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
+
 import React, { useState } from "react";
-import { Button, Container, Form, Row } from "react-bootstrap";
-import { useForm } from "react-hook-form";
+import { Button, Container, Form, Row , Spinner} from "react-bootstrap";
+import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./booking.css";
 
-const Booking = () => {
-  const [formData, setFormData] = useState({});
-  const [success, setSuccess] = useState(false);
 
-  const {reset} = useForm()
+const Booking = () => {
+
+
+  const { isLoading} = useAuth()
+
+  const formDataAll = { name: '', email: '', number: '', date: '', city: "", address: "" };
+  const [formData, setFormData] = useState(formDataAll);
+
+
+
   const onBlurHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -30,42 +36,46 @@ const Booking = () => {
     newFormData[name] = value;
     setFormData(newFormData);
   };
-  const onSubmitHandler = (e) => {
-  
-    e.preventDefault();
-    console.log(formData);
-    fetch('https://enigmatic-garden-34025.herokuapp.com/addticket', {
-      method: 'POST',
-      body: formData
-  })
-      .then(res => res.json())
-      .then(data => {
-          if (data.insertedId) {
-              setSuccess('ticket added successfully')
-              console.log('ticket added successfully')
-          }
-      })
-      .catch(error => {
-          console.error('Error:', error);
-      });
-  };
 
-  const onSubmit = (data) => {
-    console.log(data);
-    axios.post("https://enigmatic-garden-34025.herokuapp.com/addticket",data)
-    .then(res => {
-      if (res.data.insertedId) {
-          alert('added successfully');
-          reset();
-      }
+
+
+
+  const onSubmitHandler = data => {
+    data.preventDefault();
+
+
+
+    const newDispalyReviwe = {
+      ...formData
+    }
+
+    fetch('https://enigmatic-garden-34025.herokuapp.com/booking', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newDispalyReviwe)
     })
+      .then(res => res.json())
+      .then(data => console.log(data));
+
+
+
+
+      if(newDispalyReviwe){
+        alert("Thank You, Your Ticket IS Booking")
+      }
+
   }
+
+
+
   return (
     <div>
       <Navigation />
       <div className="follow-us container">
         <div className="follow-us-box">
-          
+
           <FontAwesomeIcon className="facebook-icon me-1" icon={faFacebookF} />
           <FontAwesomeIcon className="twitter-icon me-1" icon={faTwitter} />
           <FontAwesomeIcon
@@ -88,6 +98,8 @@ const Booking = () => {
               Dubai World Cup.
             </p>
           </div>
+
+          {!isLoading && 
           <form className="mt-4" onSubmit={onSubmitHandler}>
             <Form.Group className="mb-3 input-box">
               <Form.Label className="mb-0">Name</Form.Label>
@@ -152,12 +164,19 @@ const Booking = () => {
             </Form.Group>
             <Form.Group className="mb-3 input-box">
               <Form.Label className="mb-0"></Form.Label>
-              <Button style={{ background: "#e40046" }} className="fw-bold w-100"  type="submit">
+              <Button style={{ background: "#e40046" }} className="fw-bold w-100" type="submit">
                 SUBMIT
               </Button>
             </Form.Group>
-          </form>
-          {success && <p style={{ color: 'green' }}>{success}</p>}
+          </form>} :
+
+          {/* {!formDataAll && <div class="alert alert-success" role="alert">
+  user create successfully!
+</div>}  */}
+
+          
+          {isLoading &&   <Spinner animation="border" variant="secondary" />}
+         
         </div>
       </div>
       <div className="next-match-container">
@@ -166,8 +185,8 @@ const Booking = () => {
             <div className="col-md-2 text-center">
               <p>Next Match</p>
               <h1
-                style={{ fontSize: "5rem",  }}
-                className="fw-bold my-0 text-warning" 
+                style={{ fontSize: "5rem", }}
+                className="fw-bold my-0 text-warning"
               >
                 25
               </h1>

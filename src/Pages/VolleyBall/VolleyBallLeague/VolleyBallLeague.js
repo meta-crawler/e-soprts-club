@@ -1,13 +1,13 @@
 import React from 'react';
 import './VolleyBallLeague.css';
 import {  Container, Row, Col } from "react-bootstrap";
-import player1 from '../../../Images/cricketLeague/shakib-al-hasan-792.png';
-import player2 from '../../../Images/cricketLeague/mohammad-nabi-1313.png';
-import player3 from '../../../Images/cricketLeague/chris-woakes-1056.png';
-import player4 from '../../../Images/cricketLeague/rashid-khan-arman_636964742186305003.png';
-import player5 from '../../../Images/cricketLeague/benjamin-andrew-stokes_636526681993441973.png';
-import banner1 from '../../../Images/cricketLeague/CTH2_1920x1080_NoCTA.jpg';
-import banner2 from '../../../Images/cricketLeague/CLUB-TICKETING-PROGRAM_social_1920x1080_Landscape.jpg';
+import player1 from '../../../Images/VolleyBallLeauge/player1.jpg';
+import player2 from '../../../Images/VolleyBallLeauge/player2.jpg';
+import player3 from '../../../Images/VolleyBallLeauge/player3.jpg';
+import player4 from '../../../Images/VolleyBallLeauge/player4.jpg';
+import player5 from '../../../Images/VolleyBallLeauge/player5.jpg';
+import banner1 from '../../../Images/VolleyBallLeauge/volleyballBanner1.jpg';
+import banner2 from '../../../Images/VolleyBallLeauge/volleyballBanner4.jpg';
 
 const VolleyBallLeague = () => {
     return (
@@ -23,8 +23,8 @@ const VolleyBallLeague = () => {
                     <img src={player1} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Shakib Al Hasan </h2>
-                    <h4>Bangladesh</h4>
+                    <h2>Giba</h2>
+                    <h4>Brazil</h4>
                     
                      </div>
 
@@ -38,8 +38,8 @@ const VolleyBallLeague = () => {
                     <img src={player2} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Mohammad Nabi</h2>
-                    <h4>Afghanistan</h4>
+                    <h2>Saeid Marouf</h2>
+                    <h4>Iranian</h4>
                     
                      </div>
 
@@ -66,8 +66,8 @@ const VolleyBallLeague = () => {
                     <img src={player4} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>DRashid Khan</h2>
-                    <h4>Afghanistan</h4>
+                    <h2>Ivan Zaytsev</h2>
+                    <h4>Russian</h4>
                     
                      </div>
 
@@ -79,8 +79,8 @@ const VolleyBallLeague = () => {
                     <img src={player5} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Ben Stokes</h2>
-                    <h4>England</h4>
+                    <h2>Steve Timmons</h2>
+                    <h4>American</h4>
                     
                      </div>
 

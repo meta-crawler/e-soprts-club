@@ -1,13 +1,13 @@
 import React from 'react';
 import './BaseBallLeague.css';
 import {  Container, Row, Col } from "react-bootstrap";
-import player1 from '../../../Images/cricketLeague/shakib-al-hasan-792.png';
-import player2 from '../../../Images/cricketLeague/mohammad-nabi-1313.png';
-import player3 from '../../../Images/cricketLeague/chris-woakes-1056.png';
-import player4 from '../../../Images/cricketLeague/rashid-khan-arman_636964742186305003.png';
-import player5 from '../../../Images/cricketLeague/benjamin-andrew-stokes_636526681993441973.png';
-import banner1 from '../../../Images/cricketLeague/CTH2_1920x1080_NoCTA.jpg';
-import banner2 from '../../../Images/cricketLeague/CLUB-TICKETING-PROGRAM_social_1920x1080_Landscape.jpg';
+import player1 from '../../../Images/baseballLeauge/player1.jpg';
+import player2 from '../../../Images/baseballLeauge/player2.jpg';
+import player3 from '../../../Images/baseballLeauge/player3.jpg';
+import player4 from '../../../Images/baseballLeauge/player4.jpg';
+import player5 from '../../../Images/baseballLeauge/player5.jpg';
+import banner1 from '../../../Images/baseballLeauge/baseballBanner2.jpg';
+import banner2 from '../../../Images/baseballLeauge/baseballBanner2.jpg';
 
 const BaseBallLeague = () => {
     return (
@@ -15,7 +15,7 @@ const BaseBallLeague = () => {
             <Row style={{padding: "100px 0px 100px"}}>
     <Col xs={6}>
         <div>
-            <h1 style={{width: "700px", marginBottom: "100px"}}><span className='color'>ICC</span>  Player Rankings For  <span className='color'>All-Rounders</span></h1>
+            <h1 style={{width: "700px", marginBottom: "100px"}}><span className='color'>MLW</span>  Player Rankings For <span className='color'>International</span></h1>
             <div className="CricketLeague">
 
                 <div className="images">
@@ -23,8 +23,8 @@ const BaseBallLeague = () => {
                     <img src={player1} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Shakib Al Hasan </h2>
-                    <h4>Bangladesh</h4>
+                    <h2>Christian Vaquero</h2>
+                    <h4>Venezuela</h4>
                     
                      </div>
 
@@ -38,8 +38,8 @@ const BaseBallLeague = () => {
                     <img src={player2} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Mohammad Nabi</h2>
-                    <h4>Afghanistan</h4>
+                    <h2>Ryan Reckley</h2>
+                    <h4>The Bahamas</h4>
                     
                      </div>
 
@@ -52,7 +52,7 @@ const BaseBallLeague = () => {
                     <img src={player3} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Chris Woakes</h2>
+                    <h2>Anthony Gutierrez</h2>
                     <h4>England</h4>
                     
                      </div>
@@ -66,8 +66,8 @@ const BaseBallLeague = () => {
                     <img src={player4} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>DRashid Khan</h2>
-                    <h4>Afghanistan</h4>
+                    <h2>Johan Barrios</h2>
+                    <h4>Panama</h4>
                     
                      </div>
 
@@ -79,8 +79,8 @@ const BaseBallLeague = () => {
                     <img src={player5} alt="" />
                 </div>
                 <div className="Text">
-                    <h2>Ben Stokes</h2>
-                    <h4>England</h4>
+                    <h2>Alexis Hernandez</h2>
+                    <h4>Taiwan</h4>
                     
                      </div>
 

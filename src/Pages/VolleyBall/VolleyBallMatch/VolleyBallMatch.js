@@ -1,9 +1,9 @@
 import React from 'react';
 import './VolleyBallMatch.css';
 import { Card } from 'react-bootstrap';
-import img1 from '../../../Images/iconCricket/bangladesh.png';
+import img1 from '../../../Images/iconHockey/china.png';
 import img2 from '../../../Images/iconCricket/australia.png';
-import img3 from '../../../Images/iconCricket/india.png';
+import img3 from '../../../Images/iconHockey/united-states.png';
 import img4 from '../../../Images/iconCricket/new-zealand.png';
 import img5 from '../../../Images/iconCricket/pakistan.png';
 
@@ -29,7 +29,7 @@ const VolleyBallMatch = () => {
                             </Card.Text>
                             <div className="d-flex justify-content-evenly align-items-center">
                                 <img className='logoimage' src={img1} alt="" />
-                                <h3 style={{ fontSize: '20px' }}>Bangladesh</h3>
+                                <h3 style={{ fontSize: '20px' }}>China</h3>
                                 <h3 style={{ fontSize: '20px', backgroundColor: '#FFC722', padding: '10px' }}> VS </h3>
                                 <h3 style={{ fontSize: '20px' }}>Australia</h3>
                                 <img className='logoimage' src={img2} alt="" />
@@ -69,7 +69,7 @@ const VolleyBallMatch = () => {
                                     <td className=''>21, Octomber, 2022</td>
 
                                     <img className='logoimage2' src={img1} alt="" />
-                                    <h3 style={{ fontSize: '16px' }}>Bangladesh</h3>
+                                    <h3 style={{ fontSize: '16px' }}>United States</h3>
                                     <h3 style={{ fontSize: '27px', color: '#FFC722', padding: '10px' }}> VS </h3>
                                     <h3 style={{ fontSize: '16px' }}>Pakistan</h3>
                                     <img className='logoimage2' src={img5} alt="" />
