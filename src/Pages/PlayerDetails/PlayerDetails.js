@@ -16,7 +16,6 @@ import PlayerReviwe from '../PlayerReviwe/PlayerReviwe';
 import location from '../../Images/Connting/819814.png';
 import email from '../../Images/Connting/email.png';
 import phone from '../../Images/Connting/phone-call.png';
-import TextField from '@mui/material/TextField';
 
 
 
@@ -161,8 +160,8 @@ const hendalPalyer = player => {
 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-style">
                             <div class="modal-header-style">
                               <h5 class="modal-titel1 mb-3">Send Your Variable Messages </h5>
