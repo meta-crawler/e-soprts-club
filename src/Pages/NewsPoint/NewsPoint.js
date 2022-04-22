@@ -173,30 +173,8 @@ const NewsPoint = () => {
                     </div>
                 </div>
                 </div>
-                <div className="col-lg-3 col-12">
-                <div className="ImageItam">
-                    <img style={{width: "100%", height: "300px"}} src={lage1} alt="" />
+                <div className="col-lg-12 col-12">
 
-                    <div className="TextLeag">
-                    <p><CalendarMonthIcon /> April 17, 2022</p>
-                        
-                        <p>Everything In Soccer Starts Right Here in USA</p>
-                    </div>
-                </div>
-                </div>
-                <div className="col-lg-3 col-12">
-                <div className="ImageItam">
-                    <img style={{width: "100%", height: "300px"}} src={lage2} alt="" />
-
-                    <div className="TextLeag">
-                    <p><CalendarMonthIcon /> April 16, 2022</p>
-                        
-                        <p>Latest Point Table For The Premier League</p>
-                    </div>
-                </div>
-                </div>
-                <div className="col-lg-3 col-12">
-                
                 </div>
 
 </div>            
