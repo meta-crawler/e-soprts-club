@@ -1,3 +1,17 @@
 .pd-bg{
     background-color: #E40046;
 }
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:20px;
+    /* padding-left: 150px; */
+}
+@media only screen and (max-width:688px) {
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:20px;
+        /* padding-left: 150px; */
+    }
+}

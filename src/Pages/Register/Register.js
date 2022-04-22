@@ -48,8 +48,10 @@ const Register = () => {
     }
     return (
         <div className='main-section'>
+            
          <div className='bg-img'></div>
         <div className='login-main'>
+        <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '-310px' }} to='/'>Go To Home </Link>
            {!isLoading && <form onSubmit={handleRegisterSubmit} action="" className='login'>
             <Typewriter
 

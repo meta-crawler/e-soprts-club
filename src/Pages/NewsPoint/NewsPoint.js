@@ -11,6 +11,7 @@ import lage3 from '../../Images/NewsUpdate/2021–22_Indian_Super_League_poster.
 
 
 import './NewsPoint.css';
+import { Link } from 'react-router-dom';
 
 const NewsPoint = () => {
     return (
@@ -161,45 +162,26 @@ const NewsPoint = () => {
             </div>
             </div>
 
-            <div style={{marginTop: "50px"}}  className="row">
-            <div className="col-lg-3 col-12">
-                <div className="ImageItam">
-                    <img style={{width: "100%", height: "300px"}} src={lage3} alt="" />
-
-                    <div className="TextLeag">
-                    <p><CalendarMonthIcon /> April 18, 2022</p>
+            <div style={{marginTop: "50px"}}  className="">
+            <Container>
+                <div className="BookingPart">
+                        <div className="Text">
+                        <h1 style={{color:'gold'}} >Why are you still waiting?</h1>
+                    <p>PLEASE! <span style={{color: "#E71E68"}} >JOIN OUR QUIZE EVENT THEN  </span></p>
+                        </div>
                         
-                        <p> Premier League 2022/23 dates announced</p>
-                    </div>
-                </div>
-                </div>
-                <div className="col-lg-3 col-12">
-                <div className="ImageItam">
-                    <img style={{width: "100%", height: "300px"}} src={lage1} alt="" />
-
-                    <div className="TextLeag">
-                    <p><CalendarMonthIcon /> April 17, 2022</p>
-                        
-                        <p>Everything In Soccer Starts Right Here in USA</p>
-                    </div>
-                </div>
-                </div>
-                <div className="col-lg-3 col-12">
-                <div className="ImageItam">
-                    <img style={{width: "100%", height: "300px"}} src={lage2} alt="" />
-
-                    <div className="TextLeag">
-                    <p><CalendarMonthIcon /> April 16, 2022</p>
-                        
-                        <p>Latest Point Table For The Premier League</p>
-                    </div>
-                </div>
-                </div>
-                <div className="col-lg-3 col-12">
-                
+                        <div className="Bottun">
+                            <Link to="/contestsregister" > <Button style={{background: "#E71E68", color: "#FFF", padding: "10px", border: "0px", marginTop: "20px"}}>EVENT BOOKING</Button></Link>
+                        </div>
+                        <div className="Number">
+                            <h2><span style={{color: "#E71E68", marginTop: "0px", display: "block"}} >25 </span> March 2022</h2>
+                        </div>
                 </div>
 
-</div>            
+            </Container>
+
+           
+            </div>            
         </Container>
     );
 };

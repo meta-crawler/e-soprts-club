@@ -87,7 +87,7 @@ const SingleProduct = () => {
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>
       <div className="my-auto">
         <div style={{ marginTop: "100px" }} class="card mb-3"  >
-          <div class="row g-0">
+          <div class="row g-0  single-product-style">
             <div class="col-md-6 pe-2 d-flex justify-content-center align-items-center">
               <img src={singleProducts?.img} class="w-100 h-75" alt="..." />
             </div>
