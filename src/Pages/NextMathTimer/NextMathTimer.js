@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import img1 from '../../Images/logo4.png'
-import img2 from '../../Images/club_logo8.png'
+import img2 from '../../Images/club_logo8.png';
+import img1 from '../../Images/logo4.png';
 const NextMathTimer = () => {
 
 
@@ -43,7 +43,7 @@ const NextMathTimer = () => {
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                     <Card className='' style={{ width: '100%', height: '250px', background: '#363533' }}>
 
-                        <table class="table table-hover table-bordered  ">
+                        <table className="table table-hover table-bordered  ">
                             <tr className='text-white p-3 p-4'>
 
 

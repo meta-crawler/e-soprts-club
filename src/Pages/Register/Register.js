@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import './Register.css'
-import Typewriter from 'typewriter-effect';
-import { Link, NavLink ,useNavigate } from 'react-router-dom';
-import useAuth from '../../Hook/UseAuth';
-import { Alert, Button, Modal, Spinner } from 'react-bootstrap';
 import {
-    
-    faGoogle,
-    faFacebook,
-    faGithub
-  } from "@fortawesome/free-brands-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+  faFacebook,
+  faGithub, faGoogle
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import { Alert, Spinner } from 'react-bootstrap';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
+import Typewriter from 'typewriter-effect';
+import useAuth from '../../Hook/UseAuth';
 import Footer from '../Shared/Footer/Footer';
+import './Register.css';
 
 
 const Register = () => {
@@ -114,7 +112,7 @@ const Register = () => {
                 
             </form>}
             {isLoading &&   <Spinner animation="border" variant="secondary" />}
-            {user?.email && <div class="alert alert-success" role="alert">
+            {user?.email && <div className="alert alert-success" role="alert">
   user create successfully!
 </div>}
                 {authError && [
