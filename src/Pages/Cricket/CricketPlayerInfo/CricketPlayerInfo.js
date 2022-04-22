@@ -63,7 +63,7 @@ const CricketPlayerInfo = () => {
       setDetailsItam(matchItam);
     }
 
-  }, [playerDetails])
+  }, [playerDetails, id])
 
 
 

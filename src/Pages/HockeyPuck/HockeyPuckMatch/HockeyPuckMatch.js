@@ -1,12 +1,12 @@
 import React from 'react';
-import './HockeyPuckMatch.css';
 import { Card } from 'react-bootstrap';
 import img1 from '../../../Images/iconHockey/bangladesh.png';
 import img2 from '../../../Images/iconHockey/china.png';
-import img3 from '../../../Images/iconHockey/south-africa.png';
-import img4 from '../../../Images/iconHockey/mexico.png';
 import img5 from '../../../Images/iconHockey/indonesia.png';
+import img4 from '../../../Images/iconHockey/mexico.png';
+import img3 from '../../../Images/iconHockey/south-africa.png';
 import img6 from '../../../Images/iconHockey/united-states.png';
+import './HockeyPuckMatch.css';
 
 const HockeyPuckMatch = () => {
     const date = new Date().toLocaleDateString();
@@ -49,7 +49,7 @@ const HockeyPuckMatch = () => {
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                     <Card className='' style={{ width: '100%', height: '250px', background: '#363533' }}>
 
-                        <table class="table table-hover table-bordered  ">
+                        <table className="table table-hover table-bordered  ">
                             <tr className='text-white p-3 p-4'>
 
 

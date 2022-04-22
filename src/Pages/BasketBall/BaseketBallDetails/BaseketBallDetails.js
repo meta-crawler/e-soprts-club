@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
-import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from '../Shared/Navigation/Navigation';
+import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
+import Navigation from '../../../Pages/Shared/Navigation/Navigation';
 import {  
   faVideo  
 } from "@fortawesome/free-solid-svg-icons";
@@ -11,8 +11,7 @@ import { Rating, Typography } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import { Box } from '@mui/system';
-import './PlayerDetails.css';
-import PlayerReviwe from '../PlayerReviwe/PlayerReviwe';
+import PlayerReviwe from '../../PlayerReviwe/PlayerReviwe';
 
 
 const labels = {
@@ -31,43 +30,24 @@ const labels = {
 
 
 
-const PlayerDetails = () => {
+const BaseketBallDetails = () => {
 
 
-  const { id } = useParams();
+let { id } = useParams();
 
-  const [playerDetails, setPlayerDetails] = useState([]);
-  const [detailsItam, setDetailsItam] = useState([]);
+const [tableTaPlayers, setTableTaPlayers] = useState([]);
+const [sinleTaTanis, setSinleTaTanis] = useState({});
+/* const [quantity, setQuantity] = useState(1); */
 
-
-  useEffect(() => {
-
-    fetch('https://enigmatic-garden-34025.herokuapp.com/players')
-      .then(res => res.json())
-      .then(data => {
-        setPlayerDetails(data);
-      });
-  }, []);
-
-
-
-
-
-
-
-
-
-  useEffect(() => {
-    if (playerDetails?.length > 0) {
-      const matchItam = playerDetails.find(playerDetails => playerDetails.id == id)
-      setDetailsItam(matchItam);
-    }
-
-  }, [playerDetails, id])
-
-
-
-  console.log(detailsItam);
+useEffect(() => {
+fetch('https://enigmatic-garden-34025.herokuapp.com/basketBall',)
+.then(res => res.json())
+.then(data => setTableTaPlayers(data))
+}, [])
+useEffect(() => {
+const foundPlayers = tableTaPlayers.find(player => (player.id === id))
+setSinleTaTanis(foundPlayers)
+}, [tableTaPlayers, id])
 
 
   const [value, setValue] = React.useState(2);
@@ -122,15 +102,15 @@ const PlayerDetails = () => {
             <div className='details-player-bgimg'></div>
             <Container className='details-player-info'>
                 <div>
-                    <h1 className='details-player-title'>{detailsItam?.name }  </h1>
+                    <h1 className='details-player-title'>{sinleTaTanis?.name }  </h1>
 
-                    <p className='details-player-des'>{detailsItam?.describe }</p>
-                    <button className='details-connecting'>conecting</button>
+                    <p className='details-player-des'>{sinleTaTanis?.describe }</p>
+                    <button className='details-connecting'>Conecting</button>
                     <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}
-                    <img className='details-player-img' src={detailsItam?.img } alt="" />
+                    <img className='details-player-img' src={sinleTaTanis?.img } alt="" />
                 </div>
             </Container>
         </div>
@@ -143,10 +123,10 @@ const PlayerDetails = () => {
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
           <h2 style={{marginBottom: "40px", fontSize: "30px", fontWeight: "600"}}>
-            {detailsItam?.name}
+            {sinleTaTanis?.name}
           </h2>
 
-          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{detailsItam?.describe}</p>
+          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{sinleTaTanis?.describe}</p>
           <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
           <p style={{marginBottom: "40px", fontSize: "20px", fontWeight: "400", width: "500px"}}>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
           <div>
@@ -154,19 +134,19 @@ const PlayerDetails = () => {
                   <tbody>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Height</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Height}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Height}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Weight</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Weight}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Weight}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Position</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Position}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Position}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Nationality</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Nationality}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Nationality}</td>
                       </tr>
                   </tbody>
               </table>
@@ -183,10 +163,10 @@ const PlayerDetails = () => {
 <div className="playerman container">
   <h1 style={{marginTop:  "100px", marginBottom: "50px"}}>Player Say!</h1>
   <div className="player">
-  <img src={detailsItam?.img} alt="" />
-  <h2>{detailsItam?.name}</h2>
-  <h4>{detailsItam?.Position}</h4>
-  <p>{detailsItam?.describe}</p>
+  <img src={sinleTaTanis?.img} alt="" />
+  <h2>{sinleTaTanis?.name}</h2>
+  <h4>{sinleTaTanis?.Position}</h4>
+  <p>{sinleTaTanis?.describe}</p>
   </div>
  
 </div>
@@ -240,7 +220,7 @@ const PlayerDetails = () => {
           
 
           <input name='PlayerName'
-            onBlur={hendalOnBlure} defaultValue={detailsItam?.name} type="text" id="" placeholder='Player Name' />
+            onBlur={hendalOnBlure} defaultValue={sinleTaTanis?.name} type="text" id="" placeholder='Player Name' />
 
           <input  type="url" name="url" onBlur={hendalOnBlure} id="" placeholder='Type a Photo url' />
 
@@ -266,4 +246,4 @@ style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <I
     );
 };
 
-export default PlayerDetails;
+export default BaseketBallDetails;
