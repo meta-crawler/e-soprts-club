@@ -263,3 +263,47 @@
     top: 20px;
 }
 
+
+
+.modal-body .PlayerIcon{
+    margin-top: 50px;
+}
+
+
+.modal-body .PlayerIcon .location{
+    width: 300px;
+    background-color: #dc3545;
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url(../../Images/Connting//empty-podium-with-line-gradient-neon-square-frame-vector.jpg);
+    padding: 20px;
+}
+
+.modal-body .PlayerIcon .email{
+    width: 300px;
+    background-color: #dc3545;
+    margin: 10px;
+    border-radius: 10px;    
+    background-image: url(../../Images/Connting//empty-podium-with-line-gradient-neon-square-frame-vector.jpg);
+    padding: 20px;
+}
+
+
+.modal-body .PlayerIcon .phone{
+    width: 300px;
+    background-color: #dc3545;
+    margin: 10px;
+    border-radius: 10px;
+    background-image: url(../../Images/Connting//empty-podium-with-line-gradient-neon-square-frame-vector.jpg);
+    padding: 20px;
+    
+
+    
+
+}
+
+
+
+.modal-style{
+    background-image: url(../../Images/Connting/pngtree-simple-technology-blue-background-design-display-boardbackground-materialinnovationtechnologybackground-image_72625.jpg);
+}

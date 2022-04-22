@@ -4,13 +4,29 @@ import { useState } from 'react';
 import Product from '../Product/Product';
 import './Products.css';
 const Products = () => {
-         const [products, setProducts] = useState([]);
+         
 
-         useEffect(()=>{
-                  fetch('https://enigmatic-garden-34025.herokuapp.com/other')
-                  .then(res => res.json())
-                  .then(data => setProducts(data))
-         },[])
+
+    const [products, setProducts] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+
+    const size = 5;
+
+    useEffect(() => {
+        fetch(`https://enigmatic-garden-34025.herokuapp.com/other?page=${page}&&size=${size}`)
+            .then(res => res.json())
+            .then(data => {
+                setProducts(data.products);
+                const count = data.count;
+                const pageNumber = Math.ceil(count / size);
+                setPageCount(pageNumber)
+            });
+    }, [page]);
+
+
+
+       
          return (
                   <div id='shop'>
                   <div className="container my-5">
@@ -23,6 +39,19 @@ const Products = () => {
                                      ></Product>)
                   }
                   </div>
+
+                  <div className="pagenation">
+
+                {
+                    [...Array(pageCount).keys()]
+                        .map(number => <button
+                            className={number === page ? 'selated' : ''}
+                            key={number}
+                            onClick={() => setPage(number)}
+                        >{number}</button>)
+                }
+
+            </div>
                   </div>
                   </div>
          );

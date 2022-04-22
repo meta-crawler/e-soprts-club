@@ -7,7 +7,7 @@ const Usedata = () => {
 
     //Loaed Data
     useEffect(() => {
-        fetch('http://localhost:7000/players')
+        fetch('https://enigmatic-garden-34025.herokuapp.com/players')
             .then(res => res.json())
             .then(data => this.course(data))
     },
