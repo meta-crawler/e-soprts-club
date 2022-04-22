@@ -11,6 +11,7 @@ import lage3 from '../../Images/NewsUpdate/2021–22_Indian_Super_League_poster.
 
 
 import './NewsPoint.css';
+import { Link } from 'react-router-dom';
 
 const NewsPoint = () => {
     return (
@@ -175,9 +176,28 @@ const NewsPoint = () => {
                 </div>
                 <div className="col-lg-12 col-12">
 
+
+            <div style={{marginTop: "50px"}}  className="">
+            <Container>
+                <div className="BookingPart">
+                        <div className="Text">
+                        <h1 style={{color:'gold'}} >Why are you still waiting?</h1>
+                    <p>PLEASE! <span style={{color: "#E71E68"}} >JOIN OUR QUIZE EVENT THEN  </span></p>
+                        </div>
+                        
+                        <div className="Bottun">
+                            <Link to="/contestsregister" > <Button style={{background: "#E71E68", color: "#FFF", padding: "10px", border: "0px", marginTop: "20px"}}>EVENT BOOKING</Button></Link>
+                        </div>
+                        <div className="Number">
+                            <h2><span style={{color: "#E71E68", marginTop: "0px", display: "block"}} >25 </span> March 2022</h2>
+                        </div>
                 </div>
 
-</div>            
+            </Container>
+
+
+           
+            </div>            
         </Container>
     );
 };

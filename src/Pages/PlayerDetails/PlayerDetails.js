@@ -71,7 +71,7 @@ const PlayerDetails = () => {
       setDetailsItam(matchItam);
     }
 
-  }, [playerDetails])
+  }, [playerDetails, id])
 
 
 

@@ -1,8 +1,9 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
+import HockeyPlayers from '../HockeyPlayers/HockeyPlayers'
 import Slider from "react-slick/lib/slider";
-import Player from "../../Player/Player";
+
 import './HockeyPuckPlayer.css';
 
 
@@ -68,7 +69,7 @@ export default class HockeyPuckPlayer extends Component {
 
         <Slider ref={(c) => (this.slider = c)} {...settings}>
           
-          {this.state.players.map(players => <Player
+          {this.state.players.map(players => <HockeyPlayers
 
             key={players._id}
             player={players}

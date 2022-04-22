@@ -1,11 +1,11 @@
 import React from 'react';
-import './VolleyBallMatch.css';
 import { Card } from 'react-bootstrap';
-import img1 from '../../../Images/iconHockey/china.png';
 import img2 from '../../../Images/iconCricket/australia.png';
-import img3 from '../../../Images/iconHockey/united-states.png';
 import img4 from '../../../Images/iconCricket/new-zealand.png';
 import img5 from '../../../Images/iconCricket/pakistan.png';
+import img1 from '../../../Images/iconHockey/china.png';
+import img3 from '../../../Images/iconHockey/united-states.png';
+import './VolleyBallMatch.css';
 
 const VolleyBallMatch = () => {
     const date = new Date().toLocaleDateString();
@@ -48,7 +48,7 @@ const VolleyBallMatch = () => {
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                     <Card className='' style={{ width: '100%', height: '250px', background: '#363533' }}>
 
-                        <table class="table table-hover table-bordered  ">
+                        <table className="table table-hover table-bordered  ">
                             <tr className='text-white p-3 p-4'>
 
 
