@@ -38,19 +38,19 @@ const BaseketBallDetails = () => {
 
 let { id } = useParams();
 
-const [tableTaPlayers, setTableTaPlayers] = useState([]);
-const [sinleTaTanis, setSinleTaTanis] = useState({});
+const [baseballPlayers, setBaseballPlayers] = useState([]);
+const [singleBaseball, setSingleBaseball] = useState({});
 /* const [quantity, setQuantity] = useState(1); */
 
 useEffect(() => {
 fetch('https://enigmatic-garden-34025.herokuapp.com/basketBall',)
 .then(res => res.json())
-.then(data => setTableTaPlayers(data))
+.then(data => setBaseballPlayers(data))
 }, [])
 useEffect(() => {
-const foundPlayers = tableTaPlayers.find(player => (player.id === id))
-setSinleTaTanis(foundPlayers)
-}, [tableTaPlayers, id])
+const foundPlayers = baseballPlayers.find(player => (player.id === id))
+setSingleBaseball(foundPlayers)
+}, [baseballPlayers, id])
 
 
   const [value, setValue] = React.useState(2);
@@ -117,9 +117,9 @@ setSinleTaTanis(foundPlayers)
             <div className='details-player-bgimg'></div>
             <Container className='details-player-info'>
                 <div>
-                    <h1 className='details-player-title'>{sinleTaTanis?.name }  </h1>
+                    <h1 className='details-player-title'>{singleBaseball?.name }  </h1>
 
-                    <p className='details-player-des'>{sinleTaTanis?.describe }</p>
+                    <p className='details-player-des'>{singleBaseball?.describe }</p>
                     <button className='details-connecting cart-btn'
                     type='button' data-bs-toggle="modal" data-bs-target="#exampleModal">Conecting</button>
                     
@@ -172,7 +172,7 @@ setSinleTaTanis(foundPlayers)
           
 
           <input name='PlayerName'
-            onBlur={hendalOnBlure} defaultValue={sinleTaTanis?.name} type="text" id="" placeholder='Player Name' 
+            onBlur={hendalOnBlure} defaultValue={singleBaseball?.name} type="text" id="" placeholder='Player Name' 
             required
             
             style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
@@ -200,7 +200,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}
-                    <img className='details-player-img' src={sinleTaTanis?.img } alt="" />
+                    <img className='details-player-img' src={singleBaseball?.img } alt="" />
                 </div>
             </Container>
         </div>
@@ -213,10 +213,10 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
           <h2 style={{marginBottom: "40px", fontSize: "30px", fontWeight: "600"}}>
-            {sinleTaTanis?.name}
+            {singleBaseball?.name}
           </h2>
 
-          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{sinleTaTanis?.describe}</p>
+          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{singleBaseball?.describe}</p>
           <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
           <p style={{marginBottom: "40px", fontSize: "20px", fontWeight: "400", width: "500px"}}>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
           <div>
@@ -224,19 +224,19 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                   <tbody>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Height</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Height}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Height}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Weight</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Weight}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Weight}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Position</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Position}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Position}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Nationality</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Nationality}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Nationality}</td>
                       </tr>
                   </tbody>
               </table>
@@ -253,10 +253,10 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 <div className="playerman container">
   <h1 style={{marginTop:  "100px", marginBottom: "50px"}}>Player Say!</h1>
   <div className="player">
-  <img src={sinleTaTanis?.img} alt="" />
-  <h2>{sinleTaTanis?.name}</h2>
-  <h4>{sinleTaTanis?.Position}</h4>
-  <p>{sinleTaTanis?.describe}</p>
+  <img src={singleBaseball?.img} alt="" />
+  <h2>{singleBaseball?.name}</h2>
+  <h4>{singleBaseball?.Position}</h4>
+  <p>{singleBaseball?.describe}</p>
   </div>
  
 </div>
@@ -310,7 +310,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           
 
           <input name='PlayerName'
-            onBlur={hendalOnBlure} defaultValue={sinleTaTanis?.name} type="text" id="" placeholder='Player Name' />
+            onBlur={hendalOnBlure} defaultValue={singleBaseball?.name} type="text" id="" placeholder='Player Name' />
 
           <input  type="url" name="url" onBlur={hendalOnBlure} id="" placeholder='Type a Photo url' />
 
