@@ -10,22 +10,22 @@ const Video = () => {
     return (
         <div className='main-video'>
            <Container>
-  <Row>
-    <Col>
+  <div className='video-grid'>
+    <div>
         <div>
             <h1 className='video-title'>MOST POPULAR </h1>
             <h1 className='video-title'> VIDEOS</h1>
             <p className='video-describtion'>Stumptown flexitarian schlitz adaptogen neutra sartorial edison bulb brunch</p>
             <Button className='video-button'>WATCH ON YOUTUBE  </Button>
         </div>
-    </Col>
-    <Col>
+    </div>
+    <div>
    <div className='video'>
    <iframe width="370" height="250" src="https://www.youtube.com/embed/HdOa5EOTzdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    
    </div>
-    </Col>
-    <Col>
+    </div>
+    <div>
     <div className='video-team'>
         <div>
             <img src={img1} alt="" />
@@ -54,8 +54,8 @@ const Video = () => {
         </div>
     </div>
    
-    </Col>
-  </Row>
+    </div>
+  </div>
 </Container>
             
         </div>
