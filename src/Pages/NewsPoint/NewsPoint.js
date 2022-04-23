@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 
 
 const NewsPoint = () => {
-
+    
     const [event, setEvent] = useState([])
 
     useEffect(() => {
@@ -25,6 +25,26 @@ const NewsPoint = () => {
     }, []);
 
 console.log(event);
+
+
+
+
+const Booking = () => {
+    console.log("Go There");
+    const ref = React.createRef();
+    return ref;
+    
+}
+
+
+
+const Permetion = () => {
+    alert("Are You Agreey With Us")
+    // const ref = React.createRef();
+    // return ref;
+
+    
+}
 
 
 
@@ -180,22 +200,29 @@ console.log(event);
             </div>
 
             <div style={{marginTop: "50px"}}  className="row">
-            <div className="col-lg-8 col-12">
+            <div className="col-lg-12 col-12">
                 <div className="eventBanner">
+                    <div className="UpEvent">
+                    <Button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%"}}>Up Coming  New Matchs</Button>
+                    
+                       <Button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%"}}>Up Coming  New Contests</Button>
+
+
+                    </div>
+
+
+
                      </div>
 
-                <div style={{marginTop: "50px"}}>
-                <Button className='details-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal">Up Coming  New Events 
 
-                </Button>
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-banner">
                             <div class="modal-header-style">
-                              <h5 class="modal-titel1 mb-3">Up Coming  New Events  </h5>
+                              <h5 class="modal-titel1 mb-3">Up Coming  New Matchs </h5>
                             </div>
                             <div class="modal-body">
 
@@ -226,8 +253,8 @@ console.log(event);
           </div>
       </td>
       <td style={{color: "#fbc02d"}}><h4>{pd.nationality}</h4> </td>
-      <td> <Button style={{color: "#FFFFFF", background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/booking">	Book Now</Link> </Button></td>
-      <td><Button style={{ background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/event-register">Register Now</Link></Button> </td>
+      <td> <Button  onClick={Booking()} style={{color: "#FFFFFF", background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/booking">	Book Now</Link> </Button></td>
+      <td><Button onClick={Booking()}  style={{ background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/event-register">Register Now</Link></Button> </td>
       
 
 
@@ -249,16 +276,37 @@ console.log(event);
                           </div>
                           </div>
                           </div>
-                        
 
 
 
+
+                          <div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
+                          <div style={{width: "1000px"}} class="modal-content modal-banner">
+                            <div class="modal-header-style">
+                              <h5 class="modal-titel1 mb-3">Up Coming  New Contests </h5>
+                            </div>
+                            <div class="modal-body">
+
+               
+
+
+
+
+                <div class="modal-footer">
+                              <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                             <Link onClick={Permetion} to="/contestsregister"><button type="button" class="modal-btn">Next</button></Link> 
+                              
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
 
                 
-                    
                 </div>
-                </div>
-                <div className="col-lg-4 col-12">
+                <div>
                 
                 
 
