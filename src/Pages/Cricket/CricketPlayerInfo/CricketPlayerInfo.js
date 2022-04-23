@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
-import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from '../Shared/Navigation/Navigation';
+import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
+
 import {  
   faVideo  
 } from "@fortawesome/free-solid-svg-icons";
@@ -11,8 +11,12 @@ import { Rating, Typography } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import { Box } from '@mui/system';
-import './PlayerDetails.css';
-import PlayerReviwe from '../PlayerReviwe/PlayerReviwe';
+import PlayerReviwe from '../../PlayerReviwe/PlayerReviwe';
+import Navigation from '../../Shared/Navigation/Navigation';
+
+import location from '../../../Images/Connting/819814.png';
+import email from '../../../Images/Connting/email.png';
+import phone from '../../../Images/Connting/phone-call.png';
 
 
 const labels = {
@@ -63,7 +67,7 @@ const CricketPlayerInfo = () => {
       setDetailsItam(matchItam);
     }
 
-  }, [playerDetails])
+  }, [playerDetails, id])
 
 
 
@@ -114,6 +118,24 @@ const CricketPlayerInfo = () => {
   
     }
 
+
+
+
+    
+    const hendalPalyer = player => {
+      player.preventDefault();
+
+      
+      
+
+     if(orderinfo ===  ""){
+       alert("I CAmakd")
+     }
+
+
+
+}
+
     return (
       <>
         <Navigation />
@@ -125,7 +147,105 @@ const CricketPlayerInfo = () => {
                     <h1 className='details-player-title'>{detailsItam?.name }  </h1>
 
                     <p className='details-player-des'>{detailsItam?.describe }</p>
-                    <button className='details-connecting'>conecting</button>
+                    
+                    
+
+
+
+
+                    <button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    
+                    >Conecting</button>
+
+
+
+                    
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
+                          <div style={{width: "1000px"}} class="modal-content modal-style">
+                            <div class="modal-header-style">
+                              <h5 class="modal-titel1 mb-3">Send Your Variable Messages </h5>
+                            </div>
+                            <div class="modal-body">
+                              <div className="text-center text-white">
+                                
+
+                                <div style={{display: "flex"}} className="PlayerIcon">
+                                  <div className="location">
+                                <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
+
+                                <h6>Mirpur 01, Dhaka, bd</h6>
+                                  </div>
+                                  <div className="email">
+                                <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />
+                                <h6>sport@gmail.com</h6>
+
+                                  </div>
+
+                                  <div className="phone">
+                                <img style={{width: "100px", padding: "20px"}} src={phone} alt="" />
+                                <h6>01908145097</h6>
+
+                                  </div>
+
+                                </div>
+
+
+<form style={{marginTop: "100px"}} onSubmit={hendalPalyer}>
+
+          <br />
+          <input type="text" name='name'
+            onBlur={hendalOnBlure} id="" placeholder='Your Name' 
+            required
+            style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
+            />
+
+          <input type="text" name='email'
+            onBlur={hendalOnBlure} id="" placeholder='Your Email'
+            required 
+            style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
+            />
+
+          
+
+          <input name='PlayerName'
+            onBlur={hendalOnBlure} defaultValue={detailsItam?.name} type="text" id="" placeholder='Player Name' 
+            required
+            
+            style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
+            />
+
+<textarea className='textarea' onBlur={hendalOnBlure} type="text" name='deatls' placeholder='Type Your Feedback'
+style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} /> <br />
+
+
+<button class="modal-btn"  type="button">Send</button>
+                                
+</form>
+                                
+                                
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+
+
                     <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
                 </div>
                 <div>

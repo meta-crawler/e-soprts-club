@@ -1,18 +1,36 @@
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import {  Button, Container } from 'react-bootstrap';
 import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
 import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
 
-import lage1 from '../../Images/NewsUpdate/1363501000.jpg';
-import lage2 from '../../Images/NewsUpdate/EHGHlETWsAEqy0T.jpg';
-import lage3 from '../../Images/NewsUpdate/2021–22_Indian_Super_League_poster.jpg';
+import { Table } from 'react-bootstrap';
+import { useState, useEffect } from "react";
+
 
 
 import './NewsPoint.css';
+import { Link } from 'react-router-dom';
+
 
 const NewsPoint = () => {
+
+    const [event, setEvent] = useState([])
+
+    useEffect(() => {
+      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
+        .then((res) => res.json())
+        .then((data) => setEvent(data));
+    }, []);
+
+console.log(event);
+
+
+
+
+
+
     return (
         <Container>
              <div className="row">
@@ -162,22 +180,94 @@ const NewsPoint = () => {
             </div>
 
             <div style={{marginTop: "50px"}}  className="row">
-            <div className="col-lg-3 col-12">
-                <div className="ImageItam">
-                    <img style={{width: "100%", height: "300px"}} src={lage3} alt="" />
+            <div className="col-lg-8 col-12">
+                <div className="eventBanner">
+                     </div>
 
-                    <div className="TextLeag">
-                    <p><CalendarMonthIcon /> April 18, 2022</p>
+                <div style={{marginTop: "50px"}}>
+                <Button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal">Up Coming  New Events 
+
+                </Button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
+                          <div style={{width: "1000px"}} class="modal-content modal-banner">
+                            <div class="modal-header-style">
+                              <h5 class="modal-titel1 mb-3">Up Coming  New Events  </h5>
+                            </div>
+                            <div class="modal-body">
+
+                <Table striped bordered hover >
+  <thead style={{color: "#FFFFFF"}}>
+    <tr>
+      <th>#</th>
+      <th>EVENT</th>
+      <th>PLACE</th>
+      <th>BOOKING</th>
+      <th>REGISTER</th>
+    </tr>
+  </thead>
+  {
+    event.map((pd, index) => (   
+      <tbody style={{color: "#FFFFFF"}}>
+      <tr>
+      <td style={{color: "#FFFFFF"}}>{index}</td>
+      <td style={{color: "#FFFFFF"}}>
+
+          <div style={{position: "relative", width: "170px", padding: "15px"}} className="Event">
+              <img style={{width: "80px", height: "50px", borderRadius: "05px", display: "inline-block"}} src={pd.img} alt="" />
+
+              <div style={{display: "inline-block", position: "absolute", top: "13px", right: "-60px"}} className="TextEvent">
+              <h5 style={{fontSize: "20px"}}>{pd.name}</h5>
+              <h6 style={{fontSize: "18px", color: "#fbc02d"}}>{pd.date}</h6>
+              </div>
+          </div>
+      </td>
+      <td style={{color: "#fbc02d"}}><h4>{pd.nationality}</h4> </td>
+      <td> <Button style={{color: "#FFFFFF", background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/booking">	Book Now</Link> </Button></td>
+      <td><Button style={{ background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/event-register">Register Now</Link></Button> </td>
+      
+
+
+      </tr>
+      </tbody>
+  ))}
+  
+  
+  </Table>
+
+
+
+
+                <div class="modal-footer">
+                              <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                              
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
                         
-                        <p> Premier League 2022/23 dates announced</p>
-                    </div>
+
+
+
+
+                
+                    
                 </div>
                 </div>
-                <div className="col-lg-12 col-12">
+                <div className="col-lg-4 col-12">
+                
+                
+
+
 
                 </div>
 
-</div>            
+           
+            </div>            
         </Container>
     );
 };

@@ -120,7 +120,7 @@ const Banner = () => {
         <div className="col-md-3 latest-result-box">
           <h3 className="text-uppercase">latest result</h3>
           <Table id="result-table">
-            <thead class="thead-light">
+            <thead className="thead-light">
               <tr>
                 <th>25 SEP,2022</th>
                 <th></th>
@@ -173,9 +173,9 @@ const Banner = () => {
             width="100%"
             src="https://www.youtube.com/embed/Xjq4aIqHcSw"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </Row>

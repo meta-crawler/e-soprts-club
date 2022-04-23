@@ -16,7 +16,7 @@ import PlayerReviwe from '../PlayerReviwe/PlayerReviwe';
 import location from '../../Images/Connting/819814.png';
 import email from '../../Images/Connting/email.png';
 import phone from '../../Images/Connting/phone-call.png';
-import TextField from '@mui/material/TextField';
+
 
 
 
@@ -71,7 +71,7 @@ const PlayerDetails = () => {
       setDetailsItam(matchItam);
     }
 
-  }, [playerDetails])
+  }, [playerDetails, id])
 
 
 

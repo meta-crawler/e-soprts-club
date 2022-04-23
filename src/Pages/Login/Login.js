@@ -52,8 +52,10 @@ const Login = () => {
 
     return (
        <div className='main-section'>
+           
            <div className='bg-img'></div>
            <div className='login-main'>
+           <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '-310px' }} to='/'>Go to Home </Link>
                <form onSubmit={handleLoginSubmit} action="" className='login'>
                <Typewriter
 

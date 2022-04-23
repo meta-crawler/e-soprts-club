@@ -38,9 +38,9 @@
 }
 @media only screen and (max-width:688px) {
     .login{
-        width: 309px;
-        height: 483px;
-        margin-left: 190px;
+        width: 383px !important;
+        height: 483px !important;
+        margin-left: 235px !important;
 
         
     }
