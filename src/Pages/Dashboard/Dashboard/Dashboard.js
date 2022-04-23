@@ -16,7 +16,7 @@ import useAuth from '../../../Hook/UseAuth'
 import './Dashboard.css'
 
 const Dashboard = () => {
-    const {admin } = useAuth()
+    const {admin , logOut } = useAuth()
     
     return (
         <div className='row'>
@@ -91,7 +91,7 @@ const Dashboard = () => {
                         <AssignmentIndIcon className='icon' />
                         <span>Profile</span>
                         </li>
-                    <li className='dashboard-li'>
+                    <li onClick={logOut} className='dashboard-li'>
                         <LogoutIcon className='icon' />
                         <span>Logout</span>
                         </li>

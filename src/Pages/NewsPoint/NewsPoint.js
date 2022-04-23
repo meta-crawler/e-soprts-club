@@ -52,7 +52,7 @@ const Permetion = () => {
 
 
     return (
-        <Container>
+        <Container id='news'>
              <div className="row">
             <div className="col-lg-8 col-12">
                 <h1>LATEST NEWS</h1>
