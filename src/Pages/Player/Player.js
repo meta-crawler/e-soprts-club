@@ -22,21 +22,16 @@ console.log( props.player);
             () => {
                 detailsPlayer(id);
             }}>
-            <img style={{height: "400px"}} src={img} alt="" />
-
-
-            <div className="Head">
-
-            <div className="Number">
-            <h1>{id}</h1>
-            </div>
-            <div className="Text">
-            <h3>{name}</h3>
-            <h5>{Position||Nationality}</h5>
-            
-            </div>
-
-            </div>
+            <div className="card">
+                                    <img src={img} className="card-img-top" alt="..." />
+                                    <div className="card-body card-style">
+                                    <div>
+                                             <h2 className="player-number">{id}</h2>
+                                    </div>
+                                    <h5 className="card-title player-name">{name}</h5>
+                                    <p className="card-text player-title">{Position || Nationality}</p>
+                                    </div>
+                                    </div>
             
 
 

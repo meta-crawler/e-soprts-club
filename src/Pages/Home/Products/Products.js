@@ -46,6 +46,7 @@ const Products = () => {
                     [...Array(pageCount).keys()]
                         .map(number => <button
                             className={number === page ? 'selated' : ''}
+                            id="button-style"
                             key={number}
                             onClick={() => setPage(number)}
                         >{number}</button>)
