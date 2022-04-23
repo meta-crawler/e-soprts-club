@@ -60,6 +60,14 @@
        
         width: 470px !important;
     }
+    .biograph-responsibe{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .style-playerDetails{
+        margin-left: 30px;
+        margin-top: 10px;
+    }
     
 }
 .details-player-main{
@@ -164,7 +172,16 @@
    
 
 }
-
+.biograph-responsibe{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 688px) {
+    .biograph-responsibe{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 .player img{
     width: 100px;
     height: 100px;

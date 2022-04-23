@@ -257,7 +257,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
         
        
       <div className='biography container'>
-      <div className='row'>
+      <div className='row biograph-responsibe'>
           <div className='col-md-6'>
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
