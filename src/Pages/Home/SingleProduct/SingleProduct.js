@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 import './SingleProduct.css';
 // import { Spinner } from 'react-bootstrap';
 
-import image1 from '../../../Images/iconCricket/pakistan.png';
-import image2 from '../../../Images/iconCricket/bangladesh.png';
-import { Button } from 'react-bootstrap';
+
 
 const SingleProduct = () => {
 
@@ -46,48 +44,6 @@ const SingleProduct = () => {
 
   return (
     <div className="container mt-5">
-<<<<<<< HEAD
-      <Link style={{textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top:"0px", left:"115px", borderRadius: "5px", marginTop: '20px'}} to='/'>Home </Link>
-      <div  className="my-auto">
-      <div style={{marginTop: "100px"}} className="card mb-3"  >
-  <div className="row g-0">
-    <div className="col-md-6 pe-2 d-flex justify-content-center align-items-center">
-      <img src={singleProducts?.img} className="w-100 h-75" alt="..." />
-    </div>
-    <div className="col-md-6 ps-3">
-      <div className="card-body">
-        <h5 className="product-titel text-dark">{singleProducts?.name}</h5>
-        <p className="product-price text-dark text-center">{singleProducts?.price}</p>
-        <p className="card-text product-dis1">{singleProducts?.description1}</p>
-      </div>
-      <div>
-                <div className="quantity">
-                  <form>
-                  <div className="d-flex">
-                    <input className="cart-style" size="1" min="1" value="1"/>
-                    <button type="button" className="cart-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Shop 
-                  </button>
-                  <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog">
-                      <div className="modal-content modal-style">
-                        <div className="modal-header-style">
-                          <h5 className="modal-titel1 mb-3">Buy This Product</h5>
-                        </div>
-                        <div className="modal-body">
-                          <div className="text-center text-white">
-                            <img className="w-25 rounded-circle" src={singleProducts?.img} alt="" />
-                            <h3 className="modal-pd-name m">{singleProducts?.name}</h3>
-                            <h5 className="modal-pd-name">{singleProducts?.price}</h5>
-                            <h6 className="modal-pd-name">Category: {singleProducts?.category}</h6>
-                            <h6 className="modal-pd-name">Tags: {singleProducts?.tags}</h6>
-                          </div>
-                        </div>
-                        <div className="modal-footer">
-                          <button type="button" className="modal-btn" data-bs-dismiss="modal">Close</button>
-                          <button type="button" className="modal-btn">Buy Now</button>
-                        </div>
-=======
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>
       <div className="my-auto">
         <div style={{ marginTop: "100px" }} class="card mb-3"  >
@@ -130,7 +86,6 @@ const SingleProduct = () => {
                             </div>
                           </div>
                         </div>
->>>>>>> e7c1906bb0fb8590f8c6dd57bf30b5470270ca20
                       </div>
                     </div>
                   </form>

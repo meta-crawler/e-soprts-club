@@ -68,3 +68,20 @@
     opacity: .3;
     
 }
+
+
+.eventBanner{
+    background-image: url(../../Images/UPCOMINGEVENTS/istockphoto-1303366530-612x612.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.modal-banner{
+    background-image: url(../../Images/UPCOMINGEVENTS/images.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}

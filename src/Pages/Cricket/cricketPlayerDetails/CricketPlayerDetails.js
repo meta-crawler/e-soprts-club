@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
 import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from '../../../Pages/Shared/Navigation/Navigation';
+import Navigation from '../../Shared/Navigation/Navigation';
 import {  
   faVideo  
 } from "@fortawesome/free-solid-svg-icons";

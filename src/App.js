@@ -26,6 +26,12 @@ import AddTicketBooking from "./Pages/Dashboard/AddTicketBooking/AddTicketBookin
 import AddEventRegister from "./Pages/Dashboard/AddEventRegister/AddEventRegister";
 import AdminRoute from "./Pages/AdminRoute/AdminRoute";
 import ContestsRegister from "./Pages/ContestsRegister/ContestsRegister";
+import CricketPlayerInfo from "./Pages/Cricket/CricketPlayerInfo/CricketPlayerInfo";
+import VolleyBallDetails from "./Pages/VolleyBall/VolleyBallDetails/VolleyBallDetails";
+import HockeyPlayersDetails from "./Pages/HockeyPuck/HockeyPlayersDetails";
+import TableTennishDetails from "./Pages/TableTennis/TableTennishDetails/TableTennishDetails";
+import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
+import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
 
 
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
@@ -56,6 +62,14 @@ function App() {
             <Route path="/event-register" element={<EventRegister />} />
             <Route path="/playerDetails/:id" element={<PlayerDetails />} />
             <Route path="/singleProduct/:id" element={<SingleProduct />} />
+            <Route path="/cricketPlayer/:id" element={<CricketPlayerInfo />} />
+            <Route path="/volleyballplayer/:id" element={<VolleyBallDetails />} />
+            <Route path="/hokeypalyer/:id" element={<HockeyPlayersDetails />} />
+            <Route path="/tableTanishPlayer/:id" element={<TableTennishDetails />} />
+
+            <Route path="/baseballplayer/:id" element={<BaseBallDetails />} />
+
+            <Route path="/basketBallPlayer/:id" element={<BaseketBallDetails />} />
 
 
 
