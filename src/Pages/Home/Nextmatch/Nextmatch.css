@@ -22,7 +22,10 @@
 
     }
     .match-main{
-        width: 469px;
+        width: 450px;
+    }
+    .tweets-style{
+        width: 448px;
     }
 }
 .match-info{

@@ -1,17 +1,10 @@
-import {
-  faFacebookF,
-  faGooglePlusG,
-  faTwitter,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+import React, { useState } from "react";
 import {
   faComment,
-  faEnvelope,
   faShareNodes,
   faTag,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
 import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
@@ -78,19 +71,7 @@ const EventRegister = () => {
   return (
     <div>
       <Navigation />
-      <div className="follow-us container">
-        <div className="follow-us-box">
-          <span >FOLLOW US:</span>
-          <FontAwesomeIcon className="facebook-icon me-1" icon={faFacebookF} />
-          <FontAwesomeIcon className="twitter-icon me-1" icon={faTwitter} />
-          <FontAwesomeIcon
-            className="googlePlus-icon me-1"
-            icon={faGooglePlusG}
-          />
-          <FontAwesomeIcon className="whatsapp-icon me-1" icon={faWhatsapp} />
-          <FontAwesomeIcon className="envelope-icon me-1" icon={faEnvelope} />
-        </div>
-      </div>
+      
       <div className="booking-container container">
         <div className="ticket-booking-container">
           <div className="text-center">

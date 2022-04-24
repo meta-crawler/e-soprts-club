@@ -32,6 +32,7 @@ import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
 import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
 import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
+import ShopData from "./Pages/Dashboard/ShopData/ShopData";
 
 function App() {
   return (
@@ -66,14 +67,12 @@ function App() {
 
             <Route path="/basketBallPlayer/:id" element={<BaseketBallDetails />} />
 
-
-
             <Route path="/dashboard" element={<Dashboard />}>
             <Route path={`/dashboard/addproduct`} element={<AdminRoute><AddProduct></AddProduct></AdminRoute>} />
             <Route path={`/dashboard/addadmin`} element={<AdminRoute><AddAdmin></AddAdmin></AdminRoute>} />
             <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
             <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
-            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard/loadProdect`} element={<ShopData />} />
             <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
 
             </Route>

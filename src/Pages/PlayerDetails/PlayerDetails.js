@@ -153,6 +153,12 @@ const hendalPalyer = player => {
                     <h1 className='details-player-title'>{detailsItam?.name }  </h1>
 
                     <p className='details-player-des'>{detailsItam?.describe }</p>
+                    
+                    
+
+
+
+
                     <button className='details-connecting cart-btn'
                     type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
                     
@@ -160,7 +166,7 @@ const hendalPalyer = player => {
 
 
 
-
+                    
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-style">
@@ -175,7 +181,7 @@ const hendalPalyer = player => {
                                   <div className="location">
                                 <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
 
-                                <h6>Mirpur 01, Dhaka, bd</h6>
+                                <h6>{detailsItam?.Nationality}</h6>
                                   </div>
                                   <div className="email">
                                 <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />
@@ -231,12 +237,48 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                               <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
                               
                             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
                           </div>
                         </div>
                       </div>
 
 
 
+                      
+                      <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />  <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div className="modal-dialog modal-dialog-centered">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" style={{color:'ButtonText'}} id="exampleModalToggleLabel">Player details video</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+       {/* <video src={video}></video> */}
+       <iframe width="455" height="250" src="https://www.youtube.com/embed/387782CRNQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<a className='player-details-video' data-bs-toggle="modal" href="#exampleModalToggle" role="button">Play video</a></button>
 
 
 
@@ -244,8 +286,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 
 
 
-
-                    <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
+                    
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}
@@ -257,7 +298,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
         
        
       <div className='biography container'>
-      <div className='row biograph-responsibe'>
+      <div className='row'>
           <div className='col-md-6'>
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
@@ -366,7 +407,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           <br /><br />
           <Button onClick={handelonSubmit}
 
-style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <IosShareIcon /></Button>
+          style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <IosShareIcon /></Button>
 
 
         </form>
