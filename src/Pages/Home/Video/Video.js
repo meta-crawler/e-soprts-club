@@ -3,6 +3,7 @@ import { Button, Col, Container, Row } from 'react-bootstrap';
 import img1 from '../../../Images/sport team img/image-4-110x70.jpg'
 import img2 from '../../../Images/sport team img/image-5-110x70.jpg'
 import img3 from '../../../Images/sport team img/image-7-110x70.jpg'
+import video from '../../../Images/simple.mp4'
 import './Video.css'
 
 
@@ -16,7 +17,25 @@ const Video = () => {
             <h1 className='video-title'>MOST POPULAR </h1>
             <h1 className='video-title'> VIDEOS</h1>
             <p className='video-describtion'>Stumptown flexitarian schlitz adaptogen neutra sartorial edison bulb brunch</p>
-            <Button className='video-button'>WATCH ON YOUTUBE  </Button>
+   
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style={{color:'ButtonText'}} id="exampleModalToggleLabel">WATCH ON YOUTUBE</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       {/* <video src={video}></video> */}
+       <iframe width="455" height="250" src="https://www.youtube.com/embed/387782CRNQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<a class=" video-button" data-bs-toggle="modal" href="#exampleModalToggle" role="button">WATCH ON YOUTUBE</a>
+            {/* <Button className='video-button modal-dialog modal-dialog-centered'> WATCH ON YOUTUBE  </Button> */}
         </div>
     </div>
     <div>

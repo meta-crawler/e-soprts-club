@@ -23,6 +23,7 @@ import footerimg3 from '../../../Images/footer img/video-post-90x65.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  './Footer.css';
 import Footericon from './Footericon/Footericon';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -41,16 +42,17 @@ const Footer = () => {
     <p style={{marginBottom:'20px'}}>Amet nisl purus in mollis nunc sed id. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Volutpat a tincidunt vitae semper pellentesque diam volutpat.</p>
     <div className='footer-nav'>
         <div >
-            <li className='footer-li'>Home</li>
-            <li className='footer-li'>blog</li>
-            <li className='footer-li'>team</li>
-            <li className='footer-li'>eSports</li>
+            <Link className='footer-li' to='/football'><li>Football</li></Link>
+            <Link className='footer-li' to='/cricket'><li>Cricket</li></Link>
+            <Link className='footer-li' to='/hockeyPuck'><li>Hockey Puck</li></Link>
+            <Link className='footer-li' to='/tableTennis'><li>Table Tennis</li></Link>
+
         </div>
         <div>
-            <li className='footer-li' >Game</li>
-            <li className='footer-li'>About</li>
-            <li className='footer-li'>coumunity</li>
-            <li className='footer-li'>Contact</li>
+        <Link className='footer-li' to='/baseBall'><li>Base Ball</li></Link>
+        <Link className='footer-li' to='/basketBall'><li>Basket Ball</li></Link>
+        <Link className='footer-li' to='/volleyBall'><li>Volley Ball</li></Link>
+           
         </div>
     </div>
     </div>
