@@ -39,9 +39,12 @@ const Booking = () => {
 
 
 const Permetion = () => {
-    alert("Are You Agreey With Us")
-    // const ref = React.createRef();
-    // return ref;
+    const confrom = window.confirm("Are You Agreey With Us");
+     let  ref = React.createRef(null);
+    if(confrom){
+        ref =  React.createRef();
+    }
+   return ref;
 
     
 }
@@ -204,10 +207,15 @@ const Permetion = () => {
                 <div className="eventBanner">
                     <div className="UpEvent">
                     <Button className='details-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%"}}>Up Coming  New Matchs</Button>
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%", color: "#000000"}}>Up Coming  New Matchs</Button>
                     
+
                        <Button className='details2-connecting cart-btn'
                     type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%"}}>Up Coming  New Contests</Button>
+
+                       <Button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%", color: "#000000"}}>Up Coming  New Contests</Button>
+
 
 
                     </div>

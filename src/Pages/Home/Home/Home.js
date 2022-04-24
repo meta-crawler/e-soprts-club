@@ -25,8 +25,7 @@ const Home = () => {
       <WorkHome />
       <Statistics />
       <Nextmatch />
-      <ControledSlider />
-      <OurTeam />
+      <ControledSlider />      
       <NewsPoint />
       <Video />
       <Products />

@@ -14,9 +14,7 @@ import FootBallHome from "./Pages/Football/FootBallHome/FootBallHome";
 import HockeyPuckHome from "./Pages/HockeyPuck/HockeyPuckHome/HockeyPuckHome";
 import ContactUs from "./Pages/Home/ContactUs/ContactUs";
 import Home from "./Pages/Home/Home/Home";
-import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import Login from "./Pages/Login/Login";
-import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import Register from "./Pages/Register/Register";
 import TableTennisHome from "./Pages/TableTennis/TableTennisHome/TableTennisHome";
 import VolleyBallHome from "./Pages/VolleyBall/VolleyBallHome/VolleyBallHome";
@@ -32,11 +30,8 @@ import HockeyPlayersDetails from "./Pages/HockeyPuck/HockeyPlayersDetails";
 import TableTennishDetails from "./Pages/TableTennis/TableTennishDetails/TableTennishDetails";
 import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
 import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
-
-
-// import Nextmatch from './Pages/Nextmatch/Nextmatch';
-
-// test
+import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
+import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 
 function App() {
   return (
@@ -70,8 +65,6 @@ function App() {
             <Route path="/baseballplayer/:id" element={<BaseBallDetails />} />
 
             <Route path="/basketBallPlayer/:id" element={<BaseketBallDetails />} />
-
-
 
             <Route path="/dashboard" element={<Dashboard />}>
             <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />

@@ -43,6 +43,26 @@ export default class HockeyPuckPlayer extends Component {
       slidesToShow: 3,
       pauseOnHover: false,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1,
+          },
+        },
+      ],
+
     };
 
 
@@ -56,6 +76,7 @@ export default class HockeyPuckPlayer extends Component {
 
     return (
       <div className="container AllPlayer">
+        <h1 style={{marginBottom: "50px", marginTop: "100px"}}>OUR TEAM</h1>
         <div className="my-5">
           <FontAwesomeIcon
             className="me-2"
