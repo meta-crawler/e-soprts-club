@@ -66,8 +66,6 @@ function App() {
 
             <Route path="/basketBallPlayer/:id" element={<BaseketBallDetails />} />
 
-
-
             <Route path="/dashboard" element={<Dashboard />}>
             <Route path={`/dashboard/addproduct`} element={<AdminRoute><AddProduct></AddProduct></AdminRoute>} />
             <Route path={`/dashboard/addadmin`} element={<AdminRoute><AddAdmin></AddAdmin></AdminRoute>} />
