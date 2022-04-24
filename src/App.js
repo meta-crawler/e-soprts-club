@@ -68,12 +68,17 @@ function App() {
             <Route path="/basketBallPlayer/:id" element={<BaseketBallDetails />} />
 
             <Route path="/dashboard" element={<Dashboard />}>
-            <Route path={`/dashboard/addproduct`} element={<AdminRoute><AddProduct></AddProduct></AdminRoute>} />
-            <Route path={`/dashboard/addadmin`} element={<AdminRoute><AddAdmin></AddAdmin></AdminRoute>} />
+            <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
+            <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
             <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
             <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
+
             <Route path={`/dashboard/loadProdect`} element={<ShopData />} />
             <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
+
+            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
+
 
             </Route>
             

@@ -34,13 +34,13 @@ const Dashboard = () => {
                     <Link className='link-style-das'  to={`/`} >  <li className='dashboard-li'>
                         <DashboardIcon className='icon'/>
                         <span>Dashboard</span>
-                    </li></Link>
+                    </li></Link >
                     <p className="title">List</p>
                     <li className='dashboard-li'> 
                         <PersonOutlineOutlinedIcon className='icon'/>
                     <span>Users</span>
                     </li>
-                   <Link to={`/dashboard/addproduct`}>
+                   <Link className='link-style-das' to={`/dashboard/addproduct`}>
                    <li className='dashboard-li'>
                         <Inventory2RoundedIcon className='icon'/>
                         <span>Add-Products</span>
@@ -49,14 +49,14 @@ const Dashboard = () => {
                         <BorderColorIcon className='icon'/>
                         <span>Orders</span>
                         </li> */}
-                    <Link to={`/dashboard/addreview`}>
+                    <Link className='link-style-das' to={`/dashboard/addreview`}>
                     <li className='dashboard-li'>
                         <LocalShippingIcon className='icon'/>
                         <span>Add-Review</span>
                         </li>
                     </Link>
                         <p className="title">Useful</p>
-                   <Link to={`/dashboard/addadmin`}>
+                   <Link className='link-style-das' to={`/dashboard/addadmin`}>
                    <li className='dashboard-li'>
                         <AssessmentIcon className='icon'/>
                         <span> Make An Admin</span>
@@ -66,13 +66,13 @@ const Dashboard = () => {
                         <span>Notificafion</span>
                         </li>
                         <p className="title">Services</p>
-                    <Link to={`/dashboard/addticketbooking`}>
+                    <Link className='link-style-das' to={`/dashboard/addticketbooking`}>
                     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Ticket-Booking</span>
                     </li>
                     </Link>
-                    <Link to={`/dashboard/addEventRegister`}>
+                    <Link className='link-style-das' to={`/dashboard/addEventRegister`}>
                     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Event-Register</span>
@@ -80,7 +80,7 @@ const Dashboard = () => {
                     </Link>
 
 
-                    <Link to={`/dashboard/loadProdect`}>
+                    <Link className='link-style-das' to={`/dashboard/loadProdect`}>
                     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Your Shop</span>
