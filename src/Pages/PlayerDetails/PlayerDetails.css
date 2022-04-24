@@ -26,7 +26,7 @@
 }
 /* table CSS  styly */
 .style-playerDetails table {
-    width: 100%;
+    width: 223%;
     border-spacing: 2px;
     border-collapse: separate;
     margin-bottom: 20px;
@@ -68,7 +68,14 @@
         margin-left: 30px;
         margin-top: 10px;
     }
+
     
+}
+.player-details-video{
+    text-decoration: none;
+    color: #000;
+    font-family:sans-serif;
+    font-weight: 700;
 }
 .details-player-main{
     background-image: url(https://webmain-a9187.web.app/static/media/Mask%20Group%205.704e9676438f92f60342.png);
@@ -183,6 +190,45 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+    .details-player-img{
+        width: 464px;
+        height: 464px;
+    }
+    .biography{
+        padding: 28px 2px;
+
+    }
+    .player-details-boi-p3{
+        width: 444px !important;
+    }
+    .player-details-boi-p1{
+        width: 444px !important;
+    }
+    .player-details-boi-p2{
+        width: 444px !important;
+    }
+    .style-playerDetails table {
+        width: 68%;
+       
+    }
+    .banner img {
+        width: 429px !important;
+        
+    }
+    .player p{
+        width: 259px !important;
+     
+    }
+    
+}
+.player-details-boi-p3{
+    width: 500px;
+}
+.player-details-boi-p1{
+    width: 500px;
+}
+.player-details-boi-p2{
+    width: 500px;
 }
 .player img{
     width: 100px;
