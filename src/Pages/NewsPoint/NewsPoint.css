@@ -68,3 +68,49 @@
     opacity: .3;
     
 }
+
+
+.eventBanner{
+    background-image: url(../../Images/UPCOMINGEVENTS/istockphoto-1303366530-612x612.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;    
+    transition: linear .4s;
+    
+}
+
+.modal-banner{
+    background-image: url(../../Images/UPCOMINGEVENTS/images.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+
+
+.UpEvent {
+    width: 100%;
+    text-align: center;
+    background: #e88bf3;
+    opacity: .5;
+    padding: 300px;
+    height: 100%;
+    transition: linear .4s;
+    visibility: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+
+.eventBanner:hover .UpEvent{
+    visibility: visible;
+    transform: scale(20deg);
+
+}
+
+.eventBanner:hover{
+    border-radius: 30px;
+}

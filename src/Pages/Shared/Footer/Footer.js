@@ -35,8 +35,8 @@ const Footer = () => {
             <div className='main-footer'>
             <Container >
   
-  <Row >
-    <Col style={{marginTop:'30px'}}>
+  <div className='footer-responsibe' >
+    <div style={{marginTop:'30px'}}>
     <h1 className='footer-title'>ABOUT <span style={{color:'gold'}} >US</span></h1>
     <p style={{marginBottom:'20px'}}>Amet nisl purus in mollis nunc sed id. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Volutpat a tincidunt vitae semper pellentesque diam volutpat.</p>
     <div className='footer-nav'>
@@ -53,10 +53,10 @@ const Footer = () => {
             <li className='footer-li'>Contact</li>
         </div>
     </div>
-    </Col>
+    </div>
 
 
-    <Col style={{marginTop:'30px'}}><h1 className='footer-title'>LATEST <span style={{color:'gold'}} >NEWS</span></h1>
+    <div style={{marginTop:'30px'}}><h1 className='footer-title'>LATEST <span style={{color:'gold'}} >NEWS</span></h1>
         <div>
             <div className='footer-cart'>
                 <div>
@@ -89,10 +89,10 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </Col>
+    </div>
     
 
-    <Col style={{marginTop:'30px'}}>
+    <div style={{marginTop:'30px'}}>
     <h1 className='footer-title'> APPS <span style={{color:'gold'}} >& PLATFORMS
     </span></h1>
 
@@ -176,8 +176,8 @@ const Footer = () => {
 
 
 
-    </Col>
-  </Row>
+    </div>
+  </div>
 </Container>
         </div>
         </div>

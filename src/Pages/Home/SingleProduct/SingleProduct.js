@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import './SingleProduct.css';
 // import { Spinner } from 'react-bootstrap';
 
+
+
 const SingleProduct = () => {
 
   let { id } = useParams();
@@ -45,7 +47,7 @@ const SingleProduct = () => {
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>
       <div className="my-auto">
         <div style={{ marginTop: "100px" }} class="card mb-3"  >
-          <div class="row g-0">
+          <div class="row g-0  single-product-style">
             <div class="col-md-6 pe-2 d-flex justify-content-center align-items-center">
               <img src={singleProducts?.img} class="w-100 h-75" alt="..." />
             </div>
@@ -112,6 +114,22 @@ const SingleProduct = () => {
                 Neque vitae tempus quam pellentesque. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Rhoncus dolor purus non enim praesent elementum facilisis leo. Quisque non tellus orci ac auctor augue mauris. Lobortis mattis aliquam faucibus purus. <span className="fw-bold"> Cras pulvinar mattis nunc sed blandit libero volutpat. Amet porttitor eget dolor morbi non arcu risus. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Molestie at elementum eu facilisis sed. In aliquam sem fringilla ut morbi.</span> Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis lorem.</p>
             </div>
           </div>
+          {/* <div className="SengalProdectItam">
+            <div className="ProdectItam">
+              <div className="ProdectImg">
+              <img style={{display: "block"}} src={image1} alt="" />
+              <img src={image2} alt="" />
+              </div>
+
+              <div className="Text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat molestias.
+              </div>
+
+              <div className="button">
+                <Button>Shop</Button>
+              </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </div>

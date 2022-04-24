@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const HockeyPlayers = (props) => {
+const CricketPlayer = (props) => {
 
     console.log(props.player);
 
@@ -43,4 +43,4 @@ console.log( props.player);
     );
 };
 
-export default HockeyPlayers;
+export default CricketPlayer;

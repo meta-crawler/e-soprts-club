@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Product.css';
 
+
 const Product = (props) => {
 
         const product = props.product;
         const {img, name, price, id } = product;
         return (
-                  <div className="col-md-4 col-12 mt-4 mb-3">
+                  <div className=" mt-4 mb-3">
                  <Link className="text-decoration-none" to={`/singleProduct/${id}`}>
                  <div className="card h-100 card-style  pd-bg">
                    <div className="d-flex justify-content-center align-items-center"> 
