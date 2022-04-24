@@ -73,6 +73,11 @@ hr{
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
     }
+    .sidebar{
+      
+        width: 123px;
+    }
+    
 }
 .link-style-das{
     text-decoration: none;

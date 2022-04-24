@@ -2,3 +2,8 @@
     background-color: whitesmoke;
     background-size: cover;
 }
+@media only screen and (max-width:688px) {
+    .admin-main{
+        margin-left: -105px;
+    }
+}
