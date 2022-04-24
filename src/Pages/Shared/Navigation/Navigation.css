@@ -1,6 +1,8 @@
 .link-style{
     color: black;
     padding: 30px;
+    text-decoration: none;
+    transition: linear .4s;
 }
 .link-style:hover{
     color: white;
@@ -11,7 +13,7 @@
     color: whitesmoke;
 }
 .text-style:hover{
-    color: #0d6efd;
+    color: #dc3545;
 }
 
 .info-bar{

@@ -4,6 +4,7 @@ import Footer from "../../../Pages/Shared/Footer/Footer";
 import Navigation from "../../../Pages/Shared/Navigation/Navigation";
 import ControledSlider from "../../ControledSlider/ControledSlider";
 import CountSlider from "../../CountSlider/CountSlider";
+import NewsPoint from "../../NewsPoint/NewsPoint";
 import Banner from "../Banner/Banner";
 import Fans from "../Fans/Fans";
 import Nextmatch from "../Nextmatch/Nextmatch";
@@ -26,6 +27,7 @@ const Home = () => {
       <Nextmatch />
       <ControledSlider />
       <OurTeam />
+      <NewsPoint />
       <Video />
       <Products />
       <Travel />

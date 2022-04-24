@@ -1,3 +1,15 @@
 .pd-bg{
     background-color: #E40046;
 }
+#button-style{
+    width: 55px;
+    height: 40px;
+    background-color: #E40046;
+    color: #FFFFFF;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    
+}

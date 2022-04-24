@@ -12,11 +12,23 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Button, Container, Form, Row } from "react-bootstrap";
+import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
+import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
 
 const EventRegister = () => {
-  const [formData, setFormData] = useState({});
+
+
+
+  const { isLoading} = useAuth()
+  
+  const formDataAll = { eventName: '', StartDate: '', sex: '', age: '',city: "", address: "", eventDes: "", ClubName: "", email: "", number: "", status: "pending"};
+
+
+
+  const [formData, setFormData] = useState(formDataAll);
+
+
   const onBlurHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -24,10 +36,45 @@ const EventRegister = () => {
     newFormData[name] = value;
     setFormData(newFormData);
   };
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
+
+
+
+
+
+  const onSubmitHandler = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...formData
+      }
+  
+      fetch('https://enigmatic-garden-34025.herokuapp.com/eventRegister', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+
+
+
+
+        if(newDispalyReviwe){
+          alert("Thank You, Your Register was Completed")
+        }
+  
+    }
+
+
+
+
+
+
+
   return (
     <div>
       <Navigation />
@@ -56,6 +103,8 @@ const EventRegister = () => {
               Dubai World Cup.
             </p>
           </div>
+
+          {!isLoading && 
           <form className="mt-4" onSubmit={onSubmitHandler}>
             <Form.Group className="mb-3 input-box">
               <Form.Label className="mb-0">Event Name</Form.Label>
@@ -172,7 +221,10 @@ const EventRegister = () => {
                 SUBMIT
               </Button>
             </Form.Group>
-          </form>
+          </form>} 
+
+
+          {isLoading &&   <Spinner animation="border" variant="secondary" />}
         </div>
       </div>
       <div className="next-match-container">

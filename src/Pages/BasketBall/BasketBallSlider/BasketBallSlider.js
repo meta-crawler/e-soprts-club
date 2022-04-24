@@ -1,16 +1,15 @@
 import React from "react";
 import Slider from "react-slick";
-import image8 from "../../../Images/cricketLeague/CLUB-TICKETING-PROGRAM_social_1920x1080_Landscape.jpg";
-import image1 from "../../../Images/cricketLeague/CTH2_1920x1080_NoCTA.jpg";
-import image2 from "../../../Images/cricketLeague/FLC1awJaIAIFVPa.jpg";
-import image3 from "../../../Images/cricketLeague/ICC-1170x614.jpg";
+import image8 from "../../../Images/BasketballLeague/baseketballBanner1.jpg";
+import image1 from "../../../Images/BasketballLeague/baseketballBanner2.jpg";
+import image2 from "../../../Images/BasketballLeague/baseketballBanner3.jpg";
+import image3 from "../../../Images/BasketballLeague/baseketballBanner4.jpg";
 import {
   default as image4,
   default as image5,
-} from "../../../Images/cricketLeague/ICC-Mens-T20-World-Cup-2022-Tickets-Booking.jpg";
-import image6 from "../../../Images/cricketLeague/icc_mens_t20_world_cup_2021_dubai_intern_2021_oct_23_2021_nov_11_dubai_international_stadium_82188-full-en1633270121.png";
-import image7 from "../../../Images/cricketLeague/JfQocbY8.jpg";
-import "./BasketBallSlider.css";
+} from "../../../Images/BasketballLeague/baseketballBanner5.jpg";
+import image6 from "../../../Images/BasketballLeague/baseketballBanner6.jpg";
+import image7 from "../../../Images/BasketballLeague/baseketballBanner3.jpg";
 
 const BasketBallSlider = () => {
   const settings = {
