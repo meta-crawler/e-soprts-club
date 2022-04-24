@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
-import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-
+import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
+import Navigation from '../Shared/Navigation/Navigation';
 import {  
   faVideo  
 } from "@fortawesome/free-solid-svg-icons";
@@ -11,12 +11,16 @@ import { Rating, Typography } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import { Box } from '@mui/system';
-import PlayerReviwe from '../../PlayerReviwe/PlayerReviwe';
-import Navigation from '../../Shared/Navigation/Navigation';
+import './PlayerDetails.css';
+import PlayerReviwe from '../PlayerReviwe/PlayerReviwe';
+import location from '../../Images/Connting/819814.png';
+import email from '../../Images/Connting/email.png';
+import phone from '../../Images/Connting/phone-call.png';
 
-import location from '../../../Images/Connting/819814.png';
-import email from '../../../Images/Connting/email.png';
-import phone from '../../../Images/Connting/phone-call.png';
+
+
+
+
 
 
 const labels = {
@@ -35,7 +39,7 @@ const labels = {
 
 
 
-const CricketPlayerInfo = () => {
+const PlayerDetails = () => {
 
 
   const { id } = useParams();
@@ -46,7 +50,7 @@ const CricketPlayerInfo = () => {
 
   useEffect(() => {
 
-    fetch('https://enigmatic-garden-34025.herokuapp.com/cricketplayers')
+    fetch('https://enigmatic-garden-34025.herokuapp.com/players')
       .then(res => res.json())
       .then(data => {
         setPlayerDetails(data);
@@ -97,6 +101,26 @@ const CricketPlayerInfo = () => {
 
 
 
+
+const hendalPalyer = player => {
+       player.preventDefault();
+
+       
+       
+
+      if(orderinfo ===  ""){
+        alert("I CAmakd")
+      }
+
+
+
+}
+
+
+
+
+
+
   const handelonSubmit = data => {
       data.preventDefault();
   
@@ -118,24 +142,6 @@ const CricketPlayerInfo = () => {
   
     }
 
-
-
-
-    
-    const hendalPalyer = player => {
-      player.preventDefault();
-
-      
-      
-
-     if(orderinfo ===  ""){
-       alert("I CAmakd")
-     }
-
-
-
-}
-
     return (
       <>
         <Navigation />
@@ -147,12 +153,6 @@ const CricketPlayerInfo = () => {
                     <h1 className='details-player-title'>{detailsItam?.name }  </h1>
 
                     <p className='details-player-des'>{detailsItam?.describe }</p>
-                    
-                    
-
-
-
-
                     <button className='details-connecting cart-btn'
                     type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
                     
@@ -160,7 +160,7 @@ const CricketPlayerInfo = () => {
 
 
 
-                    
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-style">
@@ -175,7 +175,7 @@ const CricketPlayerInfo = () => {
                                   <div className="location">
                                 <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
 
-                                <h6>{detailsItam?.Nationality}</h6>
+                                <h6>Mirpur 01, Dhaka, bd</h6>
                                   </div>
                                   <div className="email">
                                 <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />
@@ -245,7 +245,6 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 
 
 
-
                     <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
                 </div>
                 <div>
@@ -258,7 +257,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
         
        
       <div className='biography container'>
-      <div className='row'>
+      <div className='row biograph-responsibe'>
           <div className='col-md-6'>
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
@@ -386,4 +385,4 @@ style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <I
     );
 };
 
-export default CricketPlayerInfo;
+export default PlayerDetails;

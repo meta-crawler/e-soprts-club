@@ -11,8 +11,8 @@ const Nextmatch = () => {
     return (
         <div>
        <Container>
-  <Row>
-    <Col>
+  <div className='next-macht-main'>
+    <div>
         <div className='match-main'>
             <h2 className='next-style'>NEXT MATCH</h2>
        <div  className='match-info'>
@@ -39,8 +39,8 @@ const Nextmatch = () => {
             <Link to="/booking">
             <Button style={{background: "#E40046", padding: "10px", marginLeft: "265px", marginTop: "20px", border: '0px'}}>Booking</Button></Link>
         </div>
-    </Col>
-    <Col>
+    </div>
+    <div>
         <div className='tweets-style'>
            
             <div className=''>
@@ -119,8 +119,8 @@ const Nextmatch = () => {
   </Carousel.Item>
 </Carousel>
         </div>
-    </Col>
-  </Row>
+    </div>
+  </div>
  
 </Container>
         </div>

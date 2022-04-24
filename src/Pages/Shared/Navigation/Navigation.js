@@ -48,12 +48,16 @@ const Navigation = () => {
          
 
           <Nav.Link className='link-style' as={Link} to="/contact"><h5 className='text-style'>CONTACT</h5></Nav.Link>
-          <Nav.Link className='link-style' as={Link} to="/dashboard"><h5 className='text-style'>DASHBOARD</h5></Nav.Link>
+       
           
           
   
        { user?.email ? 
-      <h5 onClick={logOut} style={{cursor:'pointer'}} className='text-style'>LOGOUT</h5>
+       
+      <div className="d-flex">
+           <Nav.Link className='link-style' as={Link} to="/dashboard"><h5 className='text-style'>DASHBOARD</h5></Nav.Link>
+        <h5 onClick={logOut} style={{cursor:'pointer', marginLeft: "51px"}} className='text-style'>LOGOUT</h5>
+      </div>
        : 
         <Nav.Link className='link-style' as={Link} to="/login"><h5 className='text-style'>LOGIN</h5></Nav.Link>}
          

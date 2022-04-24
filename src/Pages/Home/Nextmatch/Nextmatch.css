@@ -5,7 +5,25 @@
     padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-right: 16px;
 
+}
+.next-macht-main{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap:20px;
+
+}
+@media only screen and (max-width:688px) {
+    .next-macht-main{
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        grid-gap:20px;
+
+    }
+    .match-main{
+        width: 469px;
+    }
 }
 .match-info{
     display: flex;

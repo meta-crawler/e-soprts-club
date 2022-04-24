@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
 import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-
+import Navigation from '../../../Pages/Shared/Navigation/Navigation';
 import {  
   faVideo  
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +12,7 @@ import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import { Box } from '@mui/system';
 import PlayerReviwe from '../../PlayerReviwe/PlayerReviwe';
-import Navigation from '../../Shared/Navigation/Navigation';
+
 
 import location from '../../../Images/Connting/819814.png';
 import email from '../../../Images/Connting/email.png';
@@ -35,43 +35,24 @@ const labels = {
 
 
 
-const CricketPlayerInfo = () => {
+const TableTennishDetails = () => {
 
 
-  const { id } = useParams();
+let { id } = useParams();
 
-  const [playerDetails, setPlayerDetails] = useState([]);
-  const [detailsItam, setDetailsItam] = useState([]);
+const [tableTaPlayers, setTableTaPlayers] = useState([]);
+const [sinleTaTanis, setSinleTaTanis] = useState({});
+/* const [quantity, setQuantity] = useState(1); */
 
-
-  useEffect(() => {
-
-    fetch('https://enigmatic-garden-34025.herokuapp.com/cricketplayers')
-      .then(res => res.json())
-      .then(data => {
-        setPlayerDetails(data);
-      });
-  }, []);
-
-
-
-
-
-
-
-
-
-  useEffect(() => {
-    if (playerDetails?.length > 0) {
-      const matchItam = playerDetails.find(playerDetails => playerDetails.id == id)
-      setDetailsItam(matchItam);
-    }
-
-  }, [playerDetails, id])
-
-
-
-  console.log(detailsItam);
+useEffect(() => {
+fetch('https://enigmatic-garden-34025.herokuapp.com/tableTennis',)
+.then(res => res.json())
+.then(data => setTableTaPlayers(data))
+}, [])
+useEffect(() => {
+const foundPlayers = tableTaPlayers.find(player => (player.id === id))
+setSinleTaTanis(foundPlayers)
+}, [tableTaPlayers, id])
 
 
   const [value, setValue] = React.useState(2);
@@ -121,7 +102,7 @@ const CricketPlayerInfo = () => {
 
 
 
-    
+
     const hendalPalyer = player => {
       player.preventDefault();
 
@@ -136,6 +117,18 @@ const CricketPlayerInfo = () => {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+    console.log(sinleTaTanis);
     return (
       <>
         <Navigation />
@@ -144,15 +137,9 @@ const CricketPlayerInfo = () => {
             <div className='details-player-bgimg'></div>
             <Container className='details-player-info'>
                 <div>
-                    <h1 className='details-player-title'>{detailsItam?.name }  </h1>
+                    <h1 className='details-player-title'>{sinleTaTanis?.name }  </h1>
 
-                    <p className='details-player-des'>{detailsItam?.describe }</p>
-                    
-                    
-
-
-
-
+                    <p className='details-player-des'>{sinleTaTanis?.describe }</p>
                     <button className='details-connecting cart-btn'
                     type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
                     
@@ -175,7 +162,7 @@ const CricketPlayerInfo = () => {
                                   <div className="location">
                                 <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
 
-                                <h6>{detailsItam?.Nationality}</h6>
+                                <h6>{sinleTaTanis?.nationality}</h6>
                                   </div>
                                   <div className="email">
                                 <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />
@@ -210,7 +197,7 @@ const CricketPlayerInfo = () => {
           
 
           <input name='PlayerName'
-            onBlur={hendalOnBlure} defaultValue={detailsItam?.name} type="text" id="" placeholder='Player Name' 
+            onBlur={hendalOnBlure} defaultValue={sinleTaTanis?.name} type="text" id="" placeholder='Player Name' 
             required
             
             style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
@@ -234,23 +221,11 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                           </div>
                         </div>
                       </div>
-
-
-
-
-
-
-
-
-
-
-
-
                     <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}
-                    <img className='details-player-img' src={detailsItam?.img } alt="" />
+                    <img className='details-player-img' src={sinleTaTanis?.img } alt="" />
                 </div>
             </Container>
         </div>
@@ -263,10 +238,10 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
           <h2 style={{marginBottom: "40px", fontSize: "30px", fontWeight: "600"}}>
-            {detailsItam?.name}
+            {sinleTaTanis?.name}
           </h2>
 
-          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{detailsItam?.describe}</p>
+          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{sinleTaTanis?.describe}</p>
           <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
           <p style={{marginBottom: "40px", fontSize: "20px", fontWeight: "400", width: "500px"}}>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
           <div>
@@ -274,19 +249,19 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                   <tbody>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Height</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Height}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.height}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Weight</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Weight}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.weight}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Position</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Position}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Position}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Nationality</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{detailsItam?.Nationality}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.nationality}</td>
                       </tr>
                   </tbody>
               </table>
@@ -303,10 +278,10 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 <div className="playerman container">
   <h1 style={{marginTop:  "100px", marginBottom: "50px"}}>Player Say!</h1>
   <div className="player">
-  <img src={detailsItam?.img} alt="" />
-  <h2>{detailsItam?.name}</h2>
-  <h4>{detailsItam?.Position}</h4>
-  <p>{detailsItam?.describe}</p>
+  <img src={sinleTaTanis?.img} alt="" />
+  <h2>{sinleTaTanis?.name}</h2>
+  <h4>{sinleTaTanis?.Position}</h4>
+  <p>{sinleTaTanis?.describe}</p>
   </div>
  
 </div>
@@ -360,7 +335,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           
 
           <input name='PlayerName'
-            onBlur={hendalOnBlure} defaultValue={detailsItam?.name} type="text" id="" placeholder='Player Name' />
+            onBlur={hendalOnBlure} defaultValue={sinleTaTanis?.name} type="text" id="" placeholder='Player Name' />
 
           <input  type="url" name="url" onBlur={hendalOnBlure} id="" placeholder='Type a Photo url' />
 
@@ -386,4 +361,4 @@ style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <I
     );
 };
 
-export default CricketPlayerInfo;
+export default TableTennishDetails;
