@@ -64,6 +64,8 @@ export default class ControledSlider extends Component {
     return (
       <div className="container AllPlayer">
         <div className="my-5">
+
+          <h1 style={{marginBottom: "50px", marginTop: "100px"}}>OUR TEAM</h1>
           <FontAwesomeIcon
             className="me-2"
             onClick={this.previous}
