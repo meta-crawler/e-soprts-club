@@ -32,6 +32,7 @@ import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
 import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
 import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
+import ShopData from "./Pages/Dashboard/ShopData/ShopData";
 
 function App() {
   return (
@@ -71,8 +72,13 @@ function App() {
             <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
             <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
             <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
+
+            <Route path={`/dashboard/loadProdect`} element={<ShopData />} />
+            <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
+
             <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
             <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
+
 
             </Route>
             
