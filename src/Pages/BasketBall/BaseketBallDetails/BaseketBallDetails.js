@@ -12,6 +12,9 @@ import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import { Box } from '@mui/system';
 import PlayerReviwe from '../../PlayerReviwe/PlayerReviwe';
+import location from '../../../Images/Connting/819814.png';
+import email from '../../../Images/Connting/email.png';
+import phone from '../../../Images/Connting/phone-call.png';
 
 import location from '../../../Images/Connting/819814.png';
 import email from '../../../Images/Connting/email.png';
@@ -39,19 +42,19 @@ const BaseketBallDetails = () => {
 
 let { id } = useParams();
 
-const [tableTaPlayers, setTableTaPlayers] = useState([]);
-const [sinleTaTanis, setSinleTaTanis] = useState({});
+const [baseballPlayers, setBaseballPlayers] = useState([]);
+const [singleBaseball, setSingleBaseball] = useState({});
 /* const [quantity, setQuantity] = useState(1); */
 
 useEffect(() => {
 fetch('https://enigmatic-garden-34025.herokuapp.com/basketBall',)
 .then(res => res.json())
-.then(data => setTableTaPlayers(data))
+.then(data => setBaseballPlayers(data))
 }, [])
 useEffect(() => {
-const foundPlayers = tableTaPlayers.find(player => (player.id === id))
-setSinleTaTanis(foundPlayers)
-}, [tableTaPlayers, id])
+const foundPlayers = baseballPlayers.find(player => (player.id === id))
+setSingleBaseball(foundPlayers)
+}, [baseballPlayers, id])
 
 
   const [value, setValue] = React.useState(2);
@@ -75,7 +78,19 @@ setSinleTaTanis(foundPlayers)
 
   }
 
+  const hendalPalyer = player => {
+    player.preventDefault();
 
+    
+    
+
+   if(orderinfo ===  ""){
+     alert("I CAmakd")
+   }
+
+
+
+}
 
   const handelonSubmit = data => {
       data.preventDefault();
@@ -133,8 +148,69 @@ setSinleTaTanis(foundPlayers)
             <div className='details-player-bgimg'></div>
             <Container className='details-player-info'>
                 <div>
-                    <h1 className='details-player-title'>{sinleTaTanis?.name }  </h1>
+                    <h1 className='details-player-title'>{singleBaseball?.name }  </h1>
 
+                    <p className='details-player-des'>{singleBaseball?.describe }</p>
+                    <button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal">Conecting</button>
+                    
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
+                          <div style={{width: "1000px"}} class="modal-content modal-style">
+                            <div class="modal-header-style">
+                              <h5 class="modal-titel1 mb-3">Send Your Variable Messages </h5>
+                            </div>
+                            <div class="modal-body">
+                              <div className="text-center text-white">
+                                
+
+                                <div style={{display: "flex"}} className="PlayerIcon">
+                                  <div className="location">
+                                <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
+
+                                <h6>Mirpur 01, Dhaka, bd</h6>
+                                  </div>
+                                  <div className="email">
+                                <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />
+                                <h6>sport@gmail.com</h6>
+
+                                  </div>
+
+                                  <div className="phone">
+                                <img style={{width: "100px", padding: "20px"}} src={phone} alt="" />
+                                <h6>01908145097</h6>
+
+                                  </div>
+
+                                </div>
+
+
+<form style={{marginTop: "100px"}} onSubmit={hendalPalyer}>
+
+          <br />
+          <input type="text" name='name'
+            onBlur={hendalOnBlure} id="" placeholder='Your Name' 
+            required
+            style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
+            />
+
+          <input type="text" name='email'
+            onBlur={hendalOnBlure} id="" placeholder='Your Email'
+            required 
+            style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
+            />
+
+          
+
+          <input name='PlayerName'
+            onBlur={hendalOnBlure} defaultValue={singleBaseball?.name} type="text" id="" placeholder='Player Name' 
+            required
+            
+            style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
+            />
+
+<<<<<<< HEAD
+=======
                     <p className='details-player-des'>{sinleTaTanis?.describe }</p>
                     
                     <button className='details-connecting cart-btn'
@@ -200,6 +276,7 @@ setSinleTaTanis(foundPlayers)
             style={{width: "200px", padding: "10px", borderRadius: "05px", margin: "20px"}}
             />
 
+>>>>>>> 0cd85b81476daa944dc315b2693f6141668e152d
 <textarea className='textarea' onBlur={hendalOnBlure} type="text" name='deatls' placeholder='Type Your Feedback'
 style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} /> <br />
 
@@ -218,6 +295,8 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
                     
 
 
@@ -226,11 +305,12 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 
 
 
+>>>>>>> 0cd85b81476daa944dc315b2693f6141668e152d
                     <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}
-                    <img className='details-player-img' src={sinleTaTanis?.img } alt="" />
+                    <img className='details-player-img' src={singleBaseball?.img } alt="" />
                 </div>
             </Container>
         </div>
@@ -243,10 +323,10 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           <div className='style-playerDetails'>
           <h1 style={{marginBottom: "50px", fontSize: "40px", fontWeight: "700"}} className='playerHeading'>Biography</h1>
           <h2 style={{marginBottom: "40px", fontSize: "30px", fontWeight: "600"}}>
-            {sinleTaTanis?.name}
+            {singleBaseball?.name}
           </h2>
 
-          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{sinleTaTanis?.describe}</p>
+          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{singleBaseball?.describe}</p>
           <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
           <p style={{marginBottom: "40px", fontSize: "20px", fontWeight: "400", width: "500px"}}>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
           <div>
@@ -254,6 +334,21 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                   <tbody>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Height</strong></td>
+<<<<<<< HEAD
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Height}</td>
+                      </tr>
+                      <tr>
+                          <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Weight</strong></td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Weight}</td>
+                      </tr>
+                      <tr>
+                          <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Position</strong></td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Position}</td>
+                      </tr>
+                      <tr>
+                          <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Nationality</strong></td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{singleBaseball?.Nationality}</td>
+=======
                           <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.height}</td>
                       </tr>
                       <tr>
@@ -267,6 +362,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Nationality</strong></td>
                           <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.nationality}</td>
+>>>>>>> 0cd85b81476daa944dc315b2693f6141668e152d
                       </tr>
                   </tbody>
               </table>
@@ -283,10 +379,10 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 <div className="playerman container">
   <h1 style={{marginTop:  "100px", marginBottom: "50px"}}>Player Say!</h1>
   <div className="player">
-  <img src={sinleTaTanis?.img} alt="" />
-  <h2>{sinleTaTanis?.name}</h2>
-  <h4>{sinleTaTanis?.Position}</h4>
-  <p>{sinleTaTanis?.describe}</p>
+  <img src={singleBaseball?.img} alt="" />
+  <h2>{singleBaseball?.name}</h2>
+  <h4>{singleBaseball?.Position}</h4>
+  <p>{singleBaseball?.describe}</p>
   </div>
  
 </div>
@@ -340,7 +436,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           
 
           <input name='PlayerName'
-            onBlur={hendalOnBlure} defaultValue={sinleTaTanis?.name} type="text" id="" placeholder='Player Name' />
+            onBlur={hendalOnBlure} defaultValue={singleBaseball?.name} type="text" id="" placeholder='Player Name' />
 
           <input  type="url" name="url" onBlur={hendalOnBlure} id="" placeholder='Type a Photo url' />
 
