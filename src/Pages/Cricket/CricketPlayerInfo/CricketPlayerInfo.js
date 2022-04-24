@@ -175,7 +175,7 @@ const CricketPlayerInfo = () => {
                                   <div className="location">
                                 <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
 
-                                <h6>Mirpur 01, Dhaka, bd</h6>
+                                <h6>{detailsItam?.Nationality}</h6>
                                   </div>
                                   <div className="email">
                                 <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />

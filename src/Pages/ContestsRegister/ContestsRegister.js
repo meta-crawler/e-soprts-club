@@ -63,7 +63,7 @@ const ContestsRegister = () => {
 
 
     return (
-        <div>
+        <div style={{zIndex: "24"}}>
         <Navigation />
         <div className="follow-us container">
           <div className="follow-us-box">
