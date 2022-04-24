@@ -113,5 +113,13 @@
    margin-bottom: 5px;
    border-bottom: 1px solid #fff;
 }
+.features-heading{
+   font-weight: 700;
+    font-size: 36px;
+    color: rgb(36, 34, 34);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center;
+}
 
 
