@@ -15,6 +15,13 @@
         grid-gap:20px;
 
     }
+
+    .card-img-top{
+        height: 100%;
+        width: 100%;
+    }
+
+
 }
 .our-taem-card{
     margin-right: 50px;
@@ -67,3 +74,5 @@
 .player-title{
     font-size: 14px;
 }
+.card-img-top{
+    height: 400px;

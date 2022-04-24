@@ -257,7 +257,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Position</strong></td>
-                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.position}</td>
+                          <td style={{color: "#dc3545", fontWeight: "700", fontSize: "18px"}}>{sinleTaTanis?.Position}</td>
                       </tr>
                       <tr>
                           <td style={{ fontWeight: "600", fontSize: "16px"}}><strong>Nationality</strong></td>

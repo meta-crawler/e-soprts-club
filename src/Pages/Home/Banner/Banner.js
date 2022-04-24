@@ -14,7 +14,7 @@ const Banner = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <Container>
-      <Row className="g-0">
+      <Row className="g-0 row">
         <div className="col-md-9 Banner">
           <Swiper
             style={{
@@ -29,6 +29,8 @@ const Banner = () => {
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper2"
             allowTouchMove={false}
+            
+            
           >
             <SwiperSlide
               className="carousel-banner"
