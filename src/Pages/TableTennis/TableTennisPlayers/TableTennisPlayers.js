@@ -36,6 +36,7 @@ export default class TableTennisPlayers extends Component {
   render() {
     const settings = {
       autoplay: true,
+      arrows: false,
       dots: false,
       infinite: true,
       speed: 800,

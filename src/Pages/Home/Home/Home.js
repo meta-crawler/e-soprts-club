@@ -8,7 +8,6 @@ import NewsPoint from "../../NewsPoint/NewsPoint";
 import Banner from "../Banner/Banner";
 import Fans from "../Fans/Fans";
 import Nextmatch from "../Nextmatch/Nextmatch";
-import OurTeam from "../OurTeam/OurTeam";
 import Products from "../Products/Products";
 import Sponsored from "../Sponsored/Sponsored";
 import Statistics from "../Statistics/Statistics";

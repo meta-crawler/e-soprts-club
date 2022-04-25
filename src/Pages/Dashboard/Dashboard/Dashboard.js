@@ -41,7 +41,10 @@ const Dashboard = () => {
                         <PersonOutlineOutlinedIcon className='icon'/>
                     <span>Users</span>
                     </li>
-                     { admin && <Link className='link-style-das' to={`/dashboard/addproduct`}>
+                   { admin && <Link className='link-style-das' to={`/dashboard/addproduct`}>
+
+                   <Link className='link-style-das' to={`/dashboard/addproduct`}>
+
                    <li className='dashboard-li'>
                         <Inventory2RoundedIcon className='icon'/>
                         <span>Add-Products</span>
@@ -57,7 +60,11 @@ const Dashboard = () => {
                         </li>
                     </Link>
                         <p className="title">Useful</p>
+
                    { admin && <Link className='link-style-das' to={`/dashboard/addadmin`}>
+
+                   <Link className='link-style-das' to={`/dashboard/addadmin`}>
+
                    <li className='dashboard-li'>
                         <AssessmentIcon className='icon'/>
                         <span> Make An Admin</span>
@@ -67,14 +74,18 @@ const Dashboard = () => {
                         <span>Notificafion</span>
                         </li>
                         <p className="title">Services</p>
+
                    { admin && <Link className='link-style-das' to={`/dashboard/addticketbooking`}>
-                    <li className='dashboard-li'>
+                    <Link className='link-style-das' to={`/dashboard/addticketbooking`}>
+     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Ticket-Booking</span>
                     </li>
+
                     </Link>}
-                  { admin &&  <Link className='link-style-das' to={`/dashboard/addEventRegister`}>
-                    <li className='dashboard-li'>
+                  { admin &&  <Link className='link-style-das' to={`/dashboard/addEventRegister`}>                    </Link>
+                    <Link className='link-style-das' to={`/dashboard/addEventRegister`}>
+                 <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Event-Register</span>
                     </li>
