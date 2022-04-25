@@ -82,7 +82,7 @@ function App() {
 
             <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
 
-            <Route path={`/dashboard/loadProdect`} element={<ShopData />} />
+            <Route path={`/dashboard/yourShop`} element={<AdminRoute> <ShopData /> </AdminRoute>} />
             <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
 
 
