@@ -17,9 +17,10 @@ import './Dashboard.css'
 
 const Dashboard = () => {
     const {admin , logOut } = useAuth()
+    console.log(admin)
     
     return (
-        <div className='raw'>
+        <div className='row raw'>
             <div className='col-md-3 col-lg-3 col-sm-6'>
             <div className='sidebar'>
             
@@ -40,11 +41,11 @@ const Dashboard = () => {
                         <PersonOutlineOutlinedIcon className='icon'/>
                     <span>Users</span>
                     </li>
-                   <Link className='link-style-das' to={`/dashboard/addproduct`}>
+                     { admin && <Link className='link-style-das' to={`/dashboard/addproduct`}>
                    <li className='dashboard-li'>
                         <Inventory2RoundedIcon className='icon'/>
                         <span>Add-Products</span>
-                        </li></Link>
+                        </li></Link>}
                     {/* <li>
                         <BorderColorIcon className='icon'/>
                         <span>Orders</span>
@@ -56,28 +57,28 @@ const Dashboard = () => {
                         </li>
                     </Link>
                         <p className="title">Useful</p>
-                   <Link className='link-style-das' to={`/dashboard/addadmin`}>
+                   { admin && <Link className='link-style-das' to={`/dashboard/addadmin`}>
                    <li className='dashboard-li'>
                         <AssessmentIcon className='icon'/>
                         <span> Make An Admin</span>
-                        </li></Link>
+                        </li></Link>}
                     <li className='dashboard-li'>
                         <NotificationsNoneIcon className='icon'/>
                         <span>Notificafion</span>
                         </li>
                         <p className="title">Services</p>
-                    <Link className='link-style-das' to={`/dashboard/addticketbooking`}>
+                   { admin && <Link className='link-style-das' to={`/dashboard/addticketbooking`}>
                     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Ticket-Booking</span>
                     </li>
-                    </Link>
-                    <Link className='link-style-das' to={`/dashboard/addEventRegister`}>
+                    </Link>}
+                  { admin &&  <Link className='link-style-das' to={`/dashboard/addEventRegister`}>
                     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Event-Register</span>
                     </li>
-                    </Link>
+                    </Link>}
 
 
                     <Link className='link-style-das' to={`/dashboard/loadProdect`}>
