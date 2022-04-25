@@ -2,6 +2,7 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import './AddTicketBooking.css';
 
 
 const AddTicketBooking = () => {
@@ -59,19 +60,19 @@ const AddTicketBooking = () => {
 
 
     return (
-        <div>
+        <div className='ticket-table'>
           <h1 style={{margin: "50px"}}> All Ticket Booking ({ticket.length}) </h1>
-           <Table striped bordered hover variant="dark">
+           <Table className='ticket-table' striped bordered hover variant="dark">
   <thead>
     <tr>
       <th>#</th>
       <th>First Name</th>
-      <th>Email</th>
+      <th className='th-display-block' >Email</th>
       <th>Number</th>
-      <th>Date</th>
-      <th>City</th>
-      <th>Address</th>
-      <th>Status</th>
+      <th className='th-display-block'>Date</th>
+      <th className='th-display-block'>City</th>
+      <th className='th-display-block'>Address</th>
+      <th style={{display:'inline-block'}}>Status</th>
     </tr>
   </thead>
   {
@@ -80,11 +81,11 @@ const AddTicketBooking = () => {
       <tr>
       <td>{index}</td>
       <td>{pd.name}</td>
-      <td>{pd.email}</td>
+      <td className='th-display-block'>{pd.email}</td>
       <td>{pd.number}</td>
-      <td>{pd.date}</td>
-      <td>{pd.city}</td>
-      <td>{pd.address}</td>
+      <td className='th-display-block'>{pd.date}</td>
+      <td className='th-display-block'>{pd.city}</td>
+      <td className='th-display-block'>{pd.address}</td>
       <button onClick={()=> handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
 {pd.status === "pending" ? <button onClick={()=> handleApprove(pd._id)} className="btn bg-danger p-2">Approve</button>: <span><AddTaskIcon style={{
   color: "dc3545", fontSize: "20px"
