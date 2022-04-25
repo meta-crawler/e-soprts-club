@@ -1,5 +1,4 @@
 import React from "react";
-import MessengerCustomerChat from "react-messenger-customer-chat";
 import Footer from "../../../Pages/Shared/Footer/Footer";
 import Navigation from "../../../Pages/Shared/Navigation/Navigation";
 import ControledSlider from "../../ControledSlider/ControledSlider";
@@ -32,11 +31,7 @@ const Home = () => {
       <Fans />
       <CountSlider />
       <Footer />
-      <MessengerCustomerChat
-        pageId="104705585550276
-    "
-        appId="2184967135000690"
-      />
+      
     </div>
   );
 };
