@@ -133,7 +133,7 @@ const githubsignIn = () => {
         fetch(`https://enigmatic-garden-34025.herokuapp.com/users/${user.email} `)
         .then(res => res.json())
         .then(data => setAdmin(data.admin))
-    }, [])
+    }, [user?.email])
 
 
 

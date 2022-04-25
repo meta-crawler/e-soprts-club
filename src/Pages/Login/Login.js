@@ -19,7 +19,8 @@ import Footer from '../Shared/Footer/Footer';
 const Login = () => {
 
     const [loginFromData , setLoginFromData] = useState()
-    const { user,loginUser,authError,googleSignIn ,isLoading,handleFacebookSingIn, githubsignIn} = useAuth()
+    const { user,loginUser,authError,googleSignIn , admin ,isLoading,handleFacebookSingIn, githubsignIn} = useAuth()
+    console.log(admin)
     const location = useLocation();
     const navigate = useNavigate();
 
