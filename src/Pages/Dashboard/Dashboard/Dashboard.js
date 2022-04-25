@@ -6,8 +6,6 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import SettingsSystemDaydreamIcon from '@mui/icons-material/SettingsSystemDaydream';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import SettingsIcon from '@mui/icons-material/Settings';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import LogoutIcon from '@mui/icons-material/Logout';
 
@@ -81,7 +79,7 @@ const Dashboard = () => {
                     </Link>}
 
 
-                    <Link className='link-style-das' to={`/dashboard/loadProdect`}>
+                    <Link className='link-style-das' to={`/dashboard/yourShop`}>
                     <li className='dashboard-li'>
                         <SettingsSystemDaydreamIcon className='icon'/>
                         <span>Your Shop</span>

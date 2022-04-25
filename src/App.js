@@ -72,12 +72,12 @@ function App() {
             <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
             <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
             <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
-            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            {/* <Route path={`/dashboard/yourShop`} element={<AdminRoute> <ShopData /> </AdminRoute>} /> */}
             <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
 
             </Route>
             
-            
+                             
             
 
             
