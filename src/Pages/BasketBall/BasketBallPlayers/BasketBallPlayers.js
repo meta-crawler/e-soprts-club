@@ -36,12 +36,32 @@ export default class BasketBallPlayers extends Component {
   render() {
     const settings = {
       autoplay: true,
+      arrows: false,
       dots: false,
       infinite: true,
       speed: 800,
       slidesToShow: 3,
       pauseOnHover: false,
       slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 1,
+          },
+        },
+      ],
     };
 
 
@@ -55,6 +75,7 @@ export default class BasketBallPlayers extends Component {
 
     return (
       <div className="container AllPlayer">
+        <h1 style={{marginBottom: "50px", marginTop: "100px"}}>OUR TEAM</h1>
         <div className="my-5">
           <FontAwesomeIcon
             className="me-2"

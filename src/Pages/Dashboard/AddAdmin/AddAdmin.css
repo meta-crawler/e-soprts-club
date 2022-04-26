@@ -1,4 +1,14 @@
 .admin-main{
-    background-color: whitesmoke;
     background-size: cover;
+}
+
+.input-field{
+    width:695px ;
+}
+
+
+@media only screen and (max-width:688px) {
+    .admin-main{
+        margin-left: -105px;
+    }
 }

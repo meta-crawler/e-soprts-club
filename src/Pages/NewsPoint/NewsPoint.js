@@ -43,9 +43,12 @@ const Booking = () => {
 
 
 const Permetion = () => {
-    alert("Are You Agreey With Us")
-    // const ref = React.createRef();
-    // return ref;
+    const confrom = window.confirm("Are You Agreey With Us");
+     let  ref = React.createRef(null);
+    if(confrom){
+        ref =  React.createRef();
+    }
+   return ref;
 
     
 }
@@ -55,18 +58,18 @@ const Permetion = () => {
 
     return (
         <Container id='news'>
-             <div className="row">
+             <div className="row news-responsibe">
             <div className="col-lg-8 col-12">
                 <h1>LATEST NEWS</h1>
                 <span className='Line'></span>
 
-                <img style={{width: "100%", opacity: ".4"}} src={images} alt="" />
+                <img className='latest-news-img' style={{width: "100%", opacity: ".4" }} src={images} alt="" />
 
                 <div className="NewsText">
                     <div className="Text"></div>
                     <p><CalendarMonthIcon /> April 20, 2022</p>
                     <h2>Top Ten Football Leagues In The World</h2>
-              <h6>The snatch is a wide-grip, one-move lift. The clean and jerk is a close-grip,...</h6> 
+              <h6 className='newspont-details-text'>The snatch is a wide-grip, one-move lift. The clean and jerk is a close-grip,...</h6> 
                 </div>
             </div>
 
@@ -171,10 +174,19 @@ const Permetion = () => {
                 <div className="eventBanner">
                     <div className="UpEvent">
                     <Button className='details-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%"}}>Up Coming  New Matchs</Button>
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%", color: "#000000"}}>Up Coming  New Matchs</Button>
                     
-                       <Button className='details-connecting cart-btn'
+
+                       <Button className='details2-connecting cart-btn'
                     type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%"}}>Up Coming  New Contests</Button>
+
+
+
+                       <Button className='details-connecting cart-btn'
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%", color: "#000000"}}>Up Coming  New Contests</Button>
+
+
+
 
                     </div>
 

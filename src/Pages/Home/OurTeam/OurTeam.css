@@ -15,6 +15,13 @@
         grid-gap:20px;
 
     }
+
+    .card-img-top{
+        height: 100%;
+        width: 100%;
+    }
+
+
 }
 .our-taem-card{
     margin-right: 50px;
@@ -32,6 +39,8 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
+
 .player-number{
     transform: translate(-50%, -50%);
     margin: 0;
@@ -48,6 +57,8 @@
     font-weight: 700;
     text-align: center;
 }
+
+
 .player-number::before{
     content: "";
     display: block;
@@ -59,11 +70,20 @@
     background: #E40046;
     transition: 0.3s;
 }
+
+
 .player-name{
     font-size: 24px;
     line-height: 20px;
     font-weight: 700;
 }
+
+
 .player-title{
     font-size: 14px;
+}
+
+
+.card-img-top{
+    height: 400px;
 }

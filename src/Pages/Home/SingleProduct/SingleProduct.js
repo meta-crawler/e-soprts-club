@@ -13,7 +13,14 @@ const SingleProduct = () => {
 
   const [products, setProducts] = useState([]);
   const [singleProducts, setSingleProducts] = useState({});
-  /* const [quantity, setQuantity] = useState(1); */
+  const [featuredProducts, setFeaturedProducts] = useState([])
+
+  useEffect(() => {
+    fetch('/featuredProducts.json',)
+      .then(res => res.json())
+      .then(data => setFeaturedProducts(data))
+  }, [])
+
 
   useEffect(() => {
     fetch('https://enigmatic-garden-34025.herokuapp.com/other',)
@@ -25,23 +32,34 @@ const SingleProduct = () => {
     setSingleProducts(foundProducts)
   }, [products, id])
 
-  // Function is called everytime increment button is clicked
-  /*  const handleClick1 = () => {
-     // Counter state is incremented
-     setQuantity(quantity + 1)
-   } */
 
-  // Function is called everytime decrement button is clicked
-  /* const handleClick2 = () => {
-    // Counter state is decremented
-    if (quantity <= 1) {
-      setQuantity(1)
-    }
-    else {
-      setQuantity(quantity - 1)
-    }
-  } */
 
+
+  const onSubmit = (data) => {
+    data.status= "Pending";
+
+
+    fetch('https://enigmatic-garden-34025.herokuapp.com/ordersInfo', 
+    
+    
+    {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(singleProducts)
+      })
+      .then((res) => res.json())
+      .then((result) =>{
+          alert("Ordered Successfully!");
+    });
+
+    console.log(data);
+
+    }
+
+
+    
   return (
     <div className="container mt-5">
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>
@@ -82,7 +100,9 @@ const SingleProduct = () => {
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="modal-btn">Buy Now</button>
+                              <button type="button" 
+                              onClick={onSubmit}
+                              class="modal-btn">Buy Now</button>
                             </div>
                           </div>
                         </div>
@@ -114,22 +134,24 @@ const SingleProduct = () => {
                 Neque vitae tempus quam pellentesque. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Rhoncus dolor purus non enim praesent elementum facilisis leo. Quisque non tellus orci ac auctor augue mauris. Lobortis mattis aliquam faucibus purus. <span className="fw-bold"> Cras pulvinar mattis nunc sed blandit libero volutpat. Amet porttitor eget dolor morbi non arcu risus. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Molestie at elementum eu facilisis sed. In aliquam sem fringilla ut morbi.</span> Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis lorem.</p>
             </div>
           </div>
-          {/* <div className="SengalProdectItam">
-            <div className="ProdectItam">
-              <div className="ProdectImg">
-              <img style={{display: "block"}} src={image1} alt="" />
-              <img src={image2} alt="" />
-              </div>
-
-              <div className="Text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat molestias.
-              </div>
-
-              <div className="button">
-                <Button>Shop</Button>
-              </div>
-            </div>
-          </div> */}
+      <div>
+      <h2 className="product-titel text-dark text-center my-4">Featured Products</h2>
+      <div className="row">
+                  {
+                  featuredProducts.map(featuredProduct=> <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
+                  <div className="card h-100 card-style">
+                    <div className="d-flex justify-content-center align-items-center"> 
+                      <img className="w-100" src={featuredProduct?.img} alt="..."/>
+                      </div>
+                     <div className="text-center my-2">
+                       <h3 className="pd-titel mb-3">{featuredProduct?.name}</h3>
+                       <h5 className="fw-bold text-white mb-2">Price: {featuredProduct?.price}</h5>
+                     </div>
+                   </div>
+                  </div>)
+                  }
+                  </div>
+      </div>
         </div>
       </div>
     </div>

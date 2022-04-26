@@ -5,7 +5,7 @@ const BaseBallPlayer = (props) => {
 
     console.log(props.player);
 
-    const {name, img, Position, Nationality, id} = props.player;
+    const {name, img, position, nationality, id} = props.player;
 console.log( props.player);
 
 
@@ -17,26 +17,26 @@ console.log( props.player);
   
 
     return (
-        <div className='MainPlayer' onClick={
+        <div className='card-style' onClick={
             () => {
                 detailsPlayer(id);
             }}>
-            <img style={{height: "400px"}} src={img} alt="" />
+            <img className="card-img-top" src={img} alt="" />
 
 
-            <div className="Head">
+            <div className='card-body card-style'>
 
-            <div className="Number">
-            <h1>{id}</h1>
+                <div className="player-number">
+                    <h1>{id}</h1>
+                </div>
+                <div>
+                    <h3 className="card-title player-name">{name}</h3>
+                    <p className="card-text player-title">{position || nationality}</p>
+
+                </div>
+
             </div>
-            <div className="Text">
-            <h3>{name}</h3>
-            <h5>{Position||Nationality}</h5>
-            
-            </div>
 
-            </div>
-            
 
 
         </div>

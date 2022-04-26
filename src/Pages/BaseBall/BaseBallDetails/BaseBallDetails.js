@@ -220,10 +220,30 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 
 
 
+                      <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />  <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div className="modal-dialog modal-dialog-centered">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" style={{color:'ButtonText'}} id="exampleModalToggleLabel">Player details video</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+       {/* <video src={video}></video> */}
+       <iframe width="455" height="250" src="https://www.youtube.com/embed/387782CRNQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<a className='player-details-video' data-bs-toggle="modal" href="#exampleModalToggle" role="button">Play video</a></button>
 
 
 
-                    <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
+
+
+
+
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}

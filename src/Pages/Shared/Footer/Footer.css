@@ -26,10 +26,14 @@
     margin-bottom: 30px;
 }
 .footer-li{
-    margin: 10px;
+    margin: 15px;
     transition: linear .3s;
+    text-decoration: none;
 }
-.footer-li:hover{
+.footer-li li{
+    color: whitesmoke;
+}
+.footer-li li:hover{
     color: #e40046;
 }
 .footer-cart{
@@ -51,7 +55,7 @@
     margin-top: -10px;
 }
 .footer-appmain{
-    border: 0.1px solid white;
+    /* border: 0.1px solid white; */
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;

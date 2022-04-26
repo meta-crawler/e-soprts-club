@@ -17,7 +17,6 @@ import location from '../../../Images/Connting/819814.png';
 import email from '../../../Images/Connting/email.png';
 import phone from '../../../Images/Connting/phone-call.png';
 
-
 const labels = {
   0.5: 'Useless',
   1: 'Useless+',
@@ -75,7 +74,7 @@ setSinleTaTanis(foundPlayers)
 
   }
 
-
+ 
 
   const handelonSubmit = data => {
       data.preventDefault();
@@ -119,7 +118,7 @@ setSinleTaTanis(foundPlayers)
 
 
 
-
+console.log(sinleTaTanis);
 
 
 
@@ -136,17 +135,11 @@ setSinleTaTanis(foundPlayers)
                     <h1 className='details-player-title'>{sinleTaTanis?.name }  </h1>
 
                     <p className='details-player-des'>{sinleTaTanis?.describe }</p>
-                    
                     <button className='details-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal">Conecting</button>
                     
-                    >Conecting</button>
-
-
-
-                    
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-style">
                             <div class="modal-header-style">
                               <h5 class="modal-titel1 mb-3">Send Your Variable Messages </h5>
@@ -159,7 +152,7 @@ setSinleTaTanis(foundPlayers)
                                   <div className="location">
                                 <img style={{width: "100px", padding: "20px"}} src={location} alt="" />
 
-                                <h6>Mirpur 01, Dhaka, bd</h6>
+                                <h6>{sinleTaTanis?.nationality}</h6>
                                   </div>
                                   <div className="email">
                                 <img style={{width: "100px", padding: "20px", opacity: ".4"}} src={email} alt="" />
@@ -221,12 +214,29 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
                     
 
 
+                      <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />  <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div className="modal-dialog modal-dialog-centered">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" style={{color:'ButtonText'}} id="exampleModalToggleLabel">Player details video</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div className="modal-body">
+       {/* <video src={video}></video> */}
+       <iframe width="455" height="250" src="https://www.youtube.com/embed/387782CRNQM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<a className='player-details-video' data-bs-toggle="modal" href="#exampleModalToggle" role="button">Play video</a></button>
 
 
 
 
 
-                    <button className='details-player-video'><FontAwesomeIcon style={{marginRight:'5px'}}  icon={faVideo} />Play video</button>
+
                 </div>
                 <div>
                     {/* <div className='details-single-img'></div> */}

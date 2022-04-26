@@ -1,5 +1,4 @@
 import React from "react";
-import MessengerCustomerChat from "react-messenger-customer-chat";
 import Footer from "../../../Pages/Shared/Footer/Footer";
 import Navigation from "../../../Pages/Shared/Navigation/Navigation";
 import ControledSlider from "../../ControledSlider/ControledSlider";
@@ -8,7 +7,6 @@ import NewsPoint from "../../NewsPoint/NewsPoint";
 import Banner from "../Banner/Banner";
 import Fans from "../Fans/Fans";
 import Nextmatch from "../Nextmatch/Nextmatch";
-import OurTeam from "../OurTeam/OurTeam";
 import Products from "../Products/Products";
 import Sponsored from "../Sponsored/Sponsored";
 import Statistics from "../Statistics/Statistics";
@@ -25,8 +23,7 @@ const Home = () => {
       <WorkHome />
       <Statistics />
       <Nextmatch />
-      <ControledSlider />
-      <OurTeam />
+      <ControledSlider />      
       <NewsPoint />
       <Video />
       <Products />
@@ -34,11 +31,7 @@ const Home = () => {
       <Fans />
       <CountSlider />
       <Footer />
-      <MessengerCustomerChat
-        pageId="104705585550276
-    "
-        appId="2184967135000690"
-      />
+      
     </div>
   );
 };

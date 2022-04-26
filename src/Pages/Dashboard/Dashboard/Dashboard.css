@@ -69,10 +69,15 @@ hr{
     margin: 5px;
 }
 @media only screen and (max-width:688px) {
-    .row{
+    .raw{
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
     }
+    .sidebar{
+      
+        width: 123px;
+    }
+    
 }
 .link-style-das{
     text-decoration: none;

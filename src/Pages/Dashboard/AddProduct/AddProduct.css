@@ -6,7 +6,19 @@
     width: 500px;
 
   }
+@media only screen and (max-width:688px) {
+  .ProductFrom{
+    width: 352px;
+    margin-left: -206px;
 
+  }
+  .textarea{
+    width: 328px !important;
+  }
+  .add-product {
+    margin-left: -105px !important;
+  }
+}
 .add-product{
   color: rgb(255, 183, 0);
 }
