@@ -32,6 +32,9 @@ import HockeyPlayersDetails from "./Pages/HockeyPuck/HockeyPlayersDetails";
 import TableTennishDetails from "./Pages/TableTennis/TableTennishDetails/TableTennishDetails";
 import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
 import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
+import QuizContest from "./Pages/Dashboard/AddEventRegister/QuizContest";
+import StartQuiz from "./Pages/Dashboard/AddEventRegister/StartQuiz";
+import ContestResult from "./Pages/Dashboard/AddEventRegister/ContestResult";
 
 
 // import Nextmatch from './Pages/Nextmatch/Nextmatch';
@@ -80,6 +83,12 @@ function App() {
             <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
             <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
             <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
+
+
+            {/* <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} /> */}
+            <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} />
+            <Route path={`/dashboard/contest/start`} element={<StartQuiz />} />
+            <Route path={`/dashboard/contest/result`} element={<ContestResult />} />
 
             </Route>
             
