@@ -23,7 +23,7 @@ const NewsPoint = () => {
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
+      fetch("https://blooming-thicket-66783.herokuapp.com/upcomingEvents")
         .then((res) => res.json())
         .then((data) => setEvent(data));
     }, []);

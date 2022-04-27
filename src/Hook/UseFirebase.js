@@ -130,7 +130,7 @@ const githubsignIn = () => {
     }  
     // admin
     useEffect( () => {
-        fetch(`https://enigmatic-garden-34025.herokuapp.com/users/${user.email} `)
+        fetch(`https://blooming-thicket-66783.herokuapp.com/users/${user.email} `)
         .then(res => res.json())
         .then(data => setAdmin(data.admin))
     }, [user?.email])
@@ -146,12 +146,12 @@ const githubsignIn = () => {
             setAuthError( error.message )
           }).finally(() => setIsLoading(false))
     }
-    // https://enigmatic-garden-34025.herokuapp.com/
+    // https://blooming-thicket-66783.herokuapp.com/
 
     const saveUser = (email, displayName, method) => {
         console.log("saveUser")
         const user = { email, displayName };
-        fetch('https://enigmatic-garden-34025.herokuapp.com/users', {
+        fetch('https://blooming-thicket-66783.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

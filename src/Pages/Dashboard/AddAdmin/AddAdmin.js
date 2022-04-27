@@ -7,7 +7,7 @@ const AddAdmin = () => {
     const { register, handleSubmit, watch, errors,reset } = useForm();
     const [success, setSuccess] = useState(false)
     const onSubmit = (data) => {
-        fetch("https://enigmatic-garden-34025.herokuapp.com/users/admin", {
+        fetch("https://blooming-thicket-66783.herokuapp.com/users/admin", {
           method: "PUT",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),

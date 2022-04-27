@@ -14,7 +14,7 @@ export default class TableTennisPlayers extends Component {
   }
 
   componentDidMount() {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/tableTennis')
+    fetch('https://blooming-thicket-66783.herokuapp.com/tableTennis')
       .then((response) => response.json())
       .then(playersList => {
         this.setState({ players: playersList });

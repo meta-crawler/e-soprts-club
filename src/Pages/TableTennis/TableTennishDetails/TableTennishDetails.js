@@ -31,6 +31,31 @@ const labels = {
 };
 
 const TableTennishDetails = () => {
+
+
+let { id } = useParams();
+
+const [tableTaPlayers, setTableTaPlayers] = useState([]);
+const [sinleTaTanis, setSinleTaTanis] = useState({});
+/* const [quantity, setQuantity] = useState(1); */
+
+useEffect(() => {
+fetch('https://blooming-thicket-66783.herokuapp.com/tableTennis',)
+.then(res => res.json())
+.then(data => setTableTaPlayers(data))
+}, [])
+useEffect(() => {
+const foundPlayers = tableTaPlayers.find(player => (player.id === id))
+setSinleTaTanis(foundPlayers)
+}, [tableTaPlayers, id])
+
+
+  const [value, setValue] = React.useState(2);
+  const [hover, setHover] = React.useState(-1);  
+
+
+  const ininsialComment = { name: '', PlayerName: '', deatls: '', url: '',feedback: "", labels: "" };
+
   let { id } = useParams();
 
   const [tableTaPlayers, setTableTaPlayers] = useState([]);
@@ -60,6 +85,7 @@ const TableTennishDetails = () => {
     labels: "",
   };
 
+
   const [orderinfo, setOrderinfo] = useState(ininsialComment);
 
   const hendalOnBlure = (data) => {
@@ -70,6 +96,25 @@ const TableTennishDetails = () => {
     setOrderinfo(newValue);
     console.log(newValue);
   };
+
+  const handelonSubmit = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...orderinfo
+      }
+  
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
 
   
   const dispatch = useDispatch()

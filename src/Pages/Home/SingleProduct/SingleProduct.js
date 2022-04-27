@@ -23,7 +23,7 @@ const SingleProduct = () => {
 
 
   useEffect(() => {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/other',)
+    fetch('https://blooming-thicket-66783.herokuapp.com/other',)
       .then(res => res.json())
       .then(data => setProducts(data.products))
   }, [])
@@ -39,7 +39,7 @@ const SingleProduct = () => {
     data.status= "Pending";
 
 
-    fetch('https://enigmatic-garden-34025.herokuapp.com/ordersInfo', 
+    fetch('https://blooming-thicket-66783.herokuapp.com/ordersInfo', 
     
     
     {

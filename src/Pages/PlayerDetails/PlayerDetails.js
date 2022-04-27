@@ -39,9 +39,16 @@ const PlayerDetails = () => {
  
 
   useEffect(() => {
+
+
+    fetch('https://blooming-thicket-66783.herokuapp.com/players')
+      .then(res => res.json())
+      .then(data => {
+
     fetch("https://enigmatic-garden-34025.herokuapp.com/players")
       .then((res) => res.json())
       .then((data) => {
+
         setPlayerDetails(data);
       });
   }, []);
@@ -89,6 +96,25 @@ const PlayerDetails = () => {
       alert("I CAmakd");
     }
   };
+
+  const handelonSubmit = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...orderinfo
+      }
+  
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
 
   
   const dispatch = useDispatch()

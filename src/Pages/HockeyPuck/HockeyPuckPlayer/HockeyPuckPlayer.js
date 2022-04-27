@@ -15,7 +15,7 @@ export default class HockeyPuckPlayer extends Component {
   }
 
   componentDidMount() {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/hockeyPuckPlayers')
+    fetch('https://blooming-thicket-66783.herokuapp.com/hockeyPuckPlayers')
       .then((response) => response.json())
       .then(playersList => {
         this.setState({ players: playersList });

@@ -33,6 +33,30 @@ const labels = {
 const HockeyPlayersDetails = () => {
   let { id } = useParams();
 
+
+let { id } = useParams();
+
+const [hockeyPlayers, setHockeyPlayers] = useState([]);
+const [singleHockeys, setSingleHockeys] = useState({});
+/* const [quantity, setQuantity] = useState(1); */
+
+useEffect(() => {
+fetch('https://blooming-thicket-66783.herokuapp.com/hockeyPuckPlayers',)
+.then(res => res.json())
+.then(data => setHockeyPlayers(data))
+}, [])
+useEffect(() => {
+const foundPlayers = hockeyPlayers.find(player => (player.id === id))
+setSingleHockeys(foundPlayers)
+}, [hockeyPlayers, id])
+
+
+  const [value, setValue] = React.useState(2);
+  const [hover, setHover] = React.useState(-1);  
+
+
+  const ininsialComment = { name: '', PlayerName: '', deatls: '', url: '',feedback: "", labels: "" };
+
   const [hockeyPlayers, setHockeyPlayers] = useState([]);
   const [singleHockeys, setSingleHockeys] = useState({});
  
@@ -60,6 +84,7 @@ const HockeyPlayersDetails = () => {
     labels: "",
   };
 
+
   const [orderinfo, setOrderinfo] = useState(ininsialComment);
 
   const hendalOnBlure = (data) => {
@@ -68,6 +93,33 @@ const HockeyPlayersDetails = () => {
     const newValue = { ...orderinfo };
     newValue[filed] = value;
     setOrderinfo(newValue);
+
+    console.log(newValue);  
+
+  }
+
+
+
+  const handelonSubmit = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...orderinfo
+      }
+  
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+  
+
     console.log(newValue);
   };
 
@@ -87,6 +139,7 @@ const HockeyPlayersDetails = () => {
     ) {
       alert(`All fields are required`);
       return;
+
     }
     
     // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {

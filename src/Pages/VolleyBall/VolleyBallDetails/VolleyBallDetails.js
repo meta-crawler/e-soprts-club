@@ -33,6 +33,31 @@ const labels = {
 const VolleyBallDetails = () => {
   let { id } = useParams();
 
+
+
+let { id } = useParams();
+
+const [tableTaPlayers, setTableTaPlayers] = useState([]);
+const [sinleTaTanis, setSinleTaTanis] = useState({});
+/* const [quantity, setQuantity] = useState(1); */
+
+useEffect(() => {
+fetch('https://blooming-thicket-66783.herokuapp.com/volleyBall',)
+.then(res => res.json())
+.then(data => setTableTaPlayers(data))
+}, [])
+useEffect(() => {
+const foundPlayers = tableTaPlayers.find(player => (player.id === id))
+setSinleTaTanis(foundPlayers)
+}, [tableTaPlayers, id])
+
+
+  const [value, setValue] = React.useState(2);
+  const [hover, setHover] = React.useState(-1);  
+
+
+  const ininsialComment = { name: '', PlayerName: '', deatls: '', url: '',feedback: "", labels: "" };
+
   const [tableTaPlayers, setTableTaPlayers] = useState([]);
   const [sinleTaTanis, setSinleTaTanis] = useState({});
  
@@ -60,6 +85,7 @@ const VolleyBallDetails = () => {
     labels: "",
   };
 
+
   const [orderinfo, setOrderinfo] = useState(ininsialComment);
 
   const hendalOnBlure = (data) => {
@@ -68,6 +94,32 @@ const VolleyBallDetails = () => {
     const newValue = { ...orderinfo };
     newValue[filed] = value;
     setOrderinfo(newValue);
+
+    console.log(newValue);  
+
+  }
+
+
+
+  const handelonSubmit = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...orderinfo
+      }
+  
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+  
     console.log(newValue);
   };
 
@@ -87,6 +139,7 @@ const VolleyBallDetails = () => {
     ) {
       alert(`All fields are required`);
       return;
+
     }
     
     // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {

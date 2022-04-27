@@ -39,9 +39,16 @@ const CricketPlayerInfo = () => {
   
 
   useEffect(() => {
+
+
+    fetch('https://blooming-thicket-66783.herokuapp.com/cricketplayers')
+      .then(res => res.json())
+      .then(data => {
+
     fetch("https://enigmatic-garden-34025.herokuapp.com/cricketplayers")
       .then((res) => res.json())
       .then((data) => {
+
         setPlayerDetails(data);
       });
   }, []);
@@ -77,6 +84,33 @@ const CricketPlayerInfo = () => {
     const newValue = { ...orderinfo };
     newValue[filed] = value;
     setOrderinfo(newValue);
+
+    console.log(newValue);  
+
+  }
+
+
+
+  const handelonSubmit = data => {
+      data.preventDefault();
+  
+      
+  
+      const newDispalyReviwe = {
+        ...orderinfo
+      }
+  
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(newDispalyReviwe)
+      })
+        .then(res => res.json())
+        .then(data => console.log(data));
+  
+
     console.log(newValue);
   };
 
