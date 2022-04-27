@@ -254,6 +254,7 @@ const ContestsRegister = () => {
           </Container>
         </div>
       </div>
+      </div>
     );
 };
 
