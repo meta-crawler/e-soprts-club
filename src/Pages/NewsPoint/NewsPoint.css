@@ -151,3 +151,9 @@
 .eventBanner:hover{
     border-radius: 30px;
 }
+.ContentsFullBanner{
+    background-image: url(../../Images/UPCOMINGEVENTS/images.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
