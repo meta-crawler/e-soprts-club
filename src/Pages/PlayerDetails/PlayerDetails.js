@@ -50,7 +50,7 @@ const PlayerDetails = () => {
 
   useEffect(() => {
 
-    fetch('https://enigmatic-garden-34025.herokuapp.com/players')
+    fetch('https://blooming-thicket-66783.herokuapp.com/players')
       .then(res => res.json())
       .then(data => {
         setPlayerDetails(data);
@@ -130,7 +130,7 @@ const hendalPalyer = player => {
         ...orderinfo
       }
   
-      fetch('https://enigmatic-garden-34025.herokuapp.com/review', {
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
@@ -169,7 +169,7 @@ const hendalPalyer = player => {
                     
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
-                          <div style={{width: "1000px"}} class="modal-content modal-style">
+                          <div  class="modal-content modal-style">
                             <div class="modal-header-style">
                               <h5 class="modal-titel1 mb-3">Send Your Variable Messages </h5>
                             </div>
@@ -306,9 +306,9 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
             {detailsItam?.name}
           </h2>
 
-          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>{detailsItam?.describe}</p>
-          <p style={{marginBottom: "10px", fontSize: "20px", fontWeight: "400", width: "500px"}}>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
-          <p style={{marginBottom: "40px", fontSize: "20px", fontWeight: "400", width: "500px"}}>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
+          <p className='player-detaisl-pres' >{detailsItam?.describe}</p>
+          <p className='player-detaisl-pres'>He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, four UEFA Champions League titles and six Copas del Rey.</p>
+          <p className='player-detaisl-pres13'>A prolific goalscorer and a creative playmaker, Messi holds the records for most goals in La Liga (419), a La Liga and European league season (50), most hat-tricks in the UEFA Champions League (8), and most assists in La Liga (169) and the Copa América (12). He has scored 698 senior career goals for club and country.</p>
           <div>
               <table>
                   <tbody>
@@ -364,9 +364,9 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
 
         </div>
 
-        <form className='From' >
+        <form className='From'  >
 
-
+        <div className='from-details-res'>
           <div className="Rating">
             <Typography sx={{ fontWeight: '700' }} >Your Rating</Typography>
             <Rating
@@ -388,7 +388,7 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
             )}
 
           </div>
-
+            <div>
           <input className='textarea' onBlur={hendalOnBlure} type="text" name='deatls' placeholder='Type Your Feedback' />
           <br />
           <input type="text" name='name'
@@ -408,8 +408,9 @@ style={{width: "400px", padding: "10px", borderRadius: "05px", margin: "20px"}} 
           <Button onClick={handelonSubmit}
 
           style={{background: "#dc3545", border: "none", padding: "10px 10px"}} >Submit <IosShareIcon /></Button>
+          </div>
 
-
+          </div>
         </form>
 
 

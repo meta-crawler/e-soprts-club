@@ -27,7 +27,7 @@ const ReviewAll = (porps) => {
         
 
           </div>
-          <p style={{width: "400px", marginTop: "10px"}}>{deatls}</p>
+          <p className='review-all-pstyle' >{deatls}</p>
 
           
           

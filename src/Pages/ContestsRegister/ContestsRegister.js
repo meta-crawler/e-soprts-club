@@ -32,7 +32,7 @@ const ContestsRegister = () => {
         const newDispalyReviwe = {
           ...formData
         }
-    // https://enigmatic-garden-34025.herokuapp.com/contextRegister
+    // https://blooming-thicket-66783.herokuapp.com/contextRegister
         fetch('', {
           method: 'POST',
           headers: {

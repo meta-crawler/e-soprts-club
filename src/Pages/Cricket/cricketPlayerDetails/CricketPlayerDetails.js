@@ -43,7 +43,7 @@ const [singleCricket, setSingleCricket] = useState({});
 /* const [quantity, setQuantity] = useState(1); */
 
 useEffect(() => {
-fetch('https://enigmatic-garden-34025.herokuapp.com/cricketplayers',)
+fetch('https://blooming-thicket-66783.herokuapp.com/cricketplayers',)
 .then(res => res.json())
 .then(data => setCricketPlayers(data))
 }, [])
@@ -98,7 +98,7 @@ setSingleCricket(foundPlayers)
         ...orderinfo
       }
   
-      fetch('https://enigmatic-garden-34025.herokuapp.com/review', {
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

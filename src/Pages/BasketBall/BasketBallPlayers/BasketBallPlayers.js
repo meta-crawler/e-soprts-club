@@ -14,7 +14,7 @@ export default class BasketBallPlayers extends Component {
   }
 
   componentDidMount() {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/basketBall')
+    fetch('https://blooming-thicket-66783.herokuapp.com/basketBall')
       .then((response) => response.json())
       .then(playersList => {
         this.setState({ players: playersList });

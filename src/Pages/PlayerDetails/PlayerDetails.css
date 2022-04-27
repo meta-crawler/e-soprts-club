@@ -167,7 +167,9 @@
     margin-top: 230px;
 }
 
-
+.biography{
+    width: 1383px;
+}
 
 
 .player:hover{
@@ -189,6 +191,9 @@
     .biograph-responsibe{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+    .biography{
+        width: 377px;
     }
     .details-player-img{
         width: 464px;
@@ -212,12 +217,17 @@
        
     }
     .banner img {
-        width: 429px !important;
+        width: 325px !important;
         
     }
     .player p{
         width: 259px !important;
+        margin-left: -43px !important;
      
+    }
+    .from-details-res{
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
     }
     
 }
@@ -300,6 +310,8 @@
 
 .From {
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
 }
 
 .From .textarea {
@@ -352,8 +364,67 @@
     background-image: url(../../Images/Connting//empty-podium-with-line-gradient-neon-square-frame-vector.jpg);
     padding: 20px;
 }
+.PlayerIcon{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+}
+@media only screen and (max-width:688px) {
+    .PlayerIcon{
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+    }
+    .modal-style{
+        width: 465px !important;
+        margin-left: -290px;
+    }
+    .modal-body .PlayerIcon .location{
+        width: 140px;
+        margin: 10px;
+       
+        padding: 0px;
+    }
+    .modal-body .PlayerIcon .email{
+        width: 140px;
+        margin: 10px;
+       
+        padding: 0px;
+    }
+    .modal-body .PlayerIcon .phone{
+        width: 140px !important;
+        margin: 10px !important;
+       
+        padding: 0px !important;
+    }
+    .From-Main {
+        padding: 33px;
+       
+    
+    }
+    .Rating {
+        /* position: absolute; */
+        right: 65%;
+        top: -29px;
+    }
+    .player-detaisl-pres{
+        width: 322px !important;
+    }
+    .player-detaisl-pres13{
+    width:322px !important;
+    }
+}
+.player-detaisl-pres13{
+    margin-bottom: 10px ;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    width: 500px ;
+    }
 
-
+.player-detaisl-pres{
+    margin-bottom: 10px ;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    width: 500px ;
+}
 .modal-body .PlayerIcon .phone{
     width: 300px;
     background-color: #dc3545;
@@ -371,4 +442,5 @@
 
 .modal-style{
     background-image: url(../../Images/Connting/pngtree-simple-technology-blue-background-design-display-boardbackground-materialinnovationtechnologybackground-image_72625.jpg);
+    width: 1000px;
 }

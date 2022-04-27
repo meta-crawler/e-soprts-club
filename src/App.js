@@ -36,6 +36,7 @@ import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 
 import ShopData from "./Pages/Dashboard/ShopData/ShopData";
+import Payment from "./Pages/Dashboard/Payment/Payment";
 
 
 function App() {
@@ -70,6 +71,8 @@ function App() {
             <Route path="/baseballplayer/:id" element={<PrivateRoute><BaseBallDetails /></PrivateRoute>} />
 
             <Route path="/basketBallPlayer/:id" element={<PrivateRoute><BaseketBallDetails /></PrivateRoute>} />
+            {/* <Route path="/payment" element={<Payment />} /> */}
+
 
             <Route path="/dashboard" element={<Dashboard />}>
             <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
@@ -87,6 +90,7 @@ function App() {
 
 
             <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard/payment/:productId`} element={<Payment />} />
             <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
 
 

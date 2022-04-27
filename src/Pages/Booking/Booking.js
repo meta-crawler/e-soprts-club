@@ -43,7 +43,7 @@ const Booking = () => {
       ...formData
     }
 console.log(newDispalyReviwe);
-    fetch('https://enigmatic-garden-34025.herokuapp.com/booking', {
+    fetch('https://blooming-thicket-66783.herokuapp.com/booking', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
