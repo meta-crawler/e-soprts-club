@@ -16,7 +16,7 @@ const SingleProduct = () => {
   const [featuredProducts, setFeaturedProducts] = useState([])
 
   useEffect(() => {
-    fetch('/featuredProducts.json',)
+    fetch('https://blooming-thicket-66783.herokuapp.com/featuresProducts',)
       .then(res => res.json())
       .then(data => setFeaturedProducts(data))
   }, [])
@@ -149,10 +149,10 @@ const SingleProduct = () => {
                        <h5 className="fw-bold text-white mb-2">Price: {featuredProduct?.price}</h5>
                      </div>
                      <div>
-                     <button type="button" class="features-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     <button type="button" class="features-btn" data-bs-toggle="modal1" data-bs-target="#exampleModal2">
                         Shop
                       </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content modal-style">
                             <div class="modal-header-style">
@@ -168,7 +168,7 @@ const SingleProduct = () => {
                               </div>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="modal-btn" data-bs-dismiss="modal1">Close</button>
                               <button type="button" 
                               onClick={onSubmit}
                               class="modal-btn">Buy Now</button>
