@@ -70,13 +70,13 @@ const AddEventRegister = () => {
   <thead>
     <tr>
       <th>#</th>
-      <th>Start Date</th>
-      <th>Sex</th>
+      <th className='th-display-block'>Start Date</th>
+      <th className='th-display-block'>Sex</th>
       <th>First Name</th>
-      <th>Club Name</th>
+      <th className='th-display-block'>Club Name</th>
       <th>Number</th>
-      <th>City</th>
-      <th>Address</th>
+      <th className='th-display-block'>City</th>
+      <th className='th-display-block'>Address</th>
       <th>Status</th>
     </tr>
   </thead>
@@ -85,13 +85,13 @@ const AddEventRegister = () => {
       <tbody>
       <tr>
       <td>{index}</td>
-      <td>{pd.StartDate}</td>
-      <td>{pd.sex}</td>
+      <td className='th-display-block'>{pd.StartDate}</td>
+      <td className='th-display-block'>{pd.sex}</td>
       <td>{pd.eventName}</td>
-      <td>{pd.ClubName}</td>
+      <td className='th-display-block'>{pd.ClubName}</td>
       <td>{pd.number}</td>
-      <td>{pd.city}</td>
-      <td>{pd.address}</td>
+      <td className='th-display-block'>{pd.city}</td>
+      <td className='th-display-block'>{pd.address}</td>
       <button onClick={()=> handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
 {pd.status === "pending" ? <button onClick={()=> handleApprove(pd._id)} className="btn bg-danger p-2">Approve</button>: <span><AddTaskIcon style={{
   color: "dc3545", fontSize: "20px"

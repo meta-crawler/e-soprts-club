@@ -20,6 +20,8 @@ const SingleProduct = () => {
       .then(res => res.json())
       .then(data => setFeaturedProducts(data))
   }, [])
+
+
   useEffect(() => {
     fetch('https://enigmatic-garden-34025.herokuapp.com/other',)
       .then(res => res.json())
@@ -30,20 +32,34 @@ const SingleProduct = () => {
     setSingleProducts(foundProducts)
   }, [products, id])
 
+
+
+
   const onSubmit = (data) => {
     data.status= "Pending";
-    fetch('https://enigmatic-garden-34025.herokuapp.com/orders', {
-      method: "POST",
-      headers: { "content-type": "application/json"},
-      body: JSON.stringify(data),
-    })
+
+
+    fetch('https://enigmatic-garden-34025.herokuapp.com/ordersInfo', 
+    
+    
+    {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json'
+        },
+        body: JSON.stringify(singleProducts)
+      })
       .then((res) => res.json())
       .then((result) =>{
           alert("Ordered Successfully!");
     });
-    console.log(data);
-};
 
+    console.log(data);
+
+    }
+
+
+    
   return (
     <div className="container mt-5">
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>

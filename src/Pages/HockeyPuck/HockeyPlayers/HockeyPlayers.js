@@ -17,30 +17,29 @@ console.log( props.player);
   
 
     return (
-        <div className="card our-taem-card">
-        <div className='card-body card-style' onClick={
+        <div className='card-style' onClick={
             () => {
                 detailsPlayer(id);
             }}>
             <img className="card-img-top" src={img} alt="" />
 
 
-            <div>
+            <div className='card-body card-style'>
 
                 <div className="player-number">
                     <h1>{id}</h1>
                 </div>
                 <div>
                     <h3 className="card-title player-name">{name}</h3>
-                    <p className="card-text player-title">{Position || Nationality} </p>
+                    <p className="card-text player-title">{Position || Nationality}</p>
 
                 </div>
 
             </div>
 
-        </div>
 
-    </div>
+
+        </div>
     );
 };
 

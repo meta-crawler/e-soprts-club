@@ -30,8 +30,18 @@ import HockeyPlayersDetails from "./Pages/HockeyPuck/HockeyPlayersDetails";
 import TableTennishDetails from "./Pages/TableTennis/TableTennishDetails/TableTennishDetails";
 import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
 import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
+
+import QuizContest from "./Pages/Dashboard/AddEventRegister/QuizContest";
+import StartQuiz from "./Pages/Dashboard/AddEventRegister/StartQuiz";
+import ContestResult from "./Pages/Dashboard/AddEventRegister/ContestResult";
 import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
+
+
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+
+import ShopData from "./Pages/Dashboard/ShopData/ShopData";
+
 
 function App() {
   return (
@@ -51,28 +61,54 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/contestsregister" element={<ContestsRegister />} />
-            <Route path="/event-register" element={<EventRegister />} />
-            <Route path="/playerDetails/:id" element={<PlayerDetails />} />
-            <Route path="/singleProduct/:id" element={<SingleProduct />} />
-            <Route path="/cricketPlayer/:id" element={<CricketPlayerInfo />} />
-            <Route path="/volleyballplayer/:id" element={<VolleyBallDetails />} />
-            <Route path="/hokeypalyer/:id" element={<HockeyPlayersDetails />} />
-            <Route path="/tableTanishPlayer/:id" element={<TableTennishDetails />} />
+            <Route path="/contact" element={  <ContactUs />  } />
+            <Route path="/booking" element={<PrivateRoute>  <Booking /> </PrivateRoute> } />
+            <Route path="/contestsregister" element={ 
+              <PrivateRoute> <ContestsRegister />  
+              </PrivateRoute>} />
+            <Route path="/event-register" element={
+              <PrivateRoute> <EventRegister /> 
+              </PrivateRoute>} />
+            <Route path="/playerDetails/:id" element={ <PrivateRoute> <PlayerDetails /> </PrivateRoute> } />
+            <Route path="/singleProduct/:id" element={ <PrivateRoute><SingleProduct /></PrivateRoute> } />
+            <Route path="/cricketPlayer/:id" element={<PrivateRoute><CricketPlayerInfo /></PrivateRoute>} />
+            <Route path="/volleyballplayer/:id" element={<PrivateRoute><VolleyBallDetails /></PrivateRoute>} />
+            <Route path="/hokeypalyer/:id" element={<PrivateRoute><HockeyPlayersDetails /></PrivateRoute>} />
+            <Route path="/tableTanishPlayer/:id" element={<PrivateRoute><TableTennishDetails /></PrivateRoute>} />
 
-            <Route path="/baseballplayer/:id" element={<BaseBallDetails />} />
+            <Route path="/baseballplayer/:id" element={<PrivateRoute><BaseBallDetails /></PrivateRoute>} />
 
-            <Route path="/basketBallPlayer/:id" element={<BaseketBallDetails />} />
+            <Route path="/basketBallPlayer/:id" element={<PrivateRoute><BaseketBallDetails /></PrivateRoute>} />
 
             <Route path="/dashboard" element={<Dashboard />}>
-            <Route path={`/dashboard/addproduct`} element={<AdminRoute><AddProduct></AddProduct></AdminRoute>} />
-            <Route path={`/dashboard/addadmin`} element={<AdminRoute><AddAdmin></AddAdmin></AdminRoute>} />
-            <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
-            <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
+            <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
+            <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
+          
+          
+           <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
+
+            <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
             <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
+
+            <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
+
+           
+            <Route path={`/dashboard/yourShop`} element={<ShopData /> } />
+
+
             <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
+
+
+
+            {/* <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} /> */}
+            <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} />
+            <Route path={`/dashboard/contest/start`} element={<StartQuiz />} />
+            <Route path={`/dashboard/contest/result`} element={<ContestResult />} />
+
+            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
+
 
             </Route>
             
