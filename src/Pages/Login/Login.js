@@ -1,10 +1,7 @@
-import { Alert } from 'bootstrap';
 import React, { useState } from 'react';
-import { Spinner } from 'react-bootstrap';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 import useAuth from '../../Hook/UseAuth';
-import img from '../../Images/google.png'
 import {
     
     faGoogle,
@@ -13,13 +10,12 @@ import {
   } from "@fortawesome/free-brands-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 import './Login.css'
 import Footer from '../Shared/Footer/Footer';
 const Login = () => {
 
     const [loginFromData , setLoginFromData] = useState()
-    const { user,loginUser,authError,googleSignIn ,isLoading,handleFacebookSingIn, githubsignIn} = useAuth()
+    const { loginUser,googleSignIn ,handleFacebookSingIn, githubsignIn} = useAuth()
     const location = useLocation();
     const navigate = useNavigate();
 

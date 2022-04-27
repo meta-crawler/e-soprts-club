@@ -122,7 +122,8 @@ const SingleProduct = () => {
       <h2 className="product-titel text-dark text-center my-4">Featured Products</h2>
       <div className="row">
                   {
-                  featuredProducts.map(featuredProduct=> <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
+                  featuredProducts.map(featuredProduct=> <>
+                  <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
                   <div className="card h-100 card-style">
                     <div className="d-flex justify-content-center align-items-center"> 
                       <img className="w-100" src={featuredProduct?.img} alt="..."/>
@@ -131,8 +132,39 @@ const SingleProduct = () => {
                        <h3 className="pd-titel mb-3">{featuredProduct?.name}</h3>
                        <h5 className="fw-bold text-white mb-2">Price: {featuredProduct?.price}</h5>
                      </div>
+                     <div>
+                     <button type="button" class="features-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Shop
+                      </button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content modal-style">
+                            <div class="modal-header-style">
+                              <h5 class="modal-titel1 mb-3">Buy This Product</h5>
+                            </div>
+                            <div class="modal-body">
+                              <div className="text-center text-white">
+                                <img className="w-25 rounded-circle" src={featuredProduct?.img} alt="" />
+                                <h3 className="modal-pd-name m">{featuredProduct?.name}</h3>
+                                <h5 className="modal-pd-name">{featuredProduct?.price}</h5>
+                                {/* <h6 className="modal-pd-name">Category: {singleProducts?.category}</h6>
+                                <h6 className="modal-pd-name">Tags: {singleProducts?.tags}</h6> */}
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
+                              <button type="button" 
+                              onClick={onSubmit}
+                              class="modal-btn">Buy Now</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
                    </div>
-                  </div>)
+                  </div>
+                  </>
+                  ) 
                   }
                   </div>
       </div>
