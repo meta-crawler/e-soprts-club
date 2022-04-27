@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate} from 'react-router-dom';
-import {  Button, Container } from 'react-bootstrap';
+import {  Button, Container, Modal } from 'react-bootstrap';
 import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
@@ -18,12 +18,20 @@ import { Link } from 'react-router-dom';
 
 const contestRules = ["NO PURCHASE NECESSARY.  A PURCHASE WILL NOT INCREASE YOUR CHANCE OF WINNING.", "HOW TO ENTER:  NO PURCHASE IS NECESSARY TO PARTICIPATE IN THE CONTEST. YOU MUST BE A GAME LOVER TO PERTICIPATE THIS CONTEST.  Entries must be received by the exact time of the contest start.", "PRIZES:  Prizes vary, but will be a product or discount from SPORTS_CLUB.", "WINNER SELECTION:  Winners will be selected automatically based on the less times consumed by the perticipant and the highest number of correct quize. To decide the winner, Our algorithm will use a simple calculation", "Here, each unused seconds(1sec) = 2 point, and each correct answer = 10 points. However, All decisions regarding prize awards will be made by SPORTS_CLUB and are final and binding.", "ELIGIBILITY:  The contests are open to all members of the our club.  Admin and Moderator of SPORTS_CLUB are not eligible to participate.", "GENERAL TERMS:  No substitution of prize is offered, no transfer of a prize to a third party is permitted, and prize may not be redeemed for cash value.  Void where prohibited or restricted by law.  All entrants, as a condition of entry, agree to be bound by these Official Rules and the decisions of the judges.  The entry information provided is subject to the Privacy Policy on the SPORTS_CLUB website.", "WINNER NOTIFICATION:  Winners will be notified via dashboard. Please collect your price within the time will be mentioned in the dashboard during notifying. ", "LIMITATIONS OF LIABILITY:  SPORTS_CLUB assumes no responsibility for computer or communications errors or any incorrect or inaccurate information.  SPORTS_CLUB reserves the right, at its sole discretion, to disqualify any individual it finds to be tampering with the entry process or to be acting in violation of the terms and conditions of the website.  SPORTS_CLUB reserves the right, at its sole discretion, to cancel, terminate, modify or suspend the contest and determine the winner from entries received prior to the action taken.", "DISPUTE RESOLUTION:  Except where prohibited, by participating, you agree that all issues and questions concerning the construction, validity, interpretation and enforceability of these Official Rules, or the rights and obligations of participant(s) and SPORTS_CLUB, shall be governed by the laws of Bangladesh without giving effect to any principles of conflicts of law of any jurisdiction.  By participating, you also agree that any and all claims, judgments and awards shall be limited to actual out-of-pocket costs incurred, including costs associated with participating."]
 const NewsPoint = () => {
+
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
     const navigate = useNavigate()
     
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-      fetch("https://blooming-thicket-66783.herokuapp.com/upcomingEvents")
+      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
         .then((res) => res.json())
         .then((data) => setEvent(data));
     }, []);
@@ -33,12 +41,7 @@ console.log(event);
 
 
 
-const Booking = () => {
-    console.log("Go There");
-    const ref = React.createRef();
-    return ref;
-    
-}
+
 
 
 
@@ -173,17 +176,48 @@ const Permetion = () => {
             <div className="col-lg-12 col-12">
                 <div className="eventBanner">
                     <div className="UpEvent">
-                    <Button className='details-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%", color: "#000000"}}>Up Coming  New Matchs</Button>
-                    
-
-                       <Button className='details2-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#E40046", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%"}}>Up Coming  New Contests</Button>
 
 
 
-                       <Button className='details-connecting cart-btn'
-                    type='button' data-bs-toggle="modal" data-bs-target="#exampleModall"  style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "30%", color: "#000000"}}>Up Coming  New Contests</Button>
+                      <Button style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%", color: "#000000"}} variant="primary" onClick={handleShow}>
+                      Up Coming 
+      </Button>
+
+      <Modal  show={show} onHide={handleClose}>
+        <Modal.Header className='ContentsFullBanner' style={{margin: "0 auto", width: "1000px"}}  closeButton>
+          <Modal.Title> 
+              <h5 class="modal-titel1 mb-3">Up Coming  New  </h5>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='ContentsFullBanner'  style={{width: "1000px"}}>
+
+
+
+{
+            contestRules.map(rule=><p>
+                <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}><FcRules /></IconContext.Provider>
+                <span style={{marginLeft:"15px"}}>{rule}</span>
+                </p>)
+        }
+        <h4 style={{textAlign:"center"}}>SPONSOR: SPORTS_CLUB.</h4>
+
+
+        </Modal.Body>
+        <Modal.Footer style={{margin: "0 auto", width: "1000px"}}  className='ContentsFullBanner'>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary">
+          <Link style={{textDecoration:"none",color:"white"}} onClick={Permetion} to="/contestsregister">Next</Link>
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+         
+
+    
+
+                       
 
 
 
@@ -192,7 +226,7 @@ const Permetion = () => {
 
                      </div>
 
-                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                     {/* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
                 <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-banner">
@@ -252,32 +286,10 @@ const Permetion = () => {
 
 
 
-                          <div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-                        <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
-                          <div style={{width: "1000px"}} class="modal-content modal-banner">
-                            <div class="modal-header-style">
-                              <h5 class="modal-titel1 mb-3">Up Coming  New Contests </h5>
-                            </div>
-                            <div class="modal-body" style={{backdropFilter: "blur(30px)"}}>
-                                {
-                                    contestRules.map(rule=><p>
-                                        <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}><FcRules /></IconContext.Provider>
-                                        <span style={{marginLeft:"15px"}}>{rule}</span>
-                                        </p>)
-                                }
-                                <h4 style={{textAlign:"center"}}>SPONSOR: SPORTS_CLUB.</h4>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="modal-btn" data-bs-dismiss="modal"><Link style={{textDecoration:"none",color:"white"}} onClick={Permetion} to="/contestsregister">Next</Link></button> 
-                            </div>
-                        </div>
-                    </div>
-                    </div>
+                          
 
                 </div>
-                <div>
+                <div> */}
                 
                 </div>
 

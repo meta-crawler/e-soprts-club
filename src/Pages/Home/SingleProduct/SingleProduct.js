@@ -1,4 +1,3 @@
-/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -16,12 +15,10 @@ const SingleProduct = () => {
   const [featuredProducts, setFeaturedProducts] = useState([])
 
   useEffect(() => {
-    fetch('/featuredProducts.json',)
+    fetch('https://blooming-thicket-66783.herokuapp.com/featuredProducts',)
       .then(res => res.json())
       .then(data => setFeaturedProducts(data))
   }, [])
-
-
   useEffect(() => {
     fetch('https://blooming-thicket-66783.herokuapp.com/other',)
       .then(res => res.json())
@@ -32,34 +29,20 @@ const SingleProduct = () => {
     setSingleProducts(foundProducts)
   }, [products, id])
 
-
-
-
   const onSubmit = (data) => {
     data.status= "Pending";
-
-
-    fetch('https://blooming-thicket-66783.herokuapp.com/ordersInfo', 
-    
-    
-    {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(singleProducts)
-      })
+    fetch('https://blooming-thicket-66783.herokuapp.com/orders', {
+      method: "POST",
+      headers: { "content-type": "application/json"},
+      body: JSON.stringify(data),
+    })
       .then((res) => res.json())
       .then((result) =>{
           alert("Ordered Successfully!");
     });
-
     console.log(data);
+};
 
-    }
-
-
-    
   return (
     <div className="container mt-5">
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>
@@ -138,8 +121,7 @@ const SingleProduct = () => {
       <h2 className="product-titel text-dark text-center my-4">Featured Products</h2>
       <div className="row">
                   {
-                  featuredProducts.map(featuredProduct=> <>
-                  <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
+                  featuredProducts.map(featuredProduct=> <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
                   <div className="card h-100 card-style">
                     <div className="d-flex justify-content-center align-items-center"> 
                       <img className="w-100" src={featuredProduct?.img} alt="..."/>
@@ -148,39 +130,8 @@ const SingleProduct = () => {
                        <h3 className="pd-titel mb-3">{featuredProduct?.name}</h3>
                        <h5 className="fw-bold text-white mb-2">Price: {featuredProduct?.price}</h5>
                      </div>
-                     <div>
-                     <button type="button" class="features-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Shop
-                      </button>
-                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content modal-style">
-                            <div class="modal-header-style">
-                              <h5 class="modal-titel1 mb-3">Buy This Product</h5>
-                            </div>
-                            <div class="modal-body">
-                              <div className="text-center text-white">
-                                <img className="w-25 rounded-circle" src={featuredProduct?.img} alt="" />
-                                <h3 className="modal-pd-name m">{featuredProduct?.name}</h3>
-                                <h5 className="modal-pd-name">{featuredProduct?.price}</h5>
-                                {/* <h6 className="modal-pd-name">Category: {singleProducts?.category}</h6>
-                                <h6 className="modal-pd-name">Tags: {singleProducts?.tags}</h6> */}
-                              </div>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
-                              <button type="button" 
-                              onClick={onSubmit}
-                              class="modal-btn">Buy Now</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                     </div>
                    </div>
-                  </div>
-                  </>
-                  ) 
+                  </div>)
                   }
                   </div>
       </div>
