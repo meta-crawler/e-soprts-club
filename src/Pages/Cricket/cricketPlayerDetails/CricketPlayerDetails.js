@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from "../../Shared/Navigation/Navigation";
+
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Container } from "react-bootstrap";
@@ -10,6 +10,8 @@ import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import { Box } from "@mui/system";
 import PlayerReviwe from "../../PlayerReviwe/PlayerReviwe";
+import Navigation from "../../Shared/Navigation/Navigation";
+
 import location from "../../../Images/Connting/819814.png";
 import email from "../../../Images/Connting/email.png";
 import phone from "../../../Images/Connting/phone-call.png";
@@ -29,48 +31,31 @@ const labels = {
   5: "Excellent+",
 };
 
-const CricketPlayerDetails = () => {
+const CricketPlayerInfo = () => {
+  const { id } = useParams();
 
-
-
-let { id } = useParams();
-
-const [cricketPlayers, setCricketPlayers] = useState([]);
-const [singleCricket, setSingleCricket] = useState({});
-/* const [quantity, setQuantity] = useState(1); */
-
-useEffect(() => {
-fetch('https://blooming-thicket-66783.herokuapp.com/cricketplayers',)
-.then(res => res.json())
-.then(data => setCricketPlayers(data))
-}, [])
-useEffect(() => {
-const foundPlayers = cricketPlayers.find(player => (player.id === id))
-setSingleCricket(foundPlayers)
-}, [cricketPlayers, id])
-
-
-  const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);  
-
-
-  const ininsialComment = { name: '', PlayerName: '', deatls: '', url: '',feedback: "", labels: "" };
-
-  let { id } = useParams();
-
-  const [cricketPlayers, setCricketPlayers] = useState([]);
-  const [singleCricket, setSingleCricket] = useState({});
-  /* const [quantity, setQuantity] = useState(1); */
+  const [playerDetails, setPlayerDetails] = useState([]);
+  const [detailsItam, setDetailsItam] = useState([]);
+  
 
   useEffect(() => {
     fetch("https://enigmatic-garden-34025.herokuapp.com/cricketplayers")
       .then((res) => res.json())
-      .then((data) => setCricketPlayers(data));
+      .then((data) => {
+        setPlayerDetails(data);
+      });
   }, []);
+
   useEffect(() => {
-    const foundPlayers = cricketPlayers.find((player) => player.id === id);
-    setSingleCricket(foundPlayers);
-  }, [cricketPlayers, id]);
+    if (playerDetails?.length > 0) {
+      const matchItam = playerDetails.find(
+        (playerDetails) => playerDetails.id == id
+      );
+      setDetailsItam(matchItam);
+    }
+  }, [playerDetails, id]);
+
+  console.log(detailsItam);
 
   const [value, setValue] = React.useState(0);
   const [hover, setHover] = React.useState(-1);
@@ -84,8 +69,6 @@ setSingleCricket(foundPlayers)
     labels: "",
   };
 
-  
-
   const [orderinfo, setOrderinfo] = useState(ininsialComment);
 
   const hendalOnBlure = (data) => {
@@ -96,56 +79,27 @@ setSingleCricket(foundPlayers)
     setOrderinfo(newValue);
     console.log(newValue);
   };
-  const hendalPalyer = (player) => {
-    player.preventDefault();
 
-    if (orderinfo === "") {
-      alert("I CAmakd");
-    }
-  };
-
-
-  
-  const handelonSubmit = data => {
-      data.preventDefault();
-  
-      
-  
-      const newDispalyReviwe = {
-        ...orderinfo
-      }
-  
-      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(newDispalyReviwe)
-      })
-        .then(res => res.json())
-        .then(data => console.log(data));
-
-  
   const dispatch = useDispatch()
   const handelonSubmit = (data) => {
     data.preventDefault();
-    orderinfo.PlayerName = singleCricket?.name
+    orderinfo.PlayerName = detailsItam?.name
     const newDispalyReviwe = {
-      ...orderinfo,PlayerName:singleCricket?.name
+      ...orderinfo,PlayerName:detailsItam?.name
     };
-    newDispalyReviwe.PlayerName = singleCricket?.name
+    newDispalyReviwe.PlayerName = detailsItam?.name
     if (
       !newDispalyReviwe.email ||
       !newDispalyReviwe.name ||
       !newDispalyReviwe.feedback ||
       !newDispalyReviwe.PlayerName
     ) {
-      alert(`All fields are required`);
+      alert("All fields are required");
       return;
     }
     
     // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -162,6 +116,13 @@ setSingleCricket(foundPlayers)
       });
   };
 
+  const hendalPalyer = (player) => {
+    player.preventDefault();
+
+    if (orderinfo === "") {
+      alert("I CAmakd");
+    }
+  };
 
   return (
     <>
@@ -171,9 +132,10 @@ setSingleCricket(foundPlayers)
           <div className="details-player-bgimg"></div>
           <Container className="details-player-info">
             <div>
-              <h1 className="details-player-title">{singleCricket?.name} </h1>
+              <h1 className="details-player-title">{detailsItam?.name} </h1>
 
-              <p className="details-player-des">{singleCricket?.describe}</p>
+              <p className="details-player-des">{detailsItam?.describe}</p>
+
               <button
                 className="details-connecting cart-btn"
                 type="button"
@@ -213,7 +175,7 @@ setSingleCricket(foundPlayers)
                               alt=""
                             />
 
-                            <h6>Mirpur 01, Dhaka, bd</h6>
+                            <h6>{detailsItam?.Nationality}</h6>
                           </div>
                           <div className="email">
                             <img
@@ -274,7 +236,7 @@ setSingleCricket(foundPlayers)
                           <input
                             name="PlayerName"
                             onBlur={hendalOnBlure}
-                            defaultValue={singleCricket?.name}
+                            defaultValue={detailsItam?.name}
                             type="text"
                             id=""
                             placeholder="Player Name"
@@ -318,19 +280,66 @@ setSingleCricket(foundPlayers)
                   </div>
                 </div>
               </div>
+
               <button className="details-player-video">
                 <FontAwesomeIcon
                   style={{ marginRight: "5px" }}
                   icon={faVideo}
-                />
-                Play video
+                />{" "}
+                <div
+                  className="modal fade"
+                  id="exampleModalToggle"
+                  aria-hidden="true"
+                  aria-labelledby="exampleModalToggleLabel"
+                  tabindex="-1"
+                >
+                  <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5
+                          className="modal-title"
+                          style={{ color: "ButtonText" }}
+                          id="exampleModalToggleLabel"
+                        >
+                          Player details video
+                        </h5>
+                        <button
+                          type="button"
+                          className="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div className="modal-body">
+                        {/* <video src={video}></video> */}
+                        <iframe
+                          width="455"
+                          height="250"
+                          src="https://www.youtube.com/embed/387782CRNQM"
+                          title="YouTube video player"
+                          frameborder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  className="player-details-video"
+                  data-bs-toggle="modal"
+                  href="#exampleModalToggle"
+                  role="button"
+                >
+                  Play video
+                </a>
               </button>
             </div>
             <div>
               {/* <div className='details-single-img'></div> */}
               <img
                 className="details-player-img"
-                src={singleCricket?.img}
+                src={detailsItam?.img}
                 alt=""
               />
             </div>
@@ -359,7 +368,7 @@ setSingleCricket(foundPlayers)
                   fontWeight: "600",
                 }}
               >
-                {singleCricket?.name}
+                {detailsItam?.name}
               </h2>
 
               <p
@@ -370,7 +379,7 @@ setSingleCricket(foundPlayers)
                   width: "500px",
                 }}
               >
-                {singleCricket?.describe}
+                {detailsItam?.describe}
               </p>
               <p
                 style={{
@@ -396,7 +405,7 @@ setSingleCricket(foundPlayers)
                 A prolific goalscorer and a creative playmaker, Messi holds the
                 records for most goals in La Liga (419), a La Liga and European
                 league season (50), most hat-tricks in the UEFA Champions League
-                (8), and most assists in La Liga (169) and the Copa América
+                (😎, and most assists in La Liga (169) and the Copa América
                 (12). He has scored 698 senior career goals for club and
                 country.
               </p>
@@ -414,7 +423,7 @@ setSingleCricket(foundPlayers)
                           fontSize: "18px",
                         }}
                       >
-                        {singleCricket?.Height}
+                        {detailsItam?.Height}
                       </td>
                     </tr>
                     <tr>
@@ -428,7 +437,7 @@ setSingleCricket(foundPlayers)
                           fontSize: "18px",
                         }}
                       >
-                        {singleCricket?.Weight}
+                        {detailsItam?.Weight}
                       </td>
                     </tr>
                     <tr>
@@ -442,7 +451,7 @@ setSingleCricket(foundPlayers)
                           fontSize: "18px",
                         }}
                       >
-                        {singleCricket?.Position}
+                        {detailsItam?.Position}
                       </td>
                     </tr>
                     <tr>
@@ -456,7 +465,7 @@ setSingleCricket(foundPlayers)
                           fontSize: "18px",
                         }}
                       >
-                        {singleCricket?.Nationality}
+                        {detailsItam?.Nationality}
                       </td>
                     </tr>
                   </tbody>
@@ -475,14 +484,14 @@ setSingleCricket(foundPlayers)
           Player Say!
         </h1>
         <div className="player">
-          <img src={singleCricket?.img} alt="" />
-          <h2>{singleCricket?.name}</h2>
-          <h4>{singleCricket?.Position}</h4>
-          <p>{singleCricket?.describe}</p>
+          <img src={detailsItam?.img} alt="" />
+          <h2>{detailsItam?.name}</h2>
+          <h4>{detailsItam?.Position}</h4>
+          <p>{detailsItam?.describe}</p>
         </div>
       </div>
 
-      <PlayerReviwe PlayerName={singleCricket?.name} />
+      <PlayerReviwe PlayerName={detailsItam?.name} />
 
       <Container className="Player-All">
         <div className="From-Main">
@@ -551,7 +560,7 @@ setSingleCricket(foundPlayers)
             <input
               name="PlayerName"
               onBlur={hendalOnBlure}
-              defaultValue={singleCricket?.name}
+              defaultValue={detailsItam?.name}
               type="text"
               id=""
               placeholder="Player Name"
@@ -584,4 +593,4 @@ setSingleCricket(foundPlayers)
   );
 };
 
-export default CricketPlayerDetails;
+export default CricketPlayerInfo;

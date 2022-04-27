@@ -31,32 +31,6 @@ const labels = {
 };
 
 const BaseketBallDetails = () => {
-
-
-
-let { id } = useParams();
-
-const [tableTaPlayers, setTableTaPlayers] = useState([]);
-const [sinleTaTanis, setSinleTaTanis] = useState({});
-/* const [quantity, setQuantity] = useState(1); */
-
-useEffect(() => {
-fetch('https://blooming-thicket-66783.herokuapp.com/basketBall',)
-.then(res => res.json())
-.then(data => setTableTaPlayers(data))
-}, [])
-useEffect(() => {
-const foundPlayers = tableTaPlayers.find(player => (player.id === id))
-setSinleTaTanis(foundPlayers)
-}, [tableTaPlayers, id])
-
-
-  const [value, setValue] = React.useState(2);
-  const [hover, setHover] = React.useState(-1);  
-
-
-  const ininsialComment = { name: '', PlayerName: '', deatls: '', url: '',feedback: "", labels: "" };
-
   let { id } = useParams();
 
   const [tableTaPlayers, setTableTaPlayers] = useState([]);
@@ -84,7 +58,6 @@ setSinleTaTanis(foundPlayers)
     feedback: "",
     labels: "",
   };
->>>>>>> main
 
   const [orderinfo, setOrderinfo] = useState(ininsialComment);
 
@@ -96,26 +69,6 @@ setSinleTaTanis(foundPlayers)
     setOrderinfo(newValue);
     console.log(newValue);
   };
-
-
-  const handelonSubmit = data => {
-      data.preventDefault();
-  
-      
-  
-      const newDispalyReviwe = {
-        ...orderinfo
-      }
-  
-      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json'
-        },
-        body: JSON.stringify(newDispalyReviwe)
-      })
-        .then(res => res.json())
-        .then(data => console.log(data));
 
   
   const dispatch = useDispatch()
@@ -132,12 +85,12 @@ setSinleTaTanis(foundPlayers)
       !newDispalyReviwe.feedback ||
       !newDispalyReviwe.PlayerName
     ) {
-      alert(`All fields are required`);
+      alert("All fields are required");
       return;
     }
     
     // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -445,7 +398,7 @@ setSinleTaTanis(foundPlayers)
                 A prolific goalscorer and a creative playmaker, Messi holds the
                 records for most goals in La Liga (419), a La Liga and European
                 league season (50), most hat-tricks in the UEFA Champions League
-                (8), and most assists in La Liga (169) and the Copa América
+                (😎, and most assists in La Liga (169) and the Copa América
                 (12). He has scored 698 senior career goals for club and
                 country.
               </p>
