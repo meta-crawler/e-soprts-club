@@ -121,5 +121,14 @@
     margin-bottom: 50px;
     text-align: center;
 }
-
+.features-btn{
+   padding: 15px 36px;
+   background: #e40046;
+   border:none;
+   color: #fff;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
 
