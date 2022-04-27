@@ -47,8 +47,8 @@ const ContestsRegister = () => {
             user_address: newDispalyReviwe.user_address
           }
           
-    // https://blooming-thicket-66783.herokuapp.com/contextRegister
-        fetch('https://blooming-thicket-66783.herokuapp.com/contest/participant', {
+    // https://enigmatic-garden-34025.herokuapp.com/contextRegister
+        fetch('http://localhost:7000/contest/participant', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
