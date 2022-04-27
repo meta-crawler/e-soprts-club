@@ -44,7 +44,7 @@ const [sinleTaTanis, setSinleTaTanis] = useState({});
 /* const [quantity, setQuantity] = useState(1); */
 
 useEffect(() => {
-fetch('https://enigmatic-garden-34025.herokuapp.com/baseBall',)
+fetch('https://blooming-thicket-66783.herokuapp.com/baseBall',)
 .then(res => res.json())
 .then(data => setTableTaPlayers(data))
 }, [])
@@ -86,7 +86,7 @@ setSinleTaTanis(foundPlayers)
         ...orderinfo
       }
   
-      fetch('https://enigmatic-garden-34025.herokuapp.com/review', {
+      fetch('https://blooming-thicket-66783.herokuapp.com/review', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

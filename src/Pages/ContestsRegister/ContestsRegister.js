@@ -47,7 +47,7 @@ const ContestsRegister = () => {
             user_address: newDispalyReviwe.user_address
           }
           
-    // https://enigmatic-garden-34025.herokuapp.com/contextRegister
+    // https://blooming-thicket-66783.herokuapp.com/contextRegister
         fetch('http://localhost:7000/contest/participant', {
           method: 'POST',
           headers: {
@@ -122,7 +122,7 @@ const ContestsRegister = () => {
                 <Form.Control
                   onChange={onBlurHandler}
                   type="email"
-                  placeholder="Type your date"
+                  placeholder="Type your email"
                   name="contact_email"
                   required
                 />
@@ -132,7 +132,7 @@ const ContestsRegister = () => {
                 <Form.Control
                   onChange={onBlurHandler}
                   type="number"
-                  placeholder="Type your date"
+                  placeholder="Type your Number"
                   name="contact_number"
                   required
                 />
@@ -253,6 +253,7 @@ const ContestsRegister = () => {
             </Row>
           </Container>
         </div>
+      </div>
       </div>
     );
 };

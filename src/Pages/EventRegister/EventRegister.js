@@ -43,7 +43,7 @@ const EventRegister = () => {
         ...formData
       }
   
-      fetch('https://enigmatic-garden-34025.herokuapp.com/eventRegister', {
+      fetch('https://blooming-thicket-66783.herokuapp.com/eventRegister', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

@@ -24,7 +24,7 @@ const TopNavbar = () => {
             </Link>
 
         <Link to="/dashboard/contest/start">
-              <span className="top-right-part bg-warning">
+              <span className="top-right-part bg-success">
                 <FontAwesomeIcon icon={faTicket} /> CONTEST RESULT 
               </span>
             </Link>
