@@ -55,7 +55,7 @@ const AddProduct = () => {
     }
 
 
-    fetch('https://enigmatic-garden-34025.herokuapp.com/other', {
+    fetch('https://blooming-thicket-66783.herokuapp.com/other', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

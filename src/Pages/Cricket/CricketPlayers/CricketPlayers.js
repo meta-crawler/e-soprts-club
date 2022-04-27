@@ -14,7 +14,7 @@ export default class CricketPlayers extends Component {
   }
 
   componentDidMount() {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/cricketplayers')
+    fetch('https://blooming-thicket-66783.herokuapp.com/cricketplayers')
       .then((response) => response.json())
       .then(playersList => {
         this.setState({ players: playersList });
