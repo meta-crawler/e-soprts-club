@@ -39,7 +39,7 @@ const HockeyPlayersDetails = () => {
   /* const [quantity, setQuantity] = useState(1); */
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/hockeyPuckPlayers")
+    fetch("https://blooming-thicket-66783.herokuapp.com/hockeyPuckPlayers")
       .then((res) => res.json())
       .then((data) => setHockeyPlayers(data));
   }, []);
@@ -89,7 +89,7 @@ const HockeyPlayersDetails = () => {
       return;
     }
     
-    // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
+    // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
     fetch("http://localhost:7000/review", {
       method: "POST",
       headers: {
