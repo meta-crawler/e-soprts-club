@@ -4,7 +4,7 @@ import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
 import Navigation from "../../Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Modal } from "react-bootstrap";
 import { Rating, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
@@ -32,9 +32,19 @@ const labels = {
 const CricketPlayerDetails = () => {
   let { id } = useParams();
 
+
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [playerDetails, setPlayerDetails] = useState([]);
+  const [detailsItam, setDetailsItam] = useState([]);
+  
   const [cricketPlayers, setCricketPlayers] = useState([]);
   const [singleCricket, setSingleCricket] = useState({});
   /* const [quantity, setQuantity] = useState(1); */
+
 
   useEffect(() => {
     fetch("https://blooming-thicket-66783.herokuapp.com/cricketplayers")
@@ -124,6 +134,17 @@ const CricketPlayerDetails = () => {
             <div>
               <h1 className="details-player-title">{singleCricket?.name} </h1>
 
+
+              
+
+
+
+              
+              
+              
+              
+              <Button variant="primary" onClick={handleShow}>
+
               <p className="details-player-des">{singleCricket?.describe}</p>
               <button
                 className="details-connecting cart-btn"
@@ -131,31 +152,23 @@ const CricketPlayerDetails = () => {
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
-                Conecting
-              </button>
 
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div
-                  style={{ marginLeft: "300px", marginTop: "50px" }}
-                  class="modal-dialog"
-                >
-                  <div
-                    style={{ width: "1000px" }}
-                    class="modal-content modal-style"
-                  >
-                    <div class="modal-header-style">
-                      <h5 class="modal-titel1 mb-3">
+                Conecting
+      </Button>
+
+      <Modal  show={show} onHide={handleClose}>
+        <Modal.Header className='ContentsFullBanner' style={{margin: "0 auto", width: "1000px"}}  closeButton>
+          <Modal.Title> 
+          <h5 class="modal-titel1 mb-3">
                         Send Your Variable Messages{" "}
                       </h5>
-                    </div>
-                    <div class="modal-body">
-                      <div className="text-center text-white">
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='ContentsFullBanner'  style={{width: "1000px"}}>
+
+
+
+        <div className="text-center text-white">
                         <div style={{ display: "flex" }} className="PlayerIcon">
                           <div className="location">
                             <img
@@ -256,6 +269,22 @@ const CricketPlayerDetails = () => {
                           </button>
                         </form>
                       </div>
+
+        
+
+
+        </Modal.Body>
+        <Modal.Footer style={{margin: "0 auto", width: "1000px"}}  className='ContentsFullBanner'>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          
+        </Modal.Footer>
+      </Modal> 
+              
+              
+
+
                     </div>
                     <div class="modal-footer">
                       <button
@@ -269,6 +298,7 @@ const CricketPlayerDetails = () => {
                   </div>
                 </div>
               </div>
+
               <button className="details-player-video">
                 <FontAwesomeIcon
                   style={{ marginRight: "5px" }}

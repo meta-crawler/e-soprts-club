@@ -1,4 +1,3 @@
-/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
@@ -17,12 +16,14 @@ const SingleProduct = () => {
   
 
   useEffect(() => {
+
+    fetch('https://blooming-thicket-66783.herokuapp.com/featuredProducts',)
+
     fetch('https://blooming-thicket-66783.herokuapp.com/featuresProducts',)
+
       .then(res => res.json())
       .then(data => setFeaturedProducts(data))
   }, [])
-
-
   useEffect(() => {
     fetch('https://blooming-thicket-66783.herokuapp.com/other',)
       .then(res => res.json())
@@ -33,11 +34,15 @@ const SingleProduct = () => {
     setSingleProducts(foundProducts)
   }, [products, id])
 
-
-
-
   const onSubmit = (data) => {
     data.status= "Pending";
+
+    fetch('https://blooming-thicket-66783.herokuapp.com/orders', {
+      method: "POST",
+      headers: { "content-type": "application/json"},
+      body: JSON.stringify(data),
+    })
+
     delete singleProducts?._id
     console.log(singleProducts)
     fetch('https://blooming-thicket-66783.herokuapp.com/ordersInfo', 
@@ -48,17 +53,14 @@ const SingleProduct = () => {
         },
         body: JSON.stringify(singleProducts)
       })
+
       .then((res) => res.json())
       .then((result) =>{
           alert("Ordered Successfully!");
     });
-
     console.log(data);
+};
 
-    }
-
-
-    
   return (
     <div style={{position:"relative"}} className="container mt-5">
       <Link style={{ textDecoration: 'none', background: "#e40046", color: "#FFF", padding: "5px", position: "absolute", top: "0px", left: "115px", borderRadius: "5px", marginTop: '20px' }} to='/'>Home </Link>
@@ -138,8 +140,7 @@ const SingleProduct = () => {
       <h2 className="product-titel text-dark text-center my-4">Featured Products</h2>
       <div className="row">
                   {
-                  featuredProducts.map(featuredProduct=> <>
-                  <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
+                  featuredProducts.map(featuredProduct=> <div className=" mt-4 mb-3 col-md-3 col-12" key={featuredProduct.id}>
                   <div className="card h-100 card-style">
                     <div className="d-flex justify-content-center align-items-center"> 
                       <img className="w-100" src={featuredProduct?.img} alt="..."/>
@@ -148,6 +149,7 @@ const SingleProduct = () => {
                        <h3 className="pd-titel mb-3">{featuredProduct?.name}</h3>
                        <h5 className="fw-bold text-white mb-2">Price: {featuredProduct?.price}</h5>
                      </div>
+
                      <div>
                        <button type="button" class="cart-btn" data-toggle="modal" data-target={`#${featuredProduct?.id}`}>
                         Shop
@@ -175,10 +177,9 @@ const SingleProduct = () => {
                           </div>
                         </div>
                      </div>
+
                    </div>
-                  </div>
-                  </>
-                  ) 
+                  </div>)
                   }
                   </div>
       </div>

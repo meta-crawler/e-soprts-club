@@ -4,7 +4,7 @@ import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
 import Navigation from "../../../Pages/Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Modal } from "react-bootstrap";
 import { Rating, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
@@ -32,6 +32,10 @@ const labels = {
 
 const TableTennishDetails = () => {
   let { id } = useParams();
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const [tableTaPlayers, setTableTaPlayers] = useState([]);
   const [sinleTaTanis, setSinleTaTanis] = useState({});
@@ -129,37 +133,25 @@ const TableTennishDetails = () => {
               <h1 className="details-player-title">{sinleTaTanis?.name} </h1>
 
               <p className="details-player-des">{sinleTaTanis?.describe}</p>
-              <button
-                className="details-connecting cart-btn"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Conecting
-              </button>
+              
 
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div
-                  style={{ marginLeft: "300px", marginTop: "50px" }}
-                  class="modal-dialog"
-                >
-                  <div
-                    style={{ width: "1000px" }}
-                    class="modal-content modal-style"
-                  >
-                    <div class="modal-header-style">
-                      <h5 class="modal-titel1 mb-3">
+              <Button variant="primary" onClick={handleShow}>
+                Conecting
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header className='ContentsFullBanner' style={{margin: "0 auto", width: "1000px"}}  closeButton>
+          <Modal.Title> 
+          <h5 class="modal-titel1 mb-3">
                         Send Your Variable Messages{" "}
                       </h5>
-                    </div>
-                    <div class="modal-body">
-                      <div className="text-center text-white">
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='ContentsFullBanner'  style={{width: "1000px"}}>
+
+
+
+        <div className="text-center text-white">
                         <div style={{ display: "flex" }} className="PlayerIcon">
                           <div className="location">
                             <img
@@ -260,19 +252,35 @@ const TableTennishDetails = () => {
                           </button>
                         </form>
                       </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="modal-btn"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        
+
+
+        </Modal.Body>
+        <Modal.Footer style={{margin: "0 auto", width: "1000px"}}  className='ContentsFullBanner'>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          
+        </Modal.Footer>
+      </Modal> 
+              
+              
+              
+              
+              
+              
+              
+              
+             
+
+
+
+
+
+
+
+
+
 
               <button className="details-player-video">
                 <FontAwesomeIcon
@@ -444,7 +452,7 @@ const TableTennishDetails = () => {
                           fontSize: "18px",
                         }}
                       >
-                        {sinleTaTanis?.Position}
+                        {sinleTaTanis?.position}
                       </td>
                     </tr>
                     <tr>
