@@ -46,12 +46,12 @@
         left: 14%;
     }
     .ContentsFullBanner{
-        width: 381px;
+        width: 381px !important;
     }
     .ContentsFullBanner{
-        margin: 0px auto;
-         margin-left: 0px;
-        width: 379px;
+        margin: 0px auto !important;
+         margin-left: 0px !important;
+        width: 379px !important;
     }
     /* .TablePoint{
         width: 454px;
@@ -128,7 +128,7 @@
     
 }
 
-.modal-banner{
+.ContentsFullBanner{
     background-image: url(../../Images/UPCOMINGEVENTS/images.jpg);
     background-position: center;
     background-repeat: no-repeat;

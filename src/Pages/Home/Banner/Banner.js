@@ -50,7 +50,6 @@ const Banner = () => {
                   himself and the Heat preparing for offseason, Riley took a
                   nice shot at James.
                 </p>
-                <Button variant="warning">Read more</Button>
               </div>
             </SwiperSlide>
             <SwiperSlide
@@ -71,7 +70,6 @@ const Banner = () => {
                   city of Cleveland. Cementing his legacy as one of the greatest
                   cs:go players ever.
                 </p>
-                <Button variant="warning">Read more</Button>
               </div>
             </SwiperSlide>
             <SwiperSlide
@@ -93,7 +91,6 @@ const Banner = () => {
                   names, I can`t do that — but there were some people that I
                   trusted.
                 </p>
-                <Button variant="warning">Read more</Button>
               </div>
               {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> */}
             </SwiperSlide>

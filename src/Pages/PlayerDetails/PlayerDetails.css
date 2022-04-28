@@ -375,7 +375,7 @@
     }
     .modal-style{
         width: 465px !important;
-        margin-left: -290px;
+        margin-left: 0px;
     }
     .modal-body .PlayerIcon .location{
         width: 140px;

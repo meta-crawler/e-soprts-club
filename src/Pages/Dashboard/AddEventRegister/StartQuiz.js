@@ -12,8 +12,8 @@ const StartQuiz = () => {
 
     useEffect(()=>{
         if (user?.email) {
-            // fetch(` http://localhost:7000/contest/id/${"dd@gmail.com"}`)
-            fetch(` http://localhost:7000/contest/id/${user?.email}`)
+            // fetch(` https://blooming-thicket-66783.herokuapp.com/contest/id/${"dd@gmail.com"}`)
+            fetch(` https://blooming-thicket-66783.herokuapp.com/contest/id/${user?.email}`)
             .then(res=>res.json())
             .then(data=>{
                 if (data.par_id) {
@@ -27,8 +27,8 @@ const StartQuiz = () => {
     const handleStartContest = () =>{
 
         if (user?.email) {
-            // fetch(` http://localhost:7000/contest/id/${"dd@gmail.com"}`)
-            fetch(` http://localhost:7000/contest/id/${user?.email}`)
+            // fetch(` https://blooming-thicket-66783.herokuapp.com/contest/id/${"dd@gmail.com"}`)
+            fetch(` https://blooming-thicket-66783.herokuapp.com/contest/id/${user?.email}`)
             .then(res=>res.json())
             .then(data=>{
                 if (data.par_id) {

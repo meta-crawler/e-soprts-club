@@ -3,7 +3,6 @@ import { Container, Nav, Navbar, NavDropdown, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import useAuth from "../../../Hook/UseAuth";
-import cartlogo from "../../../Images/download.png";
 import logo from "../../../Images/logo.png";
 import TopNavbar from "../TopNavbar/TopNavbar";
 

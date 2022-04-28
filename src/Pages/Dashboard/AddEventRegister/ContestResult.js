@@ -12,7 +12,7 @@ const ContestResult = () => {
 
     useEffect(()=>{
         if (contBodyInfo.playing_ctg  && contBodyInfo.lavel) {
-            fetch("http://localhost:7000/contest/result",{
+            fetch("https://blooming-thicket-66783.herokuapp.com/contest/result",{
                 method:"post",
                 headers:{
                     "content-type":"application/json"
@@ -27,7 +27,7 @@ const ContestResult = () => {
     },[contBodyInfo])
 
     useEffect(()=>{
-            fetch("http://localhost:7000/contest/participant")
+            fetch("https://blooming-thicket-66783.herokuapp.com/contest/participant")
             .then(res=>res.json())
             .then(data=>{
                 setContestUsers(data);

@@ -29,7 +29,7 @@ const AddQuizQuestion = ({setAddQuizeModalOpen}) => {
         })
         if ((quizOptions.length === 4) && (newQuizInfo.lavel) && (newQuizInfo.ans) && (newQuizInfo.question) && (newQuizInfo.playing_ctg)) {
             newQuizInfo.options = quizOptions
-            fetch("http://localhost:7000/contest/quizes",{
+            fetch("https://blooming-thicket-66783.herokuapp.com/contest/quizes",{
                 method:"post",
                 headers:{
                     "content-type":"application/json"

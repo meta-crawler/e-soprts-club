@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { callReviews } from "../../features/PlayerReviewSlice/PlayerReviewSlice";
-import useAuth from "../../Hook/UseAuth";
 import ReviewAll from "../ReviewAll/ReviewAll";
 
 const PlayerReviwe = ({PlayerName}) => {

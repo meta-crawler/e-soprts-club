@@ -60,10 +60,7 @@ const Dashboard = () => {
                         <AssessmentIcon className='icon'/>
                         <span> Make An Admin</span>
                         </li></Link>}
-                    <li className='dashboard-li'>
-                        <NotificationsNoneIcon className='icon'/>
-                        <span>Notificafion</span>
-                        </li>
+                 
                         <p className="title">Services</p>
                    { admin && <Link className='link-style-das' to={`/dashboard/addticketbooking`}>
                     <li className='dashboard-li'>
@@ -86,10 +83,13 @@ const Dashboard = () => {
                     </li>
                     </Link>
                     <p className="title">User</p>
+                   
+                    <Link className='link-style-das' to={`/dashboard/contest/start`}>
                     <li className='dashboard-li'>
-                        <AssignmentIndIcon className='icon' />
-                        <span>Profile</span>
-                        </li>
+                        <SettingsSystemDaydreamIcon className='icon'/>
+                        <span>Contest</span>
+                    </li>
+                    </Link>
                     <li onClick={logOut} className='dashboard-li'>
                         <LogoutIcon className='icon' />
                         <span>Logout</span>

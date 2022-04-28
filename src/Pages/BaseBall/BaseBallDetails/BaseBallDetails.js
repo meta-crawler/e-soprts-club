@@ -4,7 +4,7 @@ import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
 import Navigation from "../../../Pages/Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container } from "react-bootstrap";
+import { Button, Container, Modal } from "react-bootstrap";
 import { Rating, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
@@ -32,12 +32,18 @@ const labels = {
 
 const BaseBallDetails = () => {
   let { id } = useParams();
+  const [openModel, setOpenModel] = useState(false);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const [tableTaPlayers, setTableTaPlayers] = useState([]);
   const [sinleTaTanis, setSinleTaTanis] = useState({});
   /* const [quantity, setQuantity] = useState(1); */
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/baseBall")
+    fetch("https://blooming-thicket-66783.herokuapp.com/baseBall")
       .then((res) => res.json())
       .then((data) => setTableTaPlayers(data));
   }, []);
@@ -57,9 +63,9 @@ const BaseBallDetails = () => {
     feedback: "",
     labels: "",
   };
-  
+
   const [orderinfo, setOrderinfo] = useState(ininsialComment);
-  
+
   const hendalOnBlure = (data) => {
     const filed = data.target.name;
     const value = data.target.value;
@@ -68,14 +74,14 @@ const BaseBallDetails = () => {
     setOrderinfo(newValue);
     console.log(newValue);
   };
-  
-  
+
+
   const dispatch = useDispatch()
   const handelonSubmit = (data) => {
     data.preventDefault();
     orderinfo.PlayerName = sinleTaTanis?.name
     const newDispalyReviwe = {
-      ...orderinfo,PlayerName:sinleTaTanis?.name
+      ...orderinfo, PlayerName: sinleTaTanis?.name
     };
     newDispalyReviwe.PlayerName = sinleTaTanis?.name
     if (
@@ -87,9 +93,9 @@ const BaseBallDetails = () => {
       alert(`All fields are required`);
       return;
     }
-    
+
     // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -102,7 +108,7 @@ const BaseBallDetails = () => {
         if (data.insertedId) {
           alert("comment successful!");
           dispatch(addReview(newDispalyReviwe));
-          
+
         }
       });
   };
@@ -127,37 +133,23 @@ const BaseBallDetails = () => {
 
               <p className="details-player-des">{sinleTaTanis?.describe}</p>
 
-              <button
-                className="details-connecting cart-btn"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
+              <Button style={{marginRight:'10px'}} variant="primary" onClick={handleShow}>
                 Conecting
-              </button>
+      </Button>
 
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div
-                  style={{ marginLeft: "300px", marginTop: "50px" }}
-                  class="modal-dialog"
-                >
-                  <div
-                    style={{ width: "1000px" }}
-                    class="modal-content modal-style"
-                  >
-                    <div class="modal-header-style">
-                      <h5 class="modal-titel1 mb-3">
+      <Modal  show={show} onHide={handleClose}>
+        <Modal.Header className='ContentsFullBanner' style={{margin: "0 auto", width: "1000px"}}  closeButton>
+          <Modal.Title> 
+          <h5 class="modal-titel1 mb-3">
                         Send Your Variable Messages{" "}
                       </h5>
-                    </div>
-                    <div class="modal-body">
-                      <div className="text-center text-white">
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body className='ContentsFullBanner'  style={{width: "1000px"}}>
+
+
+
+        <div className="text-center text-white">
                         <div style={{ display: "flex" }} className="PlayerIcon">
                           <div className="location">
                             <img
@@ -166,7 +158,7 @@ const BaseBallDetails = () => {
                               alt=""
                             />
 
-                            <h6>{sinleTaTanis?.nationality}</h6>
+                            <h6>{sinleTaTanis?.Nationality}</h6>
                           </div>
                           <div className="email">
                             <img
@@ -258,82 +250,65 @@ const BaseBallDetails = () => {
                           </button>
                         </form>
                       </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="modal-btn"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        
 
-              <button className="details-player-video">
+
+        </Modal.Body>
+        <Modal.Footer style={{margin: "0 auto", width: "1000px"}}  className='ContentsFullBanner'>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          
+        </Modal.Footer>
+      </Modal> 
+              
+              
+              
+              
+              
+              
+              
+              
+      <button onClick={ () => setOpenModel(true)} className="details-player-video">
                 <FontAwesomeIcon
                   style={{ marginRight: "5px" }}
                   icon={faVideo}
                 />{" "}
-                <div
-                  className="modal fade"
-                  id="exampleModalToggle"
-                  aria-hidden="true"
-                  aria-labelledby="exampleModalToggleLabel"
-                  tabindex="-1"
-                >
-                  <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h5
-                          className="modal-title"
-                          style={{ color: "ButtonText" }}
-                          id="exampleModalToggleLabel"
-                        >
-                          Player details video
-                        </h5>
-                        <button
-                          type="button"
-                          className="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div className="modal-body">
-                        {/* <video src={video}></video> */}
-                        <iframe
-                          width="455"
-                          height="250"
-                          src="https://www.youtube.com/embed/387782CRNQM"
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  className="player-details-video"
-                  data-bs-toggle="modal"
-                  href="#exampleModalToggle"
-                  role="button"
-                >
+               
                   Play video
-                </a>
+                
               </button>
+
+
+
             </div>
-            <div>
-              {/* <div className='details-single-img'></div> */}
-              <img
-                className="details-player-img"
-                src={sinleTaTanis?.img}
-                alt=""
-              />
-            </div>
+            
+            {
+              openModel? <div> 
+
+
+<iframe style={{marginTop:'200px'}} width="560" height="315" src="https://www.youtube.com/embed/i-0kJOPzIfE?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <Button style={{ marginBottom:'100px'}} onClick={ () => setOpenModel(false)} >Close </Button>
+
+                </div>
+                :
+
+<div >
+{/* <div className='details-single-img'></div> */}
+<img 
+  className="details-player-img"
+  src={sinleTaTanis?.img}
+  alt=""
+/>
+</div>
+
+
+
+            }
+              
+              
+              
+           
           </Container>
         </div>
       </>

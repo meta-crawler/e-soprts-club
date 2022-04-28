@@ -4,7 +4,7 @@ export const callReviews = createAsyncThunk(
     'review/fetchReview',
     async (commentInfo) => {
       // const response = await fetch('https://enigmatic-garden-34025.herokuapp.com/review').then(res=>res.json());
-      const response = await fetch('http://localhost:7000/review').then(res=>res.json());
+      const response = await fetch('https://blooming-thicket-66783.herokuapp.com/review').then(res=>res.json());
       console.log(response,"think called");
       return response;
     }
