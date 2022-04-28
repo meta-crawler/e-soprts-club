@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import {
-  faComment,
-  faShareNodes,
-  faTag,
+    faComment,
+    faShareNodes,
+    faTag
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
@@ -43,7 +43,7 @@ const EventRegister = () => {
         ...formData
       }
   
-      fetch('https://enigmatic-garden-34025.herokuapp.com/eventRegister', {
+      fetch('https://blooming-thicket-66783.herokuapp.com/eventRegister', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

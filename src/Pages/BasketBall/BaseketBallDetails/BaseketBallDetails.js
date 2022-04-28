@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from "../../../Pages/Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container } from "react-bootstrap";
-import { Rating, Typography } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
+import StarIcon from "@mui/icons-material/Star";
+import { Rating, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import PlayerReviwe from "../../PlayerReviwe/PlayerReviwe";
-
+import React, { useEffect, useState } from "react";
+import { Button, Container } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { addReview } from "../../../features/PlayerReviewSlice/PlayerReviewSlice";
 import location from "../../../Images/Connting/819814.png";
 import email from "../../../Images/Connting/email.png";
 import phone from "../../../Images/Connting/phone-call.png";
-import { addReview } from "../../../features/PlayerReviewSlice/PlayerReviewSlice";
-import { useDispatch } from "react-redux";
+import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
+import Navigation from "../../../Pages/Shared/Navigation/Navigation";
+import PlayerReviwe from "../../PlayerReviwe/PlayerReviwe";
+
 
 const labels = {
   0.5: "Useless",
@@ -38,7 +38,7 @@ const BaseketBallDetails = () => {
   /* const [quantity, setQuantity] = useState(1); */
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/basketBall")
+    fetch("https://blooming-thicket-66783.herokuapp.com/basketBall")
       .then((res) => res.json())
       .then((data) => setTableTaPlayers(data));
   }, []);
@@ -89,8 +89,8 @@ const BaseketBallDetails = () => {
       return;
     }
     
-    // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

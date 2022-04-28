@@ -1,11 +1,11 @@
-import React, { useState } from "react";
 import {
-  faComment,
-  faShareNodes,
-  faTag,
+    faComment,
+    faShareNodes,
+    faTag
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container, Form, Row , Spinner} from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
 import "./booking.css";
@@ -43,7 +43,7 @@ const Booking = () => {
       ...formData
     }
 console.log(newDispalyReviwe);
-    fetch('https://enigmatic-garden-34025.herokuapp.com/booking', {
+    fetch('https://blooming-thicket-66783.herokuapp.com/booking', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

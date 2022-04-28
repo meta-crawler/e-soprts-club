@@ -1,7 +1,6 @@
-import React from 'react';
-import { Table } from 'react-bootstrap';
-import { useState, useEffect } from "react";
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import './AddTicketBooking.css';
 
 
@@ -9,7 +8,7 @@ const AddTicketBooking = () => {
   const [ticket, setTicket] = useState([])
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/booking")
+    fetch("https://blooming-thicket-66783.herokuapp.com/booking")
       .then((res) => res.json())
       .then((data) => setTicket(data));
   }, []);
@@ -17,7 +16,7 @@ const AddTicketBooking = () => {
   const handleDelete = id => {
     const proceed = window.confirm('Are you sure, you want to delete?');
     if(proceed){
-      const url = `https://enigmatic-garden-34025.herokuapp.com/booking/${id}`;
+      const url = `https://blooming-thicket-66783.herokuapp.com/booking/${id}`;
     fetch(url,{
       method:'DELETE'
     })
@@ -42,7 +41,7 @@ const AddTicketBooking = () => {
   const handleApprove = (id) => {
     console.log(id);
 
-    fetch(`https://enigmatic-garden-34025.herokuapp.com/update/${id}`, {
+    fetch(`https://blooming-thicket-66783.herokuapp.com/update/${id}`, {
     method: "PUT"
 
 

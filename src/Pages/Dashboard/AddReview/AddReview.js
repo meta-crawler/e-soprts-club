@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Box, Button, Rating, Typography } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
+import StarIcon from '@mui/icons-material/Star';
+import { Box, Button, Rating, Typography } from '@mui/material';
+import React, { useState } from 'react';
 
 
 
@@ -51,7 +51,7 @@ const onSubmit = (data) => {
   }
 
 
-  fetch('https://enigmatic-garden-34025.herokuapp.com/review', {
+  fetch('https://blooming-thicket-66783.herokuapp.com/review', {
     method: 'POST',
     headers: {
       'content-type': 'application/json'

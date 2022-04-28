@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
 import {
     faComment,
     faShareNodes,
-    faTag,
-  } from "@fortawesome/free-solid-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
-  import useAuth from "../../Hook/UseAuth";
-  import Navigation from "../Shared/Navigation/Navigation";
+    faTag
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import useAuth from "../../Hook/UseAuth";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const ContestsRegister = () => {
     const { isLoading,user} = useAuth()
@@ -47,8 +47,8 @@ const ContestsRegister = () => {
             user_address: newDispalyReviwe.user_address
           }
           
-    // https://enigmatic-garden-34025.herokuapp.com/contextRegister
-        fetch('http://localhost:7000/contest/participant', {
+          
+        fetch('https://blooming-thicket-66783.herokuapp.com/contest/participant', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

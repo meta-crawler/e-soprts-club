@@ -1,20 +1,17 @@
-import React from 'react';
-import { useNavigate} from 'react-router-dom';
-import {  Button, Container } from 'react-bootstrap';
-import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
-import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
-
-import { Table } from 'react-bootstrap';
-import { useState, useEffect } from "react";
-import { FcRules } from 'react-icons/fc';
+import React, { useEffect, useState } from 'react';
+import { Button, Container, Table } from 'react-bootstrap';
 import { IconContext } from "react-icons";
-
-
-
+import { FcRules } from 'react-icons/fc';
+import { Link, useNavigate } from 'react-router-dom';
+import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
+import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import './NewsPoint.css';
-import { Link } from 'react-router-dom';
+
+
+
+
 
 const contestRules = ["NO PURCHASE NECESSARY.  A PURCHASE WILL NOT INCREASE YOUR CHANCE OF WINNING.", "HOW TO ENTER:  NO PURCHASE IS NECESSARY TO PARTICIPATE IN THE CONTEST. YOU MUST BE A GAME LOVER TO PERTICIPATE THIS CONTEST.  Entries must be received by the exact time of the contest start.", "PRIZES:  Prizes vary, but will be a product or discount from SPORTS_CLUB.", "WINNER SELECTION:  Winners will be selected automatically based on the less times consumed by the perticipant and the highest number of correct quize. To decide the winner, Our algorithm will use a simple calculation", "Here, each unused seconds(1sec) = 2 point, and each correct answer = 10 points. However, All decisions regarding prize awards will be made by SPORTS_CLUB and are final and binding.", "ELIGIBILITY:  The contests are open to all members of the our club.  Admin and Moderator of SPORTS_CLUB are not eligible to participate.", "GENERAL TERMS:  No substitution of prize is offered, no transfer of a prize to a third party is permitted, and prize may not be redeemed for cash value.  Void where prohibited or restricted by law.  All entrants, as a condition of entry, agree to be bound by these Official Rules and the decisions of the judges.  The entry information provided is subject to the Privacy Policy on the SPORTS_CLUB website.", "WINNER NOTIFICATION:  Winners will be notified via dashboard. Please collect your price within the time will be mentioned in the dashboard during notifying. ", "LIMITATIONS OF LIABILITY:  SPORTS_CLUB assumes no responsibility for computer or communications errors or any incorrect or inaccurate information.  SPORTS_CLUB reserves the right, at its sole discretion, to disqualify any individual it finds to be tampering with the entry process or to be acting in violation of the terms and conditions of the website.  SPORTS_CLUB reserves the right, at its sole discretion, to cancel, terminate, modify or suspend the contest and determine the winner from entries received prior to the action taken.", "DISPUTE RESOLUTION:  Except where prohibited, by participating, you agree that all issues and questions concerning the construction, validity, interpretation and enforceability of these Official Rules, or the rights and obligations of participant(s) and SPORTS_CLUB, shall be governed by the laws of Bangladesh without giving effect to any principles of conflicts of law of any jurisdiction.  By participating, you also agree that any and all claims, judgments and awards shall be limited to actual out-of-pocket costs incurred, including costs associated with participating."]
 const NewsPoint = () => {
@@ -23,7 +20,7 @@ const NewsPoint = () => {
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
+      fetch("https://blooming-thicket-66783.herokuapp.com/upcomingEvents")
         .then((res) => res.json())
         .then((data) => setEvent(data));
     }, []);
@@ -52,9 +49,6 @@ const Permetion = () => {
 
     
 }
-
-
-
 
     return (
         <Container id='news'>

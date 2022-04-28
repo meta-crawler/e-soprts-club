@@ -23,7 +23,7 @@ const QuizContest = () => {
     const [randomQuiz, setRandomQuiz] = useState("")
     useEffect(()=>{
         if (userAns.par_id) {
-            fetch(" http://localhost:7000/contest/run/quize",{
+            fetch("https://blooming-thicket-66783.herokuapp.com/contest/run/quize",{
                 method:"post",
                 headers:{
                     "content-type":"application/json"
@@ -55,7 +55,7 @@ const QuizContest = () => {
 
     const handleNextQuiz = () =>{
         if (userAns.par_id) {
-            fetch(" http://localhost:7000/contest/run/quize",{
+            fetch("https://blooming-thicket-66783.herokuapp.com/contest/run/quize",{
                 method:"post",
                 headers:{
                     "content-type":"application/json"

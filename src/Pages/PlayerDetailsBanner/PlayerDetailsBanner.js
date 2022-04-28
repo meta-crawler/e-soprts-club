@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import bannerImg from '../../Images/playerimgbanner.png'
-import  './PlayerDetailsBanner.css';
-  import {
-    faMailBulk,
-    faLocation,
-    faPhone,
+import {
     faVideo
-    
-  } from "@fortawesome/free-solid-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './PlayerDetailsBanner.css';
 const PlayerDetailsBanner = () => {
     const { id } = useParams();
     const [details, setDetails] = useState([])
@@ -18,7 +13,7 @@ const PlayerDetailsBanner = () => {
 
     useEffect(() => {
 
-        fetch('https://enigmatic-garden-34025.herokuapp.com/players')
+        fetch('https://blooming-thicket-66783.herokuapp.com/players')
           .then(res => res.json())
           .then(data => {
             console.log(data);

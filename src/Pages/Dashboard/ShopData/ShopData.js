@@ -8,7 +8,7 @@ const ShopData = () => {
     const [ordersInfo, setOrdersInfo] = useState([])
 
     useEffect(() => {
-      fetch("https://enigmatic-garden-34025.herokuapp.com/ordersInfo")
+      fetch("https://blooming-thicket-66783.herokuapp.com/ordersInfo")
         .then((res) => res.json())
         .then((data) => setOrdersInfo(data));
     }, []);

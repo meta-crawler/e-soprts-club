@@ -1,14 +1,13 @@
-import React from 'react';
-import { Table } from 'react-bootstrap';
-import { useState, useEffect } from "react";
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 
 const AddEventRegister = () => {
 
     const [ticket, setTicket] = useState([])
 
     useEffect(() => {
-      fetch("https://enigmatic-garden-34025.herokuapp.com/eventRegister")
+      fetch("https://blooming-thicket-66783.herokuapp.com/eventRegister")
         .then((res) => res.json())
         .then((data) => setTicket(data));
     }, []);
@@ -16,7 +15,7 @@ const AddEventRegister = () => {
     const handleDelete = id => {
       const proceed = window.confirm('Are you sure, you want to delete?');
       if(proceed){
-        const url = `https://enigmatic-garden-34025.herokuapp.com/eventRegister/${id}`;
+        const url = `https://blooming-thicket-66783.herokuapp.com/eventRegister/${id}`;
       fetch(url,{
         method:'DELETE'
       })
@@ -41,7 +40,7 @@ const AddEventRegister = () => {
     const handleApprove = (id) => {
       console.log(id);
   
-      fetch(`https://enigmatic-garden-34025.herokuapp.com/updatemere/${id}`, {
+      fetch(`https://blooming-thicket-66783.herokuapp.com/updatemere/${id}`, {
       method: "PUT"
   
   

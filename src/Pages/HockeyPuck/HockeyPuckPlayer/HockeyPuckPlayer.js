@@ -1,10 +1,10 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import HockeyPlayers from '../HockeyPlayers/HockeyPlayers'
 import Slider from "react-slick/lib/slider";
-
+import HockeyPlayers from '../HockeyPlayers/HockeyPlayers';
 import './HockeyPuckPlayer.css';
+
 
 
 export default class HockeyPuckPlayer extends Component {
@@ -15,7 +15,7 @@ export default class HockeyPuckPlayer extends Component {
   }
 
   componentDidMount() {
-    fetch('https://enigmatic-garden-34025.herokuapp.com/hockeyPuckPlayers')
+    fetch('https://blooming-thicket-66783.herokuapp.com/hockeyPuckPlayers')
       .then((response) => response.json())
       .then(playersList => {
         this.setState({ players: playersList });

@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from "../../Pages/Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Container } from "react-bootstrap";
-import { Rating, Typography } from "@mui/material";
-import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
+import StarIcon from "@mui/icons-material/Star";
+import { Rating, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import "./HockeyPlayersDetails";
-import PlayerReviwe from "../../Pages/PlayerReviwe/PlayerReviwe";
+import React, { useEffect, useState } from "react";
+import { Button, Container } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { addReview } from "../../features/PlayerReviewSlice/PlayerReviewSlice";
 import location from "../../Images/Connting/819814.png";
 import email from "../../Images/Connting/email.png";
 import phone from "../../Images/Connting/phone-call.png";
-import { useDispatch } from "react-redux";
-import { addReview } from "../../features/PlayerReviewSlice/PlayerReviewSlice";
+import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
+import PlayerReviwe from "../../Pages/PlayerReviwe/PlayerReviwe";
+import Navigation from "../../Pages/Shared/Navigation/Navigation";
+import "./HockeyPlayersDetails";
 
 const labels = {
   0.5: "Useless",
@@ -39,7 +39,7 @@ const HockeyPlayersDetails = () => {
   /* const [quantity, setQuantity] = useState(1); */
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/hockeyPuckPlayers")
+    fetch("https://blooming-thicket-66783.herokuapp.com/hockeyPuckPlayers")
       .then((res) => res.json())
       .then((data) => setHockeyPlayers(data));
   }, []);
@@ -89,8 +89,8 @@ const HockeyPlayersDetails = () => {
       return;
     }
     
-    // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
