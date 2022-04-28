@@ -41,6 +41,7 @@ import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 
 import ShopData from "./Pages/Dashboard/ShopData/ShopData";
+import UpComeingContest from "./Pages/Contest/UpComeingContest";
 
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/contact" element={  <ContactUs />  } />
             <Route path="/booking" element={<PrivateRoute>  <Booking /> </PrivateRoute> } />
+            <Route path="/upcomeingNewContest" element={<PrivateRoute>  <UpComeingContest/> </PrivateRoute> } />
             <Route path="/contestsregister" element={ 
               <PrivateRoute> <ContestsRegister />  
               </PrivateRoute>} />

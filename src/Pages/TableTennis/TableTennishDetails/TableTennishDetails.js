@@ -43,7 +43,7 @@ const TableTennishDetails = () => {
 
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/tableTennis")
+    fetch("https://blooming-thicket-66783.herokuapp.com/tableTennis")
       .then((res) => res.json())
       .then((data) => setTableTaPlayers(data));
   }, []);
@@ -94,8 +94,8 @@ const TableTennishDetails = () => {
       return;
     }
     
-    // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    fetch("http://localhost:7000/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

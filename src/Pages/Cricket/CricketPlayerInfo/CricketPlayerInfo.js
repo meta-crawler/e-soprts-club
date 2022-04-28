@@ -44,7 +44,7 @@ const CricketPlayerInfo = () => {
   
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/cricketplayers")
+    fetch("https://blooming-thicket-66783.herokuapp.com/cricketplayers")
       .then((res) => res.json())
       .then((data) => {
         setPlayerDetails(data);
@@ -99,12 +99,12 @@ const CricketPlayerInfo = () => {
       !newDispalyReviwe.feedback ||
       !newDispalyReviwe.PlayerName
     ) {
-      alert("All fields are required");
+      alert(`All fields are required`);
       return;
     }
     
-    // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    fetch("http://localhost:7000/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -400,7 +400,7 @@ const CricketPlayerInfo = () => {
                 A prolific goalscorer and a creative playmaker, Messi holds the
                 records for most goals in La Liga (419), a La Liga and European
                 league season (50), most hat-tricks in the UEFA Champions League
-                (😎, and most assists in La Liga (169) and the Copa América
+                (8), and most assists in La Liga (169) and the Copa América
                 (12). He has scored 698 senior career goals for club and
                 country.
               </p>

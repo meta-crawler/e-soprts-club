@@ -122,7 +122,7 @@ const ContestsRegister = () => {
                 <Form.Control
                   onChange={onBlurHandler}
                   type="email"
-                  placeholder="Type your email"
+                  placeholder="Type your date"
                   name="contact_email"
                   required
                 />
@@ -132,7 +132,7 @@ const ContestsRegister = () => {
                 <Form.Control
                   onChange={onBlurHandler}
                   type="number"
-                  placeholder="Type your Number"
+                  placeholder="Type your date"
                   name="contact_number"
                   required
                 />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-
+import Navigation from "../../Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Container, Modal } from "react-bootstrap";
@@ -10,8 +10,6 @@ import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import { Box } from "@mui/system";
 import PlayerReviwe from "../../PlayerReviwe/PlayerReviwe";
-import Navigation from "../../Shared/Navigation/Navigation";
-
 import location from "../../../Images/Connting/819814.png";
 import email from "../../../Images/Connting/email.png";
 import phone from "../../../Images/Connting/phone-call.png";
@@ -31,8 +29,9 @@ const labels = {
   5: "Excellent+",
 };
 
-const CricketPlayerInfo = () => {
-  const { id } = useParams();
+const CricketPlayerDetails = () => {
+  let { id } = useParams();
+
 
 
   const [show, setShow] = useState(false);
@@ -42,25 +41,20 @@ const CricketPlayerInfo = () => {
   const [playerDetails, setPlayerDetails] = useState([]);
   const [detailsItam, setDetailsItam] = useState([]);
   
+  const [cricketPlayers, setCricketPlayers] = useState([]);
+  const [singleCricket, setSingleCricket] = useState({});
+  /* const [quantity, setQuantity] = useState(1); */
+
 
   useEffect(() => {
-    fetch("https://enigmatic-garden-34025.herokuapp.com/cricketplayers")
+    fetch("https://blooming-thicket-66783.herokuapp.com/cricketplayers")
       .then((res) => res.json())
-      .then((data) => {
-        setPlayerDetails(data);
-      });
+      .then((data) => setCricketPlayers(data));
   }, []);
-
   useEffect(() => {
-    if (playerDetails?.length > 0) {
-      const matchItam = playerDetails.find(
-        (playerDetails) => playerDetails.id == id
-      );
-      setDetailsItam(matchItam);
-    }
-  }, [playerDetails, id]);
-
-  console.log(detailsItam);
+    const foundPlayers = cricketPlayers.find((player) => player.id === id);
+    setSingleCricket(foundPlayers);
+  }, [cricketPlayers, id]);
 
   const [value, setValue] = React.useState(0);
   const [hover, setHover] = React.useState(-1);
@@ -84,27 +78,35 @@ const CricketPlayerInfo = () => {
     setOrderinfo(newValue);
     console.log(newValue);
   };
+  const hendalPalyer = (player) => {
+    player.preventDefault();
 
+    if (orderinfo === "") {
+      alert("I CAmakd");
+    }
+  };
+
+  
   const dispatch = useDispatch()
   const handelonSubmit = (data) => {
     data.preventDefault();
-    orderinfo.PlayerName = detailsItam?.name
+    orderinfo.PlayerName = singleCricket?.name
     const newDispalyReviwe = {
-      ...orderinfo,PlayerName:detailsItam?.name
+      ...orderinfo,PlayerName:singleCricket?.name
     };
-    newDispalyReviwe.PlayerName = detailsItam?.name
+    newDispalyReviwe.PlayerName = singleCricket?.name
     if (
       !newDispalyReviwe.email ||
       !newDispalyReviwe.name ||
       !newDispalyReviwe.feedback ||
       !newDispalyReviwe.PlayerName
     ) {
-      alert("All fields are required");
+      alert(`All fields are required`);
       return;
     }
     
-    // fetch("https://enigmatic-garden-34025.herokuapp.com/review", {
-    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
+    fetch("http://localhost:7000/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -121,13 +123,6 @@ const CricketPlayerInfo = () => {
       });
   };
 
-  const hendalPalyer = (player) => {
-    player.preventDefault();
-
-    if (orderinfo === "") {
-      alert("I CAmakd");
-    }
-  };
 
   return (
     <>
@@ -137,9 +132,8 @@ const CricketPlayerInfo = () => {
           <div className="details-player-bgimg"></div>
           <Container className="details-player-info">
             <div>
-              <h1 className="details-player-title">{detailsItam?.name} </h1>
+              <h1 className="details-player-title">{singleCricket?.name} </h1>
 
-              <p className="details-player-des">{detailsItam?.describe}</p>
 
               
 
@@ -150,6 +144,15 @@ const CricketPlayerInfo = () => {
               
               
               <Button variant="primary" onClick={handleShow}>
+
+              <p className="details-player-des">{singleCricket?.describe}</p>
+              <button
+                className="details-connecting cart-btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+
                 Conecting
       </Button>
 
@@ -174,7 +177,7 @@ const CricketPlayerInfo = () => {
                               alt=""
                             />
 
-                            <h6>{detailsItam?.Nationality}</h6>
+                            <h6>Mirpur 01, Dhaka, bd</h6>
                           </div>
                           <div className="email">
                             <img
@@ -235,7 +238,7 @@ const CricketPlayerInfo = () => {
                           <input
                             name="PlayerName"
                             onBlur={hendalOnBlure}
-                            defaultValue={detailsItam?.name}
+                            defaultValue={singleCricket?.name}
                             type="text"
                             id=""
                             placeholder="Player Name"
@@ -266,6 +269,7 @@ const CricketPlayerInfo = () => {
                           </button>
                         </form>
                       </div>
+
         
 
 
@@ -280,65 +284,34 @@ const CricketPlayerInfo = () => {
               
               
 
+
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="modal-btn"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <button className="details-player-video">
                 <FontAwesomeIcon
                   style={{ marginRight: "5px" }}
                   icon={faVideo}
-                />{" "}
-                <div
-                  className="modal fade"
-                  id="exampleModalToggle"
-                  aria-hidden="true"
-                  aria-labelledby="exampleModalToggleLabel"
-                  tabindex="-1"
-                >
-                  <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h5
-                          className="modal-title"
-                          style={{ color: "ButtonText" }}
-                          id="exampleModalToggleLabel"
-                        >
-                          Player details video
-                        </h5>
-                        <button
-                          type="button"
-                          className="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div className="modal-body">
-                        {/* <video src={video}></video> */}
-                        <iframe
-                          width="455"
-                          height="250"
-                          src="https://www.youtube.com/embed/387782CRNQM"
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  className="player-details-video"
-                  data-bs-toggle="modal"
-                  href="#exampleModalToggle"
-                  role="button"
-                >
-                  Play video
-                </a>
+                />
+                Play video
               </button>
             </div>
             <div>
               {/* <div className='details-single-img'></div> */}
               <img
                 className="details-player-img"
-                src={detailsItam?.img}
+                src={singleCricket?.img}
                 alt=""
               />
             </div>
@@ -367,7 +340,7 @@ const CricketPlayerInfo = () => {
                   fontWeight: "600",
                 }}
               >
-                {detailsItam?.name}
+                {singleCricket?.name}
               </h2>
 
               <p
@@ -378,7 +351,7 @@ const CricketPlayerInfo = () => {
                   width: "500px",
                 }}
               >
-                {detailsItam?.describe}
+                {singleCricket?.describe}
               </p>
               <p
                 style={{
@@ -404,7 +377,7 @@ const CricketPlayerInfo = () => {
                 A prolific goalscorer and a creative playmaker, Messi holds the
                 records for most goals in La Liga (419), a La Liga and European
                 league season (50), most hat-tricks in the UEFA Champions League
-                (😎, and most assists in La Liga (169) and the Copa América
+                (8), and most assists in La Liga (169) and the Copa América
                 (12). He has scored 698 senior career goals for club and
                 country.
               </p>
@@ -422,7 +395,7 @@ const CricketPlayerInfo = () => {
                           fontSize: "18px",
                         }}
                       >
-                        {detailsItam?.Height}
+                        {singleCricket?.Height}
                       </td>
                     </tr>
                     <tr>
@@ -436,7 +409,7 @@ const CricketPlayerInfo = () => {
                           fontSize: "18px",
                         }}
                       >
-                        {detailsItam?.Weight}
+                        {singleCricket?.Weight}
                       </td>
                     </tr>
                     <tr>
@@ -450,7 +423,7 @@ const CricketPlayerInfo = () => {
                           fontSize: "18px",
                         }}
                       >
-                        {detailsItam?.Position}
+                        {singleCricket?.Position}
                       </td>
                     </tr>
                     <tr>
@@ -464,7 +437,7 @@ const CricketPlayerInfo = () => {
                           fontSize: "18px",
                         }}
                       >
-                        {detailsItam?.Nationality}
+                        {singleCricket?.Nationality}
                       </td>
                     </tr>
                   </tbody>
@@ -483,14 +456,14 @@ const CricketPlayerInfo = () => {
           Player Say!
         </h1>
         <div className="player">
-          <img src={detailsItam?.img} alt="" />
-          <h2>{detailsItam?.name}</h2>
-          <h4>{detailsItam?.Position}</h4>
-          <p>{detailsItam?.describe}</p>
+          <img src={singleCricket?.img} alt="" />
+          <h2>{singleCricket?.name}</h2>
+          <h4>{singleCricket?.Position}</h4>
+          <p>{singleCricket?.describe}</p>
         </div>
       </div>
 
-      <PlayerReviwe PlayerName={detailsItam?.name} />
+      <PlayerReviwe PlayerName={singleCricket?.name} />
 
       <Container className="Player-All">
         <div className="From-Main">
@@ -559,7 +532,7 @@ const CricketPlayerInfo = () => {
             <input
               name="PlayerName"
               onBlur={hendalOnBlure}
-              defaultValue={detailsItam?.name}
+              defaultValue={singleCricket?.name}
               type="text"
               id=""
               placeholder="Player Name"
@@ -592,4 +565,4 @@ const CricketPlayerInfo = () => {
   );
 };
 
-export default CricketPlayerInfo;
+export default CricketPlayerDetails;
