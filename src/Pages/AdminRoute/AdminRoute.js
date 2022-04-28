@@ -11,7 +11,7 @@ const AdminRoute = ({children}) => {
     if(isLoading){
         return <h2>Loading</h2>
     }
-    if(user.email && admin){
+    if(user?.email && admin){
         return children;
     }
     return   <Navigate to="/" state={{from: location}} />

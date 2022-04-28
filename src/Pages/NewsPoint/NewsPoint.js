@@ -216,7 +216,7 @@ const Permetion = () => {
                 <div className="eventBanner">
                     <div className="UpEvent">
                    
-                    <Button style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%", color: "white"}} variant="primary" onClick={handleShow}>
+                    <Button className='news-pont-contest-b' style={{marginRight: "50px", background: "#4e6dfa", padding: "10px", border: "none", cursor: "pointer", position: "absolute", top: "50%", left: "50%", color: "white"}} variant="primary" onClick={handleShow}>
                     Up Coming  New Contests
       </Button>
 

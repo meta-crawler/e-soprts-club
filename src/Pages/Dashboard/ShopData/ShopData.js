@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './ShopData.css'
 
 const ShopData = () => {
 
@@ -16,16 +17,16 @@ const ShopData = () => {
 
 
     return (
-        <div>
+        <div >
           <h1 style={{margin: "50px"}}> All shop payment system ({ordersInfo.length}) </h1>
-           <Table striped bordered hover variant="dark">
+           <Table className='shop-data-main' striped bordered hover variant="dark">
   <thead>
     <tr>
-      <th>#</th>
+      <th className='shop-data-cat'>#</th>
       <th>Product Name</th>      
       <th>Price</th>
-      <th>Category</th>
-      <th>Tags</th>
+      <th className='shop-data-cat'>Category</th>
+      <th className='shop-data-cat'>Tags</th>
       <th>Payment System</th>
     </tr>
   </thead>
@@ -33,11 +34,11 @@ const ShopData = () => {
     ordersInfo.map((pd, index) => (   
       <tbody>
       <tr>
-      <td>{index}</td>
+      <td className='shop-data-cat'>{index}</td>
       <td>{pd.name}</td>
       <td>{pd.price}</td>
-      <td>{pd.category}</td>
-      <td>{pd.tags}</td>
+      <td className='shop-data-cat'>{pd.category}</td>
+      <td className='shop-data-cat'>{pd.tags}</td>
       <td>{pd.payment ? 
       'Paid' : 
       <Link style={{textDecoration: "none", margin: "10px"}} to={`/dashboard/payment/${pd._id}`}>

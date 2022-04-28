@@ -42,6 +42,17 @@
     .eventBanner{
         width: 467px;
     }
+    .news-pont-contest-b{
+        left: 14%;
+    }
+    .ContentsFullBanner{
+        width: 381px;
+    }
+    .ContentsFullBanner{
+        margin: 0px auto;
+         margin-left: 0px;
+        width: 379px;
+    }
     /* .TablePoint{
         width: 454px;
     } */
@@ -151,6 +162,7 @@
 .eventBanner:hover{
     border-radius: 30px;
 }
+
 .ContentsFullBanner{
     background-image: url(../../Images/UPCOMINGEVENTS/images.jpg);
     background-position: center;

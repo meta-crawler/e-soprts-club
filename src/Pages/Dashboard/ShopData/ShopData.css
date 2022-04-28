@@ -1,0 +1,11 @@
+.shop-data-main{
+    width: 451px;
+}
+@media only screen and (max-width:688px) {
+    .shop-data-cat{
+        display: none;
+    }
+    .shop-data-main{
+        width: 339px;
+    }
+}

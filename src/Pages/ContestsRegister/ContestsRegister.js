@@ -9,12 +9,14 @@ import {
   import useAuth from "../../Hook/UseAuth";
   import Navigation from "../Shared/Navigation/Navigation";
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 const ContestsRegister = () => {
-    const { isLoading} = useAuth()
+    const { isLoading,user} = useAuth()
     const {reset} = useForm()
+    const navigate = useNavigate();
 
-    const formDataAll = { eventName: '', contextDate: '', category: '', ContextCategory: '',city: "", address: "", eventDes: "", ClubName: "", email: "", number: "", status: "pending"};
+    const formDataAll = { name: '', email: '', contact_email: '', contact_number: '',event_name: "", contest_date: "", lavel: "", playing_ctg: "", user_city: "", user_address: ""};
     const [formData, setFormData] = useState(formDataAll);
 
     const onBlurHandler = (e) => {
@@ -22,41 +24,59 @@ const ContestsRegister = () => {
         const value = e.target.value;
         const newFormData = { ...formData };
         newFormData[name] = value;
+        newFormData.email = user?.email;
         setFormData(newFormData);
       };
+      
       const onSubmitHandler = data => {
         data.preventDefault();
-    
-        
-    
         const newDispalyReviwe = {
           ...formData
         }
-    // https://blooming-thicket-66783.herokuapp.com/contextRegister
-        fetch('', {
+
+        const perticipantRegInfo = { 
+            name: newDispalyReviwe.name, 
+            email: newDispalyReviwe.email, 
+            contact_email: newDispalyReviwe.contact_email,
+            contact_number: newDispalyReviwe.contact_number,
+            event_name: newDispalyReviwe.event_name, 
+            contest_date: newDispalyReviwe.contest_date, 
+            lavel: newDispalyReviwe.lavel, 
+            playing_ctg: newDispalyReviwe.playing_ctg, 
+            user_city: newDispalyReviwe.user_city, 
+            user_address: newDispalyReviwe.user_address
+          }
+          
+    // https://enigmatic-garden-34025.herokuapp.com/contextRegister
+        fetch('http://localhost:7000/contest/participant', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
           },
-          body: JSON.stringify(newDispalyReviwe)
+          body: JSON.stringify(perticipantRegInfo)
         })
           .then(res => res.json())
-          .then(data => console.log(data));
-  
-        
-  
-  
-          if(newDispalyReviwe){
-            alert("Thank You, Your Register was Completed")
-          }
-          reset()
+          .then(data =>{
+            console.log(data);
+            if (data.insertedId) {
+              alert("Thank You, Your Register was Completed")
+              reset()
+              navigate("/")
+            }else if (data?.error) {
+              alert(`${data?.error?.message}`)
+            }
+          });
     
       }
   
 
 
     return (
+
+        <div style={{zIndex:99}}>
+
         <div style={{zIndex: "24"}}>
+
         <Navigation />
         
         <div className="booking-container container">
@@ -76,38 +96,80 @@ const ContestsRegister = () => {
             {!isLoading && 
             <form onSubmit={onSubmitHandler} className="mt-4" >
               <Form.Group className="mb-3 input-box">
-                <Form.Label className="mb-0">Event Name</Form.Label>
+                <Form.Label className="mb-0">Your Name</Form.Label>
                 <Form.Control
                   onChange={onBlurHandler}
                   type="text"
                   placeholder="Type your name"
-                  name="eventName"
+                  name="name"
                   required
                 />
               </Form.Group>
               <Form.Group className="mb-3 input-box">
-                <Form.Label className="mb-0">Context Date</Form.Label>
+                <Form.Label className="mb-0">Your Email</Form.Label>
+                <Form.Control
+                  onChange={onBlurHandler}
+                  type="email"
+                  placeholder="Type your date"
+                  name="email"
+                  value={user?.email}
+                  readOnly
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3 input-box">
+                <Form.Label className="mb-0">Contact Email</Form.Label>
+                <Form.Control
+                  onChange={onBlurHandler}
+                  type="email"
+                  placeholder="Type your date"
+                  name="contact_email"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3 input-box">
+                <Form.Label className="mb-0">Mobile Number</Form.Label>
+                <Form.Control
+                  onChange={onBlurHandler}
+                  type="number"
+                  placeholder="Type your date"
+                  name="contact_number"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3 input-box">
+                <Form.Label className="mb-0">Event Name</Form.Label>
+                <Form.Control
+                  onChange={onBlurHandler}
+                  type="text"
+                  placeholder="Type your date"
+                  name="event_name"
+                  required
+                />
+              </Form.Group>
+              <Form.Group className="mb-3 input-box">
+                <Form.Label className="mb-0">Contest Date</Form.Label>
                 <Form.Control
                   onChange={onBlurHandler}
                   type="date"
                   placeholder="Type your date"
-                  name="contextDate"
+                  name="contest_date"
                   required
                 />
               </Form.Group>
               <Form.Group className="mb-3 input-box">
-                <Form.Label className="mb-0">Category</Form.Label>
-                <Form.Select onChange={onBlurHandler}   name="category" required>
-                  <option>Select-category</option>
-                  <option>Basic</option>
-                  <option>Standard</option>
-                  <option>Premium</option>
+                <Form.Label className="mb-0">Lavel</Form.Label>
+                <Form.Select onChange={onBlurHandler}   name="lavel" required>
+                  <option>Select-label</option>
+                  <option>Easy</option>
+                  <option>Normal</option>
+                  <option>Hard</option>
                 </Form.Select>
               </Form.Group>
               <Form.Group className="mb-3 input-box">
                 <Form.Label className="mb-0">Context-Category</Form.Label>
-                <Form.Select onChange={onBlurHandler} name="ContextCategory" required>
-                  <option>Select Age</option>
+                <Form.Select onChange={onBlurHandler} name="playing_ctg" required>
+                  <option>Select Category</option>
                   <option>Football</option>
                   <option>Cricket</option>
                   <option>Base-Ball</option>
@@ -123,7 +185,7 @@ const ContestsRegister = () => {
                   onChange={onBlurHandler}
                   type="text"
                   placeholder="Type your City"
-                  name="city"
+                  name="user_city"
                   required
                 />
               </Form.Group>
@@ -134,54 +196,7 @@ const ContestsRegister = () => {
                   as="textarea"
                   rows={3}
                   placeholder="Type your address"
-                  name="address"
-                  required
-                />
-              </Form.Group>
-              <Form.Group className="mb-3 input-box">
-                <Form.Label style={{ textAlign: "end" }} className="mb-0">
-                  Event Descriptions
-                </Form.Label>
-                <Form.Control
-                  onChange={onBlurHandler}
-                  as="textarea"
-                  rows={3}
-                  placeholder="Type event descriptions"
-                  name="eventDes"
-                  required
-                />
-              </Form.Group>
-              {/* <Form.Group className="mb-3 input-box">
-                <Form.Label className="mb-0">Club Name</Form.Label>
-                <Form.Control
-                  onChange={onBlurHandler}
-                  type="text"
-                  placeholder="Type your club name"
-                  name="ClubName"
-                  required
-                />
-              </Form.Group> */}
-              <Form.Group className="mb-3 input-box">
-                <Form.Label style={{ textAlign: "end" }} className="mb-0">
-                  Contact E-mail
-                </Form.Label>
-                <Form.Control
-                  onChange={onBlurHandler}
-                  type="email"
-                  placeholder="Type your email"
-                  name="email"
-                  required
-                />
-              </Form.Group>
-              <Form.Group className="mb-3 input-box">
-                <Form.Label style={{ textAlign: "end" }} className="mb-0">
-                  Contact Number
-                </Form.Label>
-                <Form.Control
-                  onChange={onBlurHandler}
-                  type="number"
-                  placeholder="Type your number"
-                  name="number"
+                  name="user_address"
                   required
                 />
               </Form.Group>
@@ -238,6 +253,7 @@ const ContestsRegister = () => {
             </Row>
           </Container>
         </div>
+      </div>
       </div>
     );
 };

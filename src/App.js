@@ -30,8 +30,13 @@ import HockeyPlayersDetails from "./Pages/HockeyPuck/HockeyPlayersDetails";
 import TableTennishDetails from "./Pages/TableTennis/TableTennishDetails/TableTennishDetails";
 import BaseBallDetails from "./Pages/BaseBall/BaseBallDetails/BaseBallDetails";
 import BaseketBallDetails from "./Pages/BasketBall/BaseketBallDetails/BaseketBallDetails";
+
+import QuizContest from "./Pages/Dashboard/AddEventRegister/QuizContest";
+import StartQuiz from "./Pages/Dashboard/AddEventRegister/StartQuiz";
+import ContestResult from "./Pages/Dashboard/AddEventRegister/ContestResult";
 import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
+
 
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 
@@ -57,10 +62,14 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/contestsregister" element={<ContestsRegister />} />
-            <Route path="/event-register" element={<EventRegister />} />
+            <Route path="/contact" element={  <ContactUs />  } />
+            <Route path="/booking" element={<PrivateRoute>  <Booking /> </PrivateRoute> } />
+            <Route path="/contestsregister" element={ 
+              <PrivateRoute> <ContestsRegister />  
+              </PrivateRoute>} />
+            <Route path="/event-register" element={
+              <PrivateRoute> <EventRegister /> 
+              </PrivateRoute>} />
             <Route path="/playerDetails/:id" element={ <PrivateRoute> <PlayerDetails /> </PrivateRoute> } />
             <Route path="/singleProduct/:id" element={ <PrivateRoute><SingleProduct /></PrivateRoute> } />
             <Route path="/cricketPlayer/:id" element={<PrivateRoute><CricketPlayerInfo /></PrivateRoute>} />
@@ -77,7 +86,9 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />}>
             <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
             <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
-            <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
+          
+          
+           <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
 
             <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
             {/* <Route path={`/dashboard/yourShop`} element={<AdminRoute> <ShopData /> </AdminRoute>} /> */}
@@ -85,9 +96,18 @@ function App() {
 
             <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
 
-            <Route path={`/dashboard/yourShop`} element={<AdminRoute> <ShopData /> </AdminRoute>} />
+           
+            <Route path={`/dashboard/yourShop`} element={<ShopData /> } />
+
+
             <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
 
+
+
+            {/* <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} /> */}
+            <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} />
+            <Route path={`/dashboard/contest/start`} element={<StartQuiz />} />
+            <Route path={`/dashboard/contest/result`} element={<ContestResult />} />
 
             <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
             <Route path={`/dashboard/payment/:productId`} element={<Payment />} />
