@@ -44,10 +44,7 @@ const Dashboard = () => {
                         <Inventory2RoundedIcon className='icon'/>
                         <span>Add-Products</span>
                         </li></Link>}
-                    {/* <li>
-                        <BorderColorIcon className='icon'/>
-                        <span>Orders</span>
-                        </li> */}
+                    
                     <Link className='link-style-das' to={`/dashboard/addreview`}>
                     <li className='dashboard-li'>
                         <LocalShippingIcon className='icon'/>
