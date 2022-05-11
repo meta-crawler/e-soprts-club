@@ -1,10 +1,10 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import HockeyPlayers from '../HockeyPlayers/HockeyPlayers'
 import Slider from "react-slick/lib/slider";
-
+import HockeyPlayers from '../HockeyPlayers/HockeyPlayers';
 import './HockeyPuckPlayer.css';
+
 
 
 export default class HockeyPuckPlayer extends Component {

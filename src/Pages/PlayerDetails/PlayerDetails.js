@@ -1,7 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from "../Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Container, Modal } from "react-bootstrap";
@@ -9,12 +5,16 @@ import { Rating, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import { Box } from "@mui/system";
-import "./PlayerDetails.css";
-import PlayerReviwe from "../PlayerReviwe/PlayerReviwe";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import location from "../../Images/Connting/819814.png";
 import email from "../../Images/Connting/email.png";
 import phone from "../../Images/Connting/phone-call.png";
-import { useDispatch } from "react-redux";
+import biograpy from "../../Images/news_296_all-sports-banner_nq.png";
+import PlayerReviwe from "../PlayerReviwe/PlayerReviwe";
+import Navigation from "../Shared/Navigation/Navigation";
+import "./PlayerDetails.css";
 import { addReview, callReviews } from "../../features/PlayerReviewSlice/PlayerReviewSlice";
 import { Link } from "react-router-dom";
 
