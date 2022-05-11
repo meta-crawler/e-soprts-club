@@ -22,29 +22,31 @@ const ContactUs = () => {
     setFormData(newFormData);
   };
   const onSubmitHandler = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    const body = {
-      email: formData.email,
-      message: formData.address
-    }
 
-    fetch("https://blooming-thicket-66783.herokuapp.com/player/sendEmail",{
-    // fetch("http://localhost:7000/player/sendEmail",{
-      method:"POST",
-      headers:{
-        "content-type":"application/json"
-      },
-      body: JSON.stringify(body)
-    })
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      if (data.messageId) {
-        alert("Your email is received")
+      e.preventDefault();
+      console.log(formData);
+      const body = {
+        email: formData.email,
+        message: formData.address
       }
-    })
-  };
+  
+      fetch("https://blooming-thicket-66783.herokuapp.com/player/sendEmail",{
+      // fetch("http://localhost:7000/player/sendEmail",{
+        method:"POST",
+        headers:{
+          "content-type":"application/json"
+        },
+        body: JSON.stringify(body)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data);
+        if (data.messageId) {
+          alert("Your email is received")
+        }
+      })
+    };
+
     return (
         <div className='ContactUs'>
         <Navigation />

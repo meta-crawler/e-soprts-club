@@ -12,7 +12,10 @@ const ContestResult = () => {
 
     useEffect(()=>{
         if (contBodyInfo.playing_ctg  && contBodyInfo.lavel) {
+
+
             console.log(contBodyInfo);
+
             fetch("https://blooming-thicket-66783.herokuapp.com/contest/result",{
                 method:"post",
                 headers:{

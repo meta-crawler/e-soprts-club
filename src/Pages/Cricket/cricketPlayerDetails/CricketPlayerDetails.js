@@ -112,7 +112,7 @@ const CricketPlayerDetails = () => {
     }
     
     // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

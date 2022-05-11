@@ -48,7 +48,7 @@ const ContestsRegister = () => {
           }
           
     // https://blooming-thicket-66783.herokuapp.com/contextRegister
-        fetch('http://localhost:7000/contest/participant', {
+        fetch('https://blooming-thicket-66783.herokuapp.com/contest/participant', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
