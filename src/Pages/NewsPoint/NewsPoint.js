@@ -1,6 +1,3 @@
-
-
-import { useNavigate} from 'react-router-dom';
 import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
@@ -10,6 +7,8 @@ import { FcRules } from 'react-icons/fc';
 import { Link} from 'react-router-dom';
 import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
 import './NewsPoint.css';
+import { Button, Modal } from 'bootstrap';
+import { Container } from '@mui/material';
 
 
 
