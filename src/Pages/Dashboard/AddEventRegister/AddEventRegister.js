@@ -65,7 +65,7 @@ const AddEventRegister = () => {
 
     return (
         <div>
-          <h1 style={{margin: "50px"}}>All Event Register {ticket.length}</h1>
+          <h1 style={{margin: "50px" ,color:'#FFB700'}}>All Event Register {ticket.length}</h1>
            <Table striped bordered hover variant="dark">
   <thead>
     <tr>

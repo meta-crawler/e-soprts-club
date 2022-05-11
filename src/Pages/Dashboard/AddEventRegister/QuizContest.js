@@ -88,29 +88,29 @@ const QuizContest = () => {
     if (contestComplete?.contest_result?.contest_status === "completed") {
         return <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center", height:"100vh"}}>
             <div style={{maxWidth:"fit-content",padding:"10px 50px", borderRadius:"15px", boxShadow:"0 0 15px 2px blue"}}>
-                <h1>Congrates You have completed the Quize</h1>
-                <h2>Total Question: {contestComplete.contest_result?.question_count}</h2>
-                <h2>Time Saved: {contestComplete.contest_result?.remaining_time / 1000} seconds</h2>
-                <h2>Valid Score: {contestComplete.contest_result?.valid_Score}</h2>
-                <h2>Contest Lavel: {contestComplete.isFinishedPerticipant?.lavel}</h2>
-                <h2>Contest Category: {contestComplete.isFinishedPerticipant?.playing_ctg}</h2>
+                <h1 style={{color:'gold'}} >Congrates You have completed the Quize</h1>
+                <h2 style={{color:'gold'}}>Total Question: {contestComplete.contest_result?.question_count}</h2>
+                <h2 style={{color:'gold'}}>Time Saved: {contestComplete.contest_result?.remaining_time / 1000} seconds</h2>
+                <h2 style={{color:'gold'}}>Valid Score: {contestComplete.contest_result?.valid_Score}</h2>
+                <h2 style={{color:'gold'}}>Contest Lavel: {contestComplete.isFinishedPerticipant?.lavel}</h2>
+                <h2 style={{color:'gold'}}>Contest Category: {contestComplete.isFinishedPerticipant?.playing_ctg}</h2>
             </div>
         </div>
     }
     
     if (contestFirstComplete?.quize_status === "completed") {
         <div>
-            <h2>Total Question: {contestFirstComplete?.question_count}</h2>
-            <h2>Time Saved: {contestFirstComplete?.remaining_time / 1000} seconds</h2>
-            <h2>Valid Score: {contestFirstComplete?.valid_Score}</h2>
+            <h2 style={{color:'gold'}}>Total Question: {contestFirstComplete?.question_count}</h2>
+            <h2 style={{color:'gold'}}>Time Saved: {contestFirstComplete?.remaining_time / 1000} seconds</h2>
+            <h2 style={{color:'gold'}}>Valid Score: {contestFirstComplete?.valid_Score}</h2>
         </div>
         
     }
     return (
         <div>
-            <h3 className='p-4'>Hello and welcome to the QUIZ CONTEST!!!</h3>
+            <h3 className='p-4' style={{color:'gold'}}>Hello and welcome to the QUIZ CONTEST!!!</h3>
             <div style={{display:"flex", justifyContent:"space-around"}}>
-                <h4>Quiz No: {questionCount}</h4>
+                <h4 style={{color:'gold'}} >Quiz No: {questionCount}</h4>
                 <Timer handleNextQuiz={handleNextQuiz} questionCount={questionCount}></Timer>
             </div>
             <div className='p-3'>
