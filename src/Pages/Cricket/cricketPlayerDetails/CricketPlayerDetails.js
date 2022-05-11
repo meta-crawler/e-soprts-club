@@ -133,7 +133,6 @@ const CricketPlayerDetails = () => {
   return (
     <>
       <Navigation />
-      <>
         <div className="details-player-main">
           <div className="details-player-bgimg"></div>
           <Container className="details-player-info">
@@ -152,7 +151,7 @@ const CricketPlayerDetails = () => {
               <Button variant="primary" onClick={handleShow}>
 
               <p className="details-player-des">{singleCricket?.describe}</p>
-              <button
+              <Button
                 className="details-connecting cart-btn"
                 type="button"
                 data-bs-toggle="modal"
