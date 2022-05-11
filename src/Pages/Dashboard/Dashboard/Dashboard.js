@@ -15,7 +15,7 @@ import './Dashboard.css'
 
 const Dashboard = () => {
     const {admin , logOut } = useAuth()
-    console.log(admin)
+    // console.log(admin)
     
     return (
         <div className='row raw'>

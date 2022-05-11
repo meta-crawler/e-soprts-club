@@ -1,10 +1,20 @@
+
 import React from 'react';
+
 import { useNavigate} from 'react-router-dom';
-import {  Button, Container, Modal } from 'react-bootstrap';
 import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
+
 import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
+
+import React, { useEffect, useState } from 'react';
+import { IconContext } from "react-icons";
+import { FcRules } from 'react-icons/fc';
+import { Link} from 'react-router-dom';
+import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
+import './NewsPoint.css';
+
 
 import { Table } from 'react-bootstrap';
 import { useState, useEffect } from "react";
@@ -27,14 +37,20 @@ const NewsPoint = () => {
 
 
     const navigate = useNavigate()
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
     
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
+      fetch("https://blooming-thicket-66783.herokuapp.com/upcomingEvents")
         .then((res) => res.json())
         .then((data) => setEvent(data));
     }, []);
+
 
 console.log(event);
 
@@ -55,9 +71,6 @@ const Permetion = () => {
 
     
 }
-
-
-
 
     return (
         <Container id='news'>

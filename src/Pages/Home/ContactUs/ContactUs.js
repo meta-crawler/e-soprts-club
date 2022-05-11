@@ -22,6 +22,7 @@ const ContactUs = () => {
     setFormData(newFormData);
   };
   const onSubmitHandler = (e) => {
+
       e.preventDefault();
       console.log(formData);
       const body = {
@@ -45,6 +46,7 @@ const ContactUs = () => {
         }
       })
     };
+
     return (
         <div className='ContactUs'>
         <Navigation />

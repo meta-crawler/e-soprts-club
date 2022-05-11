@@ -12,6 +12,10 @@ const ContestResult = () => {
 
     useEffect(()=>{
         if (contBodyInfo.playing_ctg  && contBodyInfo.lavel) {
+
+
+            console.log(contBodyInfo);
+
             fetch("https://blooming-thicket-66783.herokuapp.com/contest/result",{
                 method:"post",
                 headers:{
@@ -69,7 +73,7 @@ console.log(contestFinalResult);
         sumPoint = (sumPoint - (maxPoint-minPoint)/contestFinalResult.length)
         sizeArrayPoint.push(sumPoint)
     })
-
+    console.log(contestFinalResult);
     if (!contestFinalResult.length) {
         return(
             <div style={{marginTop:"100px", textAlign:"center"}}>
