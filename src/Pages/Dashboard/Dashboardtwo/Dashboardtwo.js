@@ -45,12 +45,15 @@ function Dashboardtwo(props) {
       <Toolbar />
       <Divider />
       <Link className='dashboard-home'  to="/home"> <HomeIcon></HomeIcon> HOME</Link>
-      <p className="title">Admin Useful</p>
-      { admin && <Link className='link-style-das' to={`/dashboard2/addproduct`}>
+     
+      { admin && <Box>
+        <p className="title">Admin Useful</p>
+        <Link className='link-style-das' to={`/dashboard2/addproduct`}>
                    <li className='dashboard-li'>
                         <Inventory2RoundedIcon className='icon'/>
                         <span>Add-Products</span>
-                        </li></Link>}
+                        </li></Link>
+        </Box>}
                        
                    
                    { admin && <Link className='link-style-das' to={`/dashboard2/addadmin`}>
