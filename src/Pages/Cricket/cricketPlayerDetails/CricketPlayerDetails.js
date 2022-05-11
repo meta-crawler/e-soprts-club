@@ -1,20 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
-import Navigation from "../../Shared/Navigation/Navigation";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+<<<<<<< HEAD
+=======
 import { Button, Container, Modal } from "react-bootstrap";
 import { Rating, Typography } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
+>>>>>>> 06d1a84120ba3c1d7637fcbef363b44126ba559e
 import IosShareIcon from "@mui/icons-material/IosShare";
+import StarIcon from "@mui/icons-material/Star";
+import { Rating, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import PlayerReviwe from "../../PlayerReviwe/PlayerReviwe";
+import React, { useEffect, useState } from "react";
+import { Button, Container } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
+import { addReview } from "../../../features/PlayerReviewSlice/PlayerReviewSlice";
 import location from "../../../Images/Connting/819814.png";
 import email from "../../../Images/Connting/email.png";
 import phone from "../../../Images/Connting/phone-call.png";
-import { useDispatch } from "react-redux";
-import { addReview } from "../../../features/PlayerReviewSlice/PlayerReviewSlice";
+import biograpy from "../../../Images/news_296_all-sports-banner_nq.png";
+import PlayerReviwe from "../../PlayerReviwe/PlayerReviwe";
+import Navigation from "../../Shared/Navigation/Navigation";
 
 const labels = {
   0.5: "Useless",

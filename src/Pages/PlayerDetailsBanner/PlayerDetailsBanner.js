@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import bannerImg from '../../Images/playerimgbanner.png'
-import  './PlayerDetailsBanner.css';
-  import {
-    faMailBulk,
-    faLocation,
-    faPhone,
+import {
     faVideo
-    
-  } from "@fortawesome/free-solid-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './PlayerDetailsBanner.css';
 const PlayerDetailsBanner = () => {
     const { id } = useParams();
     const [details, setDetails] = useState([])

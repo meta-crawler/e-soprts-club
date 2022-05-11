@@ -1,7 +1,5 @@
 
-import React from 'react';
 import { useNavigate} from 'react-router-dom';
-import {  Button, Container, Modal } from 'react-bootstrap';
 import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 
 
@@ -13,7 +11,6 @@ import { IconContext } from "react-icons";
 import { FcRules } from 'react-icons/fc';
 import { Link} from 'react-router-dom';
 import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
-import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import './NewsPoint.css';
 
 
@@ -35,18 +32,14 @@ const NewsPoint = () => {
 
     
     const [event, setEvent] = useState([])
-    const [show, setShow] = useState(false);
+
     useEffect(() => {
-      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
+      fetch("https://blooming-thicket-66783.herokuapp.com/upcomingEvents")
         .then((res) => res.json())
         .then((data) => setEvent(data));
     }, []);
 
-console.log(event);
-
-
-const handleClose = () => setShow(false);
-const handleShow = () => setShow(true);
+    
 
 
 
@@ -62,9 +55,6 @@ const Permetion = () => {
 
     
 }
-
-
-
 
     return (
         <Container id='news'>

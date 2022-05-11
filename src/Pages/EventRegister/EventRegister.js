@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import {
-  faComment,
-  faShareNodes,
-  faTag,
+    faComment,
+    faShareNodes,
+    faTag
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import useAuth from "../../Hook/UseAuth";
 import Navigation from "../Shared/Navigation/Navigation";
