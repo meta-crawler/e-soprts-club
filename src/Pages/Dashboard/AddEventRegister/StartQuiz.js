@@ -54,19 +54,19 @@ const StartQuiz = () => {
                         parID ? <div>
                                 <div style={{display:"flex",alignItems:"center",justifyContent:"center", position:"relative",}}>
                                     <button className='start-quiz' style={{position:"absolute", top:"26%", border:"none", backgroundColor:"transparent",fontSize:"2rem",fontWeight:"900",padding:"0.6rem 4rem",color:"#0F5FE2 "}} onClick={handleStartContest}>START CONTEST</button>
-                                    <img src="https://i.ibb.co/V3Fv54c/quize-1-removebg-preview-1.png" alt="" />
+                                    <img  src="https://i.ibb.co/V3Fv54c/quize-1-removebg-preview-1.png" alt="" />
                                 </div>
                             </div>
                         :   <div>
                             <div style={{display:"flex",alignItems:"center",justifyContent:"center", position:"relative",}}>
-                                <NavLink to={"/contestsregister"}  style={{position:"absolute", top:"26%", border:"none", backgroundColor:"transparent",fontSize:"2rem",fontWeight:"900",padding:"0.6rem 2.3rem",color:"#0F5FE2 ",textDecoration:"none",}} >REGISTER CONTEST</NavLink>
-                                <img src="https://i.ibb.co/V3Fv54c/quize-1-removebg-preview-1.png" alt="" />
+                                <NavLink to={"/contestsregister"}  className='startQuize-link' style={{position:"absolute", top:"26%", border:"none", backgroundColor:"transparent",fontSize:"2rem",fontWeight:"900",padding:"0.6rem 2.3rem",color:"#0F5FE2 ",textDecoration:"none",}} >REGISTER CONTEST</NavLink>
+                                <img className='start-img' src="https://i.ibb.co/V3Fv54c/quize-1-removebg-preview-1.png" alt="" />
                             </div>
                         </div>
                     }
                     <div>
                         {
-                            admin && <div style={{textAlign:"center", marginTop:"15px"}}>
+                            admin && <div style={{textAlign:"center", marginTop:"15px", color:'#FFB700'}}>
                                 <h1>Hey {user.displayName ? user.displayName : ""}, you are Admin!</h1>
                                 <h3>You can add new quizes</h3>
                                 {
