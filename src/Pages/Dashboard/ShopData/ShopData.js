@@ -41,7 +41,7 @@ const ShopData = () => {
       <td className='shop-data-cat'>{pd.tags}</td>
       <td>{pd.payment ? 
       'Paid' : 
-      <Link style={{textDecoration: "none", margin: "10px"}} to={`/dashboard/payment/${pd._id}`}>
+      <Link style={{textDecoration: "none", margin: "10px"}} to={`/dashboard2/payment/${pd._id}`}>
       <button className="btn bg-danger p-2">Payment </button>
       </Link>
       }

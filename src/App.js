@@ -102,44 +102,12 @@ function App() {
             <Route path={`/dashboard2/loadProdect`} element={<AddReview />} />
             <Route path={`/dashboard2/payment/:productId`} element={<Payment />} />
             <Route path={`/dashboard2/addEventRegister`} element={<AddEventRegister />} />
-            <Route path={`/dashboard2/addticketbooking/checkout`} element={<CheckOut />} />
+            <Route path={`/dashboard2/addticketbooking/checkout/:serviceId`} element={<CheckOut />} />
             </Route>
             
 
-
-            <Route path="/dashboard" element={<Dashboard />}>
-            <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
-            <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
-          
-          
-           <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
-
-            <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
-            {/* <Route path={`/dashboard/yourShop`} element={<AdminRoute> <ShopData /> </AdminRoute>} /> */}
-            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
-
-            <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
 
            
-            <Route path={`/dashboard/yourShop`} element={<ShopData /> } />
-
-
-            <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
-
-
-
-            {/* <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} /> */}
-            <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} />
-            <Route path={`/dashboard/contest/start`} element={<StartQuiz />} />
-            <Route path={`/dashboard/contest/result`} element={<ContestResult />} />
-
-            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
-            <Route path={`/dashboard/payment/:productId`} element={<Payment />} />
-            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
-
-
-            </Route>
-            
                              
             
 

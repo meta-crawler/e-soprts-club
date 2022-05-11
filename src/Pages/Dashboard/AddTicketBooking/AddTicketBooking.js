@@ -56,7 +56,7 @@ const AddTicketBooking = () => {
 
 
   }
-  console.log(ticket)
+  console.log(ticket, 'ticket')
 
 
 
@@ -86,7 +86,7 @@ const AddTicketBooking = () => {
       <td>{pd.number}</td>
       <td className='th-display-block'>{pd.date}</td>
       {/* <td className='th-display-block'>{pd.city}</td> */}
-      <td className='th-display-block'> <Link to='checkout'><button>Payment</button></Link> </td>
+      <td className='th-display-block'> <Link to={`checkout/${pd._id}`}><button>Payment</button></Link> </td>
       <button onClick={()=> handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
 {pd.status === "pending" ? <button onClick={()=> handleApprove(pd._id)} className="btn bg-danger p-2">Approve</button>: <span><AddTaskIcon style={{
   color: "dc3545", fontSize: "20px"
