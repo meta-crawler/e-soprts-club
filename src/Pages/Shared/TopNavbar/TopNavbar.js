@@ -17,13 +17,13 @@ const TopNavbar = () => {
             </div>
           </div>
           <div className="col-md-6 text-end">
-          <Link to="/dashboard/contest/start">
+          <Link to="/dashboard2/contest/start">
               <span className="top-right-part bg-warning">
                 <FontAwesomeIcon icon={faTicket} /> PLAY CONTEST 
               </span>
             </Link>
 
-        <Link to="/dashboard/contest/result">
+        <Link to="/dashboard2/contest/result">
               <span className="top-right-part bg-success">
                 <FontAwesomeIcon icon={faTicket} /> CONTEST RESULT 
               </span>

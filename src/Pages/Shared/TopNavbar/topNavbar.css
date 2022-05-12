@@ -3,7 +3,11 @@
     font-size: 14px;
 }
 
-
+@media only screen and (max-width:688px) {
+    .top-navbar span{
+        font-size: 10px;
+    }
+}
 
 
 
@@ -17,6 +21,6 @@
 }
 @media only screen and (max-width: 992px) {
     .top-navbar{
-        display: none;
+        /* display: none; */
     }
 }

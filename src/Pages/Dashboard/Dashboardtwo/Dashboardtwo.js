@@ -95,6 +95,10 @@ function Dashboardtwo(props) {
                         <span>Contest</span>
                     </li>
                     </Link>
+                 <Link to={`/dashboard2/profile`}>   <li  className='dashboard-li'>
+                        <LogoutIcon className='icon' />
+                        <span>Profile</span>
+                        </li></Link>
                     <li onClick={logOut} className='dashboard-li'>
                         <LogoutIcon className='icon' />
                         <span>Logout</span>
