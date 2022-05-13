@@ -33,6 +33,7 @@ const labels = {
 const BaseketBallDetails = () => {
   let { id } = useParams();
 
+  const [openModel, setOpenModel] = useState(false);
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -95,7 +96,7 @@ const BaseketBallDetails = () => {
     }
     
     // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -138,7 +139,7 @@ const BaseketBallDetails = () => {
               
               
               
-              <Button variant="primary" onClick={handleShow}>
+              <Button style={{marginRight:'10px'}} variant="primary" onClick={handleShow}>
                 Conecting
       </Button>
 
@@ -268,69 +269,42 @@ const BaseketBallDetails = () => {
       </Modal> 
               
               
-
-              <button className="details-player-video">
+      <button onClick={ () => setOpenModel(true)} className="details-player-video">
                 <FontAwesomeIcon
                   style={{ marginRight: "5px" }}
                   icon={faVideo}
                 />{" "}
-                <div
-                  className="modal fade"
-                  id="exampleModalToggle"
-                  aria-hidden="true"
-                  aria-labelledby="exampleModalToggleLabel"
-                  tabindex="-1"
-                >
-                  <div className="modal-dialog modal-dialog-centered">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h5
-                          className="modal-title"
-                          style={{ color: "ButtonText" }}
-                          id="exampleModalToggleLabel"
-                        >
-                          Player details video
-                        </h5>
-                        <button
-                          type="button"
-                          className="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div className="modal-body">
-                        {/* <video src={video}></video> */}
-                        <iframe
-                          width="455"
-                          height="250"
-                          src="https://www.youtube.com/embed/387782CRNQM"
-                          title="YouTube video player"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowfullscreen
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  className="player-details-video"
-                  data-bs-toggle="modal"
-                  href="#exampleModalToggle"
-                  role="button"
-                >
+               
                   Play video
-                </a>
+                
               </button>
+
+
+
             </div>
-            <div>
-              {/* <div className='details-single-img'></div> */}
-              <img
-                className="details-player-img"
-                src={sinleTaTanis?.img}
-                alt=""
-              />
-            </div>
+            
+            {
+              openModel? <div> 
+
+
+<iframe style={{marginTop:'200px'}} width="560" height="315" src="https://www.youtube.com/embed/dyIFohEjkyM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <Button style={{ marginBottom:'100px'}} onClick={ () => setOpenModel(false)} >Close </Button>
+
+                </div>
+                :
+
+<div >
+{/* <div className='details-single-img'></div> */}
+<img 
+  className="details-player-img"
+  src={sinleTaTanis?.img}
+  alt=""
+/>
+</div>
+
+
+
+            }
           </Container>
         </div>
       </>

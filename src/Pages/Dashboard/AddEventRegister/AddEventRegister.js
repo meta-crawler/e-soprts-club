@@ -9,7 +9,7 @@ const AddEventRegister = () => {
     fetch("https://blooming-thicket-66783.herokuapp.com/eventRegister")
       .then((res) => res.json())
       .then((data) => setTicket(data));
-  }, []);
+  }, [ticket]);
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you want to delete?");
@@ -31,16 +31,18 @@ const AddEventRegister = () => {
   };
 
   const handleApprove = (id) => {
-    console.log(id);
-
-    fetch(`https://blooming-thicket-66783.herokuapp.com/updatemere/${id}`, {
-      method: "PUT",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const remaining = ticket.filter((order) => order._id !== id);
-        setTicket(remaining);
-      });
+    const proceed = window.confirm("Are you sure, you want to Approve?");
+   if(proceed){
+      fetch(`https://blooming-thicket-66783.herokuapp.com/updatemere/${id}`, {
+            method: 'PUT',
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if(data.modifiedCount){
+                alert('Status Updated!');
+            }
+        })
+   }
   };
   console.log(ticket);
 
@@ -68,7 +70,7 @@ const AddEventRegister = () => {
         {ticket.map((pd, index) => (
           <tbody key={index} data-testid={`event-book-${index}`}>
             <tr aria-level={index}>
-              <td>{index}</td>
+              <td>{index+1}</td>
               <td className="th-display-block">{pd.StartDate}</td>
               <td className="th-display-block">{pd.sex}</td>
               <td>{pd.eventName}</td>

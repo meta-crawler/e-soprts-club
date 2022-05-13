@@ -43,3 +43,13 @@
         width: 900px;
     }
 }
+@media only screen and (max-width:688px) {
+    .start-img{
+        width: 119%;
+    }
+    .startQuize-link{
+        top: 23% !important;
+        font-size: 22px !important;
+    }
+    
+}

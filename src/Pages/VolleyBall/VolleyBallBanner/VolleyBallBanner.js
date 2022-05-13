@@ -39,7 +39,7 @@ const VolleyBallBanner = () => {
   </div>
 </div>
 
-<a className='player-details-video' data-bs-toggle="modal" href="#exampleModalToggle" role="button">FULL TABLE</a></Button>
+</Button>
 
             </div>
             </Container>
