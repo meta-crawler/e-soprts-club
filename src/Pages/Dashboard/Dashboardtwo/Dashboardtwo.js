@@ -41,7 +41,7 @@ function Dashboardtwo(props) {
   };
 
   const drawer = (
-    <div style={{ background:'blue' , overflow:'hidden' , paddingBottom:'350px'}}>
+    <div style={{ background:'#040437' , overflow:'hidden' , paddingBottom:'350px'}}>
       <Toolbar    />
       <Divider />
         <Link className='dashboard-home'  to="/home"> <HomeIcon></HomeIcon> HOME</Link>
@@ -95,10 +95,10 @@ function Dashboardtwo(props) {
                         <span>Contest</span>
                     </li>
                     </Link>
-                 <Link to={`/dashboard2/profile`}>   <li  className='dashboard-li'>
+                 {/* <Link to={`/dashboard2/profile`}>   <li  className='dashboard-li'>
                         <LogoutIcon className='icon' />
                         <span>Profile</span>
-                        </li></Link>
+                        </li></Link> */}
                     <li onClick={logOut} className='dashboard-li'>
                         <LogoutIcon className='icon' />
                         <span>Logout</span>

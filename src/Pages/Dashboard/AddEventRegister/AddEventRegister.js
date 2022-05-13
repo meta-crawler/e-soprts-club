@@ -65,12 +65,12 @@ const AddEventRegister = () => {
 
     return (
         <div>
-          <h1 style={{margin: "50px" ,color:'#FFB700'}}>All Event Register {ticket.length}</h1>
-           <Table striped bordered hover variant="dark">
+          <h1 style={{margin: "50px" ,color:'#ffffff', marginLeft:'0'}}>All Event Register</h1>
+           <Table striped bordered hover variant="white">
   <thead>
-    <tr>
+    <tr style={{color:'white'}}>
       <th>#</th>
-      <th className='th-display-block'>Start Date</th>
+      <th className='th-display-block '>Start Date</th>
       <th className='th-display-block'>Sex</th>
       <th>First Name</th>
       <th className='th-display-block'>Club Name</th>
@@ -84,16 +84,16 @@ const AddEventRegister = () => {
     ticket.map((pd, index) => (   
       <tbody>
       <tr>
-      <td>{index}</td>
-      <td className='th-display-block'>{pd.StartDate}</td>
-      <td className='th-display-block'>{pd.sex}</td>
-      <td>{pd.eventName}</td>
-      <td className='th-display-block'>{pd.ClubName}</td>
-      <td>{pd.number}</td>
-      <td className='th-display-block'>{pd.city}</td>
-      <td className='th-display-block'>{pd.address}</td>
-      <button onClick={()=> handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
-{pd.status === "pending" ? <button onClick={()=> handleApprove(pd._id)} className="btn bg-danger p-2">Approve</button>: <span><AddTaskIcon style={{
+      <td style={{color:'white'}}>{index}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.StartDate}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.sex}</td>
+      <td style={{color:'white'}}>{pd.eventName}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.ClubName}</td>
+      <td style={{color:'white'}}>{pd.number}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.city}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.address}</td>
+      <button onClick={()=> handleDelete(pd._id)} className="btn bg-danger text-white  p-2">Delete</button>
+{pd.status === "pending" ? <button onClick={()=> handleApprove(pd._id)} className="btn  bg-danger p-2">Approve</button>: <span><AddTaskIcon style={{
   color: "dc3545", fontSize: "20px"
 }} /></span>}
       

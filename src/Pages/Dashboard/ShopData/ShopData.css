@@ -9,3 +9,12 @@
         width: 339px;
     }
 }
+.shop-data-shadow{
+    box-shadow: #f1f1f1 0px 0px 10px 2px;
+    background: none;
+    border: 0px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin:10px
+}

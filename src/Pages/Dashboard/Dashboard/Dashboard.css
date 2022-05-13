@@ -55,7 +55,8 @@ hr{
     cursor: pointer;
     background-color: #732cc6;
     border-radius: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 13px;
+    margin-right: 19px;
 }
 .dashboard-li:hover{
     background-color: #ece8ff;
@@ -70,7 +71,7 @@ hr{
 .dashboard-li span{
                      font-size: 21px;
                     font-weight: 600;
-                    color: #a4c7d1;;
+                    color: #ffffff;;
                     margin-left: 10px;
 }
 .buttom{
