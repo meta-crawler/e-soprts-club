@@ -44,7 +44,7 @@ const Nextmatch = () => {
         <div className='tweets-style'>
            
             <div className=''>
-            <h2 style={{color:'whitesmoke', paddingLeft:'10px'}}>RECENT TWEETS</h2>
+            <h2 style={{color:'whitesmoke', paddingLeft:'10px', height:'70px'}}>RECENT TWEETS</h2>
             </div>
         <Carousel>
   <Carousel.Item>

@@ -1,5 +1,5 @@
 .main-footer{
-    background-color: #111111;
+    /* background-color: #111111; */
     margin-top: 30px;
 }
 .footer-nav{
@@ -35,7 +35,7 @@
     color: whitesmoke;
 }
 .footer-li li:hover{
-    color: #e40046;
+    color: #0d6efd;
 }
 .footer-cart{
     display: flex;
@@ -48,7 +48,7 @@
     transition: linear .3s;
 }
 .news-des:hover{
-    color: #e40046;
+    color: #0d6efd;
     cursor: pointer;
 }
 .news-date{
@@ -65,7 +65,7 @@
     transition: linear .3s;
 }
 .footer-appmain:hover{
-    background-color: #e40046;
+    background-color: #0d6efd;
 }
 .app-buy{
     font-weight: 300;

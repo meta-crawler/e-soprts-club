@@ -56,7 +56,7 @@ const AddTicketBooking = () => {
 
 
   }
-  console.log(ticket, 'ticket')
+  // console.log(ticket, 'ticket')
 
 
 

@@ -26,7 +26,7 @@ const Video = () => {
 
             {/* <Button className='video-button modal-dialog modal-dialog-centered'> WATCH ON YOUTUBE  </Button> */}
             <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button  variant="primary" onClick={handleShow}>
       WATCH ON YOUTUBE
       </Button>
 

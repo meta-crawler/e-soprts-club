@@ -1,8 +1,8 @@
 .fonticon-style{
     font-size: 50px;
-    color: #e40046;
+    color: #0d6efd;
     cursor: pointer;
-    
+    margin: 10px;
     
 }
 .fonticon-main{
@@ -13,7 +13,7 @@
     padding-bottom: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     margin-top: 50px;
    
     
@@ -33,11 +33,11 @@
 
 }
 .footericon-title{
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     transition: linear .3s;
     cursor: pointer;
 }
 .footericon-title:hover{
-    color: #e40046;
+    color: #ffffff;
 }
