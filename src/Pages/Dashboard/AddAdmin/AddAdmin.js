@@ -1,7 +1,7 @@
 import { Alert } from '@mui/material';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import './AddAdmin.css'
+import './AddAdmin.css';
 
 const AddAdmin = () => {
     const { register, handleSubmit, watch, errors,reset } = useForm();

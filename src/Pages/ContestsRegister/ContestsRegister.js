@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
 import {
     faComment,
     faShareNodes,
-    faTag,
-  } from "@fortawesome/free-solid-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
-  import useAuth from "../../Hook/UseAuth";
-  import Navigation from "../Shared/Navigation/Navigation";
+    faTag
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from 'react';
+import { Button, Container, Form, Row, Spinner } from "react-bootstrap";
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import useAuth from "../../Hook/UseAuth";
+import Navigation from "../Shared/Navigation/Navigation";
 
 const ContestsRegister = () => {
     const { isLoading,user} = useAuth()

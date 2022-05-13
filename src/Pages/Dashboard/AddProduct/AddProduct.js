@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Box, Button, Rating, Typography } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star';
 import IosShareIcon from '@mui/icons-material/IosShare';
-import './AddProduct.css'
+import StarIcon from '@mui/icons-material/Star';
+import { Box, Button, Rating, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import './AddProduct.css';
 
 
 
