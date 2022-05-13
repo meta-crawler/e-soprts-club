@@ -7,6 +7,11 @@
     .top-navbar span{
         font-size: 10px;
     }
+   .top-banner-link{
+        position: absolute !important;
+        top: 39px !important;
+        right: 26px !important;
+    }
 }
 
 .top-banner-link{
@@ -27,4 +32,5 @@
     .top-navbar{
         /* display: none; */
     }
+
 }
