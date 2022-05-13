@@ -6,9 +6,50 @@
 }
 .link-style:hover{
     color: white;
-    /* background-color: #00a8ff;   */
+    /* background-color: #00a8ff;  */
+    border: 2px solid #00a8ff;
+    
     
 }
+/* .link-style{
+    display: block;
+    width: 131px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  .link-style h5{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .link-style:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  .link-style:hover{
+    color: #fff;
+  }
+  
+  .link-style:hover:after{
+    width: 100%;
+  } */
 .text-style{
     color: whitesmoke;
 }

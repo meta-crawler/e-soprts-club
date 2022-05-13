@@ -35,18 +35,18 @@ function Dashboardtwo(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const {admin , logOut } = useAuth()
-  console.log(admin)
+  // console.log(admin)
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
+    <div style={{ background:'blue' , overflow:'hidden' , paddingBottom:'350px'}}>
+      <Toolbar    />
       <Divider />
-      <Link className='dashboard-home'  to="/home"> <HomeIcon></HomeIcon> HOME</Link>
+        <Link className='dashboard-home'  to="/home"> <HomeIcon></HomeIcon> HOME</Link>
      
-      { admin && <Box>
+        { admin && <Box>
         <p className="title">Admin Useful</p>
         <Link className='link-style-das' to={`/dashboard2/addproduct`}>
                    <li className='dashboard-li'>
@@ -95,6 +95,10 @@ function Dashboardtwo(props) {
                         <span>Contest</span>
                     </li>
                     </Link>
+                 <Link to={`/dashboard2/profile`}>   <li  className='dashboard-li'>
+                        <LogoutIcon className='icon' />
+                        <span>Profile</span>
+                        </li></Link>
                     <li onClick={logOut} className='dashboard-li'>
                         <LogoutIcon className='icon' />
                         <span>Logout</span>
@@ -150,7 +154,10 @@ function Dashboardtwo(props) {
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+           
           }}
+          
+
         >
           {drawer}
         </Drawer>

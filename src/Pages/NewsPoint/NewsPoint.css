@@ -72,7 +72,12 @@
     bottom: 0;
 }
 
-
+.newspoint-text{
+    color: #ffffff;
+    width: 900px;
+    margin: 0 auto;
+    font-family: 'Mukta', sans-serif;
+}
 .Line:after {
     background: #fbc02d;
     width: 75px;

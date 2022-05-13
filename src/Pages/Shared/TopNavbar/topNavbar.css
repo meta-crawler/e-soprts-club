@@ -3,9 +3,22 @@
     font-size: 14px;
 }
 
+@media only screen and (max-width:688px) {
+    .top-navbar span{
+        font-size: 10px;
+    }
+   .top-banner-link{
+        position: absolute !important;
+        top: 39px !important;
+        right: 26px !important;
+    }
+}
 
-
-
+.top-banner-link{
+    position: absolute;
+    top: 10px;
+    right: 280px;
+}
 
 .top-right-part{
     color: white;
@@ -17,6 +30,7 @@
 }
 @media only screen and (max-width: 992px) {
     .top-navbar{
-        display: none;
+        /* display: none; */
     }
+
 }

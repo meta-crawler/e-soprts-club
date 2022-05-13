@@ -55,13 +55,13 @@ const AddTicketBooking = () => {
 
 
   }
-  console.log(ticket, 'ticket')
+  // console.log(ticket, 'ticket')
 
 
 
     return (
         <div >
-          <h1 style={{margin: "50px"}}> All Ticket Booking ({ticket.length}) </h1>
+          <h1 style={{margin: "50px" , color:'#FFB700'}}> All Ticket Booking ({ticket.length}) </h1>
            <Table className='ticket-table' striped bordered hover variant="dark">
   <thead>
     <tr>

@@ -18,7 +18,7 @@ const ShopData = () => {
 
     return (
         <div >
-          <h1 style={{margin: "50px"}}> All shop payment system ({ordersInfo.length}) </h1>
+          <h1 style={{margin: "50px" , color:'gold'}}> All shop payment system ({ordersInfo.length}) </h1>
            <Table className='shop-data-main' striped bordered hover variant="dark">
   <thead>
     <tr>
