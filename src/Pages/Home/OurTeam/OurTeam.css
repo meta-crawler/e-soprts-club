@@ -32,6 +32,10 @@
     color: rgb(251, 251, 251);
     text-transform: uppercase;
     margin-bottom: 50px;
+   
+    width: 900px;
+    margin: 0 auto;
+    font-family: 'Mukta', sans-serif;
 }
 .card-style{
     background-color: rgb(56, 65, 78);

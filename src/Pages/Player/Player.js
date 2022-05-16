@@ -4,10 +4,10 @@ import './Player.css';
 
 const Player = (props) => {
 
-    console.log(props.player);
+    // console.log(props.player);
 
     const { name, img, Position, Nationality, id } = props.player;
-    console.log(props.player);
+    // console.log(props.player);
 
 
     const navigate = useNavigate();

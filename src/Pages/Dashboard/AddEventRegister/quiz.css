@@ -43,3 +43,25 @@
         width: 900px;
     }
 }
+@media only screen and (max-width:688px) {
+    .start-img{
+        width: 119%;
+    }
+    .startQuize-link{
+        top: 23% !important;
+        font-size: 22px !important;
+    }
+    .contest-title{
+        margin: 5px 0px 46px  !important;
+    }
+    .contest-result-id{
+        display: none;
+    }
+    .context-result-main-table{
+        margin-left:-67px ;
+        border-top: none !important;
+        border-radius: none;
+        box-shadow: none !important;
+    }
+    
+}

@@ -112,7 +112,7 @@ const CricketPlayerDetails = () => {
     }
     
     // fetch("https://blooming-thicket-66783.herokuapp.com/review", {
-    fetch("http://localhost:7000/review", {
+    fetch("https://blooming-thicket-66783.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -133,7 +133,6 @@ const CricketPlayerDetails = () => {
   return (
     <>
       <Navigation />
-      <>
         <div className="details-player-main">
           <div className="details-player-bgimg"></div>
           <Container className="details-player-info">
@@ -152,7 +151,7 @@ const CricketPlayerDetails = () => {
               <Button variant="primary" onClick={handleShow}>
 
               <p className="details-player-des">{singleCricket?.describe}</p>
-              <button
+              <Button
                 className="details-connecting cart-btn"
                 type="button"
                 data-bs-toggle="modal"

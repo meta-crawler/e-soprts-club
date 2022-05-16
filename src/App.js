@@ -38,10 +38,15 @@ import SingleProduct from "./Pages/Home/SingleProduct/SingleProduct";
 import PlayerDetails from "./Pages/PlayerDetails/PlayerDetails";
 
 
+
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 
 import ShopData from "./Pages/Dashboard/ShopData/ShopData";
+import Payment from "./Pages/Dashboard/Payment/Payment";
 import UpComeingContest from "./Pages/Contest/UpComeingContest";
+import Dashboardtwo from "./Pages/Dashboard/Dashboardtwo/Dashboardtwo";
+import CheckOut from "./Pages/CheckOut/CheckOut";
+import Profile from "./Pages/Profile/Profile";
 
 
 function App() {
@@ -82,39 +87,30 @@ function App() {
 
             <Route path="/basketBallPlayer/:id" element={<PrivateRoute><BaseketBallDetails /></PrivateRoute>} />
 
-            <Route path="/dashboard" element={<Dashboard />}>
-            <Route path={`/dashboard/addproduct`} element={<AddProduct></AddProduct>} />
-            <Route path={`/dashboard/addadmin`} element={<AddAdmin></AddAdmin>} />
-          
-          
-           <Route path={`/dashboard/addreview`} element={<AddReview></AddReview>} />
-
-            <Route path={`/dashboard/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
-            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
-            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
-
-            <Route path={`/dashboard/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
-
-           
-            <Route path={`/dashboard/yourShop`} element={<ShopData /> } />
-
-
-            <Route path={`/dashboard/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
-
-
-
-            {/* <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} /> */}
-            <Route path={`/dashboard/contest/start/:participant`} element={<QuizContest />} />
-            <Route path={`/dashboard/contest/start`} element={<StartQuiz />} />
-            <Route path={`/dashboard/contest/result`} element={<ContestResult />} />
-
-            <Route path={`/dashboard/loadProdect`} element={<AddReview />} />
-            <Route path={`/dashboard/addEventRegister`} element={<AddEventRegister />} />
-
-
+            {/* dashboardtwo  */}
+            <Route path="/dashboard2" element={<Dashboardtwo />} >
+            <Route path={`/dashboard2/addproduct`} element={<AddProduct></AddProduct>} />
+            <Route path={`/dashboard2/addadmin`} element={<AddAdmin></AddAdmin>} />
+           <Route path={`/dashboard2/addreview`} element={<AddReview></AddReview>} />
+            <Route path={`/dashboard2/addticketbooking`} element={<AddTicketBooking></AddTicketBooking>} />
+            <Route path={`/dashboard2/addEventRegister`} element={<AddEventRegister />} />
+            <Route path={`/dashboard2/addticketbooking`} element={<AdminRoute><AddTicketBooking></AddTicketBooking></AdminRoute>} />
+            <Route path={`/dashboard2/yourShop`} element={<ShopData /> } />
+            <Route path={`/dashboard2/addEventRegister`} element={<AdminRoute><AddEventRegister /></AdminRoute>} />
+            <Route path={`/dashboard2/contest/start/:participant`} element={<QuizContest />} />
+            <Route path={`/dashboard2/contest/start`} element={<StartQuiz />} />
+            <Route path={`/dashboard2/contest/result`} element={<ContestResult />} />
+            <Route path={`/dashboard2/loadProdect`} element={<AddReview />} />
+            <Route path={`/dashboard2/payment/:productId`} element={<Payment />} />
+            <Route path={`/dashboard2/addEventRegister`} element={<AddEventRegister />} />
+            <Route path={`/dashboard2/profile`} element={<Profile />} />
+            <Route path={`/dashboard2/addticketbooking/checkout/:serviceId`} element={<CheckOut />} />
             </Route>
             
-            
+
+
+           
+                             
             
 
             

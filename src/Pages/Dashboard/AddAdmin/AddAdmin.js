@@ -25,8 +25,8 @@ const AddAdmin = () => {
 
     return (
         <div className='admin-main'>
-      <h1 className=''>make admin</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <h1 style={{color:'#FFB700' , marginBottom:'30px'}}>Make Admin</h1>
+      <form className='admin-from' onSubmit={handleSubmit(onSubmit)}>
         <input
           className="input-field"
           name="email"

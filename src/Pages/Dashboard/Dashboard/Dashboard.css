@@ -29,20 +29,39 @@ hr{
     padding: 0px;
 }
 .title{
-    font-size: 15px;
+    font-size: 21px;
     font-weight: bold;
     color: #999;
     margin-top: 15px;
     margin-bottom: 5px;
+}
+.dashboard-home{
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+    background-color: #000000c9;
+    color: #c9cb0d;
+    padding-left: 20px;
+    padding-right: 112px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .dashboard-li{
     display: flex;
     align-items: center;
     padding: 5px;
     cursor: pointer;
+    background-color: #732cc6;
+    border-radius: 15px;
+    margin-bottom: 13px;
+    margin-right: 19px;
 }
 .dashboard-li:hover{
     background-color: #ece8ff;
+    border-radius: 10px;
+    color: rgba(19, 232, 69, 0.483) !important;
 
 }
 .icon{
@@ -50,9 +69,9 @@ hr{
     color: #7451f8;
 }
 .dashboard-li span{
-                     font-size: 13px;
+                     font-size: 21px;
                     font-weight: 600;
-                    color: #888;
+                    color: #ffffff;;
                     margin-left: 10px;
 }
 .buttom{

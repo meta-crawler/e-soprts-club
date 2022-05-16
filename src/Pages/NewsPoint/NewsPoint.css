@@ -42,6 +42,17 @@
     .eventBanner{
         width: 467px;
     }
+    .news-pont-contest-b{
+        left: 14%;
+    }
+    .ContentsFullBanner{
+        width: 381px !important;
+    }
+    .ContentsFullBanner{
+        margin: 0px auto !important;
+         margin-left: 0px !important;
+        width: 379px !important;
+    }
     /* .TablePoint{
         width: 454px;
     } */
@@ -61,7 +72,12 @@
     bottom: 0;
 }
 
-
+.newspoint-text{
+    color: #ffffff;
+    width: 900px;
+    margin: 0 auto;
+    font-family: 'Mukta', sans-serif;
+}
 .Line:after {
     background: #fbc02d;
     width: 75px;
@@ -150,4 +166,11 @@
 
 .eventBanner:hover{
     border-radius: 30px;
+}
+
+.ContentsFullBanner{
+    background-image: url(../../Images/UPCOMINGEVENTS/images.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
