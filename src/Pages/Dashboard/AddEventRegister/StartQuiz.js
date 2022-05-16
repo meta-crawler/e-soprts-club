@@ -45,8 +45,6 @@ const StartQuiz = () => {
     }
 
 
-    console.log("object");
-
     return (
         <div style={{marginTop:"50px", width:"100%", height:"100%"}}>
             {

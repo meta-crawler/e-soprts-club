@@ -19,16 +19,18 @@ const AddQuizQuestion = ({setAddQuizeModalOpen}) => {
         setNewQuizOptions(_newQuizOptions)
     }
     const handleQuizeAdd = (e) =>{
-        console.log(newQuizOptions.length);
+        // console.log(newQuizOptions.length);
         e.preventDefault();
-        console.log("click");
+        // console.log("click");
         const quizOptions = []
         Object.keys(newQuizOptions).map(property=>{
             quizOptions.push(newQuizOptions[property])
             return null
         })
+        console.log(newQuizInfo);
         if ((quizOptions.length === 4) && (newQuizInfo.lavel) && (newQuizInfo.ans) && (newQuizInfo.question) && (newQuizInfo.playing_ctg)) {
             newQuizInfo.options = quizOptions
+            
             fetch("https://blooming-thicket-66783.herokuapp.com/contest/quizes",{
                 method:"post",
                 headers:{
@@ -52,48 +54,48 @@ const AddQuizQuestion = ({setAddQuizeModalOpen}) => {
 
             alert("All fields are required")
         }
-        console.log(quizOptions);
+        // console.log(quizOptions);
     }
     return (
         <div className="add-quiz" style={{marginBottom:"15px"}}>
             <button onClick={e=>setAddQuizeModalOpen(false)} style={{display:"block",marginLeft:"auto",border:"none",backgroundColor:"red", borderRadius:"8px", padding:"3px 25px", fontWeight:"bold"}}>X</button>
             <form className='px-3 mt-4' onSubmit={e=>handleQuizeAdd(e)}>
-                <div class="mb-3 row">
-                    <label for="question" class="col-sm-2 col-form-label">Question</label>
-                    <div class="col-sm-10">
-                        <input onChange={e=>handleNewQuizChange(e)} type="text" name="question" class="form-control" id='question' placeholder='Add a question' required/>
+                <div className="mb-3 row">
+                    <label htmlFor="question" className="col-sm-2 col-form-label">Question</label>
+                    <div className="col-sm-10">
+                        <input onChange={e=>handleNewQuizChange(e)} data-testid="question" type="text" name="question" className="form-control" id='question' placeholder='Add a question' required/>
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="question" class="col-sm-2 col-form-label">Options</label>
-                    <div class="col-sm-10">
-                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question1' class="form-control" id='question1' placeholder='Option 1' required/>
-                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question2' class="form-control" id='question2' placeholder='Option 2'required />
-                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question3' class="form-control" id='question3' placeholder='Option 3' required/>
-                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question4' class="form-control" id='question4' placeholder='Option 4' required />
+                <div className="mb-3 row">
+                    <label htmlFor="question" className="col-sm-2 col-form-label">Options</label>
+                    <div className="col-sm-10">
+                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question1' className="form-control" id='question1' placeholder='Option 1' data-testid="option1" required/>
+                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question2' className="form-control" id='question2' placeholder='Option 2' data-testid="option2" required />
+                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question3' className="form-control" id='question3' placeholder='Option 3' data-testid="option3" required/>
+                        <input onBlur={e=>handleNewQuizAnswerBlur(e)} type="text" name='question4' className="form-control" id='question4' placeholder='Option 4' data-testid="option4" required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="question" class="col-sm-2 col-form-label">Answer</label>
-                    <div class="col-sm-10">
-                        <input  onChange={e=>handleNewQuizChange(e)} type="text" name="ans" class="form-control" id='question' placeholder='correct answer' required />
+                <div className="mb-3 row">
+                    <label htmlFor="question" className="col-sm-2 col-form-label">Answer</label>
+                    <div className="col-sm-10">
+                        <input  onChange={e=>handleNewQuizChange(e)} data-testid="answer" type="text" name="ans" className="form-control" id='question' placeholder='correct answer' required />
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="playing_ctg" class="col-sm-2 col-form-label"> Category</label>
-                    <div class="col-sm-10">
-                        <select class="form-select" name="playing_ctg" aria-label="Default select example"  onChange={e=>handleNewQuizChange(e)} id='playing_ctg' defaultValue={"Choose a category"} required>
-                            <option value={"Choose a category"} disabled>Choose a category</option>
+                <div className="mb-3 row">
+                    <label htmlFor="playing_ctg" className="col-sm-2 col-form-label"> Category</label>
+                    <div className="col-sm-10">
+                        <select className="form-select" data-testid="q-ctg-select" name="playing_ctg" aria-label="Default select example"  onChange={e=>handleNewQuizChange(e)} id='playing_ctg' defaultValue={"Choose a category"} required>
+                            <option value={"Choose a category"} data-testid="ctg-option" disabled>Choose a category</option>
                             {
-                                conCategories.map(ctg=><option value={ctg}>{ctg}</option>)
+                                conCategories.map(ctg=><option value={ctg} data-testid={"ctg-option"} >{ctg}</option>)
                             }
                         </select>
                     </div>
                 </div>
-                <div class="mb-3 row">
-                    <label for="level" class="col-sm-2 col-form-label">Level</label>
-                    <div class="col-sm-10">
-                        <select class="form-select"  onChange={e=>handleNewQuizChange(e)} name="lavel" aria-label="Default select example" id='level' defaultValue={"Choose a level"} required>
+                <div className="mb-3 row">
+                    <label htmlFor="level" className="col-sm-2 col-form-label">Level</label>
+                    <div className="col-sm-10">
+                        <select className="form-select"  onChange={e=>handleNewQuizChange(e)} name="lavel" aria-label="Default select example" id='level' defaultValue={"Choose a level"} required>
                             <option value={"Choose a level"} disabled>Choose a level</option>
                             {
                                 conLavels.map(lavel=><option value={lavel}>{lavel}</option>)

@@ -29,7 +29,7 @@ const Timer = ({handleNextQuiz,questionCount,startQuize}) => {
 
     return (
         <div>
-            <h1>Time: {timeer}</h1>
+            <h1 data-testid="time-counter">Time: {timeer}</h1>
         </div>
     );
 };

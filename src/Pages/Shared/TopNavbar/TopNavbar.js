@@ -23,6 +23,32 @@ const TopNavbar = () => {
 
             </div>
           </div>
+
+          <div className="col-md-6 text-end">
+          <Link to="/dashboard/contest/start">
+              <span className="top-right-part bg-warning">
+                <FontAwesomeIcon icon={faTicket} /> PLAY CONTEST 
+              </span>
+            </Link>
+
+        <Link to="/dashboard/contest/result">
+              <span className="top-right-part bg-success">
+                <FontAwesomeIcon icon={faTicket} /> CONTEST RESULT 
+              </span>
+            </Link>
+
+            <Link to="/booking">
+              <span className="top-right-part bg-warning">
+                <FontAwesomeIcon icon={faTicket} /> TICKET BOOKING
+              </span>
+            </Link>
+            <Link to="/event-register">
+              <span className="top-right-part bg-success ">
+                <FontAwesomeIcon icon={faRegistered} /> EVENT REGISTER
+              </span>
+            </Link>
+          </div>
+
           
           {
             subNavOpen && <div className="col-md-6 text-end">
@@ -61,6 +87,7 @@ const TopNavbar = () => {
         }
       </div>
           
+
         </Row>
       </Container>
       

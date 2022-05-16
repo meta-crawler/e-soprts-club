@@ -42,7 +42,7 @@ const AddEventRegister = () => {
         setTicket(remaining);
       });
   };
-  console.log(ticket);
+  // console.log(ticket);
 
   if (!ticket.length) {
     return <div data-testid="book-loading">Loading...</div>

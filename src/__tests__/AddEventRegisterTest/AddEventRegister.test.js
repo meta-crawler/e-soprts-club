@@ -1,4 +1,5 @@
 import { fireEvent, render, screen, waitForElement } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import AddEventRegister from "../../Pages/Dashboard/AddEventRegister/AddEventRegister";
 
 
@@ -14,6 +15,7 @@ describe("AddEventRegister",()=>{
     afterEach(()=>{
         global.fetch = originalFetch;
     })
+
     // 1: scenario
     it("before fetching data, loading should be shown",()=>{
         const {debug} = render(<AddEventRegister></AddEventRegister>)
@@ -60,6 +62,7 @@ describe("AddEventRegister",()=>{
         // response fake delete data  and press click
         const confirmSpy = jest.spyOn(window,"confirm");
         confirmSpy.mockImplementation(jest.fn(()=>true));
+        window.alert = jest.fn()
         const fakeDelRes = {deletedCount:1, acknowledgement: true};
         const mockDelRes = {json: jest.fn().mockResolvedValueOnce(fakeDelRes)};
         const mockDelFetch = jest.fn().mockResolvedValueOnce(mockDelRes);
@@ -67,6 +70,8 @@ describe("AddEventRegister",()=>{
         fireEvent.click(delButton);
         const delElement = await waitForElement(()=> screen.getByTestId(`book-del-${fakeResponse[1]._id}`));
         expect(delElement).not.toBeInTheDocument();
+        (global).fetch.mockRestore()
+        window.alert.mockRestore()
     });
 
     // 4: scenario
@@ -78,15 +83,19 @@ describe("AddEventRegister",()=>{
         const mockResponse = {json: jest.fn().mockResolvedValueOnce(fakeResponse)};
         const mockedFetch = jest.fn().mockResolvedValueOnce(mockResponse);
         (global).fetch = mockedFetch;
-        const {getByTestId} = render(<AddEventRegister></AddEventRegister>)
-        const element = await waitForElement(()=>getByTestId(`approve-ticket-${fakeResponse[0]._id}`))
-        console.log(element);
+        // const {getByTestId} = render(<AddEventRegister></AddEventRegister>)
+        // const element = await waitForElement(()=>getByTestId(`approve-ticket-${fakeResponse[0]._id}`))
+        await act(()=>{
+            render(<AddEventRegister></AddEventRegister>)
+        })
+        const element = await screen.getByTestId(`approve-ticket-${fakeResponse[0]._id}`)
         expect(element).toBeInTheDocument();
         expect(element).toHaveTextContent(/Approve/i);
         expect(mockedFetch).toBeCalledTimes(1);
         expect(mockResponse.json).toBeCalledTimes(1);
-
-        const aproveButton = await waitForElement(()=>getByTestId(`approve-ticket-${fakeResponse[1]._id}`))
+        
+        const aproveButton = await screen.getByTestId(`approve-ticket-${fakeResponse[1]._id}`)
+        // const aproveButton = await waitForElement(()=>getByTestId(`approve-ticket-${fakeResponse[1]._id}`))
         expect(aproveButton).toBeInTheDocument();
         // response fake approve data  and press click;
         const fakeAprRes = {modifiedCount:1, acknowledgement: true};
@@ -94,12 +103,14 @@ describe("AddEventRegister",()=>{
         const mockAprFetch = jest.fn().mockResolvedValueOnce(mockAprRes);
         (global).fetch = mockAprFetch;
         // problem in main function, the function is deleting the data insted of update the approve status
-        /*
-            fireEvent.click(aproveButton) 
-            const aprElement = await waitForElement(()=> screen.getByTestId(`approve-ticket-${fakeResponse[1]._id}`));
-            expect(aprElement).not.toBeInTheDocument();
-            expect(aprElement).not.toHaveTextContent(/approve/i);
-        */
+        
+
+        //    fireEvent.click(aproveButton) 
+        //    const aprElement = await waitForElement(()=> screen.getByTestId(`approve-ticket-${fakeResponse[1]._id}`));
+        //    expect(aprElement).not.toBeInTheDocument();
+        //    expect(aprElement).not.toHaveTextContent(/approve/i);
+        
         
     });
 })
+
