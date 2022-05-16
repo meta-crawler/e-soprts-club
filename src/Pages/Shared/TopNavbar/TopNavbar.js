@@ -55,16 +55,16 @@ const TopNavbar = () => {
               </div>
             </div>
           }
-            <div>
+            <div className="top-banner-contest">
         {
-          subNavOpen ? <CancelPresentationIcon className="top-banner-link"   onClick={()=>setSubNavOpen(false)}>X</CancelPresentationIcon> : <MenuOpenIcon style={{position:'absolute' , top:'10px' , right:'310px'}} onClick={()=>setSubNavOpen(true)}>open</MenuOpenIcon>
+          subNavOpen ? <CancelPresentationIcon className="top-banner-link"   onClick={()=>setSubNavOpen(false)}>X</CancelPresentationIcon> : <MenuOpenIcon className="top-banner-link"   onClick={()=>setSubNavOpen(true)}>open</MenuOpenIcon>
         }
       </div>
           
         </Row>
       </Container>
       
-      
+      {/* style={{position:'absolute' , top:'10px' , right:'310px'}} */}
     
     </div>
   );

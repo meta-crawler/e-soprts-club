@@ -61,15 +61,17 @@ const AddTicketBooking = () => {
 
     return (
         <div >
-          <h1 style={{margin: "50px" , color:'#FFB700'}}> All Ticket Booking ({ticket.length}) </h1>
-           <Table className='ticket-table' striped bordered hover variant="dark">
+          <h1 style={{margin: "50px" , color:'#ffffff', marginLeft:'0'}}> All Ticket Booking </h1>
+           <Table className='ticket-table' striped bordered hover variant="white">
   <thead>
-    <tr>
+    <tr style={{color:'white'}}>
       <th>#</th>
       <th>First Name</th>
       <th className='th-display-block' >Email</th>
       <th>Number</th>
       <th className='th-display-block'>Date</th>
+      <th className='th-display-block'>Payment</th>
+
       {/* <th className='th-display-block'>City</th> */}
       {/* <th className='th-display-block'>Address</th> */}
       <th style={{display:'inline-block'}}>Status</th>
@@ -79,14 +81,14 @@ const AddTicketBooking = () => {
     ticket.map((pd, index) => (   
       <tbody>
       <tr>
-      <td>{index}</td>
-      <td>{pd.name}</td>
-      <td className='th-display-block'>{pd.email}</td>
-      <td>{pd.number}</td>
-      <td className='th-display-block'>{pd.date}</td>
+      <td style={{color:'white'}}>{index}</td>
+      <td style={{color:'white'}}>{pd.name}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.email}</td>
+      <td style={{color:'white'}}>{pd.number}</td>
+      <td style={{color:'white'}} className='th-display-block'>{pd.date}</td>
       {/* <td className='th-display-block'>{pd.city}</td> */}
-      <td className='th-display-block'> <Link to={`checkout/${pd._id}`}><button>Payment</button></Link> </td>
-      <button onClick={()=> handleDelete(pd._id)} className="btn bg-danger p-2">Delete</button>
+      <td  className='th-display-block'> <Link to={`checkout/${pd._id}`}><button className='shop-data-shadow'>Payment</button></Link> </td>
+      <button onClick={()=> handleDelete(pd._id)} className="btn text-white p-2 shop-data-shadow">Delete</button>
 {pd.status === "pending" ? <button onClick={()=> handleApprove(pd._id)} className="btn bg-danger p-2">Approve</button>: <span><AddTaskIcon style={{
   color: "dc3545", fontSize: "20px"
 }} /></span>}
