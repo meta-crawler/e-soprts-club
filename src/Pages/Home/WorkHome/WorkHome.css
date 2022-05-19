@@ -18,6 +18,9 @@
     color: #ffffff;
     width: 900px;
     margin: 0 auto;
+    font-family: 'Mukta', sans-serif;
+/* font-family: 'Oleo Script Swash Caps', cursive; */
+    /* font-family: 'Oleo Script Swash Caps', cursive; */
 }
 @media only screen and (max-width:688px) {
   .WorkHomeMain{
@@ -40,7 +43,7 @@
 
 .WorkText {    
     cursor: pointer;
-    box-shadow: 0px 1px 10px -5px #000000;
+    box-shadow: 1px 1px 10px 3px #2c0064;
     width: 400px;
     padding: 80px 0px;
     border-radius: 20px;
@@ -90,12 +93,13 @@
     transition: linear .3s;
 }
 
-
 .WorkText p {
     width: 230px;
     text-align: left;
     margin: 0 auto;
-    padding-left: 50px;
+    /* padding-left: 50px; */
+    font-size: 20px;
+    /* text-align: center; */
 }
 
 

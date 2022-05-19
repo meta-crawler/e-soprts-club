@@ -29,7 +29,9 @@ const NewsPoint = () => {
         .then((data) => setEvent(data));
     }, []);
 
-console.log(event);
+
+// console.log(event);
+
 
 
 
@@ -56,7 +58,7 @@ const Permetion = () => {
         <Container id='news'>
              <div className="row news-responsibe">
             <div className="col-lg-8 col-12">
-                <h1>LATEST NEWS</h1>
+                <h1 className='newspoint-text'>LATEST NEWS</h1>
                 <span className='Line'></span>
 
                 <img className='latest-news-img' style={{width: "100%", opacity: ".4" }} src={images} alt="" />
@@ -70,7 +72,7 @@ const Permetion = () => {
             </div>
 
             <div className="col-lg-4 col-12 TablePoint">
-              <h1>POINT TABLE</h1>
+              <h1 className='newspoint-text'>POINT TABLE</h1>
               
               <span className='Line'></span>
               <div className="TableImage">

@@ -45,8 +45,6 @@ const StartQuiz = () => {
     }
 
 
-    console.log("object");
-
     return (
         <div style={{marginTop:"50px", width:"100%", height:"100%"}}>
             {
@@ -57,8 +55,8 @@ const StartQuiz = () => {
                     {
                         parID ? <div>
                                 <div style={{display:"flex",alignItems:"center",justifyContent:"center", position:"relative",}}>
-                                    <button className='start-quiz' style={{position:"absolute", top:"26%", border:"none", backgroundColor:"transparent",fontSize:"2rem",fontWeight:"900",padding:"0.6rem 4rem",color:"#0F5FE2 "}} onClick={handleStartContest}>START CONTEST</button>
-                                    <img  src="https://i.ibb.co/V3Fv54c/quize-1-removebg-preview-1.png" alt="" />
+                                    <button className='start-quiz startQuize-link'  style={{position:"absolute", top:"26%", border:"none", backgroundColor:"transparent",fontSize:"2rem",fontWeight:"900",padding:"0.6rem 4rem",color:"#0F5FE2 "}} onClick={handleStartContest}>START CONTEST</button>
+                                    <img className='start-img'  src="https://i.ibb.co/V3Fv54c/quize-1-removebg-preview-1.png" alt="" />
                                 </div>
                             </div>
                         :   <div>

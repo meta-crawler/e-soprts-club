@@ -1,6 +1,6 @@
 Standard quality
 
-#2 Entertainment  (SportsClub) https://soprtsclub-1f161.web.app/
+#2 Entertainment  (SportsClub) https://sports-club-70293.web.app/
 
 This sports club is one of the Best and most Unique Sports Templates forever Sports like Soccer, Football, Cricket, Baseball, Basketball, Hockey, Tennis, Surfing, Boxing, Yoga, Tennis, Cycling, Swimming, Athletics, Slalom, Golf, Volleyball, and All king of Sports Events. These themes have maintained team squad, team ranking, and all sports events easily.
 
@@ -58,4 +58,4 @@ Tools: Npm, Git.
 We all (team) will work together and finish it step by step, we will cooperate with each other in case of any problem.
 
 
-https://soprtsclub-1f161.web.app/
+https://sports-club-70293.web.app/

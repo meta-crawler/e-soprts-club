@@ -46,6 +46,7 @@ import Payment from "./Pages/Dashboard/Payment/Payment";
 import UpComeingContest from "./Pages/Contest/UpComeingContest";
 import Dashboardtwo from "./Pages/Dashboard/Dashboardtwo/Dashboardtwo";
 import CheckOut from "./Pages/CheckOut/CheckOut";
+import Profile from "./Pages/Profile/Profile";
 
 
 function App() {
@@ -102,6 +103,7 @@ function App() {
             <Route path={`/dashboard2/loadProdect`} element={<AddReview />} />
             <Route path={`/dashboard2/payment/:productId`} element={<Payment />} />
             <Route path={`/dashboard2/addEventRegister`} element={<AddEventRegister />} />
+            <Route path={`/dashboard2/profile`} element={<Profile />} />
             <Route path={`/dashboard2/addticketbooking/checkout/:serviceId`} element={<CheckOut />} />
             </Route>
             
