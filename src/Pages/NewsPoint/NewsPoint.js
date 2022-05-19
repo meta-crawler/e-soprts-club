@@ -1,22 +1,9 @@
-
 import React from 'react';
-
-import { useNavigate} from 'react-router-dom';
+import {  Button, Container, Modal } from 'react-bootstrap';
 import images from '../../Images/News/72752f5719a50f923ecc500d8138d343.jpg';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import StarBorderPurple500Icon from '@mui/icons-material/StarBorderPurple500';
-
 import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
-
-import React, { useEffect, useState } from 'react';
-import { IconContext } from "react-icons";
-import { FcRules } from 'react-icons/fc';
-import { Link} from 'react-router-dom';
-import TableImages from '../../Images/istockphoto-518118714-170667a.jpg';
-import './NewsPoint.css';
-
-
-import { Table } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { FcRules } from 'react-icons/fc';
 import { IconContext } from "react-icons";
@@ -33,20 +20,11 @@ const NewsPoint = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-
-
-    const navigate = useNavigate()
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-
     
     const [event, setEvent] = useState([])
 
     useEffect(() => {
-      fetch("https://blooming-thicket-66783.herokuapp.com/upcomingEvents")
+      fetch("https://enigmatic-garden-34025.herokuapp.com/upcomingEvents")
         .then((res) => res.json())
         .then((data) => setEvent(data));
     }, []);
@@ -72,6 +50,9 @@ const Permetion = () => {
 
     
 }
+
+
+
 
     return (
         <Container id='news'>
@@ -241,14 +222,12 @@ const Permetion = () => {
                      </div>
 
                      {/* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
                 <div style={{marginLeft: "300px", marginTop: "50px"}} class="modal-dialog">
                           <div style={{width: "1000px"}} class="modal-content modal-banner">
                             <div class="modal-header-style">
                               <h5 class="modal-titel1 mb-3">Up Coming  New Matchs </h5>
                             </div>
                             <div class="modal-body">
-
                 <Table striped bordered hover >
   <thead style={{color: "#FFFFFF"}}>
     <tr>
@@ -265,10 +244,8 @@ const Permetion = () => {
       <tr>
       <td style={{color: "#FFFFFF"}}>{index}</td>
       <td style={{color: "#FFFFFF"}}>
-
           <div style={{position: "relative", width: "170px", padding: "15px"}} className="Event">
               <img style={{width: "80px", height: "50px", borderRadius: "05px", display: "inline-block"}} src={pd.img} alt="" />
-
               <div style={{display: "inline-block", position: "absolute", top: "13px", right: "-60px"}} className="TextEvent">
               <h5 style={{fontSize: "20px"}}>{pd.name}</h5>
               <h6 style={{fontSize: "18px", color: "#fbc02d"}}>{pd.date}</h6>
@@ -279,15 +256,11 @@ const Permetion = () => {
       <td> <Button  onClick={Booking()} style={{color: "#FFFFFF", background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/booking">	Book Now</Link> </Button></td>
       <td><Button onClick={Booking()}  style={{ background: "#E40046"}} > <Link style={{color: "#FFFFFF", textDecoration: "none"}} to="/event-register">Register Now</Link></Button> </td>
       
-
-
       </tr>
       </tbody>
   ))}
-
   
   </Table>
-
                 <div class="modal-footer">
                               <button type="button" class="modal-btn" data-bs-dismiss="modal">Close</button>
                               
@@ -296,12 +269,7 @@ const Permetion = () => {
                           </div>
                           </div>
                           </div>
-
-
-
-
                           
-
                 </div>
                 <div> */}
                 

@@ -157,6 +157,7 @@ const ContestResult = () => {
                 </div>
             </div>
         </div>
+        </div>
     );
 };
 
