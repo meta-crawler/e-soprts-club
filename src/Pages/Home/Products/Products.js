@@ -4,7 +4,6 @@ import './Products.css';
 const Products = () => {
          
 
-
     const [products, setProducts] = useState([]);
     const [pageCount, setPageCount] = useState(0);
     const [page, setPage] = useState(0);
